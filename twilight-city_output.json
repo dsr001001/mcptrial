@@ -1,0 +1,99 @@
+{
+  "scene": {
+    "scene": "twilight-city",
+    "canvas": {
+      "width": 1920,
+      "height": 1080
+    },
+    "background": "sky-blue",
+    "elements": [
+      {
+        "type": "skyline",
+        "layer": null,
+        "attributes": {
+          "style": "minimal",
+          "towers": "5",
+          "variation": "moderate",
+          "lights": "on"
+        }
+      },
+      {
+        "type": "moon",
+        "layer": null,
+        "attributes": {
+          "phase": "crescent",
+          "position": "top-left",
+          "glow": "soft"
+        }
+      },
+      {
+        "type": "stars",
+        "layer": null,
+        "attributes": {
+          "density": "high",
+          "randomness": "0.3"
+        }
+      }
+    ]
+  },
+  "commands": [
+    {
+      "action": "ensure-canvas",
+      "params": {
+        "width": 1920,
+        "height": 1080
+      },
+      "comment": "Create or resize the canvas"
+    },
+    {
+      "action": "set-background",
+      "params": {
+        "style": "sky-blue"
+      },
+      "comment": "Scene background"
+    },
+    {
+      "action": "draw-skyline",
+      "params": {
+        "layer": "skyline",
+        "towers": 5,
+        "variation": "moderate",
+        "lights": true,
+        "palette": [
+          "#6d597a",
+          "#b56576",
+          "#355070"
+        ]
+      },
+      "comment": "Skyline silhouette"
+    },
+    {
+      "action": "draw-moon",
+      "params": {
+        "layer": "moon",
+        "phase": "crescent",
+        "center": [
+          576,
+          194
+        ],
+        "radius": 86,
+        "glow": "soft"
+      },
+      "comment": "Moon"
+    },
+    {
+      "action": "scatter-stars",
+      "params": {
+        "layer": "stars",
+        "density": "high",
+        "randomness": 0.3,
+        "palette": [
+          "#ffffff",
+          "#ffe066",
+          "#f7f1e1"
+        ]
+      },
+      "comment": "Star field"
+    }
+  ]
+}

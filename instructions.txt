@@ -1,0 +1,21 @@
+# Scene instructions for GIMP MCP automation
+scene: sunny-home
+canvas: 1280x720
+background: sky-blue
+---
+element: house size=medium position=center palette=warm
+layer: foreground
+---
+element: sun size=small position=top-right rays=12 glow=true
+---
+element: garden type=flowerbed band=foreground density=medium colors=pink,orange,yellow
+
+scene: twilight-city
+canvas: 1920x1080
+background: gradient dusk-purple to deep-blue
+---
+element: skyline style=minimal towers=5 variation=moderate lights=on
+---
+element: moon phase=crescent position=top-left glow=soft
+---
+element: stars density=high randomness=0.3

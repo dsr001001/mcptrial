@@ -1,0 +1,192 @@
+{
+  "scene": {
+    "scene": "sunny-home",
+    "canvas": {
+      "width": 1280,
+      "height": 720
+    },
+    "background": "sky-blue",
+    "elements": [
+      {
+        "type": "house",
+        "layer": "foreground",
+        "attributes": {
+          "size": "medium",
+          "position": "center",
+          "palette": "warm"
+        }
+      },
+      {
+        "type": "sun",
+        "layer": null,
+        "attributes": {
+          "size": "small",
+          "position": "top-right",
+          "rays": "12",
+          "glow": "true"
+        }
+      },
+      {
+        "type": "garden",
+        "layer": null,
+        "attributes": {
+          "type": "flowerbed",
+          "band": "foreground",
+          "density": "medium",
+          "colors": "pink,orange,yellow"
+        }
+      }
+    ]
+  },
+  "commands": [
+    {
+      "action": "ensure-canvas",
+      "params": {
+        "width": 1280,
+        "height": 720
+      },
+      "comment": "Create or resize the canvas"
+    },
+    {
+      "action": "set-background",
+      "params": {
+        "style": "sky-blue"
+      },
+      "comment": "Scene background"
+    },
+    {
+      "action": "new-layer",
+      "params": {
+        "name": "foreground",
+        "mode": "normal",
+        "opacity": 100
+      },
+      "comment": "Layer for house body"
+    },
+    {
+      "action": "draw-rectangle",
+      "params": {
+        "layer": "foreground",
+        "x": 461,
+        "y": 360,
+        "width": 358,
+        "height": 161,
+        "fill": "#f4a261",
+        "border": {
+          "width": 4,
+          "color": "#fb8500"
+        }
+      },
+      "comment": "House body"
+    },
+    {
+      "action": "draw-triangle",
+      "params": {
+        "layer": "foreground",
+        "points": [
+          [
+            461,
+            360
+          ],
+          [
+            819,
+            360
+          ],
+          [
+            640,
+            280
+          ]
+        ],
+        "fill": "#e76f51",
+        "border": {
+          "width": 3,
+          "color": "#fb8500"
+        }
+      },
+      "comment": "Roof"
+    },
+    {
+      "action": "draw-rectangle",
+      "params": {
+        "layer": "foreground",
+        "x": 596,
+        "y": 440,
+        "width": 89,
+        "height": 80,
+        "fill": "#ffffff",
+        "border": {
+          "width": 2,
+          "color": "#fb8500"
+        }
+      },
+      "comment": "Door"
+    },
+    {
+      "action": "new-layer",
+      "params": {
+        "name": "sun",
+        "mode": "add",
+        "opacity": 100
+      },
+      "comment": "Sun layer"
+    },
+    {
+      "action": "draw-circle",
+      "params": {
+        "layer": "sun",
+        "center": [
+          896,
+          129
+        ],
+        "radius": 46,
+        "fill": "#f4a261",
+        "border": {
+          "width": 3,
+          "color": "#fb8500"
+        }
+      },
+      "comment": "Solar disk"
+    },
+    {
+      "action": "draw-rays",
+      "params": {
+        "layer": "sun",
+        "center": [
+          896,
+          129
+        ],
+        "count": 12,
+        "inner_radius": 50,
+        "outer_radius": 69,
+        "color": "#e76f51"
+      },
+      "comment": "Sun rays"
+    },
+    {
+      "action": "apply-glow",
+      "params": {
+        "layer": "sun",
+        "radius": 23,
+        "strength": 0.6,
+        "color": "#e76f51"
+      },
+      "comment": "Sun glow"
+    },
+    {
+      "action": "scatter-brush",
+      "params": {
+        "layer": "garden",
+        "band": "foreground",
+        "density": "medium",
+        "colors": [
+          "pink",
+          "orange",
+          "yellow"
+        ],
+        "randomness": 0.25,
+        "brush": "foliage"
+      },
+      "comment": "Garden foliage"
+    }
+  ]
+}
