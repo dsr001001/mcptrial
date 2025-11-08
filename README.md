@@ -7,7 +7,7 @@ be executed by a running GIMP instance.
 ## Quick start
 
 ```bash
-python scripts/render_scene.py instructions.txt --output-dir output
+python render_scene_script.py instructions_to_draw.txt --output-dir output
 ```
 
 Enable the `--send` flag to stream the generated plan directly to a MCP daemon
@@ -15,7 +15,7 @@ Enable the `--send` flag to stream the generated plan directly to a MCP daemon
 
 ## Instruction file format
 
-Instructions are defined in `instructions.txt`. Each scene begins with a
+Instructions are defined in `instructions_to_draw.txt`. Each scene begins with a
 `scene:` header and can contain `canvas`, `background`, and one or more
 `element` blocks separated by `---` lines. Elements support lightweight
 attributes for layout, palette, and style. For example:
@@ -40,7 +40,7 @@ captures the resolved scene metadata and the ordered list of MCP commands.
 
 ## Extending the vocabulary
 
-Scene element handling is implemented in `scripts/render_scene.py`. Extend the
+Scene element handling is implemented in `render_scene_script.py`. Extend the
 `CommandBuilder` class with new `handle_<element>()` methods to introduce more
 building blocks (e.g., clouds, mountains, trees). Each handler should return a
 list of command definitions structured for the target MCP endpoint.
