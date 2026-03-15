@@ -7,8 +7,12 @@ the best available TTS engine, and combines into a single MP3.
 
 Usage:
     python3 generate_local_podcast.py
+
+Dependencies (auto-installed if missing):
+    pip install piper-tts imageio-ffmpeg pathvalidate
 """
 
+import ctypes
 import os
 import platform
 import re
@@ -30,21 +34,38 @@ OUTPUT_FILE = "podcast_architecture_of_control.mp3"
 # Pause between speaker segments (seconds)
 PAUSE_BETWEEN_SPEAKERS = 0.8
 
-# Piper TTS voice models (Linux)
+# espeak-ng voices (used via piper's bundled espeak-ng on Linux)
+# See: espeak-ng --voices for full list
+ESPEAK_VOICES = {
+    "CLAUDE": "en-gb",      # British English male — for Claude
+    "DHARMAJ": "en-us",     # American English male — for Dharmaj
+}
+
+# espeak-ng speech rate (words per minute)
+ESPEAK_SPEED = {
+    "CLAUDE": 160,
+    "DHARMAJ": 165,
+}
+
+# espeak-ng pitch (0-99, default ~50)
+ESPEAK_PITCH = {
+    "CLAUDE": 45,
+    "DHARMAJ": 55,
+}
+
+# Piper TTS voice models (used if ONNX models are available)
 # See https://github.com/rhasspy/piper/blob/master/VOICES.md
 PIPER_VOICES = {
     "CLAUDE": "en_GB-alan-medium",       # British male
-    "DHARMAJ": "en_US-lessac-medium",     # American male
+    "DHARMAJ": "en_US-lessac-medium",    # American male
 }
 
-# Piper speech rate (words per minute approx — via length_scale)
-# < 1.0 = faster, > 1.0 = slower
 PIPER_LENGTH_SCALE = {
     "CLAUDE": 1.0,
     "DHARMAJ": 1.0,
 }
 
-# macOS 'say' voices (used if running on macOS)
+# macOS 'say' voices
 MAC_VOICES = {
     "CLAUDE": "Daniel",
     "DHARMAJ": "Rishi",
@@ -53,17 +74,6 @@ MAC_VOICES = {
 MAC_SPEECH_RATE = {
     "CLAUDE": 175,
     "DHARMAJ": 175,
-}
-
-# espeak-ng voices (Linux fallback)
-ESPEAK_VOICES = {
-    "CLAUDE": "en-gb",
-    "DHARMAJ": "en-us",
-}
-
-ESPEAK_SPEED = {
-    "CLAUDE": 160,
-    "DHARMAJ": 165,
 }
 
 # Audio settings
@@ -81,14 +91,18 @@ def parse_transcript(filepath: str) -> list[tuple[str, str]]:
     text = Path(filepath).read_text(encoding="utf-8")
 
     segments = []
-    pattern = re.compile(r'\*\*(\w+):\*\*\s*(.*?)(?=\n\n\*\*\w+:\*\*|\n---\n|\Z)', re.DOTALL)
+    pattern = re.compile(
+        r'\*\*(\w+):\*\*\s*(.*?)(?=\n\n\*\*\w+:\*\*|\n---\n|\Z)', re.DOTALL
+    )
 
     for match in pattern.finditer(text):
         speaker = match.group(1).upper()
         content = match.group(2).strip()
-        # Clean up markdown artifacts
+        # Clean up markdown formatting
         content = re.sub(r'\*+', '', content)
         content = content.replace('\n', ' ').strip()
+        # Normalize whitespace
+        content = re.sub(r'\s+', ' ', content)
         if content and speaker in ("CLAUDE", "DHARMAJ"):
             segments.append((speaker, content))
 
@@ -107,51 +121,198 @@ def detect_platform() -> str:
     return system
 
 
-def ensure_ffmpeg():
-    """Ensure ffmpeg is available."""
-    if shutil.which("ffmpeg"):
-        return
-    print("ffmpeg not found. Installing...")
-    if detect_platform() == "linux":
-        subprocess.run(["sudo", "apt-get", "update", "-qq"], check=False)
-        subprocess.run(["sudo", "apt-get", "install", "-y", "-qq", "ffmpeg"], check=True)
-    elif detect_platform() == "macos":
-        subprocess.run(["brew", "install", "ffmpeg"], check=True)
-    else:
-        print("ERROR: Please install ffmpeg manually.")
-        sys.exit(1)
-
-
-def ensure_piper():
-    """Ensure piper-tts is installed."""
+def find_ffmpeg() -> str:
+    """Find ffmpeg binary — system PATH or pip-installed."""
+    ffmpeg = shutil.which("ffmpeg")
+    if ffmpeg:
+        return ffmpeg
     try:
-        import piper  # noqa: F401
-        return True
+        import imageio_ffmpeg
+        return imageio_ffmpeg.get_ffmpeg_exe()
     except ImportError:
         pass
-    print("Installing piper-tts...")
-    subprocess.run([sys.executable, "-m", "pip", "install", "piper-tts"], check=True)
+    return ""
+
+
+def ensure_ffmpeg() -> str:
+    """Ensure ffmpeg is available, install if needed. Returns path."""
+    path = find_ffmpeg()
+    if path:
+        return path
+    print("ffmpeg not found. Installing via pip...")
+    subprocess.run(
+        [sys.executable, "-m", "pip", "install", "imageio-ffmpeg"],
+        check=True,
+    )
+    path = find_ffmpeg()
+    if path:
+        return path
+    print("ERROR: Could not install ffmpeg. Install manually:")
+    print("  pip install imageio-ffmpeg")
+    print("  # or: sudo apt install ffmpeg")
+    sys.exit(1)
+
+
+# ---------------------------------------------------------------------------
+# TTS Engine: Bundled espeak-ng (via piper-tts shared library)
+# ---------------------------------------------------------------------------
+
+_espeak_lib = None
+_espeak_sample_rate = None
+_espeak_audio_chunks: list[bytes] = []
+
+
+@ctypes.CFUNCTYPE(
+    ctypes.c_int, ctypes.POINTER(ctypes.c_short), ctypes.c_int, ctypes.c_void_p
+)
+def _espeak_callback(wav, numsamples, events):
+    """Callback invoked by espeak-ng to deliver synthesized audio chunks."""
+    if wav is not None and numsamples > 0:
+        arr = ctypes.cast(
+            wav, ctypes.POINTER(ctypes.c_short * numsamples)
+        ).contents
+        _espeak_audio_chunks.append(bytes(arr))
+    return 0
+
+
+def _init_bundled_espeak() -> bool:
+    """Initialize espeak-ng from piper-tts bundled shared library."""
+    global _espeak_lib, _espeak_sample_rate
+
+    if _espeak_lib is not None:
+        return True
+
     try:
         import piper  # noqa: F401
-        return True
     except ImportError:
-        print("WARNING: piper-tts installation failed.")
         return False
 
+    piper_dir = os.path.dirname(piper.__file__)
+    lib_path = os.path.join(piper_dir, "espeakbridge.so")
+    data_dir = os.path.join(piper_dir, "espeak-ng-data")
 
-def ensure_espeak():
-    """Ensure espeak-ng is available."""
-    if shutil.which("espeak-ng"):
-        return True
-    print("espeak-ng not found. Installing...")
+    if not os.path.exists(lib_path):
+        return False
+
     try:
-        subprocess.run(["sudo", "apt-get", "update", "-qq"], check=False)
-        subprocess.run(["sudo", "apt-get", "install", "-y", "-qq", "espeak-ng"], check=True)
-        return True
-    except Exception:
-        print("WARNING: espeak-ng installation failed.")
+        _espeak_lib = ctypes.CDLL(lib_path)
+        # AUDIO_OUTPUT_SYNCHRONOUS = 2
+        _espeak_sample_rate = _espeak_lib.espeak_Initialize(
+            2, SAMPLE_RATE, data_dir.encode(), 0
+        )
+        _espeak_lib.espeak_SetSynthCallback(_espeak_callback)
+        return _espeak_sample_rate > 0
+    except Exception as e:
+        print(f"  WARNING: Failed to init bundled espeak: {e}")
+        _espeak_lib = None
         return False
 
+
+def synthesize_bundled_espeak(text: str, speaker: str, output_wav: str):
+    """Generate speech using piper's bundled espeak-ng library."""
+    voice = ESPEAK_VOICES.get(speaker, "en")
+    speed = ESPEAK_SPEED.get(speaker, 160)
+    pitch = ESPEAK_PITCH.get(speaker, 50)
+
+    _espeak_audio_chunks.clear()
+
+    _espeak_lib.espeak_SetVoiceByName(voice.encode())
+    _espeak_lib.espeak_SetParameter(1, speed, 0)   # espeakRATE
+    _espeak_lib.espeak_SetParameter(2, 100, 0)     # espeakVOLUME
+    _espeak_lib.espeak_SetParameter(4, pitch, 0)   # espeakPITCH
+
+    text_bytes = text.encode("utf-8")
+    # 0x1000 = espeakCHARS_AUTO, 0x01 = espeakENDPAUSE
+    _espeak_lib.espeak_Synth(
+        text_bytes, len(text_bytes) + 1, 0, 0, 0, 0x1001, None, None
+    )
+    _espeak_lib.espeak_Synchronize()
+
+    audio = b"".join(_espeak_audio_chunks)
+
+    with wave.open(output_wav, "wb") as wf:
+        wf.setnchannels(CHANNELS)
+        wf.setsampwidth(SAMPLE_WIDTH)
+        wf.setframerate(_espeak_sample_rate)
+        wf.writeframes(audio)
+
+
+# ---------------------------------------------------------------------------
+# TTS Engine: System espeak-ng
+# ---------------------------------------------------------------------------
+
+def _has_system_espeak() -> bool:
+    return shutil.which("espeak-ng") is not None
+
+
+def synthesize_system_espeak(text: str, speaker: str, output_wav: str):
+    """Generate speech using system espeak-ng binary."""
+    voice = ESPEAK_VOICES.get(speaker, "en")
+    speed = ESPEAK_SPEED.get(speaker, 160)
+    pitch = ESPEAK_PITCH.get(speaker, 50)
+    subprocess.run(
+        ["espeak-ng", "-v", voice, "-s", str(speed), "-p", str(pitch),
+         "-w", output_wav, text],
+        check=True, capture_output=True,
+    )
+
+
+# ---------------------------------------------------------------------------
+# TTS Engine: Piper neural TTS
+# ---------------------------------------------------------------------------
+
+def _has_piper_models() -> bool:
+    """Check if piper voice ONNX models are downloaded."""
+    data_dir = Path.home() / ".local" / "share" / "piper-voices"
+    for voice_name in PIPER_VOICES.values():
+        model = data_dir / f"{voice_name}.onnx"
+        config = data_dir / f"{voice_name}.onnx.json"
+        if not model.exists() or not config.exists():
+            return False
+    return True
+
+
+def synthesize_piper(text: str, speaker: str, output_wav: str):
+    """Generate speech using piper-tts neural voices."""
+    from piper import PiperVoice
+
+    voice_name = PIPER_VOICES.get(speaker, "en_US-lessac-medium")
+    length_scale = PIPER_LENGTH_SCALE.get(speaker, 1.0)
+    data_dir = Path.home() / ".local" / "share" / "piper-voices"
+
+    model_path = str(data_dir / f"{voice_name}.onnx")
+    config_path = str(data_dir / f"{voice_name}.onnx.json")
+
+    voice = PiperVoice.load(model_path, config_path=config_path)
+    with wave.open(output_wav, "wb") as wav_file:
+        voice.synthesize(text, wav_file, length_scale=length_scale)
+
+
+# ---------------------------------------------------------------------------
+# TTS Engine: macOS say
+# ---------------------------------------------------------------------------
+
+def synthesize_mac_say(text: str, speaker: str, output_wav: str):
+    """Generate speech using macOS 'say' command."""
+    voice = MAC_VOICES.get(speaker, "Daniel")
+    rate = MAC_SPEECH_RATE.get(speaker, 175)
+    aiff_file = output_wav.replace(".wav", ".aiff")
+    subprocess.run(
+        ["say", "-v", voice, "-r", str(rate), "-o", aiff_file, text],
+        check=True,
+    )
+    ffmpeg_bin = find_ffmpeg() or "ffmpeg"
+    subprocess.run(
+        [ffmpeg_bin, "-y", "-i", aiff_file, "-ar", str(SAMPLE_RATE),
+         "-ac", str(CHANNELS), "-sample_fmt", "s16", output_wav],
+        check=True, capture_output=True,
+    )
+    os.unlink(aiff_file)
+
+
+# ---------------------------------------------------------------------------
+# Audio utilities
+# ---------------------------------------------------------------------------
 
 def generate_silence(duration_sec: float, sample_rate: int = SAMPLE_RATE) -> bytes:
     """Generate silence as raw PCM bytes."""
@@ -159,84 +320,14 @@ def generate_silence(duration_sec: float, sample_rate: int = SAMPLE_RATE) -> byt
     return struct.pack(f"<{num_samples}h", *([0] * num_samples))
 
 
-def synthesize_piper(text: str, speaker: str, output_wav: str):
-    """Generate speech using piper-tts."""
-    from piper import PiperVoice
-
-    voice_name = PIPER_VOICES.get(speaker, "en_US-lessac-medium")
-    length_scale = PIPER_LENGTH_SCALE.get(speaker, 1.0)
-
-    # piper downloads models to a data dir
-    data_dir = Path.home() / ".local" / "share" / "piper-voices"
-    data_dir.mkdir(parents=True, exist_ok=True)
-
-    model_path = data_dir / f"{voice_name}.onnx"
-    config_path = data_dir / f"{voice_name}.onnx.json"
-
-    # Download model if not present
-    if not model_path.exists() or not config_path.exists():
-        print(f"  Downloading voice model: {voice_name}...")
-        base_url = f"https://huggingface.co/rhasspy/piper-voices/resolve/main"
-        # Voice path structure: <lang>/<lang>-<name>/<quality>/<lang>-<name>-<quality>.onnx
-        parts = voice_name.split("-")
-        lang = parts[0] + "_" + parts[1]  # e.g., en_GB
-        quality = parts[-1]  # e.g., medium
-        name = "-".join(parts[:-1])  # e.g., en_GB-alan
-        voice_path = f"{lang}/{name}/{quality}/{voice_name}"
-
-        for suffix in [".onnx", ".onnx.json"]:
-            url = f"{base_url}/{voice_path}{suffix}"
-            dest = data_dir / f"{voice_name}{suffix}"
-            print(f"    Fetching {url}")
-            subprocess.run([
-                "python3", "-c",
-                f"import urllib.request; urllib.request.urlretrieve('{url}', '{dest}')"
-            ], check=True)
-
-    voice = PiperVoice.load(str(model_path), config_path=str(config_path))
-
-    with wave.open(output_wav, "wb") as wav_file:
-        voice.synthesize(text, wav_file, length_scale=length_scale)
-
-
-def synthesize_espeak(text: str, speaker: str, output_wav: str):
-    """Generate speech using espeak-ng."""
-    voice = ESPEAK_VOICES.get(speaker, "en")
-    speed = ESPEAK_SPEED.get(speaker, 160)
-    subprocess.run([
-        "espeak-ng",
-        "-v", voice,
-        "-s", str(speed),
-        "-w", output_wav,
-        text
-    ], check=True, capture_output=True)
-
-
-def synthesize_mac_say(text: str, speaker: str, output_wav: str):
-    """Generate speech using macOS 'say' command."""
-    voice = MAC_VOICES.get(speaker, "Daniel")
-    rate = MAC_SPEECH_RATE.get(speaker, 175)
-    aiff_file = output_wav.replace(".wav", ".aiff")
-    subprocess.run([
-        "say", "-v", voice, "-r", str(rate), "-o", aiff_file, text
-    ], check=True)
-    # Convert AIFF to WAV
-    subprocess.run([
-        "ffmpeg", "-y", "-i", aiff_file, "-ar", str(SAMPLE_RATE),
-        "-ac", str(CHANNELS), "-sample_fmt", "s16", output_wav
-    ], check=True, capture_output=True)
-    os.unlink(aiff_file)
-
-
-def normalize_wav(input_wav: str, output_wav: str):
+def normalize_wav(input_wav: str, output_wav: str, ffmpeg_bin: str = "ffmpeg"):
     """Normalize WAV to consistent format using ffmpeg."""
-    subprocess.run([
-        "ffmpeg", "-y", "-i", input_wav,
-        "-ar", str(SAMPLE_RATE),
-        "-ac", str(CHANNELS),
-        "-sample_fmt", "s16",
-        output_wav
-    ], check=True, capture_output=True)
+    subprocess.run(
+        [ffmpeg_bin, "-y", "-i", input_wav,
+         "-ar", str(SAMPLE_RATE), "-ac", str(CHANNELS),
+         "-sample_fmt", "s16", output_wav],
+        check=True, capture_output=True,
+    )
 
 
 def concatenate_wavs(wav_files: list[str], output_wav: str, pause_sec: float):
@@ -255,13 +346,13 @@ def concatenate_wavs(wav_files: list[str], output_wav: str, pause_sec: float):
                 out.writeframes(silence)
 
 
-def wav_to_mp3(wav_path: str, mp3_path: str):
+def wav_to_mp3(wav_path: str, mp3_path: str, ffmpeg_bin: str = "ffmpeg"):
     """Convert WAV to MP3 using ffmpeg."""
-    subprocess.run([
-        "ffmpeg", "-y", "-i", wav_path,
-        "-codec:a", "libmp3lame", "-qscale:a", "2",
-        mp3_path
-    ], check=True, capture_output=True)
+    subprocess.run(
+        [ffmpeg_bin, "-y", "-i", wav_path,
+         "-codec:a", "libmp3lame", "-qscale:a", "2", mp3_path],
+        check=True, capture_output=True,
+    )
 
 
 def get_wav_duration(wav_path: str) -> float:
@@ -269,6 +360,10 @@ def get_wav_duration(wav_path: str) -> float:
     with wave.open(wav_path, "rb") as w:
         return w.getnframes() / w.getframerate()
 
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
 
 def main():
     print("=" * 60)
@@ -295,39 +390,53 @@ def main():
     print(f"Platform: {plat}")
 
     # Ensure ffmpeg
-    ensure_ffmpeg()
+    ffmpeg_bin = ensure_ffmpeg()
+    print(f"ffmpeg: {ffmpeg_bin}")
 
-    # Select TTS engine
+    # Select TTS engine (priority order)
     synthesize_fn = None
     engine_name = ""
 
     if plat == "macos":
         engine_name = "macOS say"
         synthesize_fn = synthesize_mac_say
-        print(f"Using TTS engine: {engine_name}")
-        # Check for premium voices
+        print(f"TTS engine: {engine_name}")
         result = subprocess.run(["say", "-v", "?"], capture_output=True, text=True)
         available = result.stdout
         for speaker, voice in MAC_VOICES.items():
-            if voice.lower() in available.lower():
-                print(f"  {speaker}: {voice} (found)")
-            else:
-                print(f"  {speaker}: {voice} (NOT FOUND — using default)")
+            found = voice.lower() in available.lower()
+            print(f"  {speaker}: {voice} ({'found' if found else 'NOT FOUND'})")
 
     elif plat == "linux":
-        # Try piper first, then espeak
-        if ensure_piper():
-            engine_name = "piper-tts"
-            synthesize_fn = synthesize_piper
-            print(f"Using TTS engine: {engine_name}")
-            for speaker, voice in PIPER_VOICES.items():
-                print(f"  {speaker}: {voice}")
-        elif ensure_espeak():
-            engine_name = "espeak-ng"
-            synthesize_fn = synthesize_espeak
-            print(f"Using TTS engine: {engine_name} (fallback)")
-        else:
-            print("ERROR: No TTS engine available. Install piper-tts or espeak-ng.")
+        # 1. Try piper with pre-downloaded neural voice models
+        try:
+            import piper  # noqa: F401
+            if _has_piper_models():
+                engine_name = "piper-tts (neural)"
+                synthesize_fn = synthesize_piper
+                print(f"TTS engine: {engine_name}")
+                for speaker, voice in PIPER_VOICES.items():
+                    print(f"  {speaker}: {voice}")
+        except ImportError:
+            pass
+
+        # 2. Try bundled espeak-ng via piper's shared library
+        if synthesize_fn is None and _init_bundled_espeak():
+            engine_name = "espeak-ng (bundled via piper-tts)"
+            synthesize_fn = synthesize_bundled_espeak
+            print(f"TTS engine: {engine_name}")
+            for speaker, voice in ESPEAK_VOICES.items():
+                print(f"  {speaker}: {voice} @ {ESPEAK_SPEED[speaker]} wpm")
+
+        # 3. Try system espeak-ng
+        if synthesize_fn is None and _has_system_espeak():
+            engine_name = "espeak-ng (system)"
+            synthesize_fn = synthesize_system_espeak
+            print(f"TTS engine: {engine_name}")
+
+        if synthesize_fn is None:
+            print("ERROR: No TTS engine available.")
+            print("Install: pip install piper-tts")
             sys.exit(1)
     else:
         print(f"ERROR: Unsupported platform: {plat}")
@@ -349,11 +458,11 @@ def main():
 
             synthesize_fn(text, speaker, raw_wav)
 
-            # Normalize to consistent format
-            normalize_wav(raw_wav, norm_wav)
+            # Normalize to consistent sample rate/format
+            normalize_wav(raw_wav, norm_wav, ffmpeg_bin)
             wav_files.append(norm_wav)
 
-        # Concatenate
+        # Concatenate all segments with pauses
         print("\nCombining segments...")
         combined_wav = os.path.join(tmpdir, "combined.wav")
         concatenate_wavs(wav_files, combined_wav, PAUSE_BETWEEN_SPEAKERS)
@@ -365,7 +474,7 @@ def main():
 
         # Convert to MP3
         print(f"\nConverting to MP3: {OUTPUT_FILE}")
-        wav_to_mp3(combined_wav, OUTPUT_FILE)
+        wav_to_mp3(combined_wav, OUTPUT_FILE, ffmpeg_bin)
 
     file_size = os.path.getsize(OUTPUT_FILE) / (1024 * 1024)
     print(f"\nDone! Output: {OUTPUT_FILE} ({file_size:.1f} MB)")
