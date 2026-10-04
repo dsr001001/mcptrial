@@ -12,3 +12,14 @@ pre-registered candidate tests: 112 across 21 targets; controls: 22; Bonferroni 
  NEG_shuffled_rank       EQ n= 1311066 D_full=-0.0000 D_sub=-0.0000 null_max=+0.0001 p=0.571 local=0.000@log_abs_disc@bin5 p_loc=0.095  [must not hit] 27s
  NEG_shuffled_rank      LOC n= 1311066 D_full=-0.0000 D_sub=-0.0001 null_max=+0.0000 p=0.381 local=0.003@n_nonsplit_mult=5 p_loc=0.190  [must not hit] 93s
  NEG_shuffled_rank      GAL n= 1309159 D_full=-0.0000 D_sub=-0.0000 null_max=+0.0000 p=0.667 local=0.025@torsion_structure=[2,2] p_loc=0.381  [must not hit] 50s
+ NEG_shuffled_rank       AN n= 1311066 D_full=-0.0000 D_sub=-0.0001 null_max=+0.0000 p=0.429 local=0.004@v5_sha=2 p_loc=0.571  [must not hit] 67s
+ NEG_shuffled_rank       AP n= 1311066 D_full=-0.0001 D_sub=-0.0002 null_max=+0.0000 p=0.857 local=0.000@mur_mid@bin4 p_loc=0.810  [must not hit] 62s
+ NEG_shuffled_rank      DIO n= 1311066 D_full=+0.0000 D_sub=-0.0000 null_max=+0.0001 p=0.952 local=0.000@n_intpts_x@bin1 p_loc=0.952  [must not hit] 11s
+       POS_watkins v2_moddeg n= 1311066 D_full=+0.0026 D_sub=+0.0035 null_max=+0.0000 p=0.048 local=0.018@v2_moddeg@bin7 p_loc=0.048  [must hit (C1)] 13s
+     POS_lorenzini  torsion n= 1889364 D_full=+0.0317 D_sub=+0.0326 null_max=+0.0001 p=0.048 local=0.257@torsion_structure=[6] p_loc=0.048 HIT LOCAL [must local-hit at [5] (T13)] 74s
+  POS_torsion_cong frac_even n= 1311066 D_full=+0.9841 D_sub=+0.9842 null_max=+0.0000 p=0.048 local=0.998@frac_even@bin4 p_loc=0.048 HIT LOCAL [must hit (T5/T18)] 7s
+         POS_nagao    nagao n= 1311066 D_full=+0.8088 D_sub=+0.8122 null_max=+0.0001 p=0.048 local=0.997@nagao_1000@bin7 p_loc=0.048 HIT LOCAL [must hit (C7)] 11s
+            EXP_H1 disc_sign n=  734885 D_full=+0.0047 D_sub=+0.0049 null_max=+0.0000 p=0.048 local=0.005@disc_sign=-1 p_loc=0.048  [expected small (H1)] 6s
+  POS_murmur_10000   ap_raw n=   43175 D_full=+0.4302 D_sub=+0.4329 null_max=-0.0026 p=0.048 local=0.000@ p_loc=1.000 HIT [must hit (C7 murmurations)] 2s
+ POS_murmur_100000   ap_raw n=  439688 D_full=+0.0367 D_sub=+0.0351 null_max=-0.0002 p=0.048 local=0.000@ p_loc=1.000 HIT [must hit (C7 murmurations)] 46s
+done in 1018s

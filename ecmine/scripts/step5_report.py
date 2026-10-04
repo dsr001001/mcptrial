@@ -4,8 +4,10 @@ R = "results"
 out = []
 def w(s=""): out.append(s)
 
-res = pd.read_csv(f"{R}/step5_results.csv") if os.path.exists(f"{R}/step5_results.csv") else pd.DataFrame()
-loc = pd.read_csv(f"{R}/step5_local.csv") if os.path.exists(f"{R}/step5_local.csv") else pd.DataFrame()
+def readall(names):
+    fs = [pd.read_csv(f"{R}/{n}") for n in names if os.path.exists(f"{R}/{n}")]
+    return pd.concat(fs, ignore_index=True) if fs else pd.DataFrame()
+res = readall(["step5_controls.csv", "step5_results.csv"]); loc = readall(["step5_controls_local.csv", "step5_local.csv"])
 pairs = pd.read_csv(f"{R}/step5_cells_pairs.csv"); cells = pd.read_csv(f"{R}/step5_cells.csv")
 gbt = pd.read_csv(f"{R}/step5_gbt.csv") if os.path.exists(f"{R}/step5_gbt.csv") else pd.DataFrame()
 

@@ -1,0 +1,12 @@
+loaded 1889364 curves in 14s
+pairs tested 2278, pairs with flags 819, cells flagged 5657, 107s
+
+unknown-pair flags (not on the exclusion list, not same-group, not a known family):
+Empty DataFrame
+Columns: [A, B, n_flagged, min_log10_p, n_forbidden, n_rows, known]
+Index: []
+
+cells of the unknown pairs:
+Empty DataFrame
+Columns: [A, a, B, b, observed, expected, kind, log10_p, n_rows, known]
+Index: []

@@ -593,7 +593,7 @@ n_kod_Ins,n_kod_IIs,2,-135.8,0,1889364,same-group LOC
 v2_moddeg,bad_at_3,1,-134.4,0,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
 is_cm,n_kod_III,1,-133.9,0,1889364,"T10 (CM: integral j, no multiplicative reduction)"
 v2_moddeg,log_omega,3,-133.3,0,1889364,same-group AN
-v3_moddeg,c4_sign,3,-133.0,0,1889364,
+v3_moddeg,c4_sign,3,-133.0,0,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
 is_cm,n_bad_primes,1,-132.9,1,1311066,T10
 v3_moddeg,n_kod_III,3,-132.1,1,1889364,family M: valuations track the size of moddeg (T12)
 torsion_structure,n_additive,7,-131.2,7,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
@@ -608,7 +608,7 @@ n_kod_IIs,log_area,2,-123.0,0,1889364,"T11 (area is the covolume, a function of 
 rank_c,n_kod_IIIs,1,-122.0,0,1889364,U7 (rank and reduction types; T16 for n_bad_primes)
 is_cm,frac_even,1,-121.7,0,1311066,T10 (CM trace pattern)
 n_torsion_gens,v3_moddeg,2,-121.0,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
-c4_sign,petersson_resid,1,-120.8,0,1889364,family E/T10 (Eisenstein congruences; CM symmetric square)
+c4_sign,petersson_resid,1,-120.8,0,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
 two_adic_log_index,v7_tamagawa,3,-119.0,1,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
 n_bad_primes,n_kod_IVs,2,-117.8,1,1889364,same-group LOC
 odd_torsion,n_additive,2,-116.6,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
@@ -712,7 +712,7 @@ n_additive,v7_tamagawa,2,-52.0,2,1889364,same-group LOC
 n_torsion_gens,rank_c,1,-51.7,0,1889364,"C6 (rank and 2-, 3-torsion structure)"
 two_adic_level,petersson_resid,1,-51.3,0,1885114,family E/T10 (Eisenstein congruences; CM symmetric square)
 torsion_structure,has_7_isog,4,-51.3,3,1889364,same-group GAL
-c6_sign,petersson_resid,1,-50.9,1,1889364,family E/T10 (Eisenstein congruences; CM symmetric square)
+c6_sign,petersson_resid,1,-50.9,1,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
 c6_sign,frac_even,4,-50.9,4,1889364,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
 torsion_structure,rank_c,2,-50.7,0,1889364,"C6 (rank and 2-, 3-torsion structure)"
 odd_torsion,n_kod_II,1,-48.7,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
@@ -759,7 +759,7 @@ n_nonsurj_primes,rank_c,1,-27.9,0,1889364,U5 (rank and isogeny structure beyond 
 torsion_structure,v7_tamagawa,2,-27.6,1,1889364,T13
 odd_torsion,v7_tamagawa,1,-27.6,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
 n_kod_I0s,v5_tamagawa,1,-27.5,0,1889364,same-group LOC
-v5_tamagawa,petersson_resid,1,-26.9,0,1889364,
+v5_tamagawa,petersson_resid,1,-26.9,0,1889364,"T4+T12 (Tamagawa tracks v_p(Delta), hence the covolume in the residual)"
 max_isogeny_degree,petersson_resid,2,-26.7,1,1311066,family E/T10 (Eisenstein congruences; CM symmetric square)
 n_nonsplit_mult,v5_tamagawa,1,-26.3,0,1889364,same-group LOC
 has_3_isog,v5_tamagawa,1,-25.6,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
@@ -769,7 +769,7 @@ v2_torsion,v7_tamagawa,1,-25.0,0,1889364,family L: torsion/isogeny constrains lo
 rank_c,n_bad_primes,1,-24.8,0,1311066,U7 (rank and reduction types; T16 for n_bad_primes)
 odd_torsion,rank_c,1,-24.5,0,1889364,"C6 (rank and 2-, 3-torsion structure)"
 v2_moddeg,log_odd_moddeg,1,-24.2,0,1889364,same-group AN
-v3_moddeg,c6_sign,2,-24.0,1,1889364,
+v3_moddeg,c6_sign,2,-24.0,1,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
 torsion_structure,is_cm,1,-23.6,0,1889364,same-group GAL
 v2_moddeg,log_odd_tamagawa,2,-23.5,1,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
 c6_sign,n_kod_IV,1,-23.5,1,1889364,T4 (local data and equation)

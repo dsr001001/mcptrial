@@ -3389,7 +3389,7 @@ c4_sign,0,frac_zero,b2,0,308.6,forbidden,-134.0,1889364,T18/T5 (mod-l image fixe
 is_cm,1,n_kod_III,2,171,11.3,enriched,-133.9,1889364,"T10 (CM: integral j, no multiplicative reduction)"
 max_isogeny_degree,16,has_2_isog,0,0,307.0,forbidden,-133.3,1311066,same-group GAL
 v2_moddeg,1,log_omega,b0,34,424.1,depleted,-133.3,1889364,same-group AN
-v3_moddeg,0,c4_sign,0,35,425.9,depleted,-133.0,1889364,
+v3_moddeg,0,c4_sign,0,35,425.9,depleted,-133.0,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
 c4_sign,0,log_abs_c4,b6,0,306.1,forbidden,-133.0,1889364,same-group EQ
 is_cm,1,n_bad_primes,5,0,306.0,forbidden,-132.9,1311066,T10
 v2_moddeg,0,n_kod_In,3+,0,306.0,forbidden,-132.9,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
@@ -3507,7 +3507,7 @@ torsion_structure,[5],two_adic_label,X6,0,279.3,forbidden,-121.3,1841734,same-gr
 max_isogeny_degree,4,has_5_isog,1,0,279.3,forbidden,-121.3,1311066,same-group GAL
 n_torsion_gens,2,v3_moddeg,7,37,401.0,depleted,-121.0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
 torsion_structure,[6],v2_torsion,2,0,278.5,forbidden,-120.9,1889364,I
-c4_sign,0,petersson_resid,b7,12,327.6,depleted,-120.8,1889364,family E/T10 (Eisenstein congruences; CM symmetric square)
+c4_sign,0,petersson_resid,b7,12,327.6,depleted,-120.8,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
 class_size,8,v7_tamagawa,1,0,278.2,forbidden,-120.8,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
 max_isogeny_degree,12,n_kod_II,1,0,278.0,forbidden,-120.7,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
 max_isogeny_degree,16,log_odd_tamagawa,b3,0,278.0,forbidden,-120.7,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
@@ -3590,7 +3590,7 @@ two_adic_level,16,odd_torsion,3,0,253.1,forbidden,-109.9,1885114,same-group GAL
 v2_moddeg,2,n_bad_primes,6+,0,252.7,forbidden,-109.8,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
 n_nonsplit_mult,5+,v3_tamagawa,2,22,331.3,depleted,-109.5,1889364,same-group LOC
 v2_torsion,2,n_kod_II,2,0,252.0,forbidden,-109.4,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
-v3_moddeg,7,c4_sign,0,164,14.6,enriched,-109.1,1889364,
+v3_moddeg,7,c4_sign,0,164,14.6,enriched,-109.1,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
 two_adic_level,4,two_adic_label,X34,0,250.1,forbidden,-108.6,1837484,same-group GAL
 two_adic_label,X13f,n_kod_In,0,0,249.5,forbidden,-108.3,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
 two_adic_label,X13d,n_kod_In,0,0,249.5,forbidden,-108.3,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
@@ -4384,7 +4384,7 @@ max_isogeny_degree,25,log_odd_tamagawa,b1,0,117.1,forbidden,-50.9,1889364,family
 two_adic_level,32,v2_tamagawa,0,6,140.2,depleted,-50.9,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
 class_size,2,max_isogeny_degree,10,0,117.2,forbidden,-50.9,1311066,same-group GAL
 c6_sign,0,frac_even,b0,0,117.3,forbidden,-50.9,1889364,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
-c6_sign,0,petersson_resid,b7,0,117.3,forbidden,-50.9,1889364,family E/T10 (Eisenstein congruences; CM symmetric square)
+c6_sign,0,petersson_resid,b7,0,117.3,forbidden,-50.9,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
 c6_sign,0,frac_even,b1,0,116.9,forbidden,-50.8,1889364,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
 two_adic_label,X11,log_j_height,b7,16,168.4,depleted,-50.8,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
 two_adic_level,8,odd_torsion,5,5,136.7,depleted,-50.8,1885114,same-group GAL
@@ -4688,7 +4688,7 @@ n_nonsurj_primes,0,max_isogeny_degree,21,0,85.6,forbidden,-37.2,1889364,same-gro
 two_adic_label,X9,has_5_isog,1,0,85.4,forbidden,-37.1,1841734,same-group GAL
 two_adic_label,X10,has_5_isog,1,0,85.4,forbidden,-37.1,1841734,same-group GAL
 class_size,3,exceptional_image,1,0,85.5,forbidden,-37.1,1889364,same-group GAL
-v3_moddeg,8+,c4_sign,0,58,5.7,enriched,-37.1,1889364,
+v3_moddeg,8+,c4_sign,0,58,5.7,enriched,-37.1,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
 two_adic_label,X1,max_isogeny_degree,11,0,85.4,forbidden,-37.1,1841734,same-group GAL
 two_adic_level,32,max_isogeny_degree,3,0,85.0,forbidden,-36.9,1885114,same-group GAL
 v3_moddeg,6,n_kod_III,2,2,93.3,depleted,-36.9,1889364,family M: valuations track the size of moddeg (T12)
@@ -4955,7 +4955,7 @@ max_isogeny_degree,8,v2_moddeg,1,7,84.6,depleted,-27.0,1889364,"family E: Eisens
 two_adic_label,X13c,max_isogeny_degree,9,0,62.2,forbidden,-27.0,1841734,same-group GAL
 v2_moddeg,0,log_regulator,b3,0,62.2,forbidden,-27.0,1889364,same-group AN
 n_nonsplit_mult,4,n_kod_IIs,2,0,62.1,forbidden,-27.0,1889364,same-group LOC
-v5_tamagawa,3,petersson_resid,b0,8,87.1,depleted,-26.9,1889364,
+v5_tamagawa,3,petersson_resid,b0,8,87.1,depleted,-26.9,1889364,"T4+T12 (Tamagawa tracks v_p(Delta), hence the covolume in the residual)"
 max_isogeny_degree,10,v2_moddeg,4,8,87.1,depleted,-26.9,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
 torsion_structure,[8],class_size,1,0,61.9,forbidden,-26.9,1889364,same-group GAL
 torsion_structure,[8],max_isogeny_degree,1,0,61.9,forbidden,-26.9,1889364,same-group GAL
@@ -5057,7 +5057,7 @@ two_adic_label,X19,n_kod_IVs,2,0,55.8,forbidden,-24.2,1841734,family L: torsion/
 torsion_structure,[3],two_adic_label,X34,0,55.3,forbidden,-24.0,1841734,same-group GAL
 torsion_structure,[3],two_adic_label,X9d,0,55.2,forbidden,-24.0,1841734,same-group GAL
 torsion_structure,[3],two_adic_label,X10d,0,55.2,forbidden,-24.0,1841734,same-group GAL
-v3_moddeg,4,c6_sign,0,6,74.6,depleted,-24.0,1889364,
+v3_moddeg,4,c6_sign,0,6,74.6,depleted,-24.0,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
 two_adic_label,X9c,n_bad_primes,6+,2,62.5,depleted,-23.9,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
 two_adic_label,X10a,n_bad_primes,6+,2,62.5,depleted,-23.9,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
 two_adic_label,X32,v2_torsion,2,0,55.1,forbidden,-23.9,1841734,same-group GAL
@@ -5473,7 +5473,7 @@ n_kod_II,2,n_intpts_x,9,1,38.9,depleted,-15.3,1889364,U3 (likely via model size:
 exceptional_image,1,n_kod_Ins,3+,0,35.2,forbidden,-15.3,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
 two_adic_level,32,odd_torsion,3,0,35.2,forbidden,-15.3,1885114,same-group GAL
 max_isogeny_degree,13,two_adic_log_index,3,0,35.3,forbidden,-15.3,1885114,same-group GAL
-v3_moddeg,5,c6_sign,0,0,35.0,forbidden,-15.2,1889364,
+v3_moddeg,5,c6_sign,0,0,35.0,forbidden,-15.2,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
 max_isogeny_degree,15,n_additive,1,2,41.8,depleted,-15.2,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
 max_isogeny_degree,12,n_bad_primes,2,0,34.7,forbidden,-15.1,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
 max_isogeny_degree,11,c4_sign,-1,0,34.8,forbidden,-15.1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
