@@ -10,3 +10,5 @@ pre-registered candidate tests: 112 across 21 targets; controls: 22; Bonferroni 
           NEG_a997      LOC n= 1308121 D_full=+0.0000 D_sub=-0.0001 null_max=+0.0000 p=0.429 local=0.002@v5_tamagawa=2 p_loc=0.333  [must not hit] 191s
           NEG_a997       AN n= 1308121 D_full=+0.0012 D_sub=+0.0004 null_max=+0.0000 p=0.048 local=0.002@rank_c=0 p_loc=0.095  [C7 at most small] 109s
  NEG_shuffled_rank       EQ n= 1311066 D_full=-0.0000 D_sub=-0.0000 null_max=+0.0001 p=0.571 local=0.000@log_abs_disc@bin5 p_loc=0.095  [must not hit] 27s
+ NEG_shuffled_rank      LOC n= 1311066 D_full=-0.0000 D_sub=-0.0001 null_max=+0.0000 p=0.381 local=0.003@n_nonsplit_mult=5 p_loc=0.190  [must not hit] 93s
+ NEG_shuffled_rank      GAL n= 1309159 D_full=-0.0000 D_sub=-0.0000 null_max=+0.0000 p=0.667 local=0.025@torsion_structure=[2,2] p_loc=0.381  [must not hit] 50s

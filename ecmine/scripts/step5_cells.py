@@ -98,6 +98,8 @@ def known(a, b):
     MODD = MODDEG_V | {"petersson_resid"}
     LOCC = {"n_split_mult", "n_nonsplit_mult", "n_additive", "n_bad_primes", "bad_at_2", "bad_at_3"} | set(KOD)
     if "is_opt" in (a, b): return "I5/T8 (optimal vs non-optimal curves differ by the isogeny)"
+    if ({a, b} & {"c4_sign", "c6_sign"}) and ({a, b} & (MODD | TAM | SHA)): return "T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)"
+    if ({a, b} & TAM) and "petersson_resid" in (a, b): return "T4+T12 (Tamagawa tracks v_p(Delta), hence the covolume in the residual)"
     if ("frac_even" in (a, b) or "frac_zero" in (a, b)) and (a in GALX or b in GALX): return "T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)"
     if (a in AP_ and b in (RANKLIKE | SHA | {"n_intpts_x"})) or (b in AP_ and a in (RANKLIKE | SHA | {"n_intpts_x"})): return "C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
     if (a in AP_ and b in GALX) or (b in AP_ and a in GALX): return "T18/T5 (mod-l image fixes a_p mod l)"
