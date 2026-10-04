@@ -1,0 +1,50 @@
+work: optimal curves 1311066; (curve, l) pairs with some multiplicative q having l | v_q(Delta): 981235
+
+=== Non-Eisenstein, non-CM pairs: 913244
+  all                                                                    pairs  913244  V < S:     0   V < S_ko:     0
+  l >= 5, l not dividing N   (Kim-Ota range: V >= S_ko is a theorem)     pairs  281739  V < S:     0   V < S_ko:     0
+  l >= 5, l divides N                                                    pairs  175798  V < S:     0   V < S_ko:     0
+  l = 3                                                                  pairs  455707  V < S:     0   V < S_ko:     0
+  N squarefree                                                           pairs  352869  V < S:     0   V < S_ko:     0
+  N not squarefree                                                       pairs  560375  V < S:     0   V < S_ko:     0
+
+--- all non-Eisenstein non-CM violations of V >= S, by (l, every contributing prime is +-1 mod l):
+Empty DataFrame
+Columns: []
+Index: []
+
+--- violations where NOT every contributing prime is +-1 mod l (these would contradict the conjecture even in its weakest form):
+Empty DataFrame
+Columns: [label, l, V, S, S_ko, primes, N, rank, torsion, l_div_N, sqf]
+Index: []
+
+--- violations with every contributing prime +-1 mod l (first 40):
+Empty DataFrame
+Columns: [label, l, V, S, S_ko, primes, N, rank, torsion, l_div_N, sqf]
+Index: []
+
+--- among pairs with a contributing prime q = +-1 mod l: how often does V >= S still hold?
+col_0    True
+l            
+3      376962
+5       27920
+7        5033
+11        157
+13          2
+
+=== Eisenstein pairs (rational l-isogeny): 67991
+  V - S distribution:
+-2       22
+-1     2398
+ 0     9718
+ 1    17073
+ 2    17016
+ 3    12624
+ 4     9140
+col_0  -2    -1     0      1      2
+l                                  
+3      22  2188  8164  14760  37614
+5       0   192  1240   1929   1093
+7       0    18   284    384     73
+13      0     0    26      0      0
+17      0     0     4      0      0
