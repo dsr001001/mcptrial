@@ -72,3 +72,16 @@ remaining open cells that form the search space.
 `NULL_DESIGN.md` proposes the unit of analysis, the fixed splits, the nested-model test
 with conditional permutation null, the hit criterion, the pre-registered test list and
 the positive and negative controls. Step 5 does not start until it is agreed.
+
+## Step 5: cheap models (done, 2026-10-04)
+
+Two test families on the working set (N <= 300000, hold-out untouched):
+
+- regression family (`scripts/step5.py`): 112 pre-registered nested-model tests with a
+  conditional permutation null, after 22 controls (15 negative, all clean; 7 positive, 6 hits,
+  Watkins failed as a variance-explained statistic cannot see a constraint);
+- family B (`scripts/step5_cells.py`): forbidden, depleted and enriched cells for 2278 column
+  pairs inside conductor strata, added because of the failed Watkins control.
+
+Results: `results/STEP5_REPORT.md` (assembled by `scripts/step5_report.py`), with the raw
+tables in `results/step5_*.csv`. Interpretation is step 6 and has not started.

@@ -1,0 +1,137 @@
+loaded working set: 1889364 curves, 1311066 classes, 16s
+pre-registered candidate tests: 112 across 21 targets; controls: 22; Bonferroni alpha = 4.46e-04
+        NEG_rootno       EQ n=  355675 D_full=-0.0000 D_sub=-0.0000 null_max=+0.0000 p=0.905 local=0.000@log_abs_disc@bin3 p_loc=1.000  [must not hit] 17s
+        NEG_rootno      GAL n=  355675 D_full=-0.0000 D_sub=-0.0000 null_max=-0.0000 p=0.905 local=-0.001@torsion_structure=[3] p_loc=0.952  [must not hit] 25s
+        NEG_rootno      DIO n=  355675 D_full=-0.0000 D_sub=-0.0000 null_max=-0.0000 p=0.143 local=0.009@n_intpts_x@bin2 p_loc=0.095  [must not hit] 8s
+        NEG_rootno       AN n=  355675 D_full=-0.0000 D_sub=-0.0000 null_max=-0.0000 p=0.667 local=0.225@log_odd_sha@bin1 p_loc=0.667  [must not hit] 33s
+          NEG_a997       EQ n= 1308121 D_full=+0.0000 D_sub=-0.0000 null_max=+0.0000 p=0.238 local=0.000@log_j_height@bin6 p_loc=0.286  [must not hit] 30s
+          NEG_a997      GAL n= 1308121 D_full=-0.0000 D_sub=-0.0000 null_max=+0.0000 p=0.238 local=0.001@two_adic_level=16 p_loc=0.286  [must not hit] 48s
+          NEG_a997      DIO n= 1308121 D_full=+0.0003 D_sub=+0.0005 null_max=+0.0000 p=0.048 local=0.001@n_intpts_x@bin4 p_loc=0.048  [must not hit] 8s
+          NEG_a997      LOC n= 1308121 D_full=+0.0000 D_sub=-0.0001 null_max=+0.0000 p=0.429 local=0.002@v5_tamagawa=2 p_loc=0.333  [must not hit] 106s
+          NEG_a997       AN n= 1308121 D_full=+0.0012 D_sub=+0.0004 null_max=+0.0000 p=0.048 local=0.002@rank_c=0 p_loc=0.095  [C7 at most small] 85s
+ NEG_shuffled_rank       EQ n= 1311066 D_full=-0.0000 D_sub=-0.0000 null_max=+0.0001 p=0.571 local=0.000@log_abs_disc@bin5 p_loc=0.095  [must not hit] 31s
+ NEG_shuffled_rank      LOC n= 1311066 D_full=-0.0000 D_sub=-0.0001 null_max=+0.0000 p=0.381 local=0.003@n_nonsplit_mult=5 p_loc=0.190  [must not hit] 108s
+ NEG_shuffled_rank      GAL n= 1309159 D_full=-0.0000 D_sub=-0.0000 null_max=+0.0000 p=0.667 local=0.025@torsion_structure=[2,2] p_loc=0.381  [must not hit] 57s
+ NEG_shuffled_rank       AN n= 1311066 D_full=-0.0000 D_sub=-0.0001 null_max=+0.0000 p=0.429 local=0.004@v5_sha=2 p_loc=0.571  [must not hit] 80s
+ NEG_shuffled_rank       AP n= 1311066 D_full=-0.0001 D_sub=-0.0002 null_max=+0.0000 p=0.857 local=0.000@mur_mid@bin4 p_loc=0.810  [must not hit] 76s
+ NEG_shuffled_rank      DIO n= 1311066 D_full=+0.0000 D_sub=-0.0000 null_max=+0.0001 p=0.952 local=0.000@n_intpts_x@bin1 p_loc=0.952  [must not hit] 10s
+       POS_watkins v2_moddeg n= 1311066 D_full=+0.0026 D_sub=+0.0035 null_max=+0.0000 p=0.048 local=0.018@v2_moddeg@bin7 p_loc=0.048  [must hit (C1)] 11s
+     POS_lorenzini  torsion n= 1889364 D_full=+0.0317 D_sub=+0.0326 null_max=+0.0001 p=0.048 local=0.257@torsion_structure=[6] p_loc=0.048 HIT LOCAL [must local-hit at [5] (T13)] 70s
+  POS_torsion_cong frac_even n= 1311066 D_full=+0.9841 D_sub=+0.9842 null_max=+0.0000 p=0.048 local=0.998@frac_even@bin4 p_loc=0.048 HIT LOCAL [must hit (T5/T18)] 7s
+         POS_nagao    nagao n= 1311066 D_full=+0.8088 D_sub=+0.8122 null_max=+0.0001 p=0.048 local=0.997@nagao_1000@bin7 p_loc=0.048 HIT LOCAL [must hit (C7)] 11s
+            EXP_H1 disc_sign n=  734885 D_full=+0.0047 D_sub=+0.0049 null_max=+0.0000 p=0.048 local=0.005@disc_sign=-1 p_loc=0.048  [expected small (H1)] 5s
+  POS_murmur_10000   ap_raw n=   43175 D_full=+0.4302 D_sub=+0.4329 null_max=-0.0026 p=0.048 local=0.000@ p_loc=1.000 HIT [must hit (C7 murmurations)] 2s
+ POS_murmur_100000   ap_raw n=  439688 D_full=+0.0367 D_sub=+0.0351 null_max=-0.0002 p=0.048 local=0.000@ p_loc=1.000 HIT [must hit (C7 murmurations)] 42s
+              rank       EQ n= 1311066 D_full=+0.0003 D_sub=+0.0003 null_max=+0.0001 p=0.048 local=0.003@log_abs_c4@bin4 p_loc=0.048  [] 82s
+              rank      LOC n= 1311066 D_full=+0.0007 D_sub=+0.0005 null_max=+0.0001 p=0.048 local=0.028@n_kod_In=0 p_loc=0.048  [] 111s
+              rank      GAL n= 1309159 D_full=+0.0001 D_sub=+0.0001 null_max=+0.0001 p=0.143 local=0.007@max_isogeny_degree@bin3 p_loc=0.048  [U5] 93s
+              rank       AN n= 1311066 D_full=+0.0043 D_sub=+0.0031 null_max=+0.0001 p=0.048 local=0.038@petersson_resid@bin7 p_loc=0.048  [U2] 73s
+              rank       AP n= 1311066 D_full=+0.0831 D_sub=+0.0839 null_max=+0.0002 p=0.048 local=0.358@st_mean@bin7 p_loc=0.048 HIT LOCAL [known C7] 90s
+              rank      DIO n= 1311066 D_full=+0.0629 D_sub=+0.0656 null_max=+0.0003 p=0.048 local=0.266@n_intpts_x@bin2 p_loc=0.048 HIT LOCAL [known T15] 53s
+           torsion       AN n= 1889364 D_full=+0.1887 D_sub=+0.1895 null_max=+0.0002 p=0.048 local=0.625@rank_c=2 p_loc=0.048 HIT LOCAL [] 92s
+           torsion      LOC n= 1889364 D_full=+0.2187 D_sub=+0.1923 null_max=+0.0004 p=0.048 local=0.874@n_kod_Ins=3 p_loc=0.048 HIT LOCAL [known T13 for orders 5,7,9] 127s
+           torsion       EQ n= 1889364 D_full=+0.0074 D_sub=+0.0078 null_max=+0.0001 p=0.048 local=0.027@c4_sign=-1.0 p_loc=0.048  [] 53s
+           torsion      DIO n= 1889364 D_full=+0.0532 D_sub=+0.0507 null_max=+0.0001 p=0.048 local=0.226@n_intpts_x@bin1 p_loc=0.048 HIT LOCAL [known T15] 39s
+       tamagawa_v2      GAL n= 1885114 D_full=+0.0081 D_sub=+0.0080 null_max=+0.0010 p=0.048 local=0.404@two_adic_log_index=1.0 p_loc=0.048  LOCAL [U6] 133s
+       tamagawa_v2       AN n= 1889364 D_full=+0.0659 D_sub=+0.0665 null_max=+0.0028 p=0.048 local=0.477@v2_sha=4 p_loc=0.048 HIT LOCAL [partly I1] 149s
+       tamagawa_v2       EQ n= 1889364 D_full=+0.0037 D_sub=+0.0036 null_max=+0.0002 p=0.048 local=0.018@log_j_height@bin7 p_loc=0.048  [] 107s
+       tamagawa_v2       AP n= 1889364 D_full=+0.0075 D_sub=+0.0078 null_max=+0.0003 p=0.048 local=0.040@frac_even@bin2 p_loc=0.048  [] 150s
+       tamagawa_v2      DIO n= 1889364 D_full=+0.0207 D_sub=+0.0192 null_max=+0.0003 p=0.048 local=0.218@n_intpts_x@bin4 p_loc=0.048 HIT LOCAL [] 92s
+      tamagawa_odd      GAL n= 1885114 D_full=+0.0143 D_sub=+0.0149 null_max=+0.0008 p=0.048 local=0.349@class_size=6 p_loc=0.048 HIT LOCAL [U6] 127s
+      tamagawa_odd       AN n= 1889364 D_full=+0.0600 D_sub=+0.0585 null_max=+0.0010 p=0.048 local=0.473@v2_sha=4 p_loc=0.048 HIT LOCAL [partly I1] 144s
+      tamagawa_odd       EQ n= 1889364 D_full=+0.0025 D_sub=+0.0027 null_max=+0.0002 p=0.048 local=0.010@log_j_height@bin1 p_loc=0.048  [] 105s
+      tamagawa_odd       AP n= 1889364 D_full=+0.0273 D_sub=+0.0272 null_max=+0.0005 p=0.048 local=0.064@frac_even@bin1 p_loc=0.048 HIT LOCAL [] 156s
+      tamagawa_odd      DIO n= 1889364 D_full=+0.0757 D_sub=+0.0756 null_max=+0.0010 p=0.048 local=0.344@n_intpts_x@bin4 p_loc=0.048 HIT LOCAL [] 99s
+            sha_v2       EQ n= 1889364 D_full=+0.0061 D_sub=+0.0054 null_max=+0.0002 p=0.048 local=0.018@log_abs_disc@bin1 p_loc=0.048  [] 66s
+            sha_v2      LOC n= 1889364 D_full=+0.0075 D_sub=+0.0072 null_max=+0.0002 p=0.048 local=0.054@n_split_mult=4 p_loc=0.048  LOCAL [] 125s
+            sha_v2      GAL n= 1885114 D_full=+0.0171 D_sub=+0.0182 null_max=+0.0007 p=0.048 local=0.092@two_adic_log_index=5.584962500721156 p_loc=0.048 HIT LOCAL [U4] 97s
+            sha_v2       AN n= 1889364 D_full=+0.0237 D_sub=+0.0248 null_max=+0.0005 p=0.048 local=0.054@v2_moddeg@bin7 p_loc=0.048 HIT LOCAL [known T14 for 2-part] 76s
+            sha_v2       AP n= 1889364 D_full=+0.0395 D_sub=+0.0383 null_max=+0.0003 p=0.048 local=0.105@nagao_300@bin1 p_loc=0.048 HIT LOCAL [] 102s
+            sha_v2      DIO n= 1889364 D_full=+0.0170 D_sub=+0.0161 null_max=+0.0028 p=0.048 local=0.258@n_intpts_x@bin4 p_loc=0.048 HIT LOCAL [] 36s
+           sha_odd       EQ n= 1889364 D_full=+0.0025 D_sub=+0.0025 null_max=+0.0001 p=0.048 local=0.006@log_abs_disc@bin2 p_loc=0.048  [U4] 64s
+           sha_odd      LOC n= 1889364 D_full=+0.0028 D_sub=+0.0029 null_max=+0.0002 p=0.048 local=0.064@n_split_mult=4 p_loc=0.048  LOCAL [U4] 123s
+           sha_odd      GAL n= 1885114 D_full=+0.0030 D_sub=+0.0029 null_max=+0.0002 p=0.048 local=0.028@class_size=3 p_loc=0.048  [U4] 94s
+           sha_odd       AN n= 1889364 D_full=+0.0065 D_sub=+0.0068 null_max=+0.0002 p=0.048 local=0.027@log_odd_moddeg@bin1 p_loc=0.048  [known T14 (visibility)] 77s
+           sha_odd       AP n= 1889364 D_full=+0.0382 D_sub=+0.0382 null_max=+0.0005 p=0.048 local=0.113@nagao_100@bin1 p_loc=0.048 HIT LOCAL [] 105s
+           sha_odd      DIO n= 1889364 D_full=+0.0256 D_sub=+0.0256 null_max=+0.0005 p=0.048 local=0.407@n_intpts_x@bin4 p_loc=0.048 HIT LOCAL [] 44s
+         petersson       AN n= 1311066 D_full=+0.0194 D_sub=+0.0184 null_max=+0.0000 p=0.048 local=0.074@v2_sha=4 p_loc=0.048 HIT LOCAL [U2] 36s
+         petersson      LOC n= 1311066 D_full=+0.0637 D_sub=+0.0627 null_max=+0.0001 p=0.048 local=0.283@n_split_mult=5 p_loc=0.048 HIT LOCAL [] 116s
+         petersson      GAL n= 1309159 D_full=+0.0042 D_sub=+0.0036 null_max=+0.0002 p=0.048 local=0.182@class_size=3 p_loc=0.048  LOCAL [] 62s
+         petersson       EQ n= 1311066 D_full=+0.0093 D_sub=+0.0101 null_max=+0.0000 p=0.048 local=0.013@log_abs_c4@bin3 p_loc=0.048  [] 31s
+         petersson       AP n= 1311066 D_full=+0.1363 D_sub=+0.1381 null_max=+0.0001 p=0.048 local=0.232@st_m2@bin7 p_loc=0.048 HIT LOCAL [] 80s
+         petersson      DIO n= 1311066 D_full=+0.0266 D_sub=+0.0254 null_max=+0.0000 p=0.048 local=0.131@n_intpts_x@bin4 p_loc=0.048 HIT LOCAL [] 23s
+         moddeg_v2      GAL n= 1309159 D_full=+0.0038 D_sub=+0.0035 null_max=+0.0009 p=0.048 local=0.176@class_size=6 p_loc=0.048  LOCAL [] 57s
+         moddeg_v2      LOC n= 1309159 D_full=+0.0860 D_sub=+0.0856 null_max=+0.0011 p=0.048 local=0.428@n_kod_Ins=2 p_loc=0.048 HIT LOCAL [] 108s
+         moddeg_v2       AN n= 1309159 D_full=+0.0166 D_sub=+0.0166 null_max=+0.0003 p=0.048 local=0.064@v5_sha=2 p_loc=0.048 HIT LOCAL [] 66s
+         moddeg_v2       EQ n= 1309159 D_full=+0.0382 D_sub=+0.0397 null_max=+0.0002 p=0.048 local=0.115@log_abs_c4@bin1 p_loc=0.048 HIT LOCAL [] 64s
+         moddeg_v2       AP n= 1309159 D_full=+0.0033 D_sub=+0.0031 null_max=+0.0002 p=0.048 local=0.018@nagao_100@bin7 p_loc=0.048  [] 96s
+         moddeg_v2      DIO n= 1309159 D_full=+0.0059 D_sub=+0.0060 null_max=+0.0004 p=0.048 local=0.040@n_intpts_x@bin4 p_loc=0.048  [] 42s
+         moddeg_v3      GAL n= 1309159 D_full=+0.0680 D_sub=+0.0681 null_max=+0.0007 p=0.048 local=0.608@class_size=3 p_loc=0.048 HIT LOCAL [U1] 52s
+         moddeg_v3      LOC n= 1311066 D_full=+0.1908 D_sub=+0.1910 null_max=+0.0012 p=0.048 local=0.684@v3_tamagawa=4 p_loc=0.048 HIT LOCAL [U1] 101s
+         moddeg_v3       AN n= 1311066 D_full=+0.0505 D_sub=+0.0502 null_max=+0.0002 p=0.048 local=0.141@log_omega@bin7 p_loc=0.048 HIT LOCAL [] 39s
+         moddeg_v3       EQ n= 1311066 D_full=+0.1058 D_sub=+0.1029 null_max=+0.0001 p=0.048 local=0.154@log_abs_disc@bin7 p_loc=0.048 HIT LOCAL [] 40s
+         moddeg_v3       AP n= 1311066 D_full=+0.0068 D_sub=+0.0068 null_max=+0.0001 p=0.048 local=0.021@frac_zero@bin7 p_loc=0.048  [] 82s
+         moddeg_v3      DIO n= 1311066 D_full=+0.0020 D_sub=+0.0025 null_max=+0.0003 p=0.048 local=0.005@n_intpts_x@bin3 p_loc=0.048  [] 18s
+         moddeg_v5      GAL n= 1309159 D_full=+0.0191 D_sub=+0.0201 null_max=+0.0015 p=0.048 local=0.702@has_5_isog p_loc=0.048 HIT LOCAL [U1] 55s
+         moddeg_v5      LOC n= 1311066 D_full=+0.1545 D_sub=+0.1573 null_max=+0.0010 p=0.048 local=0.851@v5_tamagawa=2 p_loc=0.048 HIT LOCAL [U1] 102s
+         moddeg_v5       AN n= 1311066 D_full=+0.0377 D_sub=+0.0411 null_max=+0.0001 p=0.048 local=0.082@log_omega@bin7 p_loc=0.048 HIT LOCAL [] 37s
+         moddeg_v5       EQ n= 1311066 D_full=+0.0492 D_sub=+0.0494 null_max=+0.0001 p=0.048 local=0.121@log_abs_disc@bin7 p_loc=0.048 HIT LOCAL [] 39s
+         moddeg_v5       AP n= 1311066 D_full=+0.0016 D_sub=+0.0015 null_max=+0.0002 p=0.048 local=0.005@nagao_300@bin1 p_loc=0.048  [] 87s
+         moddeg_v5      DIO n= 1311066 D_full=+0.0009 D_sub=+0.0008 null_max=+0.0001 p=0.048 local=0.001@n_intpts_x@bin4 p_loc=0.095  [] 19s
+         moddeg_v7      GAL n= 1309159 D_full=+0.0063 D_sub=+0.0060 null_max=+0.0003 p=0.048 local=0.237@max_isogeny_degree@bin3 p_loc=0.048  LOCAL [U1] 53s
+         moddeg_v7      LOC n= 1311066 D_full=+0.1428 D_sub=+0.1439 null_max=+0.0004 p=0.048 local=0.757@v7_tamagawa=1 p_loc=0.048 HIT LOCAL [U1] 97s
+         moddeg_v7       AN n= 1311066 D_full=+0.0290 D_sub=+0.0301 null_max=+0.0002 p=0.048 local=0.060@v5_sha=2 p_loc=0.048 HIT LOCAL [] 39s
+         moddeg_v7       EQ n= 1311066 D_full=+0.0366 D_sub=+0.0370 null_max=+0.0000 p=0.048 local=0.103@log_abs_disc@bin7 p_loc=0.048 HIT LOCAL [] 39s
+         moddeg_v7       AP n= 1311066 D_full=+0.0017 D_sub=+0.0014 null_max=+0.0002 p=0.048 local=0.004@nagao_1000@bin1 p_loc=0.048  [] 90s
+         moddeg_v7      DIO n= 1311066 D_full=+0.0007 D_sub=+0.0008 null_max=+0.0001 p=0.048 local=0.003@n_intpts_x@bin4 p_loc=0.048  [] 19s
+         regulator       EQ n= 1154479 D_full=+0.0002 D_sub=+0.0002 null_max=+0.0000 p=0.048 local=0.004@c4_sign=-1.0 p_loc=0.048  [] 38s
+         regulator      LOC n= 1154479 D_full=+0.0063 D_sub=+0.0062 null_max=+0.0000 p=0.048 local=0.369@n_nonsplit_mult=5 p_loc=0.048  LOCAL [] 95s
+         regulator      GAL n= 1152073 D_full=+0.0009 D_sub=+0.0009 null_max=+0.0005 p=0.048 local=0.172@two_adic_log_index=5.584962500721156 p_loc=1.000  [] 69s
+         regulator       AN n= 1154479 D_full=+0.0004 D_sub=+0.0004 null_max=+0.0000 p=0.048 local=0.008@petersson_resid@bin7 p_loc=0.048  [] 66s
+         regulator       AP n= 1154479 D_full=+0.0502 D_sub=+0.0500 null_max=+0.0001 p=0.048 local=0.714@st_mean@bin7 p_loc=0.048 HIT LOCAL [] 86s
+         regulator      DIO n= 1154479 D_full=+0.0428 D_sub=+0.0428 null_max=+0.0000 p=0.048 local=0.470@n_intpts_x@bin3 p_loc=0.048 HIT LOCAL [known T15] 33s
+            intpts      LOC n= 1889364 D_full=+0.0138 D_sub=+0.0141 null_max=+0.0004 p=0.048 local=0.132@n_kod_II=2 p_loc=0.048 HIT LOCAL [U3] 128s
+            intpts      GAL n= 1885114 D_full=+0.0017 D_sub=+0.0017 null_max=+0.0006 p=0.048 local=0.122@two_adic_log_index=5.584962500721156 p_loc=0.190  [U3] 95s
+            intpts       AN n= 1889364 D_full=+0.0143 D_sub=+0.0142 null_max=+0.0093 p=0.048 local=0.274@v2_sha=4 p_loc=0.048 HIT LOCAL [U3] 84s
+            intpts       EQ n= 1889364 D_full=+0.0008 D_sub=+0.0008 null_max=+0.0000 p=0.048 local=0.007@c6_sign=1.0 p_loc=0.048  [U3] 49s
+            intpts       AP n= 1889364 D_full=+0.0213 D_sub=+0.0192 null_max=+0.0097 p=0.048 local=0.135@frac_zero@bin1 p_loc=0.048 HIT LOCAL [] 101s
+          two_adic       AN n= 1885114 D_full=+0.0009 D_sub=+0.0011 null_max=+0.0000 p=0.048 local=0.076@v2_sha=4 p_loc=0.048  LOCAL [] 75s
+          two_adic      LOC n= 1885114 D_full=+0.0068 D_sub=+0.0069 null_max=+0.0000 p=0.048 local=0.221@n_kod_In=0 p_loc=0.048  LOCAL [] 132s
+          two_adic       EQ n= 1885114 D_full=+0.0009 D_sub=+0.0009 null_max=+0.0000 p=0.048 local=0.016@log_abs_disc@bin1 p_loc=0.048  [] 59s
+          two_adic       AP n= 1885114 D_full=+0.0018 D_sub=+0.0019 null_max=+0.0000 p=0.048 local=0.048@frac_zero@bin1 p_loc=0.048  [] 95s
+          two_adic      DIO n= 1885114 D_full=+0.0001 D_sub=+0.0001 null_max=+0.0000 p=0.048 local=0.006@n_intpts_x@bin4 p_loc=0.048  [] 28s
+          two_adic      GAL n= 1885114 D_full=+0.0093 D_sub=+0.0096 null_max=+0.0000 p=0.048 local=0.584@has_5_isog p_loc=0.048  LOCAL [] 32s
+           nonsurj       AN n= 1885114 D_full=+0.0001 D_sub=+0.0001 null_max=+0.0001 p=0.048 local=0.019@v2_sha=4 p_loc=0.286  [] 68s
+           nonsurj      LOC n= 1885114 D_full=+0.0013 D_sub=+0.0012 null_max=+0.0001 p=0.048 local=0.429@n_additive=0 p_loc=0.048  LOCAL [] 134s
+           nonsurj       EQ n= 1885114 D_full=+0.0004 D_sub=+0.0004 null_max=+0.0000 p=0.048 local=0.018@log_abs_disc@bin7 p_loc=0.048  [] 47s
+           nonsurj       AP n= 1885114 D_full=+0.0000 D_sub=+0.0000 null_max=+0.0000 p=0.048 local=0.002@mur_mid@bin5 p_loc=0.190  [] 89s
+           nonsurj      DIO n= 1885114 D_full=+0.0000 D_sub=+0.0000 null_max=+0.0000 p=0.048 local=0.004@n_intpts_x@bin4 p_loc=0.048  [] 31s
+        class_size       AN n= 1311066 D_full=+0.0229 D_sub=+0.0208 null_max=+0.0006 p=0.048 local=0.171@v3_moddeg@bin5 p_loc=0.048 HIT LOCAL [U5] 88s
+        class_size      LOC n= 1311066 D_full=+0.0221 D_sub=+0.0213 null_max=+0.0010 p=0.048 local=0.539@n_kod_III=2 p_loc=0.048 HIT LOCAL [] 120s
+        class_size       EQ n= 1311066 D_full=+0.0043 D_sub=+0.0041 null_max=+0.0006 p=0.048 local=0.035@log_abs_disc@bin1 p_loc=0.048  [] 42s
+        class_size       AP n= 1311066 D_full=+0.0003 D_sub=+0.0003 null_max=+0.0001 p=0.048 local=0.003@mur_mid@bin1 p_loc=0.048  [] 80s
+        class_size      DIO n= 1311066 D_full=+0.0019 D_sub=+0.0019 null_max=+0.0002 p=0.048 local=0.054@n_intpts_x@bin4 p_loc=0.048  LOCAL [] 23s
+          has5isog       AN n= 1311066 D_full=+0.0296 D_sub=+0.0302 null_max=+0.0005 p=0.048 local=0.135@v5_moddeg=4 p_loc=0.048 HIT LOCAL [U5] 72s
+          has5isog      LOC n= 1311066 D_full=+0.0159 D_sub=+0.0203 null_max=+0.0074 p=0.048 local=0.322@n_split_mult=5 p_loc=0.048 HIT LOCAL [] 111s
+          has5isog       EQ n= 1311066 D_full=+0.0039 D_sub=+0.0034 null_max=+0.0001 p=0.048 local=0.007@c4_sign=-1.0 p_loc=0.048  [] 37s
+          has5isog       AP n= 1311066 D_full=+0.0003 D_sub=+0.0004 null_max=+0.0000 p=0.048 local=0.001@st_m2@bin6 p_loc=0.048  [] 64s
+          has5isog      DIO n= 1311066 D_full=+0.0005 D_sub=+0.0006 null_max=+0.0001 p=0.048 local=0.003@n_intpts_x@bin4 p_loc=0.048  [] 17s
+          has7isog       AN n= 1311066 D_full=+0.0097 D_sub=+0.0079 null_max=+0.0002 p=0.048 local=0.034@v7_moddeg=3 p_loc=0.190  [U5] 68s
+          has7isog      LOC n= 1311066 D_full=+0.0060 D_sub=+0.0083 null_max=+0.0020 p=0.048 local=0.031@n_additive=0 p_loc=0.238  [] 110s
+          has7isog       EQ n= 1311066 D_full=+0.0025 D_sub=+0.0022 null_max=+0.0002 p=0.048 local=0.003@disc_sign=-1 p_loc=0.095  [] 37s
+          has7isog       AP n= 1311066 D_full=+0.0002 D_sub=-0.0001 null_max=-0.0000 p=0.190 local=0.001@st_m2@bin6 p_loc=0.048  [] 67s
+          has7isog      DIO n= 1311066 D_full=+0.0001 D_sub=+0.0000 null_max=+0.0000 p=0.238 local=0.001@n_intpts_x@bin4 p_loc=0.048  [] 17s
+         disc_sign       AN n= 1889364 D_full=+0.0043 D_sub=+0.0047 null_max=+0.0001 p=0.048 local=0.027@log_odd_sha@bin1 p_loc=0.048  [U8; H1 for v2_sha] 106s
+         disc_sign      LOC n= 1889364 D_full=+0.0139 D_sub=+0.0137 null_max=+0.0001 p=0.048 local=0.054@n_kod_Ins=3 p_loc=0.048 HIT LOCAL [] 136s
+         disc_sign      GAL n= 1885114 D_full=+0.0057 D_sub=+0.0058 null_max=+0.0003 p=0.048 local=0.281@two_adic_log_index=1.0 p_loc=0.048  LOCAL [] 76s
+         disc_sign       AP n= 1889364 D_full=+0.0053 D_sub=+0.0050 null_max=-0.0001 p=0.048 local=0.008@frac_zero@bin1 p_loc=0.048  [] 96s
+         disc_sign      DIO n= 1889364 D_full=+0.0017 D_sub=+0.0022 null_max=+0.0001 p=0.048 local=0.009@n_intpts_x@bin4 p_loc=0.048  [U8] 25s
+        n_additive       AN n= 1889364 D_full=+0.1608 D_sub=+0.1631 null_max=+0.0001 p=0.048 local=0.393@v2_sha=4 p_loc=0.048 HIT LOCAL [U7] 106s
+        n_additive      GAL n= 1885114 D_full=+0.0119 D_sub=+0.0120 null_max=+0.0001 p=0.048 local=0.391@exceptional_image p_loc=0.048 HIT LOCAL [] 85s
+        n_additive      DIO n= 1889364 D_full=+0.0040 D_sub=+0.0040 null_max=+0.0001 p=0.048 local=0.014@n_intpts_x@bin1 p_loc=0.048  [] 28s
+        n_additive       AP n= 1889364 D_full=+0.0100 D_sub=+0.0105 null_max=+0.0001 p=0.048 local=0.077@frac_zero@bin7 p_loc=0.048 HIT LOCAL [] 99s
+        disc_resid      GAL n= 1885114 D_full=+0.0407 D_sub=+0.0407 null_max=+0.0006 p=0.048 local=0.538@has_5_isog p_loc=0.048 HIT LOCAL [] 126s
+        disc_resid       AN n= 1889364 D_full=+0.5988 D_sub=+0.5968 null_max=+0.0023 p=0.048 local=0.937@v7_moddeg=3 p_loc=0.048 HIT LOCAL [C8 for regulator] 122s
+        disc_resid      DIO n= 1889364 D_full=+0.0292 D_sub=+0.0294 null_max=+0.0003 p=0.048 local=0.090@n_intpts_x@bin4 p_loc=0.048 HIT LOCAL [known T15] 79s
+        disc_resid       AP n= 1889364 D_full=+0.0087 D_sub=+0.0086 null_max=+0.0001 p=0.048 local=0.026@mur_lo@bin1 p_loc=0.048  [] 140s
+done in 9586s
