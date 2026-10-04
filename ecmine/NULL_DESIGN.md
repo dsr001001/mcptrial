@@ -139,3 +139,33 @@ no sampling of rows is needed.
    The negative controls decide whether this is fine enough.
 7. Working set: N <= 300000 gives 1,311,066 classes and 1,869,000 or so curves; the
    hold-out (300000, 400000] has 429,936 classes.
+
+## 10. Amendment after the positive controls (2026-10-04): a second test family
+
+The regression family's Watkins control failed: predicting rank from the 2-adic valuation of
+the modular degree gains only 0.0026 in R^2, because only 0.04% of optimal curves have
+valuation 0 and 0.3% have valuation 1. The constraint 2^rank | moddeg binds on a sliver of
+rows and explains no variance. Lorenzini's theorem has the same shape: one row in the
+forbidden cell against hundreds expected. The design rule in section 6 (a failed positive
+control means the pipeline is revised) therefore adds a family:
+
+**Family B, forbidden and enriched cells** (`scripts/step5_cells.py`). For every pair of
+discrete or quantile-binned columns, the contingency table is compared with conditional
+independence inside conductor strata of width 0.5 in log N. A cell is flagged when its
+expected count is at least 30 and the observed count is at most a tenth of it (forbidden
+when zero), or when the expected count is at least 5 and the observed count is at least 30
+and at least ten times the expected. Significance is the Poisson tail; with these
+thresholds every flagged cell is far beyond any Bonferroni correction (log10 p below -13 for
+the weakest), so the family has no multiplicity problem, only an interpretation problem:
+a forbidden cell may be forced by a third column. Class-level pairs are evaluated on one
+curve per class.
+
+Annotation: each flagged pair is matched against the exclusion list and against family
+rules (torsion or isogeny structure constrains local data; Eisenstein congruences; the
+mod-2 image fixes the parity of traces; valuations of the modular degree track its size;
+Sha and Tamagawa enter BSD as a product; the Petersson residual carries the index of
+Gamma_0(N)). Pairs that match no rule are the family B candidates for step 6.
+
+The regression family keeps its role for mean-shift effects; its positive controls are now
+the Nagao sum, the trace-parity fraction and the murmuration window, and Watkins and
+Lorenzini become positive controls of family B.
