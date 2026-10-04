@@ -54,8 +54,21 @@ curve. Rank counts: 1,170,876 / 1,535,669 / 348,672 / 9,487 / 1 for ranks 0 to 4
 
 Both parquet files are build products and not committed.
 
-## Not started
+## Scope of the first search
 
-Step 3 (list of known theorems and conjectures per column pair, the exclusion list) and
-step 4 (the null and the multiple-comparison budget) are deliberately not started; they are
-the judgement-heavy steps and need discussion first.
+Agreed on 2026-10-04: conductor N <= 400000 only, where every column is determined
+(1,741,002 classes, 2,483,649 curves). Classes with N in (300000, 400000] are reserved as
+the step 8 hold-out. `scripts/load.py` applies both restrictions by default.
+
+## Step 3: exclusion list
+
+`KNOWN_RELATIONS.md` lists every identity, theorem, conjecture and heuristic known to
+relate pairs of columns, with each exact relation verified on the table by
+`scripts/verify_known.py` (all verified with zero violations), the pair matrix, and the
+remaining open cells that form the search space.
+
+## Step 4: null design (draft, not yet agreed)
+
+`NULL_DESIGN.md` proposes the unit of analysis, the fixed splits, the nested-model test
+with conditional permutation null, the hit criterion, the pre-registered test list and
+the positive and negative controls. Step 5 does not start until it is agreed.
