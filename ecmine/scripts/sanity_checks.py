@@ -17,7 +17,7 @@ print("tamagawa product mismatches:", (prod != df["tamagawa"]).sum())
 print("reduction-type count mismatches:", ((df["n_split_mult"] + df["n_nonsplit_mult"] + df["n_additive"]) != df["n_bad_primes"]).sum())
 # 5. exactly one optimal curve per class; class sizes agree with row counts
 per = df.groupby("class_label").agg(n=("label","size"), opt=("optimal","sum"), cs=("class_size","first"))
-print("classes with optimal count != 1:", (per["opt"] != 1).sum(), " class_size mismatches:", (per["n"] != per["cs"]).sum())
+g = df.groupby("class_label").agg(allknown=("optimal_known","all"), s=("optimal","sum")); print("classes with known optimality and optimal count != 1:", (g[g.allknown].s != 1).sum(), " class_size mismatches:", (per["n"] != per["cs"]).sum())
 # 6. Hasse bound on a_p
 P = [int(c[1:]) for c in ap.columns if c.startswith("a") and c[1:].isdigit()]
 viol = sum(int((ap[f"a{p}"].abs() > 2 * np.sqrt(p)).sum()) for p in P)

@@ -39,7 +39,18 @@ primes, and a_p for the 168 primes below 1000 (one row per isogeny class).
 
 - `data/curves.parquet`: one row per curve, with class-level columns joined in
 - `data/ap.parquet`: one row per isogeny class, 168 int16 a_p columns plus rank, root number,
-  torsion, Sha, log conductor and class size
+  torsion, Sha, log conductor, class size and CM flag
+
+Notes found while building:
+
+- The 2adic table marks CM curves with an infinite index; that is the source of `is_cm` (5,892 curves).
+- For conductor above 400000 the opt_man optimality flag is undetermined for 64,249 classes;
+  `optimal` is masked to NA there and `optimal_known` records it.
+
+`scripts/sanity_checks.py` passes on the full table: no parity violations, the BSD identity
+holds to 1e-5, Tamagawa products and reduction-type counts agree, Hasse bound holds for all
+a_p, every analytic Sha is a square, every class with known optimality has exactly one optimal
+curve. Rank counts: 1,170,876 / 1,535,669 / 348,672 / 9,487 / 1 for ranks 0 to 4.
 
 Both parquet files are build products and not committed.
 

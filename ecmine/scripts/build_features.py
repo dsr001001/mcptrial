@@ -104,6 +104,9 @@ df = cur.merge(tg, on="label", how="left").merge(bsd, on="label", how="left") \
         .merge(isog, on=["N", "iso"], how="left")
 df["class_label"] = df["N"].astype(str) + df["iso"]
 df["log_conductor"] = np.log(df["N"].astype(float))
+# opt_man flag: 1 optimal, 0 not optimal, >1 undetermined (only for N > 400000). Mask the undetermined ones.
+df["optimal_known"] = df["optimal"] <= 1
+df.loc[~df["optimal_known"], "optimal"] = np.nan
 # The 2adic table records an infinite index/level for CM curves: use that as the CM flag.
 df["is_cm"] = np.isinf(df["two_adic_index"].astype(float))
 df.loc[df["is_cm"], ["two_adic_index", "two_adic_level"]] = np.nan
@@ -116,17 +119,18 @@ missing = df.isna().sum(); print(missing[missing > 0].to_string(), file=sys.stde
 df.to_parquet("data/curves.parquet", index=False)
 print("curves.parquet", df.shape, file=sys.stderr)
 
-# a_p per class
+# a_p per class (numpy per file: a Python list of 2.2M tuples does not fit in memory)
 P = [p for p in range(2, 1000) if all(p % q for q in range(2, int(p ** 0.5) + 1))]
 assert len(P) == 168
-rows = []
+keys, blocks = [], []
 for f in (sorted(glob.glob(f"{PARI}/ap.*.tsv"))[:LIMIT] if LIMIT else sorted(glob.glob(f"{PARI}/ap.*.tsv"))):
     with open(f) as fh:
-        for line in fh:
-            N, iso, ap = line.rstrip("\n").split("\t")
-            rows.append((int(N), iso, *[int(x) for x in ap.strip("[]").split(",")]))
-ap = pd.DataFrame(rows, columns=["N", "iso", *[f"a{p}" for p in P]])
-for p in P: ap[f"a{p}"] = ap[f"a{p}"].astype("int16")
+        lines = [l.rstrip("\n").split("\t") for l in fh]
+    keys += [(int(a), b) for a, b, _ in lines]
+    blocks.append(np.array([c.strip("[]").split(",") for _, _, c in lines], dtype=np.int16))
+ap = pd.DataFrame(np.concatenate(blocks), columns=[f"a{p}" for p in P])
+k = pd.DataFrame(keys, columns=["N", "iso"])
+ap = pd.concat([k, ap], axis=1)
 ap["class_label"] = ap["N"].astype(str) + ap["iso"]
 cls = df[df["num"] == 1][["class_label", "rank", "root_number", "torsion", "sha_an", "log_conductor", "class_size", "is_cm"]]
 ap = ap.merge(cls, on="class_label", how="left")
