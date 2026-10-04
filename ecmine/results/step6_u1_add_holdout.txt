@@ -1,0 +1,233 @@
+
+################################ l = 3  (holdout) ################################
+curves: 409577; with some IV/IV* prime: 68189
+
+--- X = V - S against IV_c3 (all curves having such a prime): rows X (clipped), cols count
+IV_c3     1    2  3
+X                  
+1      9084    0  0
+2      8533  244  0
+3      5023  187  2
+4      2585  102  1
+5      1289   53  0
+/home/user/mcptrial/ecmine/scripts/step6_u1_add.py:48: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  iso = d[(d[col] > 0) & (d[["IV_c3", "IV_c1", "IV_q3"]].sum(1) == d[col]) & (d.S == 0)]
+    isolated (only this kind of IV/IV* prime, S = 0): rows V, cols count
+IV_c3     1    2  3
+V                  
+1      5697    0  0
+2      5298  184  0
+3      3065  154  2
+4      1521   62  1
+5       782   39  0
+
+--- X = V - S against IV_c1 (all curves having such a prime): rows X (clipped), cols count
+IV_c1     1    2  3
+X                  
+1      8965    0  0
+2      8212  266  0
+3      5046  218  3
+4      2539  102  3
+5      1314   54  0
+/home/user/mcptrial/ecmine/scripts/step6_u1_add.py:48: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  iso = d[(d[col] > 0) & (d[["IV_c3", "IV_c1", "IV_q3"]].sum(1) == d[col]) & (d.S == 0)]
+    isolated (only this kind of IV/IV* prime, S = 0): rows V, cols count
+IV_c1     1    2  3
+V                  
+1      5638    0  0
+2      5018  186  0
+3      3117  151  2
+4      1451   74  3
+5       794   42  0
+
+--- X = V - S against IV_q3 (all curves having such a prime): rows X (clipped), cols count
+IV_q3     1
+X          
+1      1942
+2      5115
+3      5556
+4      3411
+5      1831
+/home/user/mcptrial/ecmine/scripts/step6_u1_add.py:48: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  iso = d[(d[col] > 0) & (d[["IV_c3", "IV_c1", "IV_q3"]].sum(1) == d[col]) & (d.S == 0)]
+    isolated (only this kind of IV/IV* prime, S = 0): rows V, cols count
+IV_q3     1
+V          
+1      1236
+2      3162
+3      3347
+4      2070
+5      1106
+
+--- X = V - S against IV_c3_q1 (all curves having such a prime): rows X (clipped), cols count
+IV_c3_q1     1  2
+X                
+1         1372  0
+2         1529  3
+3          904  3
+4          481  1
+5          213  0
+/home/user/mcptrial/ecmine/scripts/step6_u1_add.py:48: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  iso = d[(d[col] > 0) & (d[["IV_c3", "IV_c1", "IV_q3"]].sum(1) == d[col]) & (d.S == 0)]
+    isolated (only this kind of IV/IV* prime, S = 0): rows V, cols count
+IV_c3_q1    1  2
+V               
+1         815  0
+2         861  3
+3         492  2
+4         244  0
+5         122  0
+
+--- X = V - S against IV_c3_q2 (all curves having such a prime): rows X (clipped), cols count
+IV_c3_q2     1    2
+X                  
+1         7712    0
+2         7240  123
+3         4285  104
+4         2203   53
+5         1130   26
+/home/user/mcptrial/ecmine/scripts/step6_u1_add.py:48: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  iso = d[(d[col] > 0) & (d[["IV_c3", "IV_c1", "IV_q3"]].sum(1) == d[col]) & (d.S == 0)]
+    isolated (only this kind of IV/IV* prime, S = 0): rows V, cols count
+IV_c3_q2     1   2
+V                 
+1         4882   0
+2         4437  93
+3         2573  84
+4         1277  33
+5          660  16
+
+--- X = V - S against IV_c1_q1 (all curves having such a prime): rows X (clipped), cols count
+IV_c1_q1     1  2
+X                
+1         1398  0
+2         1438  8
+3          943  6
+4          469  2
+5          183  0
+/home/user/mcptrial/ecmine/scripts/step6_u1_add.py:48: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  iso = d[(d[col] > 0) & (d[["IV_c3", "IV_c1", "IV_q3"]].sum(1) == d[col]) & (d.S == 0)]
+    isolated (only this kind of IV/IV* prime, S = 0): rows V, cols count
+IV_c1_q1    1  2
+V               
+1         823  0
+2         765  6
+3         483  4
+4         236  1
+5         104  0
+
+--- X = V - S against IV_c1_q2 (all curves having such a prime): rows X (clipped), cols count
+IV_c1_q2     1    2
+X                  
+1         7567    0
+2         6990  150
+3         4304  116
+4         2175   52
+5         1185   27
+/home/user/mcptrial/ecmine/scripts/step6_u1_add.py:48: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  iso = d[(d[col] > 0) & (d[["IV_c3", "IV_c1", "IV_q3"]].sum(1) == d[col]) & (d.S == 0)]
+    isolated (only this kind of IV/IV* prime, S = 0): rows V, cols count
+IV_c1_q2     1    2
+V                  
+1         4815    0
+2         4253  109
+3         2634   78
+4         1215   39
+5          690   24
+
+--- controls: curves whose additive primes are all of one other type and S = 0: distribution of V
+    II: n=38807, V distribution {0: 4339, 1: 11163, 2: 11279, 3: 6816, 4: 5210}
+    III: n=43154, V distribution {0: 12058, 1: 14172, 2: 9524, 3: 4656, 4: 2744}
+    I0s: n=32026, V distribution {0: 5444, 1: 9186, 2: 8068, 3: 5496, 4: 3832}
+    Ins: n=86831, V distribution {0: 14168, 1: 26828, 2: 23622, 3: 13604, 4: 8609}
+
+=== conjecture  v_3(deg) >= S + #(IV or IV* with c_q = 3, q != 3):  violations 0 of 409577
+=== stronger   v_3(deg) >= S + #(all IV or IV*):                      violations 0 of 409577
+
+################################ l = 2  (holdout) ################################
+curves (no 2-isogeny, no CM): 325510
+
+--- X = V - S against III: rows X (clipped), cols count
+III      1     2   3
+X                   
+3       60     0   0
+4      567     0   0
+5     2713     0   0
+6    42160  2622  40
+
+--- X = V - S against III_ceven: rows X (clipped), cols count
+III_ceven      1     2   3
+X                         
+3             60     0   0
+4            567     0   0
+5           2713     0   0
+6          42160  2622  40
+
+--- X = V - S against I0s: rows X (clipped), cols count
+I0s      1     2   3
+X                   
+1       11     0   0
+2      134     1   0
+3      781    14   0
+4     1883    36   0
+5     3145   103   0
+6    35043  1822  33
+
+--- X = V - S against I0s_ceven: rows X (clipped), cols count
+I0s_ceven      1    2  3
+X                       
+3             16    0  0
+4            198    0  0
+5            748    0  0
+6          19551  371  1
+
+--- X = V - S against Ins: rows X (clipped), cols count
+Ins      1      2    3  4
+X                        
+3       10      0    0  0
+4      184      0    0  0
+5     1277      0    0  0
+6    94739  11658  266  3
+
+--- X = V - S against Ins_ceven: rows X (clipped), cols count
+Ins_ceven      1      2    3  4
+X                              
+3             10      0    0  0
+4            184      0    0  0
+5           1277      0    0  0
+6          94739  11658  266  3
+
+--- X = V - S against II: rows X (clipped), cols count
+II      1     2    3
+X                   
+1      34     0    0
+2     362    11    0
+3    1730    55    2
+4    4353   204    3
+5    7002   438    9
+6   46553  3770  100
+
+--- X = V - S against IV: rows X (clipped), cols count
+IV      1     2   3
+X                  
+1     124     0   0
+2     821    44   1
+3    3042   255   6
+4    6595   642  21
+5    9279   975  21
+6   43256  3226  81
+
+--- multiplicative part alone: rows V, cols S (curves with no additive primes)
+/home/user/mcptrial/ecmine/scripts/step6_u1_add.py:76: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  sub = d[d[["III", "I0s", "Ins", "II", "IV"]].sum(1) == 0]
+S     0     1     2     3     4     5
+V                                    
+0    79     0     0     0     0     0
+1   480     0     0     0     0     0
+2  1751   127     0     0     0     0
+3  3692   853    49     0     0     0
+4  4992  2626   390    18     0     0
+5  4583  5168  1519   159     5     0
+6  3093  5956  3405   695    45     0
+7  1828  4510  4496  1866   339    20
+8  1833  5733  8037  7514  4658  3022

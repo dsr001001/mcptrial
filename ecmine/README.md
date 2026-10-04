@@ -85,3 +85,13 @@ Two test families on the working set (N <= 300000, hold-out untouched):
 
 Results: `results/STEP5_REPORT.md` (assembled by `scripts/step5_report.py`), with the raw
 tables in `results/step5_*.csv`. Interpretation is step 6 and has not started.
+
+## Step 6 to 9 on candidate U1 (done, 2026-10-04)
+
+`STEP6_U1_REPORT.md`: the l-adic valuation of the modular degree of the optimal curve is at least the
+sum over bad primes of the l-adic valuation of the order of the geometric component group, for every
+odd l with E[l] irreducible (Conjecture 1; the multiplicative part at l >= 5 is a theorem of Kim and
+Ota with Agashe, Ribet and Stein; the Kodaira type IV and IV* contribution at l = 3 is new), with a
+"twisted" supplement (Conjecture 2) and a bound on the Eisenstein deficit (Conjecture 3). All three
+hold with zero exceptions on the working set and on the hold-out; the degree column was recomputed
+independently with PARI on fifteen examples.
