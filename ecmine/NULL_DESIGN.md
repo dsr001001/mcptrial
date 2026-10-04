@@ -117,3 +117,25 @@ no sampling of rows is needed.
    torsion is itself a candidate signal (U4, U6).
 3. The effect-size threshold of 0.01. It is a judgement call; it is meant to be the level
    at which a pattern would be visible in a plot in step 6.
+
+## 9. Agreed choices and amendments (2026-10-04, before any test was run)
+
+1. The a_p block enters the candidate tests as summary statistics only: Mestre-Nagao sums
+   at 100, 300 and 1000, the fraction of even traces, the fraction of zero traces, the mean
+   and second moment of a_p / sqrt p, and the mean of a_p / sqrt p in three prime bins.
+   The raw 168-column block is used only in the murmuration positive control.
+2. Curve-level targets use all curves with folds assigned by class.
+3. The effect-size threshold stays at 0.01.
+4. Amendment on the statistic for categorical targets: the permutation null needs 200
+   refits per test, which logistic regression on 1.3M rows makes too slow. The primary
+   statistic for a categorical target is therefore the gain in R^2 of the regression of
+   each class indicator (a Brier-score gain), with the same 0.01 threshold, taken as the
+   maximum over classes. Log-loss gain is reported from the tree model as a secondary
+   check.
+5. Continuous candidate features enter the linear model as the feature plus 8
+   quantile-bin indicators, so that non-monotone effects are detectable without trees.
+6. Permutation strata: log_conductor in bins of width 0.25 crossed with the categorical
+   members of K(Y); the continuous members of K(Y) are handled by residualisation only.
+   The negative controls decide whether this is fine enough.
+7. Working set: N <= 300000 gives 1,311,066 classes and 1,869,000 or so curves; the
+   hold-out (300000, 400000] has 429,936 classes.
