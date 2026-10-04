@@ -1,3 +1,4 @@
 data/raw/
+data/pari/
 data/*.parquet
 __pycache__/
