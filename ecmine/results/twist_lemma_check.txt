@@ -1,0 +1,25 @@
+# gp -q -s 200M < scripts/twist_lemma_check.gp, PARI 2.15.4; key = type at q of E -> type at q of the twist, f = conductor exponents
+q=3 I0*->I0 f=2->0   3
+q=3 I1->I1* f=1->2   223
+q=3 I2->I2* f=1->2   69
+q=3 I3->I3* f=1->2   21
+q=3 I4->I4* f=1->2   8
+q=3 I5->I5* f=1->2   6
+q=3 I6->I6* f=1->2   1
+q=3 I9->I9* f=1->2   1
+q=3 II->IV* f=3->3   59
+q=3 II->IV* f=4->4   25
+q=3 II->IV* f=5->5   15
+q=3 III->III* f=2->2   32
+q=3 IV*->II f=3->3   2
+q=3 IV->II* f=3->3   6
+q=3 IV->II* f=4->4   4
+q>=5 I1->I1* f=1->2   3851
+q>=5 I2->I2* f=1->2   100
+q>=5 I3->I3* f=1->2   10
+q>=5 I4->I4* f=1->2   2
+q>=5 I5->I5* f=1->2   1
+q>=5 II->IV* f=2->2   117
+q>=5 III->III* f=2->2   17
+q>=5 IV->II* f=2->2   4
+tested (curve, odd q) pairs: 4577   mismatches away from q: 0

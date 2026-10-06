@@ -156,5 +156,8 @@ by 3) and is not CM. For a prime l >= 5 replace the type IV term by nothing and 
     Placeholders in double brackets (author, acknowledgement, two reference checks, the exact form of the level-lowering statement) are for you.
 11. Outreach texts: `paper/outreach.md`.
 
+Also: `scripts/twist_lemma_check.gp` (output `results/twist_lemma_check.txt`) checks Lemma 2.4 of the note (what a quadratic twist by q*
+does to the Kodaira types) on random curves; the three worked examples of the note (121a1, 539c1, 980i1) can be rechecked with `ellap`.
+
 The consolidated checker is `scripts/conj_check.py`; its summary columns are `viol_conj1` (Conjecture 1.1 of the note), `viol_conj2`
 (Conjecture 1.3, the twist-symmetrised bound, every odd l) and `viol_conj3` (Conjecture 1.5, Eisenstein deficit against the bound of 1.1).
