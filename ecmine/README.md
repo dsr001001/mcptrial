@@ -95,3 +95,32 @@ Ota with Agashe, Ribet and Stein; the Kodaira type IV and IV* contribution at l 
 "twisted" supplement (Conjecture 2) and a bound on the Eisenstein deficit (Conjecture 3). All three
 hold with zero exceptions on the working set and on the hold-out; the degree column was recomputed
 independently with PARI on fifteen examples.
+
+## Verify one curve yourself
+
+PARI/GP (any version from 2.13; the modular degree takes seconds for conductors up to a few million):
+
+```
+E = ellinit([0,0,0,-99,360]);  \\ any curve; use the optimal curve of its class for the sharp statement
+N = ellglobalred(E)[1]; L = ellglobalred(E)[5];      \\ L[i] = [f_q, Kodaira code, [u,r,s,t], c_q], primes increasing
+d = ellmoddegree(E);
+\\ Conjecture 1 at l = 3: v_3(d) >= sum over multiplicative q of v_3(v_q(Delta)) + #{q : type IV or IV*}
+\\ PARI codes: n+4 = I_n, 4 = IV, -4 = IV*
+b = sum(i=1,#L, my(k=L[i][2]); if(k>=5, valuation(k-4,3), if(k==4||k==-4, 1, 0)));
+print([N, d, valuation(d,3), b, valuation(d,3) >= b])
+```
+
+Sage:
+
+```
+E = EllipticCurve([0,0,0,-99,360]).optimal_curve()
+d = E.modular_degree(); b = 0
+for ld in E.local_data():
+    k = ld.kodaira_symbol(); s = str(k)
+    if s.startswith('I') and not s.startswith('I0') and not s.endswith('*'): b += ZZ(int(s[1:])).valuation(3)
+    if s in ('IV', 'IV*'): b += 1
+print(E.conductor(), d, d.valuation(3), b, d.valuation(3) >= b)
+```
+
+Both statements assume E has no rational 3-isogeny (`E.isogeny_class()` has a single curve, or no degree divisible
+by 3) and is not CM. For a prime l >= 5 replace the type IV term by nothing and the valuation by v_l.

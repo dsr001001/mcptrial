@@ -1,0 +1,93 @@
+=== work: equality cases, non-Eisenstein non-CM curves
+
+--- l = 3: curves with a positive bound: 617711; excess = V - bound distribution:
+excess
+0    225670
+1    207562
+2    115596
+3     47532
+4     15929
+5      4289
+6      1133
+    exact (excess 0): 0.365
+    P(excess = 0) by log10 N (half-decades):
+logNbin
+1.5    1.000
+2.0    0.807
+2.5    0.750
+3.0    0.589
+3.5    0.504
+4.0    0.437
+4.5    0.383
+5.0    0.347
+
+--- l = 5: curves with a positive bound: 235510; excess = V - bound distribution:
+excess
+0    164207
+1     57000
+2     12310
+3      1808
+4       173
+5        11
+6         1
+    exact (excess 0): 0.697
+    P(excess = 0) by log10 N (half-decades):
+logNbin
+1.5    1.000
+2.0    1.000
+2.5    0.956
+3.0    0.873
+3.5    0.783
+4.0    0.747
+4.5    0.709
+5.0    0.684
+
+--- l = 7: curves with a positive bound: 121947; excess = V - bound distribution:
+excess
+0    97994
+1    20999
+2     2738
+3      208
+4        8
+    exact (excess 0): 0.804
+    P(excess = 0) by log10 N (half-decades):
+logNbin
+2.0    1.000
+2.5    0.941
+3.0    0.917
+3.5    0.868
+4.0    0.827
+4.5    0.812
+5.0    0.796
+
+=== odd part of deg phi versus the conjectured product P = prod l^bound (curves with no odd-degree isogeny, not CM): 1226216 curves
+    odd part equals P exactly: 0.014   ratio R = oddpart/P distribution (top 12):
+9      39878
+3      35690
+15     34514
+45     31545
+27     28279
+21     23862
+63     19520
+5      19086
+135    18219
+1      17762
+33     16099
+105    14877
+    among R > 1: smallest prime factor of R divides N in 0.534 of cases; smallest prime factor distribution:
+3     807410
+5     126642
+7      57579
+11     26475
+13     19649
+17     13730
+19     10830
+23      8678
+    P(R = 1) by number of bad primes among 2,3,5,7,11,13 (proxy):
+0    0.002
+1    0.007
+2    0.011
+3    0.017
+4    0.024
+5    0.030
+6    0.051
