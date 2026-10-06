@@ -1,0 +1,12 @@
+[0;31m  ***   Warning: new maximum stack size = 3000000512 (2861.023 Mbytes).[0m
+[0;31m  *** ellmoddegree: Warning: increasing stack size to 2000000000.[0m
+[0;31m[0;31m  ***   at top-level: ...[0;35ms/oot_2.tsv";budget=5400;[0;35mread("scripts/out_of_
+[0;31m[0;31m  ***                                             ^---------------------
+[0;31m  ***   in function read: ...[0;35m)+q^3*nz(3)],"IVmixed")),[0;35mreport([random(2),ran
+[0;31m[0;31m  ***                                                 ^---------------------
+[0;31m  ***   in function report: ...[0;35m[i][4]);t=getabstime();d=[0;35mellmoddegree(E);t=(ge
+[0;31m[0;31m  ***                                                   ^---------------------
+  *** ellmoddegree: the thread stack overflows !
+  current stack size: 1000000000 (953.674 Mbytes)
+  [hint] set 'threadsizemax' to a nonzero value in your GPRC
+[0m

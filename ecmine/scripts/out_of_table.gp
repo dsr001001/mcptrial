@@ -2,7 +2,10 @@
 \\ trivial isogeny class (so the curve is optimal and E[l] is irreducible for every l), not CM, and computes the
 \\ modular degree independently with ellmoddegree. One TSV line per curve:
 \\   ainvs  N  kodaira_codes  tamagawa_list  moddeg  family  seconds
-\\ Usage: echo 'seed=1; mode=1; NLO=500000; NHI=4000000; out="results/oot_1.tsv"; budget=10800; read("scripts/out_of_table.gp")' | gp -q -s 1G
+\\ Usage: echo 'seed=1; mode=1; NLO=500000; NHI=4000000; out="results/oot_1.tsv"; budget=10800; read("scripts/out_of_table.gp")' | gp -q -s 1G -D parisizemax=3000000000
+\\ For mode 2 (random curves, large conductors) the thread stack of ellmoddegree must be enlarged at startup, e.g.
+\\   gp -q -s 1G -D parisizemax=2500000000 -D threadsizemax=1500000000 -D nbthreads=2   (setting it inside the script is too late;
+\\   results/oot_2c.log and oot_2d.log show the overflow). The logs results/oot_*.log are those of the runs behind results/oot_*.tsv.
 \\ mode 1: families IV, IV*, pairs and triples of type II, pairs of I_n* with 3 | n (by twisting);  mode 2: random curves.
 setrand(seed); t0 = getabstime();
 CMJ = [0, 1728, -3375, 8000, -32768, 54000, 287496, -884736, -12288000, 16581375, -884736000, -147197952000, -262537412640768000];
