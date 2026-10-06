@@ -1,5 +1,7 @@
 # Step 6 result: l-adic valuations of the modular degree and local component groups
 
+Superseded in part by the note `paper/note.tex` (compiled: `paper/note.pdf`), which contains the final statements, the proof of the qualitative type IV theorem, the extension to conductor 500000, the out-of-table checks and the corrected references. This file is kept as the working record.
+
 Candidate U1 from step 5 ("the l-adic valuation of the modular degree against the l-adic valuation
 of the Tamagawa product") was taken through steps 6, 8 and 9: the known mechanism was identified
 in the literature, the quantity was corrected from the Tamagawa number to the geometric component
@@ -83,7 +85,7 @@ numbers, so this is recorded as an observation only.
   Tamagawa exponent at all: the mod 3 representation is ramified at such a prime, so no theorem of
   the level-lowering-exponent type applies to it.
 - **Conjectures 2 and 3** have no counterpart in the literature I found. The closest statements are
-  Watkins's and Caro-Pasten's results at l = 2 ("number of nonsplit primes minus one"), which have the
+  Watkins's conjecture and the Dummigan (J. Théor. Nombres Bordeaux 18, 2006) and Caro-Pasten (Proc. AMS 150, 2022) results at l = 2 ("number of nonsplit primes minus one"), which have the
   same "minus one" shape as Conjecture 2.
 - **Checked against:** Jeon and Kwon (arXiv 2608.06054, 2026) on degree divisibility between levels
   (different question); Papikian and Rabinoff (arXiv 1212.3574) on non-surjectivity of component

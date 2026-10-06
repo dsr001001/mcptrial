@@ -18,7 +18,9 @@ def v3(x):
     return v
 ne = opt[(opt.max_isogeny_degree.astype("int64") % 3 != 0) & (~opt.is_cm.astype(bool))]
 t = loc[loc.label.isin(ne.index)]
-byl = {lab: grp for lab, grp in t.groupby("label")}   # one pass instead of a scan per curve
+hasII = set(t[t.type.isin(["II", "II*"])].label)          # only curves with a type II or II* prime are needed
+t = t[t.label.isin(hasII)]
+byl = {lab: grp for lab, grp in t.groupby("label")}
 g = t.groupby("label")
 prof = pd.DataFrame({"nII": g.type.apply(lambda s: int(s.isin(["II", "II*"]).sum())), "nIV": g.type.apply(lambda s: int(s.isin(["IV", "IV*"]).sum())),
                      "S": g.apply(lambda x: int(sum(v3(n) for n, m in zip(x.n, x.mult) if m)), include_groups=False),
