@@ -1,0 +1,66 @@
+holdout: optimal curves 429936
+
+######## l = 3: curves 409577; with ii_odd>0: 40502, ii_2>0: 28176, ins_odd>0: 21314, ins_2>0: 17499
+   R_odd: base + ii_odd + ins_odd                   violations       0
+   R_odd + ii_2                                     violations    8719
+   R_odd + ins_2                                    violations    4500
+   old Conjecture 2 (all but largest, any q)        violations    4012
+   min Y by (ii_odd, ins_odd) for curves with no twisted prime at 2:
+                min    size
+ii_odd ins_odd             
+0      0          0  309828
+       1          1   16096
+       2          2    2049
+       3          3      73
+1      0          1   33574
+       1          2     866
+       2          3     132
+       3          4       1
+2      0          2    1255
+       1          3      13
+       2          4       4
+3      0          3      11
+   min Y - (ii_odd + ins_odd) by (ii_2, ins_2) (contribution of the prime 2 beyond the odd rule):
+            min    size
+ii_2 ins_2             
+0    0        0  363902
+     1        0   13974
+     2        1    3285
+     3        1     240
+1    0        0   28176
+   isolated: single odd II/II* prime, nothing else: V distribution {1: 5626, 2: 6167, 3: 3692, 4: 2979}
+   isolated: single II/II* prime at 2, nothing else: V distribution {0: 4339, 1: 4624, 2: 3193, 3: 1411, 4: 791}
+   isolated: single odd In* prime with 3|n, nothing else: V distribution {(1, 1): 2395.0, (1, 2): 3526.0, (1, 3): 2335.0, (1, 4): 1473.0, (2, 1): nan, (2, 2): 371.0, (2, 3): 418.0, (2, 4): 403.0, (3, 1): nan, (3, 2): nan, (3, 3): 9.0, (3, 4): 43.0, (4, 1): nan, (4, 2): nan, (4, 3): nan, (4, 4): 2.0}
+   isolated: single In* prime at 2 with 3|n, nothing else: V distribution {(1, 0): 1298.0, (1, 1): 2753.0, (1, 2): 1843.0, (1, 3): 804.0, (1, 4): 332.0, (2, 0): nan, (2, 1): 777.0, (2, 2): 571.0, (2, 3): 259.0, (2, 4): 117.0, (3, 0): nan, (3, 1): 38.0, (3, 2): 36.0, (3, 3): 15.0, (3, 4): 5.0}
+
+######## l = 5: curves 428251; with ii_odd>0: 0, ii_2>0: 0, ins_odd>0: 11147, ins_2>0: 9371
+   R_odd: base + ii_odd + ins_odd                   violations       0
+   R_odd + ii_2                                     violations       0
+   R_odd + ins_2                                    violations    6648
+   old Conjecture 2 (all but largest, any q)        violations    6648
+   isolated: single odd In* prime with l|n and no multiplicative l-contribution: V distribution {(1, 1): 6460.0, (1, 2): 2257.0, (1, 3): 604.0, (2, 1): nan, (2, 2): 91.0, (2, 3): 29.0}
+   isolated: In* at 2 with l|n and nothing else: {(1, 0): 5276, (1, 1): 1953, (1, 2): 378, (1, 3): 55, (2, 0): 184, (2, 1): 77, (2, 2): 13, (2, 3): 3}
+
+######## l = 7: curves 429280; with ii_odd>0: 0, ii_2>0: 0, ins_odd>0: 5856, ins_2>0: 5847
+   R_odd: base + ii_odd + ins_odd                   violations       0
+   R_odd + ii_2                                     violations       0
+   R_odd + ins_2                                    violations    4746
+   old Conjecture 2 (all but largest, any q)        violations    4746
+   isolated: single odd In* prime with l|n and no multiplicative l-contribution: V distribution {(1, 1): 4267.0, (1, 2): 891.0, (1, 3): 134.0, (2, 1): nan, (2, 2): 6.0, (2, 3): 3.0}
+   isolated: In* at 2 with l|n and nothing else: {(1, 0): 4370.0, (1, 1): 923.0, (1, 2): 114.0, (1, 3): 4.0, (2, 0): 12.0, (2, 1): 1.0, (2, 2): 2.0, (2, 3): nan}
+
+######## l = 11: curves 429502; with ii_odd>0: 0, ii_2>0: 0, ins_odd>0: 1803, ins_2>0: 2685
+   R_odd: base + ii_odd + ins_odd                   violations       0
+   R_odd + ii_2                                     violations       0
+   R_odd + ins_2                                    violations    2399
+   old Conjecture 2 (all but largest, any q)        violations    2399
+   isolated: single odd In* prime with l|n and no multiplicative l-contribution: V distribution {(1, 1): 1568.0, (1, 2): 142.0, (1, 3): 10.0, (2, 1): nan, (2, 2): 1.0, (2, 3): nan}
+   isolated: In* at 2 with l|n and nothing else: {(1, 0): 2349, (1, 1): 274, (1, 2): 8, (1, 3): 1}
+
+######## l = 13: curves 429498; with ii_odd>0: 0, ii_2>0: 0, ins_odd>0: 1095, ins_2>0: 1906
+   R_odd: base + ii_odd + ins_odd                   violations       0
+   R_odd + ii_2                                     violations       0
+   R_odd + ins_2                                    violations    1799
+   old Conjecture 2 (all but largest, any q)        violations    1799
+   isolated: single odd In* prime with l|n and no multiplicative l-contribution: V distribution {(1, 1): 982, (1, 2): 80, (1, 3): 4}
+   isolated: In* at 2 with l|n and nothing else: {(1, 0): 1787, (1, 1): 102, (1, 2): 3}

@@ -1,0 +1,27 @@
+[repro] start Tue Oct  6 18:10:45 UTC 2026
+[repro] download done Tue Oct  6 18:11:15 UTC 2026  files: 50
+[repro] pari features done Tue Oct  6 18:26:05 UTC 2026  rows: 3064705
+allcurves 3064705
+optimal           140309
+two_adic_index      5892
+two_adic_level      5892
+curves.parquet (3064705, 41)
+ap.parquet (2164260, 178)
+[repro] build done Tue Oct  6 18:32:47 UTC 2026
+[repro] work 1311066
+[repro] holdout 429936
+[repro] ext 359009
+python3: can't open file '/tmp/claude-0/-home-user-mcptrial/8783ef3f-eb27-58a2-bc7b-116d9a5d0e92/scratchpad/repro/ecmine/scripts/conj_check.py': [Errno 2] No such file or directory
+python3: can't open file '/tmp/claude-0/-home-user-mcptrial/8783ef3f-eb27-58a2-bc7b-116d9a5d0e92/scratchpad/repro/ecmine/scripts/conj_check.py': [Errno 2] No such file or directory
+python3: can't open file '/tmp/claude-0/-home-user-mcptrial/8783ef3f-eb27-58a2-bc7b-116d9a5d0e92/scratchpad/repro/ecmine/scripts/conj_check.py': [Errno 2] No such file or directory
+[repro] checker done Tue Oct  6 18:32:50 UTC 2026
+diff: results/check_work_summary.csv: No such file or directory
+[repro] work summary DIFFERS from reference
+diff: results/check_work_summary.csv: No such file or directory
+diff: results/check_holdout_summary.csv: No such file or directory
+[repro] holdout summary DIFFERS from reference
+diff: results/check_holdout_summary.csv: No such file or directory
+diff: results/check_ext_summary.csv: No such file or directory
+[repro] ext summary DIFFERS from reference
+diff: results/check_ext_summary.csv: No such file or directory
+[repro] end Tue Oct  6 18:32:50 UTC 2026

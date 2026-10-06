@@ -1,6 +1,8 @@
 # Step 6 result: l-adic valuations of the modular degree and local component groups
 
-Superseded in part by the note `paper/note.tex` (compiled: `paper/note.pdf`), which contains the final statements, the proof of the qualitative type IV theorem, the extension to conductor 500000, the out-of-table checks and the corrected references. This file is kept as the working record.
+Superseded in part by the note `paper/note.tex` (compiled: `paper/note.pdf`), which contains the final statements, the proofs of the qualitative theorems, the extension to conductor 500000, the out-of-table checks and the corrected references. This file is kept as the working record.
+
+**Correction (2026-10-06, step 7 follow-up).** Conjecture 2 below ("all but the largest" of the twisted weights) is true as far as the data go, but it is not the right statement. Re-examining the twisted types with the prime 2 separated from the odd primes (`scripts/step7_twist2.py`, outputs `results/step7_twist2_{work,holdout,ext}.txt`) gives the clean rule, for every odd l: an odd prime of type II or II* contributes 1 at l = 3, an odd prime of type I_n* contributes v_l(n), the prime 2 contributes nothing through these types, and everything is additive with Conjecture 1. This is Conjecture 1.3 of the note (zero violations on all three ranges, every odd l), it implies the old Conjecture 2, and its qualitative half is proved there (Theorem 1.4: twist by the character ramified at q, lower the level, twist back). The old rule was an artifact of mixing q = 2 with odd q: the "largest weight" that had to be dropped usually sat at 2.
 
 Candidate U1 from step 5 ("the l-adic valuation of the modular degree against the l-adic valuation
 of the Tamagawa product") was taken through steps 6, 8 and 9: the known mechanism was identified

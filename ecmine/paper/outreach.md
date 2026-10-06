@@ -5,7 +5,7 @@ their work is extended: Hector Pasten (refinement of Ribet-Takahashi; Watkins at
 (the quantitative level-lowering theorem the multiplicative part rests on), Amod Agashe (modular degree versus
 congruence number), Mark Watkins (the computations and the 2002 conjecture), Neil Dummigan (Watkins at 2).
 
-## A. Message to an expert (about 250 words)
+## A. Message to an expert (about 300 words)
 
 Subject: a divisibility of the modular degree by local component groups: known?
 
@@ -24,23 +24,27 @@ with no exception, where Phi_q is the geometric component group. For l >= 5 the 
 multiplicative primes through v_l(v_q(Delta)); I understand that part to follow, for l not dividing N and
 primes q not congruent to +-1 mod l, from Kim and Ota's proof of the Pollack-Weston conjecture together with
 Agashe-Ribet-Stein, and I would be grateful to be corrected if an earlier reference states the inequality
-itself. What I have not found anywhere is the prime 3: every prime of Kodaira type IV or IV* contributes one
-to v_3(deg phi_E), whatever its Tamagawa number, and the contributions add up with the multiplicative ones.
-The qualitative statement (3 divides the degree) follows from level lowering, because the mod 3 inertia
-action at such a prime is a nontrivial unipotent; the additivity I can only verify numerically. There is
-also a curious "all but the largest" rule for the twisted types II, II* and I_n*, and a sharp description
-of how the inequality fails in the Eisenstein case.
+itself. What I have not found anywhere are the additive primes. First, every prime of Kodaira type IV or IV*
+contributes one to v_3(deg phi_E), whatever its Tamagawa number. Second, the inequality sharpens if at each
+odd prime q one replaces Phi_q by the larger of the component groups of E and of its quadratic twist by q*:
+an odd prime of type II or II* then contributes one at l = 3, and an odd prime of type I_n* contributes
+v_l(n) at every odd l; the prime 2 contributes nothing through these types. The sharpened inequality also
+holds with no exception. The qualitative statements (l divides the degree) follow from level lowering: at a
+type IV prime the mod 3 inertia action is a nontrivial unipotent; for the twisted types one twists by the
+character ramified at q, lowers the level, and twists back, which gives a congruent eigenform of level
+dividing N. The additivity I can only verify numerically. There is also a sharp description of how the
+inequality fails in the Eisenstein case.
 
-A two-page summary with the tables is attached / at [link]. If this is a special case of something you
-know, a one-line pointer would save me a great deal of time; if it is not, I would be glad to hear whether
-the additive statement looks provable by the methods of [your paper].
+A ten-page note with the tables is attached / at [link]. If this is a special case of something you know,
+a one-line pointer would save me a great deal of time; if it is not, I would be glad to hear whether the
+additive statement looks provable by the methods of [your paper].
 
 With best regards,
 [Name]
 
 ## B. MathOverflow question (title and body)
 
-Title: Does each Kodaira type IV or IV* prime force a factor of 3 in the modular degree?
+Title: Do the local component groups of an elliptic curve divide its modular degree?
 
 Body:
 
@@ -57,15 +61,23 @@ $q\not\equiv\pm1\pmod\ell$. For $\ell=3$ the primes of type IV and IV* contribut
 the Tamagawa number, and the contributions add up with the multiplicative ones. Example: $121c1$ has type IV
 at $11$ and modular degree $6$; $1369b1$ has type IV* at $37$ and degree $1332 = 4\cdot 9\cdot 37$.
 
-The qualitative statement at a single type IV prime $q\ge 5$ seems to follow from level lowering: the inertia
-image on $T_3E$ is cyclic of order 3, $T_3E$ is free of rank one over $\mathbb{Z}_3[\zeta_3]$, so mod 3 the
-inertia acts as a nontrivial unipotent and the Serre conductor has exponent 1 at $q$; lowering the level from
-$q^2$ to $q$ gives a mod 3 congruence, hence 3 divides the congruence number, hence (ARS) the degree.
+Moreover the inequality sharpens if, at each odd $q$, $\Phi_q$ is replaced by the larger of the component
+groups of $E$ and of its quadratic twist by $\mathbb{Q}(\sqrt{q^*})$ (which exchanges $\mathrm{II}
+\leftrightarrow \mathrm{IV}^*$, $\mathrm{I}_n \leftrightarrow \mathrm{I}_n^*$, and so on): an odd prime of
+type II or II* contributes one at $\ell=3$ and an odd prime of type $\mathrm{I}_n^*$ contributes
+$v_\ell(n)$ at every odd $\ell$, again with no exception in the data; the prime $2$ contributes nothing
+through these types.
 
-**Questions.** (1) Is the inequality, in particular its additive term at 3, known or a consequence of a known
+The qualitative statements seem to follow from level lowering. At a type IV prime $q\ge 5$ the inertia image
+on $T_3E$ is cyclic of order 3, $T_3E$ is free of rank one over $\mathbb{Z}_3[\zeta_3]$, so mod 3 the inertia
+acts as a nontrivial unipotent and the Serre conductor has exponent 1 at $q$; lowering the level from
+$q^2$ to $q$ gives a mod 3 congruence, hence 3 divides the congruence number, hence (ARS) the degree when
+$9\nmid N$. For the twisted types, twist by the character ramified at $q$, lower the level of the twist, and
+twist back: the result is an eigenform of level dividing $N$, different from $f_E$ and congruent to it.
+
+**Questions.** (1) Is the inequality, in particular its additive terms, known or a consequence of a known
 result? (2) Is there a reason to expect the additivity (the quantitative statement), for instance a version
-of the Kim-Ota formula with $q^2$ in the level? (3) The data also show that primes of type II, II* and
-$\mathrm{I}_n^*$ with $3\mid n$ contribute "all but the largest" of their weights (two type II primes force
-$3\mid\deg\varphi_E$, one does not, three force $9$). Is there a mechanism for that?
+of the Kim-Ota formula with $q^2$ in the level? (3) Why does the prime 2 behave differently (a type II or
+$\mathrm{I}_n^*$ at 2 forces nothing, while $\mathrm{I}_n^*$ at 2 with $9 \mid n$ forces a 3)?
 
 Tags: nt.number-theory, elliptic-curves, modular-forms, galois-representations

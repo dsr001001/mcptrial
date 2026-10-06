@@ -12,7 +12,7 @@ nz(b) = my(x); until(x != 0, x = random(2*b+1) - b); x;
 {
 report(a, fam) =
   my(E, N, L, codes, tams, d, t, j);
-  E = ellinit(a); if(E.disc == 0, return(0));
+  E = ellinit(a); if(#E == 0, return(0)); if(E.disc == 0, return(0));
   E = ellminimalmodel(E); a = vector(5, i, E[i]);
   N = ellglobalred(E)[1]; if(N <= NLO || N > NHI, return(0));
   j = E.j; for(i=1,#CMJ, if(j == CMJ[i], return(0)));
