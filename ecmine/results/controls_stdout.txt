@@ -1,0 +1,25 @@
+loaded working set: 1889364 curves, 1311066 classes, 16s
+pre-registered candidate tests: 112 across 21 targets; controls: 22; Bonferroni alpha = 4.46e-04
+        NEG_rootno       EQ n=  355675 D_full=-0.0000 D_sub=-0.0000 null_max=+0.0000 p=0.905 local=0.000@log_abs_disc@bin3 p_loc=1.000  [must not hit] 21s
+        NEG_rootno      GAL n=  355675 D_full=-0.0000 D_sub=-0.0000 null_max=-0.0000 p=0.905 local=-0.001@torsion_structure=[3] p_loc=0.952  [must not hit] 30s
+        NEG_rootno      DIO n=  355675 D_full=-0.0000 D_sub=-0.0000 null_max=-0.0000 p=0.143 local=0.009@n_intpts_x@bin2 p_loc=0.095  [must not hit] 9s
+        NEG_rootno       AN n=  355675 D_full=-0.0000 D_sub=-0.0000 null_max=-0.0000 p=0.667 local=0.225@log_odd_sha@bin1 p_loc=0.667  [must not hit] 49s
+          NEG_a997       EQ n= 1308121 D_full=+0.0000 D_sub=-0.0000 null_max=+0.0000 p=0.238 local=0.000@log_j_height@bin6 p_loc=0.286  [must not hit] 42s
+          NEG_a997      GAL n= 1308121 D_full=-0.0000 D_sub=-0.0000 null_max=+0.0000 p=0.238 local=0.001@two_adic_level=16 p_loc=0.286  [must not hit] 64s
+          NEG_a997      DIO n= 1308121 D_full=+0.0003 D_sub=+0.0005 null_max=+0.0000 p=0.048 local=0.001@n_intpts_x@bin4 p_loc=0.048  [must not hit] 13s
+          NEG_a997      LOC n= 1308121 D_full=+0.0000 D_sub=-0.0001 null_max=+0.0000 p=0.429 local=0.002@v5_tamagawa=2 p_loc=0.333  [must not hit] 191s
+          NEG_a997       AN n= 1308121 D_full=+0.0012 D_sub=+0.0004 null_max=+0.0000 p=0.048 local=0.002@rank_c=0 p_loc=0.095  [C7 at most small] 109s
+ NEG_shuffled_rank       EQ n= 1311066 D_full=-0.0000 D_sub=-0.0000 null_max=+0.0001 p=0.571 local=0.000@log_abs_disc@bin5 p_loc=0.095  [must not hit] 27s
+ NEG_shuffled_rank      LOC n= 1311066 D_full=-0.0000 D_sub=-0.0001 null_max=+0.0000 p=0.381 local=0.003@n_nonsplit_mult=5 p_loc=0.190  [must not hit] 93s
+ NEG_shuffled_rank      GAL n= 1309159 D_full=-0.0000 D_sub=-0.0000 null_max=+0.0000 p=0.667 local=0.025@torsion_structure=[2,2] p_loc=0.381  [must not hit] 50s
+ NEG_shuffled_rank       AN n= 1311066 D_full=-0.0000 D_sub=-0.0001 null_max=+0.0000 p=0.429 local=0.004@v5_sha=2 p_loc=0.571  [must not hit] 67s
+ NEG_shuffled_rank       AP n= 1311066 D_full=-0.0001 D_sub=-0.0002 null_max=+0.0000 p=0.857 local=0.000@mur_mid@bin4 p_loc=0.810  [must not hit] 62s
+ NEG_shuffled_rank      DIO n= 1311066 D_full=+0.0000 D_sub=-0.0000 null_max=+0.0001 p=0.952 local=0.000@n_intpts_x@bin1 p_loc=0.952  [must not hit] 11s
+       POS_watkins v2_moddeg n= 1311066 D_full=+0.0026 D_sub=+0.0035 null_max=+0.0000 p=0.048 local=0.018@v2_moddeg@bin7 p_loc=0.048  [must hit (C1)] 13s
+     POS_lorenzini  torsion n= 1889364 D_full=+0.0317 D_sub=+0.0326 null_max=+0.0001 p=0.048 local=0.257@torsion_structure=[6] p_loc=0.048 HIT LOCAL [must local-hit at [5] (T13)] 74s
+  POS_torsion_cong frac_even n= 1311066 D_full=+0.9841 D_sub=+0.9842 null_max=+0.0000 p=0.048 local=0.998@frac_even@bin4 p_loc=0.048 HIT LOCAL [must hit (T5/T18)] 7s
+         POS_nagao    nagao n= 1311066 D_full=+0.8088 D_sub=+0.8122 null_max=+0.0001 p=0.048 local=0.997@nagao_1000@bin7 p_loc=0.048 HIT LOCAL [must hit (C7)] 11s
+            EXP_H1 disc_sign n=  734885 D_full=+0.0047 D_sub=+0.0049 null_max=+0.0000 p=0.048 local=0.005@disc_sign=-1 p_loc=0.048  [expected small (H1)] 6s
+  POS_murmur_10000   ap_raw n=   43175 D_full=+0.4302 D_sub=+0.4329 null_max=-0.0026 p=0.048 local=0.000@ p_loc=1.000 HIT [must hit (C7 murmurations)] 2s
+ POS_murmur_100000   ap_raw n=  439688 D_full=+0.0367 D_sub=+0.0351 null_max=-0.0002 p=0.048 local=0.000@ p_loc=1.000 HIT [must hit (C7 murmurations)] 46s
+done in 1018s

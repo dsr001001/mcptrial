@@ -1,0 +1,113 @@
+
+################ l = 3 (work) ################
+/home/user/mcptrial/ecmine/scripts/step6_u1_fit.py:32: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  d["n_add"] = d[types].sum(1)
+isolated configurations (S = 0, all additive primes of a single type): min V and distribution by count
+   II   x1: n=  34611  min V = 0  V counts {0: 6788, 1: 14865, 2: 8477, 3: 3105, 4: 1015, 5: 271, 6: 90}
+   II   x2: n=   2073  min V = 1  V counts {1: 596, 2: 854, 3: 429, 4: 149, 5: 34, 6: 11}
+   II   x3: n=     24  min V = 2  V counts {2: 11, 3: 10, 4: 3}
+   II*  x1: n=  19608  min V = 0  V counts {0: 3756, 1: 5264, 2: 5453, 3: 2934, 4: 1499, 5: 504, 6: 198}
+   II*  x2: n=    968  min V = 1  V counts {1: 146, 2: 267, 3: 267, 4: 178, 5: 77, 6: 33}
+   II*  x3: n=      8  min V = 2  V counts {2: 1, 3: 2, 4: 5}
+   III  x1: n=  34904  min V = 0  V counts {0: 18563, 1: 10455, 2: 4020, 3: 1355, 4: 391, 5: 100, 6: 20}
+   III  x2: n=   2208  min V = 0  V counts {0: 1174, 1: 664, 2: 272, 3: 69, 4: 27, 5: 1, 6: 1}
+   III  x3: n=     34  min V = 0  V counts {0: 18, 1: 13, 2: 2, 3: 1}
+   III* x1: n=  25574  min V = 0  V counts {0: 9055, 1: 10035, 2: 4317, 3: 1509, 4: 475, 5: 144, 6: 39}
+   III* x2: n=   1307  min V = 0  V counts {0: 218, 1: 627, 2: 298, 3: 108, 4: 39, 5: 16, 6: 1}
+   III* x3: n=     29  min V = 0  V counts {0: 3, 1: 14, 2: 10, 3: 2}
+   IV   x1: n=  25414  min V = 1  V counts {1: 13969, 2: 6978, 3: 3028, 4: 996, 5: 319, 6: 124}
+   IV   x2: n=    969  min V = 2  V counts {2: 481, 3: 273, 4: 153, 5: 43, 6: 19}
+   IV   x3: n=     11  min V = 3  V counts {3: 7, 4: 2, 5: 2}
+   IV*  x1: n=  30168  min V = 1  V counts {1: 12422, 2: 9696, 3: 5294, 4: 1877, 5: 627, 6: 252}
+   IV*  x2: n=   2268  min V = 2  V counts {2: 620, 3: 922, 4: 479, 5: 183, 6: 64}
+   IV*  x3: n=     45  min V = 3  V counts {3: 8, 4: 24, 5: 12, 6: 1}
+   I0*  x1: n=  42924  min V = 0  V counts {0: 11397, 1: 15178, 2: 8784, 3: 5026, 4: 1872, 5: 534, 6: 133}
+   I0*  x2: n=   3093  min V = 0  V counts {0: 418, 1: 899, 2: 864, 3: 546, 4: 290, 5: 61, 6: 15}
+   I0*  x3: n=     53  min V = 0  V counts {0: 4, 1: 12, 2: 17, 3: 12, 4: 7, 5: 1}
+   In*  x1: n= 133322  min V = 0  V counts {0: 32101, 1: 49599, 2: 31640, 3: 13689, 4: 4693, 5: 1282, 6: 318}
+   In*  x2: n=  28125  min V = 0  V counts {0: 2479, 1: 8364, 2: 9205, 3: 5502, 4: 1980, 5: 489, 6: 106}
+   In*  x3: n=   1483  min V = 1  V counts {1: 199, 2: 552, 3: 522, 4: 181, 5: 23, 6: 6}
+
+=== unified conjecture v_3(deg) >= sum v_3(#Phi_geom):  violations 0 of 1233729
+
+################ l = 2 (work) ################
+/home/user/mcptrial/ecmine/scripts/step6_u1_fit.py:32: Pandas4Warning: Starting with pandas version 4.0 all arguments of sum will be keyword-only.
+  d["n_add"] = d[types].sum(1)
+isolated configurations (S = 0, all additive primes of a single type): min V and distribution by count
+   II   x1: n=  19099  min V = 1  V counts {1: 92, 2: 626, 3: 1892, 4: 3233, 5: 3500, 6: 9756}
+   II   x2: n=   1688  min V = 2  V counts {2: 16, 3: 66, 4: 177, 5: 271, 6: 1158}
+   II   x3: n=     26  min V = 3  V counts {3: 1, 4: 2, 5: 1, 6: 22}
+   II*  x1: n=  12340  min V = 1  V counts {1: 37, 2: 358, 3: 1050, 4: 1787, 5: 2309, 6: 6799}
+   II*  x2: n=    583  min V = 2  V counts {2: 4, 3: 15, 4: 44, 5: 107, 6: 413}
+   II*  x3: n=      3  min V = 5  V counts {5: 1, 6: 2}
+   III  x1: n=  14905  min V = 3  V counts {3: 233, 4: 1022, 5: 2586, 6: 11064}
+   III  x2: n=    711  min V = 5  V counts {5: 1, 6: 710}
+   III  x3: n=     10  min V = 9  V counts {6: 10}
+   III* x1: n=  14394  min V = 3  V counts {3: 74, 4: 634, 5: 1962, 6: 11724}
+   III* x2: n=    815  min V = 6  V counts {6: 815}
+   III* x3: n=     20  min V = 9  V counts {6: 20}
+   IV   x1: n=  12878  min V = 1  V counts {1: 359, 2: 1217, 3: 2656, 4: 3159, 5: 2474, 6: 3013}
+   IV   x2: n=    639  min V = 1  V counts {1: 1, 2: 54, 3: 125, 4: 192, 5: 131, 6: 136}
+   IV   x3: n=      3  min V = 6  V counts {6: 3}
+   IV*  x1: n=  18731  min V = 1  V counts {1: 186, 2: 1129, 3: 3007, 4: 4636, 5: 4217, 6: 5556}
+   IV*  x2: n=   1505  min V = 2  V counts {2: 44, 3: 214, 4: 401, 5: 349, 6: 497}
+   IV*  x3: n=     45  min V = 3  V counts {3: 5, 4: 17, 5: 10, 6: 13}
+   I0*  x1: n=  24655  min V = 1  V counts {1: 68, 2: 417, 3: 1250, 4: 2177, 5: 3324, 6: 17419}
+   I0*  x2: n=   2264  min V = 2  V counts {2: 3, 3: 33, 4: 59, 5: 130, 6: 2039}
+   I0*  x3: n=     44  min V = 5  V counts {5: 2, 6: 42}
+   In*  x1: n=  72988  min V = 3  V counts {3: 73, 4: 570, 5: 3186, 6: 69159}
+   In*  x2: n=  15676  min V = 6  V counts {6: 15676}
+   In*  x3: n=    467  min V = 11  V counts {6: 467}
+
+=== unified conjecture v_2(deg) >= sum v_2(#Phi_geom):  violations 123 of 964432
+   violations by type counts:
+          II  II*  III  III*  IV  IV*  I0*  In*  S  G  V
+label                                                   
+100539a1   0    0    0     0   0    0    1    0  0  2  1
+104076n1   0    0    0     0   1    0    2    0  0  4  3
+104076t1   0    0    0     0   1    0    2    0  0  4  3
+10571a1    0    0    0     0   0    0    1    0  0  2  1
+10683a1    0    0    0     0   0    0    1    0  0  2  1
+10683c1    0    0    0     0   0    0    1    0  0  2  1
+107451a1   0    0    0     0   0    0    1    0  0  2  1
+110827a1   0    0    0     0   0    0    1    0  0  2  1
+110827c1   0    0    0     0   0    0    1    0  0  2  1
+112651l1   0    0    0     0   0    0    2    0  0  4  2
+11331f1    0    0    0     0   0    0    1    0  0  2  1
+11466cd1   0    0    0     0   0    0    2    0  0  4  3
+11466w1    0    0    0     0   0    0    2    0  0  4  3
+135531c1   0    0    0     0   0    0    2    0  0  4  3
+137691b1   0    0    0     0   0    0    1    0  0  2  1
+   involving II: 3
+   involving II*: 0
+   involving III: 0
+   involving III*: 0
+   involving IV: 6
+   involving IV*: 2
+   involving I0*: 123
+   involving In*: 0
+   V >= S + {'III': 1, 'I0s': 1, 'Ins': 1}: violations 0
+   V >= S + {'III': 1, 'I0s': 2, 'Ins': 2}: violations 123
+   V >= S + {'III': 1, 'I0s': 1, 'Ins': 2}: violations 0
+   V >= S + {'III': 1, 'I0s': 2, 'Ins': 1}: violations 123
+   V >= S + {'III': 0, 'I0s': 1, 'Ins': 1}: violations 0
+
+################ l = 3 Eisenstein with the additive term (work): curves 76737 ################
+D = V - G by (vT, label):
+D                      -2    -1     0     1      2
+vT lab                                            
+0                       0     0    18   100    858
+   31Ns.15.1.5          0     0     0     1      4
+   3B                   0     0  1473  7172  30861
+   3B.1.2               0     0  1003  2632   4352
+   3Cs                  0     0     0    15    393
+1  3B.1.1               0  2767  8426  8077   8343
+   3B.1.1 31Ns.15.1.5   0     0     1     0      0
+   3Cs.1.1             17     5    27    76    103
+2  3B.1.1               5     0     5     3      0
+CM among Eisenstein: 1307  D for CM: {-1: 17, 0: 61, 1: 169, 2: 1060}
+violations of D >= -(vT + [split Cartan]): 0
+Empty DataFrame
+Columns: [G, V, D, vT, lab, cm, rank, tors, bound]
+Index: []
+violations of D >= -2: 0  of D >= -1 among curves without 3-torsion point: 0

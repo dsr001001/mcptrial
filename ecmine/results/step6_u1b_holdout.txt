@@ -1,0 +1,727 @@
+holdout: 429936 optimal curves
+odd primes dividing some n_q: [3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83]
+  l=3 done
+  l=5 done
+  l=7 done
+  l=11 done
+  l=13 done
+  l=17 done
+  l=19 done
+  l=23 done
+  l=29 done
+  l=31 done
+  l=37 done
+  l=41 done
+  l=43 done
+  l=47 done
+  l=53 done
+  l=59 done
+  l=61 done
+  l=67 done
+  l=71 done
+  l=73 done
+  l=79 done
+  l=83 done
+
+######## l = 3: curves with S > 0: 176815, Eisenstein among them 17007, CM 0
+
+=== l=3 non-Eisenstein non-CM, all N: curves 409577, with S > 0: 159808
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of   159808
+  all multiplicative primes                [V >= S      ] violations       0 of   159808
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of   159808
+
+=== l=3 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 47443, with S > 0: 21243
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of    21243
+  all multiplicative primes                [V >= S      ] violations       0 of    21243
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of    21243
+
+=== l=3 non-Eisenstein, N not squarefree: curves 304012, with S > 0: 104699
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of   104699
+  all multiplicative primes                [V >= S      ] violations       0 of   104699
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of   104699
+
+=== l=3 non-Eisenstein, l divides N: curves 275477, with S > 0: 113986
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of   113986
+  all multiplicative primes                [V >= S      ] violations       0 of   113986
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of   113986
+
+=== l=3 non-Eisenstein, exactly one multiplicative prime: curves 40108, with S > 0: 3004
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     3004
+  all multiplicative primes                [V >= S      ] violations       0 of     3004
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     3004
+
+=== l=3 Eisenstein (rational 3-isogeny): curves 20216, with S > 0: 17007
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations     372 of    17007  e.g. ['300166c1', '300630j1', '301658i1', '301790d1', '301845a1', '301890bd1', '302795c1', '302798a1']
+  all multiplicative primes                [V >= S      ] violations     372 of    17007  e.g. ['300166c1', '300630j1', '301658i1', '301790d1', '301845a1', '301890bd1', '302795c1', '302798a1']
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of    17007
+
+######## l = 5: curves with S > 0: 80539, Eisenstein among them 989, CM 0
+
+=== l=5 non-Eisenstein non-CM, all N: curves 428251, with S > 0: 79550
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of    79550
+  all multiplicative primes                [V >= S      ] violations       0 of    79550
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of    79550
+
+=== l=5 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 68296, with S > 0: 16210
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of    16210
+  all multiplicative primes                [V >= S      ] violations       0 of    16210
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of    16210
+
+=== l=5 non-Eisenstein, N not squarefree: curves 319556, with S > 0: 51237
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of    51237
+  all multiplicative primes                [V >= S      ] violations       0 of    51237
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of    51237
+
+=== l=5 non-Eisenstein, l divides N: curves 195752, with S > 0: 41033
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of    41033
+  all multiplicative primes                [V >= S      ] violations       0 of    41033
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of    41033
+
+=== l=5 non-Eisenstein, exactly one multiplicative prime: curves 42175, with S > 0: 1351
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     1351
+  all multiplicative primes                [V >= S      ] violations       0 of     1351
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     1351
+
+=== l=5 Eisenstein (rational 5-isogeny): curves 1263, with S > 0: 989
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations      17 of      989  e.g. ['305086b1', '306546h1', '315897a1', '337514d1', '349595a1', '361578j1', '368070l1', '368862j1']
+  all multiplicative primes                [V >= S      ] violations      17 of      989  e.g. ['305086b1', '306546h1', '315897a1', '337514d1', '349595a1', '361578j1', '368070l1', '368862j1']
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      989
+
+######## l = 7: curves with S > 0: 41524, Eisenstein among them 137, CM 0
+
+=== l=7 non-Eisenstein non-CM, all N: curves 429280, with S > 0: 41387
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of    41387
+  all multiplicative primes                [V >= S      ] violations       0 of    41387
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of    41387
+
+=== l=7 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 78450, with S > 0: 10617
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of    10617
+  all multiplicative primes                [V >= S      ] violations       0 of    10617
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of    10617
+
+=== l=7 non-Eisenstein, N not squarefree: curves 320447, with S > 0: 26019
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of    26019
+  all multiplicative primes                [V >= S      ] violations       0 of    26019
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of    26019
+
+=== l=7 non-Eisenstein, l divides N: curves 139610, with S > 0: 15162
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of    15162
+  all multiplicative primes                [V >= S      ] violations       0 of    15162
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of    15162
+
+=== l=7 non-Eisenstein, exactly one multiplicative prime: curves 42288, with S > 0: 529
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      529
+  all multiplicative primes                [V >= S      ] violations       0 of      529
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      529
+
+=== l=7 Eisenstein (rational 7-isogeny): curves 241, with S > 0: 137
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       1 of      137  e.g. ['343230l1']
+  all multiplicative primes                [V >= S      ] violations       1 of      137  e.g. ['343230l1']
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      137
+
+######## l = 11: curves with S > 0: 14244, Eisenstein among them 0, CM 0
+
+=== l=11 non-Eisenstein non-CM, all N: curves 429502, with S > 0: 14244
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of    14244
+  all multiplicative primes                [V >= S      ] violations       0 of    14244
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of    14244
+
+=== l=11 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 89646, with S > 0: 4725
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     4725
+  all multiplicative primes                [V >= S      ] violations       0 of     4725
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     4725
+
+=== l=11 non-Eisenstein, N not squarefree: curves 320660, with S > 0: 8489
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     8489
+  all multiplicative primes                [V >= S      ] violations       0 of     8489
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     8489
+
+=== l=11 non-Eisenstein, l divides N: curves 83816, with S > 0: 2955
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     2955
+  all multiplicative primes                [V >= S      ] violations       0 of     2955
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     2955
+
+=== l=11 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 153
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      153
+  all multiplicative primes                [V >= S      ] violations       0 of      153
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      153
+
+######## l = 13: curves with S > 0: 9214, Eisenstein among them 2, CM 0
+
+=== l=13 non-Eisenstein non-CM, all N: curves 429498, with S > 0: 9212
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     9212
+  all multiplicative primes                [V >= S      ] violations       0 of     9212
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     9212
+
+=== l=13 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 92897, with S > 0: 3274
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     3274
+  all multiplicative primes                [V >= S      ] violations       0 of     3274
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     3274
+
+=== l=13 non-Eisenstein, N not squarefree: curves 320656, with S > 0: 5395
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     5395
+  all multiplicative primes                [V >= S      ] violations       0 of     5395
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     5395
+
+=== l=13 non-Eisenstein, l divides N: curves 67544, with S > 0: 1501
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     1501
+  all multiplicative primes                [V >= S      ] violations       0 of     1501
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     1501
+
+=== l=13 non-Eisenstein, exactly one multiplicative prime: curves 42384, with S > 0: 70
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       70
+  all multiplicative primes                [V >= S      ] violations       0 of       70
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       70
+
+=== l=13 Eisenstein (rational 13-isogeny): curves 16, with S > 0: 2
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        2
+  all multiplicative primes                [V >= S      ] violations       0 of        2
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        2
+
+######## l = 17: curves with S > 0: 4261, Eisenstein among them 0, CM 0
+
+=== l=17 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 4261
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     4261
+  all multiplicative primes                [V >= S      ] violations       0 of     4261
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     4261
+
+=== l=17 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 97010, with S > 0: 1590
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     1590
+  all multiplicative primes                [V >= S      ] violations       0 of     1590
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     1590
+
+=== l=17 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 2496
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     2496
+  all multiplicative primes                [V >= S      ] violations       0 of     2496
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     2496
+
+=== l=17 non-Eisenstein, l divides N: curves 48292, with S > 0: 465
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      465
+  all multiplicative primes                [V >= S      ] violations       0 of      465
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      465
+
+=== l=17 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 24
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       24
+  all multiplicative primes                [V >= S      ] violations       0 of       24
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       24
+
+######## l = 19: curves with S > 0: 2908, Eisenstein among them 0, CM 0
+
+=== l=19 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 2908
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     2908
+  all multiplicative primes                [V >= S      ] violations       0 of     2908
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     2908
+
+=== l=19 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 98225, with S > 0: 1139
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     1139
+  all multiplicative primes                [V >= S      ] violations       0 of     1139
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     1139
+
+=== l=19 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 1649
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     1649
+  all multiplicative primes                [V >= S      ] violations       0 of     1649
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     1649
+
+=== l=19 non-Eisenstein, l divides N: curves 42231, with S > 0: 290
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      290
+  all multiplicative primes                [V >= S      ] violations       0 of      290
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      290
+
+=== l=19 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 32
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       32
+  all multiplicative primes                [V >= S      ] violations       0 of       32
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       32
+
+######## l = 23: curves with S > 0: 1552, Eisenstein among them 0, CM 0
+
+=== l=23 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 1552
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of     1552
+  all multiplicative primes                [V >= S      ] violations       0 of     1552
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of     1552
+
+=== l=23 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 100085, with S > 0: 643
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      643
+  all multiplicative primes                [V >= S      ] violations       0 of      643
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      643
+
+=== l=23 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 855
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      855
+  all multiplicative primes                [V >= S      ] violations       0 of      855
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      855
+
+=== l=23 non-Eisenstein, l divides N: curves 33826, with S > 0: 107
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      107
+  all multiplicative primes                [V >= S      ] violations       0 of      107
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      107
+
+=== l=23 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 11
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       11
+  all multiplicative primes                [V >= S      ] violations       0 of       11
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       11
+
+######## l = 29: curves with S > 0: 666, Eisenstein among them 0, CM 0
+
+=== l=29 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 666
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      666
+  all multiplicative primes                [V >= S      ] violations       0 of      666
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      666
+
+=== l=29 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 102432, with S > 0: 288
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      288
+  all multiplicative primes                [V >= S      ] violations       0 of      288
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      288
+
+=== l=29 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 365
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      365
+  all multiplicative primes                [V >= S      ] violations       0 of      365
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      365
+
+=== l=29 non-Eisenstein, l divides N: curves 25416, with S > 0: 41
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       41
+  all multiplicative primes                [V >= S      ] violations       0 of       41
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       41
+
+=== l=29 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 4
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        4
+  all multiplicative primes                [V >= S      ] violations       0 of        4
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        4
+
+######## l = 31: curves with S > 0: 483, Eisenstein among them 0, CM 0
+
+=== l=31 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 483
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      483
+  all multiplicative primes                [V >= S      ] violations       0 of      483
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      483
+
+=== l=31 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 102997, with S > 0: 215
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      215
+  all multiplicative primes                [V >= S      ] violations       0 of      215
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      215
+
+=== l=31 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 255
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      255
+  all multiplicative primes                [V >= S      ] violations       0 of      255
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      255
+
+=== l=31 non-Eisenstein, l divides N: curves 23119, with S > 0: 27
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       27
+  all multiplicative primes                [V >= S      ] violations       0 of       27
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       27
+
+=== l=31 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 10
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       10
+  all multiplicative primes                [V >= S      ] violations       0 of       10
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       10
+
+######## l = 37: curves with S > 0: 202, Eisenstein among them 0, CM 0
+
+=== l=37 non-Eisenstein non-CM, all N: curves 429510, with S > 0: 202
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      202
+  all multiplicative primes                [V >= S      ] violations       0 of      202
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      202
+
+=== l=37 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 103826, with S > 0: 92
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       92
+  all multiplicative primes                [V >= S      ] violations       0 of       92
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       92
+
+=== l=37 non-Eisenstein, N not squarefree: curves 320668, with S > 0: 107
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      107
+  all multiplicative primes                [V >= S      ] violations       0 of      107
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      107
+
+=== l=37 non-Eisenstein, l divides N: curves 18894, with S > 0: 5
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        5
+  all multiplicative primes                [V >= S      ] violations       0 of        5
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        5
+
+=== l=37 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+######## l = 41: curves with S > 0: 109, Eisenstein among them 0, CM 0
+
+=== l=41 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 109
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      109
+  all multiplicative primes                [V >= S      ] violations       0 of      109
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      109
+
+=== l=41 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 104385, with S > 0: 42
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       42
+  all multiplicative primes                [V >= S      ] violations       0 of       42
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       42
+
+=== l=41 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 66
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       66
+  all multiplicative primes                [V >= S      ] violations       0 of       66
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       66
+
+=== l=41 non-Eisenstein, l divides N: curves 16656, with S > 0: 3
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        3
+  all multiplicative primes                [V >= S      ] violations       0 of        3
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        3
+
+=== l=41 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+######## l = 43: curves with S > 0: 100, Eisenstein among them 0, CM 0
+
+=== l=43 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 100
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of      100
+  all multiplicative primes                [V >= S      ] violations       0 of      100
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of      100
+
+=== l=43 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 104574, with S > 0: 44
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       44
+  all multiplicative primes                [V >= S      ] violations       0 of       44
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       44
+
+=== l=43 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 55
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       55
+  all multiplicative primes                [V >= S      ] violations       0 of       55
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       55
+
+=== l=43 non-Eisenstein, l divides N: curves 15832, with S > 0: 1
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        1
+  all multiplicative primes                [V >= S      ] violations       0 of        1
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        1
+
+=== l=43 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 6
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        6
+  all multiplicative primes                [V >= S      ] violations       0 of        6
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        6
+
+######## l = 47: curves with S > 0: 53, Eisenstein among them 0, CM 0
+
+=== l=47 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 53
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       53
+  all multiplicative primes                [V >= S      ] violations       0 of       53
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       53
+
+=== l=47 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 104948, with S > 0: 32
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       32
+  all multiplicative primes                [V >= S      ] violations       0 of       32
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       32
+
+=== l=47 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 19
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       19
+  all multiplicative primes                [V >= S      ] violations       0 of       19
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       19
+
+=== l=47 non-Eisenstein, l divides N: curves 13958, with S > 0: 4
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        4
+  all multiplicative primes                [V >= S      ] violations       0 of        4
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        4
+
+=== l=47 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+######## l = 53: curves with S > 0: 28, Eisenstein among them 0, CM 0
+
+=== l=53 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 28
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       28
+  all multiplicative primes                [V >= S      ] violations       0 of       28
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       28
+
+=== l=53 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 105530, with S > 0: 13
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       13
+  all multiplicative primes                [V >= S      ] violations       0 of       13
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       13
+
+=== l=53 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 14
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       14
+  all multiplicative primes                [V >= S      ] violations       0 of       14
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       14
+
+=== l=53 non-Eisenstein, l divides N: curves 12061, with S > 0: 1
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        1
+  all multiplicative primes                [V >= S      ] violations       0 of        1
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        1
+
+=== l=53 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+######## l = 59: curves with S > 0: 4, Eisenstein among them 0, CM 0
+
+=== l=59 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 4
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        4
+  all multiplicative primes                [V >= S      ] violations       0 of        4
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        4
+
+=== l=59 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 105841, with S > 0: 3
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        3
+  all multiplicative primes                [V >= S      ] violations       0 of        3
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        3
+
+=== l=59 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 1
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        1
+  all multiplicative primes                [V >= S      ] violations       0 of        1
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        1
+
+=== l=59 non-Eisenstein, l divides N: curves 10422, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+=== l=59 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+######## l = 61: curves with S > 0: 13, Eisenstein among them 0, CM 0
+
+=== l=61 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 13
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of       13
+  all multiplicative primes                [V >= S      ] violations       0 of       13
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of       13
+
+=== l=61 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 105921, with S > 0: 8
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        8
+  all multiplicative primes                [V >= S      ] violations       0 of        8
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        8
+
+=== l=61 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 5
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        5
+  all multiplicative primes                [V >= S      ] violations       0 of        5
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        5
+
+=== l=61 non-Eisenstein, l divides N: curves 10146, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+=== l=61 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+######## l = 67: curves with S > 0: 3, Eisenstein among them 0, CM 0
+
+=== l=67 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 3
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        3
+  all multiplicative primes                [V >= S      ] violations       0 of        3
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        3
+
+=== l=67 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 106331, with S > 0: 2
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        2
+  all multiplicative primes                [V >= S      ] violations       0 of        2
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        2
+
+=== l=67 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 1
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        1
+  all multiplicative primes                [V >= S      ] violations       0 of        1
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        1
+
+=== l=67 non-Eisenstein, l divides N: curves 9211, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+=== l=67 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+######## l = 71: curves with S > 0: 2, Eisenstein among them 0, CM 0
+
+=== l=71 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 2
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        2
+  all multiplicative primes                [V >= S      ] violations       0 of        2
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        2
+
+=== l=71 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 106438, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+=== l=71 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 2
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        2
+  all multiplicative primes                [V >= S      ] violations       0 of        2
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        2
+
+=== l=71 non-Eisenstein, l divides N: curves 8484, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+=== l=71 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+######## l = 73: curves with S > 0: 2, Eisenstein among them 0, CM 0
+
+=== l=73 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 2
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        2
+  all multiplicative primes                [V >= S      ] violations       0 of        2
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        2
+
+=== l=73 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 106480, with S > 0: 2
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        2
+  all multiplicative primes                [V >= S      ] violations       0 of        2
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        2
+
+=== l=73 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+=== l=73 non-Eisenstein, l divides N: curves 8392, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+=== l=73 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+######## l = 79: curves with S > 0: 1, Eisenstein among them 0, CM 0
+
+=== l=79 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 1
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        1
+  all multiplicative primes                [V >= S      ] violations       0 of        1
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        1
+
+=== l=79 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 106621, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+=== l=79 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 1
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        1
+  all multiplicative primes                [V >= S      ] violations       0 of        1
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        1
+
+=== l=79 non-Eisenstein, l divides N: curves 7807, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+=== l=79 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+######## l = 83: curves with S > 0: 4, Eisenstein among them 0, CM 0
+
+=== l=83 non-Eisenstein non-CM, all N: curves 429514, with S > 0: 4
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        4
+  all multiplicative primes                [V >= S      ] violations       0 of        4
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        4
+
+=== l=83 non-Eisenstein, N squarefree, l not dividing N (theorem range for l>=5): curves 106775, with S > 0: 1
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        1
+  all multiplicative primes                [V >= S      ] violations       0 of        1
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        1
+
+=== l=83 non-Eisenstein, N not squarefree: curves 320672, with S > 0: 3
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        3
+  all multiplicative primes                [V >= S      ] violations       0 of        3
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        3
+
+=== l=83 non-Eisenstein, l divides N: curves 7290, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+=== l=83 non-Eisenstein, exactly one multiplicative prime: curves 42392, with S > 0: 0
+  Ribet-Takahashi (even subset)            [V >= S_even ] violations       0 of        0
+  all multiplicative primes                [V >= S      ] violations       0 of        0
+  all multiplicative primes minus one      [V >= S - 1  ] violations       0 of        0
+
+--- l=3 non-Eisenstein non-CM: rows V = v_3(deg), cols S = sum_mult v_3(n_q)
+S      0      1      2     3    4   5  6
+V                                       
+0  58176      0      0     0    0   0  0
+1  75936  33727      0     0    0   0  0
+2  58350  40059  11376     0    0   0  0
+3  33670  25688  11296  2495    0   0  0
+4  15836  12512   6197  2198  428   0  0
+5   5712   4951   2822  1173  320  60  0
+6   1625   1426   1099   498  145  38  5
+7    378    405    316   176   64  11  4
+8     71     84     93    47   11   2  0
+9     15     17     28    20    9   7  1
+
+--- l=3 Eisenstein with S > 0: rows V, cols S
+S     1     2    3    4   5   6
+V                              
+0    84     0    0    0   0   0
+1   312   135    0    0   0   0
+2   872   572  101    0   0   0
+3  1705  1366  490   45   0   0
+4  2021  1638  805  185   5   0
+5  1392  1266  676  255  64   0
+6   698   614  344  183  60  10
+7   208   255  180   98  45  20
+8    45    69   59   45   6   2
+9    12    17   17   18  13   0
+
+--- l=5 non-Eisenstein non-CM: rows V = v_5(deg), cols S = sum_mult v_5(n_q)
+S       0      1     2    3   4
+V                              
+0  225827      0     0    0   0
+1   94706  48575     0    0   0
+2   23454  18368  4872    0   0
+3    4162   4372  1649  267   0
+4     509    781   362   82  11
+5      41     94    80   17   5
+6       2      5     7    1   1
+7       0      0     1    0   0
+
+--- l=5 Eisenstein with S > 0: rows V, cols S
+S    1    2   3   4
+V                  
+1   52    4   0   0
+2  198   60  12   0
+3  184  167  68   1
+4   50   70  57  12
+5    9   13  15  14
+6    1    0   2   0
+
+--- l=7 non-Eisenstein non-CM: rows V = v_7(deg), cols S = sum_mult v_7(n_q)
+S       0      1     2   3
+V                         
+0  303004      0     0   0
+1   73128  31396     0   0
+2   10655   7118  1358   0
+3    1057   1037   290  25
+4      49    111    39   7
+5       0      2     4   0
+
+--- l=7 Eisenstein with S > 0: rows V, cols S
+S   1   2  3  4
+V              
+1  13   0  0  0
+2  57   7  0  0
+3  22  15  7  1
+4   1   4  5  3
+5   0   0  1  0
+6   0   0  1  0
+
+--- l=3 non-Eisenstein non-CM with additive primes of type IV or IV* (3 | c_q): rows V - S (excess), cols A = number of such primes
+A          1    2  3
+row_0               
+1      10102    0  0
+2      11006  332  0
+3       7372  399  2
+4       3919  272  8
+5       1450   97  3
+6        575   57  0
+    ... restricted to S = 0 (no multiplicative contribution): rows V, cols A
+A     1    2  3
+V              
+1  6347    0  0
+2  7369  251  0
+3  5311  325  2
+4  3029  213  6
+5  1166   84  3
+6   455   51  0

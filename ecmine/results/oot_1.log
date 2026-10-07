@@ -1,0 +1,7 @@
+[0;31m[0;31m  ***   at top-level: ...[0;35m/oot_1.tsv";budget=10800;[0;35mread("scripts/out_of_
+[0;31m[0;31m  ***                                             ^---------------------
+[0;31m  ***   in function read: ...[0;35m4,my(q=randprime(5,400));[0;35mreport([0,0,0,q^2*nz(
+[0;31m[0;31m  ***                                                 ^---------------------
+[0;31m  ***   in function report: ...[0;35md,t,j);E=ellinit(a);if(E.[0;35mdisc==0,return(0));E=
+[0;31m[0;31m  ***                                                   ^---------------------
+  *** _.disc: incorrect type in disc (t_VEC).[0m

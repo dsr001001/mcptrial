@@ -1,0 +1,820 @@
+A,B,n_flagged,min_log10_p,n_forbidden,n_rows,known
+has_2_isog,v2_torsion,4,-202153.4,4,1889364,same-group GAL
+has_2_isog,two_adic_log_index,7,-197635.6,2,1885114,same-group GAL
+two_adic_level,has_2_isog,5,-197635.6,1,1885114,same-group GAL
+torsion_structure,has_2_isog,11,-195024.2,11,1889364,same-group GAL
+n_torsion_gens,has_2_isog,3,-195024.2,2,1889364,same-group GAL
+two_adic_label,has_2_isog,39,-191910.2,39,1841734,same-group GAL
+torsion_structure,n_torsion_gens,22,-187826.5,20,1889364,I
+n_nonsurj_primes,class_size,9,-180666.0,4,1889364,same-group GAL
+n_nonsurj_primes,max_isogeny_degree,36,-180666.0,23,1889364,same-group GAL
+torsion_structure,v2_torsion,28,-179305.4,25,1889364,I
+two_adic_level,v2_torsion,8,-176462.2,4,1885114,same-group GAL
+v2_torsion,two_adic_log_index,16,-176462.2,8,1885114,same-group GAL
+torsion_structure,two_adic_level,23,-175299.5,15,1885114,same-group GAL
+torsion_structure,two_adic_log_index,34,-175299.5,21,1885114,same-group GAL
+two_adic_label,v2_torsion,86,-174278.6,78,1841734,same-group GAL
+n_torsion_gens,v2_torsion,8,-174172.9,5,1889364,same-group GAL
+torsion_structure,two_adic_label,145,-173078.4,136,1841734,same-group GAL
+n_nonsurj_primes,has_2_isog,2,-166991.2,0,1889364,same-group GAL
+n_torsion_gens,class_size,7,-164967.4,6,1889364,same-group GAL
+n_torsion_gens,max_isogeny_degree,26,-164967.4,21,1889364,same-group GAL
+n_nonsurj_primes,n_torsion_gens,3,-160718.9,1,1889364,same-group GAL
+class_size,v2_torsion,13,-153058.5,10,1889364,same-group GAL
+max_isogeny_degree,v2_torsion,36,-153058.5,34,1889364,same-group GAL
+torsion_structure,max_isogeny_degree,72,-152074.1,65,1889364,same-group GAL
+torsion_structure,class_size,30,-152074.1,24,1889364,same-group GAL
+n_nonsurj_primes,v2_torsion,5,-148915.2,2,1889364,same-group GAL
+torsion_structure,n_nonsurj_primes,15,-147938.9,9,1889364,same-group GAL
+rank_c,root_number,4,-141433.1,3,1311066,T1
+two_adic_level,n_torsion_gens,7,-135943.0,2,1885114,same-group GAL
+n_torsion_gens,two_adic_log_index,9,-135943.0,3,1885114,same-group GAL
+two_adic_label,n_torsion_gens,84,-133340.7,73,1841734,same-group GAL
+two_adic_label,max_isogeny_degree,234,-131377.8,223,1841734,same-group GAL
+two_adic_level,max_isogeny_degree,45,-130006.4,33,1885114,same-group GAL
+max_isogeny_degree,two_adic_log_index,60,-130006.4,45,1885114,same-group GAL
+root_number,log_regulator,1,-122629.7,0,1889364,same-group AN
+rank_c,log_regulator,6,-122317.8,4,1889364,I1 (rank 0 has regulator 1)
+two_adic_level,two_adic_label,152,-119964.5,117,1837484,same-group GAL
+class_size,is_opt,1,-117272.6,1,1889364,I5
+max_isogeny_degree,is_opt,1,-117272.6,1,1889364,I5
+two_adic_label,two_adic_log_index,152,-117179.5,131,1837484,same-group GAL
+two_adic_level,two_adic_log_index,27,-117052.8,22,1885114,same-group GAL
+n_nonsurj_primes,is_opt,1,-112382.7,0,1889364,I5/T8 (optimal vs non-optimal curves differ by the isogeny)
+v3_tamagawa,log_odd_tamagawa,13,-110911.8,11,1889364,same-group LOC
+class_size,max_isogeny_degree,54,-101936.0,48,1311066,same-group GAL
+class_size,has_2_isog,5,-101395.5,4,1311066,same-group GAL
+max_isogeny_degree,has_2_isog,15,-101395.5,15,1311066,same-group GAL
+two_adic_level,n_nonsurj_primes,7,-100982.7,2,1885114,same-group GAL
+two_adic_label,class_size,118,-97813.9,109,1841734,same-group GAL
+two_adic_label,n_nonsurj_primes,45,-97381.6,43,1841734,same-group GAL
+two_adic_level,class_size,15,-95876.5,7,1885114,same-group GAL
+n_nonsurj_primes,two_adic_log_index,10,-79810.5,3,1885114,same-group GAL
+class_size,two_adic_log_index,19,-77175.6,10,1885114,same-group GAL
+disc_sign,c4_sign,2,-76527.0,2,1889364,I4
+n_additive,n_kod_Ins,8,-71287.7,6,1889364,same-group LOC
+max_isogeny_degree,has_3_isog,21,-52024.6,15,1311066,same-group GAL
+v2_torsion,frac_even,12,-43742.1,12,1889364,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+torsion_structure,frac_even,20,-43465.1,20,1889364,T5/T18
+torsion_structure,odd_torsion,18,-42515.1,16,1889364,I
+v5_tamagawa,log_odd_tamagawa,12,-41074.3,9,1889364,same-group LOC
+v3_sha,log_odd_sha,4,-38805.1,2,1889364,same-group AN
+v5_moddeg,v5_tamagawa,10,-37969.1,4,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
+root_number,nagao_1000,1,-35912.4,0,1311066,C7
+rank_c,nagao_1000,14,-35701.8,12,1311066,C7
+n_bad_primes,n_kod_In,9,-35644.4,8,1889364,same-group LOC
+has_2_isog,v2_tamagawa,1,-35553.4,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_torsion_gens,frac_even,8,-33196.5,4,1889364,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+n_intpts_x,log_regulator,4,-32016.3,0,1889364,T15 (small generators are integral)
+n_nonsurj_primes,has_3_isog,1,-31414.2,0,1889364,same-group GAL
+v2_torsion,v2_tamagawa,8,-31378.3,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+torsion_structure,v2_tamagawa,17,-31131.5,5,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_Ins,v2_tamagawa,6,-28384.0,6,1889364,same-group LOC
+two_adic_level,frac_even,17,-28125.8,5,1885114,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+two_adic_label,frac_even,141,-27988.8,138,1841734,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+n_additive,n_kod_I0s,8,-27607.2,6,1889364,same-group LOC
+has_2_isog,frac_even,4,-26869.5,4,1311066,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+rank_c,n_intpts_x,16,-26805.7,6,1889364,T15
+v3_moddeg,v3_tamagawa,11,-26720.4,5,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
+n_split_mult,n_kod_In,12,-26594.5,12,1889364,same-group LOC
+n_nonsplit_mult,n_kod_In,12,-25172.8,12,1889364,same-group LOC
+has_3_isog,odd_torsion,3,-24652.1,1,1889364,same-group GAL
+v7_moddeg,v7_tamagawa,6,-24570.0,2,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
+two_adic_log_index,frac_even,23,-24220.9,7,1885114,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+root_number,st_mean,1,-23831.5,0,1311066,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+max_isogeny_degree,v2_tamagawa,21,-23755.0,8,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_additive,n_kod_In,9,-22610.3,5,1889364,same-group LOC
+v3_moddeg,log_odd_tamagawa,1,-22544.5,0,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
+class_size,has_3_isog,3,-22381.4,1,1311066,same-group GAL
+two_adic_label,v2_tamagawa,65,-21718.0,53,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+torsion_structure,has_3_isog,7,-21633.9,4,1889364,same-group GAL
+max_isogeny_degree,frac_even,35,-21538.5,33,1311066,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+two_adic_level,v2_tamagawa,5,-21456.0,0,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_tamagawa,log_abs_disc,1,-21220.9,0,1889364,T4 (local data and equation)
+max_isogeny_degree,odd_torsion,14,-20720.2,12,1889364,same-group GAL
+v7_tamagawa,log_odd_tamagawa,7,-20124.0,6,1889364,same-group LOC
+v2_tamagawa,log_area,1,-19403.7,0,1889364,"T11 (area is the covolume, a function of c4, c6)"
+two_adic_log_index,v2_tamagawa,8,-19266.5,0,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_additive,n_kod_IVs,7,-18083.8,5,1889364,same-group LOC
+n_additive,n_kod_IIIs,5,-17877.7,4,1889364,same-group LOC
+n_additive,n_kod_III,4,-17771.8,3,1889364,same-group LOC
+n_additive,n_kod_II,4,-16719.4,3,1889364,same-group LOC
+n_torsion_gens,disc_sign,1,-15900.4,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v3_moddeg,log_odd_moddeg,23,-15884.6,23,1889364,same-group AN
+torsion_structure,disc_sign,3,-15571.8,3,1889364,T7
+n_split_mult,log_odd_tamagawa,2,-15541.5,0,1889364,same-group LOC
+v2_moddeg,v2_tamagawa,15,-15117.5,1,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
+n_torsion_gens,is_opt,1,-14599.6,0,1889364,I5/T8 (optimal vs non-optimal curves differ by the isogeny)
+has_3_isog,v3_moddeg,2,-14428.6,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+torsion_structure,is_opt,3,-14227.7,1,1889364,T8
+v2_torsion,n_intpts_x,4,-13554.1,4,1889364,T15 (torsion points are integral)
+log_abs_disc,log_area,32,-13194.5,21,1889364,"T11 (area is the covolume, a function of c4, c6)"
+log_abs_c4,log_area,33,-13001.0,13,1889364,"T11 (area is the covolume, a function of c4, c6)"
+log_abs_disc,log_omega,22,-13000.6,15,1889364,T11
+log_regulator,nagao_1000,6,-12928.1,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+log_omega,log_area,23,-12827.0,14,1889364,I
+n_split_mult,v5_tamagawa,6,-12826.5,5,1889364,same-group LOC
+log_j_height,log_abs_c4,14,-12790.0,2,1889364,same-group EQ
+log_j_height,log_area,9,-12719.2,4,1889364,"T11 (area is the covolume, a function of c4, c6)"
+n_additive,n_kod_IV,3,-12645.9,3,1889364,same-group LOC
+log_abs_c4,log_omega,18,-12548.8,3,1889364,T11
+log_abs_disc,log_abs_c4,15,-12518.9,0,1889364,same-group EQ
+odd_torsion,v3_tamagawa,3,-12203.5,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+log_j_height,log_omega,3,-11854.2,0,1889364,T11
+n_additive,n_kod_IIs,3,-11672.6,3,1889364,same-group LOC
+log_regulator,st_mean,5,-10622.0,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+v3_moddeg,n_kod_IVs,5,-10492.6,3,1889364,family M: valuations track the size of moddeg (T12)
+torsion_structure,v3_tamagawa,11,-10317.9,2,1889364,T13
+n_torsion_gens,n_intpts_x,2,-10228.2,2,1889364,T15 (torsion points are integral)
+odd_torsion,log_odd_tamagawa,6,-10072.4,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,log_area,5,-10045.5,0,1889364,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+torsion_structure,n_intpts_x,14,-10021.6,14,1889364,T15
+class_size,v2_tamagawa,5,-10000.7,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+nagao_1000,st_mean,32,-9840.5,14,1311066,same-group AP
+log_regulator,mur_lo,1,-9645.5,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+max_isogeny_degree,has_5_isog,10,-9448.2,9,1311066,same-group GAL
+st_mean,mur_hi,9,-9326.9,0,1311066,same-group AP
+nagao_1000,mur_lo,6,-9312.9,0,1311066,same-group AP
+n_torsion_gens,odd_torsion,5,-9184.8,4,1889364,same-group GAL
+nagao_1000,mur_mid,6,-9065.6,0,1311066,same-group AP
+v2_moddeg,n_kod_Ins,18,-8720.9,8,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
+torsion_structure,log_odd_tamagawa,8,-8712.3,3,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+rank_c,mur_lo,12,-8661.5,8,1311066,C7
+rank_c,st_mean,12,-8635.2,9,1311066,C7
+st_mean,mur_mid,4,-8549.1,0,1311066,same-group AP
+log_abs_disc,log_j_height,1,-8425.0,0,1889364,same-group EQ
+two_adic_label,is_cm,14,-8254.4,13,1841734,same-group GAL
+max_isogeny_degree,n_kod_IVs,14,-8248.3,14,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,odd_torsion,2,-8010.2,2,1889364,same-group GAL
+rank_c,mur_mid,5,-7970.5,0,1311066,C7
+n_nonsurj_primes,odd_torsion,2,-7970.1,2,1889364,same-group GAL
+nagao_1000,mur_hi,2,-7581.8,0,1311066,same-group AP
+n_kod_In,log_j_height,4,-7354.6,0,1889364,T4 (local data and equation)
+v3_moddeg,n_kod_IV,3,-7347.9,2,1889364,family M: valuations track the size of moddeg (T12)
+n_bad_primes,v2_tamagawa,4,-7321.8,2,1889364,same-group LOC
+max_isogeny_degree,v3_moddeg,30,-7313.5,6,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+n_kod_IIIs,v2_tamagawa,3,-7120.4,3,1889364,same-group LOC
+n_kod_III,v2_tamagawa,3,-7075.9,3,1889364,same-group LOC
+root_number,log_odd_sha,1,-6842.2,0,1889364,same-group AN
+rank_c,log_odd_sha,3,-6805.0,2,1889364,C4
+log_odd_tamagawa,log_odd_moddeg,1,-6618.4,0,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
+log_abs_disc,log_odd_tamagawa,1,-6599.5,0,1889364,T4 (local data and equation)
+st_mean,mur_lo,2,-6557.1,0,1311066,same-group AP
+class_size,n_kod_IVs,6,-6538.2,5,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v5_sha,log_odd_sha,2,-6380.1,1,1889364,same-group AN
+n_torsion_gens,v2_tamagawa,3,-6377.6,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_split_mult,v7_tamagawa,3,-6280.7,2,1889364,same-group LOC
+two_adic_label,disc_sign,24,-6151.6,24,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+odd_torsion,n_intpts_x,3,-6071.2,3,1889364,T15 (torsion points are integral)
+two_adic_label,is_opt,10,-5998.2,3,1841734,I5/T8 (optimal vs non-optimal curves differ by the isogeny)
+n_torsion_gens,c4_sign,2,-5992.5,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,exceptional_image,17,-5923.0,15,1841734,same-group GAL
+torsion_structure,c4_sign,4,-5867.7,4,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+log_area,log_odd_tamagawa,1,-5772.6,0,1889364,"T11 (area is the covolume, a function of c4, c6)"
+max_isogeny_degree,n_kod_IV,11,-5770.5,11,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_Ins,log_abs_disc,6,-5712.5,2,1889364,T4 (local data and equation)
+two_adic_label,n_kod_In,30,-5706.4,22,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_Ins,log_area,5,-5649.8,2,1889364,"T11 (area is the covolume, a function of c4, c6)"
+root_number,v3_sha,2,-5478.8,1,1889364,same-group AN
+is_cm,n_kod_In,4,-5464.3,3,1889364,T10
+rank_c,v3_sha,5,-5448.5,4,1889364,C4
+max_isogeny_degree,log_odd_moddeg,3,-5437.1,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+is_cm,c4_sign,2,-5434.5,1,1889364,"T10 (CM: integral j, no multiplicative reduction)"
+two_adic_label,c4_sign,23,-5332.1,22,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_Ins,log_omega,4,-5164.6,1,1889364,"T4+T11 (reduction types fix v_p(Delta), hence the period)"
+class_size,frac_even,12,-4945.0,10,1311066,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+n_split_mult,n_additive,10,-4885.2,8,1311066,same-group LOC
+n_nonsplit_mult,n_additive,10,-4871.0,8,1311066,same-group LOC
+n_kod_Ins,log_abs_c4,4,-4562.0,0,1889364,T4 (local data and equation)
+rank_c,v2_sha,4,-4387.2,2,1889364,C4
+max_isogeny_degree,v2_moddeg,26,-4314.3,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+n_bad_primes,n_split_mult,10,-4033.7,9,1311066,I2
+two_adic_label,n_intpts_x,23,-4009.3,20,1841734,T15 (torsion points are integral)
+n_intpts_x,nagao_1000,21,-3955.8,3,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+n_kod_IIs,log_regulator,3,-3891.8,1,1889364,"T4+T11 (reduction types fix v_p(Delta), hence the period)"
+v2_sha,log_regulator,5,-3849.8,1,1889364,same-group AN
+v2_torsion,log_abs_c4,2,-3823.5,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_torsion,log_area,2,-3755.5,0,1889364,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+has_5_isog,v5_moddeg,4,-3666.6,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+v2_sha,nagao_1000,2,-3655.8,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+v2_torsion,log_abs_disc,2,-3615.5,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v3_tamagawa,log_odd_moddeg,4,-3586.1,1,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
+v2_moddeg,n_bad_primes,16,-3533.3,12,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
+n_bad_primes,n_nonsplit_mult,10,-3476.5,9,1311066,I2
+c4_sign,n_kod_In,4,-3447.7,3,1889364,T4 (local data and equation)
+class_size,v2_moddeg,14,-3402.5,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+two_adic_log_index,n_kod_IVs,7,-3316.3,2,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_intpts_x,st_mean,17,-3264.5,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+v2_torsion,n_kod_IVs,5,-3244.3,5,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v7_moddeg,log_odd_moddeg,9,-3200.5,9,1889364,same-group AN
+n_torsion_gens,log_abs_c4,1,-3099.4,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_intpts_x,mur_lo,17,-3098.7,1,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+max_isogeny_degree,v5_moddeg,15,-3034.1,2,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+torsion_structure,log_abs_c4,3,-3024.9,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_torsion_gens,log_abs_disc,1,-2994.9,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_torsion,n_kod_II,4,-2989.9,4,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+torsion_structure,log_abs_disc,2,-2923.7,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,n_kod_IVs,46,-2867.1,43,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_torsion_gens,log_area,1,-2843.6,0,1889364,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+two_adic_label,log_area,28,-2826.6,5,1841734,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+torsion_structure,log_area,3,-2772.8,0,1889364,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+exceptional_image,n_kod_In,2,-2668.2,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_nonsurj_primes,bad_at_2,1,-2591.0,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_nonsurj_primes,has_5_isog,1,-2559.3,1,1889364,same-group GAL
+n_torsion_gens,n_kod_IVs,2,-2445.3,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_split_mult,log_j_height,3,-2399.3,0,1889364,T4 (local data and equation)
+torsion_structure,n_kod_IVs,8,-2395.2,8,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+odd_torsion,n_split_mult,4,-2327.9,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_torsion,n_kod_IV,4,-2271.1,4,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_torsion_gens,n_kod_II,3,-2255.3,3,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+torsion_structure,n_kod_II,8,-2209.7,8,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,n_additive,27,-2116.3,22,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_torsion,n_kod_IIs,4,-2092.5,4,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+root_number,v2_sha,1,-2082.5,0,1889364,same-group AN
+v5_moddeg,log_odd_moddeg,12,-2068.8,12,1889364,same-group AN
+n_intpts_x,mur_mid,4,-2045.9,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+two_adic_label,n_kod_IV,33,-2007.2,32,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_In,n_kod_Ins,2,-1983.4,1,1889364,same-group LOC
+two_adic_label,v2_moddeg,94,-1968.1,50,1841734,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+n_bad_primes,bad_at_3,2,-1956.9,0,1311066,same-group LOC
+n_nonsurj_primes,exceptional_image,2,-1923.2,1,1889364,same-group GAL
+class_size,v3_moddeg,5,-1892.7,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+n_nonsplit_mult,log_j_height,3,-1883.5,0,1889364,T4 (local data and equation)
+n_nonsurj_primes,v3_moddeg,1,-1879.6,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+log_regulator,log_odd_sha,5,-1854.7,0,1889364,same-group AN
+n_nonsurj_primes,frac_even,2,-1835.2,0,1889364,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+n_nonsurj_primes,log_area,1,-1771.1,0,1889364,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+has_5_isog,odd_torsion,3,-1743.8,1,1889364,same-group GAL
+log_odd_sha,nagao_1000,1,-1743.6,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+n_nonsurj_primes,log_abs_c4,1,-1731.3,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+log_odd_sha,st_mean,1,-1722.8,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+n_torsion_gens,n_kod_IV,2,-1711.4,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,c4_sign,8,-1709.3,7,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,has_5_isog,1,-1706.3,1,1311066,same-group GAL
+n_nonsurj_primes,log_abs_disc,1,-1702.3,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+torsion_structure,has_5_isog,7,-1699.9,5,1889364,same-group GAL
+v2_torsion,v2_moddeg,7,-1695.5,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+torsion_structure,n_kod_IV,7,-1676.1,7,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_split_mult,v3_tamagawa,4,-1672.1,1,1889364,same-group LOC
+two_adic_label,bad_at_2,18,-1667.0,18,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_bad_primes,log_j_height,4,-1639.1,0,1889364,T4 (local data and equation)
+n_split_mult,n_nonsplit_mult,9,-1616.0,9,1311066,same-group LOC
+torsion_structure,log_odd_moddeg,1,-1610.4,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+n_torsion_gens,n_kod_IIs,3,-1577.5,3,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v7_sha,log_odd_sha,2,-1573.9,1,1889364,same-group AN
+n_split_mult,n_kod_Ins,5,-1569.2,4,1889364,same-group LOC
+torsion_structure,n_kod_IIs,9,-1545.3,9,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v3_sha,log_regulator,9,-1509.9,4,1889364,same-group AN
+torsion_structure,n_split_mult,12,-1488.1,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+log_omega,log_odd_sha,1,-1479.6,0,1889364,same-group AN
+n_kod_IIs,n_intpts_x,14,-1457.1,8,1889364,U3 (likely via model size: T15)
+odd_torsion,n_kod_IIIs,3,-1438.9,3,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,log_area,10,-1422.1,0,1889364,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+c4_sign,n_additive,3,-1412.7,1,1889364,T4 (local data and equation)
+class_size,log_abs_c4,4,-1412.3,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_bad_primes,n_additive,9,-1411.1,7,1311066,I2
+v3_sha,nagao_1000,4,-1411.0,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+two_adic_log_index,log_abs_c4,1,-1407.9,0,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,log_abs_disc,5,-1402.4,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_log_index,log_area,2,-1394.7,0,1885114,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+v3_sha,st_mean,3,-1394.0,1,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+has_2_isog,n_kod_IVs,2,-1342.6,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+is_cm,frac_zero,8,-1340.5,7,1311066,T10
+max_isogeny_degree,log_abs_c4,9,-1333.5,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,n_bad_primes,49,-1329.7,39,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_torsion_gens,v2_moddeg,5,-1311.7,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+max_isogeny_degree,log_omega,5,-1292.3,0,1889364,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+n_nonsplit_mult,n_kod_Ins,5,-1285.1,4,1889364,same-group LOC
+n_bad_primes,bad_at_2,2,-1282.7,0,1311066,same-group LOC
+has_3_isog,two_adic_log_index,3,-1279.9,2,1885114,same-group GAL
+torsion_structure,v2_moddeg,10,-1277.2,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+class_size,log_omega,2,-1275.1,0,1889364,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+torsion_structure,n_kod_IIIs,7,-1255.4,7,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_nonsurj_primes,v2_tamagawa,1,-1217.4,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+c6_sign,n_kod_In,4,-1194.2,3,1889364,T4 (local data and equation)
+two_adic_label,log_abs_c4,26,-1183.8,5,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,log_abs_disc,25,-1181.4,3,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,log_abs_disc,3,-1180.9,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v3_sha,log_omega,7,-1153.0,5,1889364,same-group AN
+two_adic_level,v2_moddeg,7,-1151.7,1,1885114,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+exceptional_image,n_additive,1,-1124.5,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,n_split_mult,32,-1104.1,15,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+odd_torsion,two_adic_log_index,6,-1086.6,3,1885114,same-group GAL
+n_kod_IIIs,n_intpts_x,4,-1073.6,0,1889364,U3 (likely via model size: T15)
+class_size,log_regulator,2,-1069.6,0,1889364,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+class_size,n_bad_primes,6,-1064.7,0,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_moddeg,n_kod_IIIs,9,-1061.9,3,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
+has_2_isog,n_kod_II,1,-1047.6,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_bad_primes,n_kod_Ins,5,-1037.9,4,1889364,same-group LOC
+v3_tamagawa,log_abs_disc,3,-1031.4,1,1889364,T4 (local data and equation)
+has_3_isog,c4_sign,1,-1020.3,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,log_regulator,3,-1014.2,0,1889364,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+odd_torsion,n_kod_Ins,4,-1012.9,4,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_In,v5_tamagawa,5,-1010.9,3,1889364,same-group LOC
+root_number,v5_sha,1,-1001.1,0,1889364,same-group AN
+rank_c,v5_sha,2,-996.0,1,1889364,same-group AN
+n_bad_primes,frac_zero,2,-993.8,2,1311066,T10 (CM curves have few bad primes)
+torsion_structure,log_j_height,9,-991.9,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_In,n_kod_II,3,-987.2,1,1889364,same-group LOC
+two_adic_label,frac_zero,47,-985.0,22,1841734,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+is_cm,n_additive,3,-977.5,1,1311066,T10
+max_isogeny_degree,v7_moddeg,4,-970.0,1,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+max_isogeny_degree,n_bad_primes,9,-968.8,3,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+has_7_isog,v7_moddeg,1,-965.6,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+n_bad_primes,n_kod_II,3,-950.0,1,1889364,same-group LOC
+v2_moddeg,n_kod_In,2,-941.9,1,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
+odd_torsion,n_kod_IIs,3,-939.4,3,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,log_omega,19,-931.2,2,1841734,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+v3_tamagawa,log_area,3,-919.5,0,1889364,"T11 (area is the covolume, a function of c4, c6)"
+v2_sha,n_intpts_x,13,-894.3,8,1889364,"U3 (likely via rank and period: T15, I1)"
+torsion_structure,n_bad_primes,9,-888.9,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+torsion_structure,n_kod_Ins,6,-887.9,6,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_In,log_odd_tamagawa,1,-882.4,0,1889364,same-group LOC
+two_adic_label,n_kod_II,31,-880.7,28,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_bad_primes,petersson_resid,2,-864.5,0,1311066,T12 (index of Gamma_0(N) carries prod(1+1/p))
+has_5_isog,v5_tamagawa,3,-831.9,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,v3_tamagawa,17,-819.0,9,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+has_3_isog,is_cm,1,-812.3,0,1311066,same-group GAL
+max_isogeny_degree,is_cm,4,-811.3,3,1311066,same-group GAL
+two_adic_label,log_j_height,22,-803.0,6,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,v5_tamagawa,12,-786.6,6,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,v2_sha,2,-764.6,0,1841734,U4 (partly C4: Selmer heuristics with torsion; Fisher for isogenies)
+exceptional_image,n_bad_primes,2,-751.8,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,v3_tamagawa,1,-732.2,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,log_odd_moddeg,2,-730.6,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+v2_moddeg,n_nonsplit_mult,10,-729.4,10,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
+v2_torsion,odd_torsion,4,-709.7,2,1889364,same-group GAL
+max_isogeny_degree,log_odd_tamagawa,7,-709.7,5,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,n_nonsplit_mult,25,-708.8,14,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,n_kod_II,8,-691.6,8,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,n_kod_IV,4,-678.2,4,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_IVs,v2_tamagawa,2,-667.2,0,1889364,same-group LOC
+two_adic_log_index,v2_moddeg,11,-653.3,1,1885114,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+v3_tamagawa,n_intpts_x,1,-649.3,0,1889364,"U3 (likely via torsion: T13, T15)"
+max_isogeny_degree,n_kod_IIs,9,-642.2,9,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_level,n_kod_IVs,3,-639.0,1,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,bad_at_3,4,-629.0,4,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,bad_at_2,4,-622.0,4,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_intpts_x,log_odd_sha,7,-620.8,4,1889364,"U3 (likely via rank and period: T15, I1)"
+two_adic_label,n_kod_IIs,23,-614.1,22,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,n_kod_III,24,-607.8,22,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_log_index,n_kod_IV,5,-599.3,3,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,exceptional_image,4,-596.8,4,1889364,same-group GAL
+n_nonsurj_primes,has_7_isog,1,-594.0,1,1889364,same-group GAL
+max_isogeny_degree,has_7_isog,7,-587.8,7,1311066,same-group GAL
+max_isogeny_degree,n_kod_Ins,4,-548.4,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,is_cm,1,-545.6,1,1311066,same-group GAL
+has_2_isog,n_kod_IV,1,-541.3,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,has_3_isog,17,-530.6,13,1841734,same-group GAL
+v2_sha,log_omega,2,-529.6,0,1889364,same-group AN
+n_kod_II,v2_tamagawa,1,-529.3,0,1889364,same-group LOC
+n_kod_I0s,log_j_height,1,-525.0,0,1889364,T4 (local data and equation)
+exceptional_image,v3_moddeg,1,-524.5,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+max_isogeny_degree,exceptional_image,4,-522.2,4,1889364,same-group GAL
+class_size,c4_sign,2,-515.7,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_sha,st_mean,1,-511.7,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+v2_moddeg,log_abs_c4,6,-509.3,1,1889364,family M: valuations track the size of moddeg (T12)
+v2_moddeg,n_split_mult,8,-507.7,8,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
+v2_moddeg,log_abs_disc,6,-506.7,1,1889364,family M: valuations track the size of moddeg (T12)
+max_isogeny_degree,n_kod_IIIs,9,-505.8,9,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,n_kod_III,9,-501.7,9,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v3_sha,n_intpts_x,8,-500.8,4,1889364,"U3 (likely via rank and period: T15, I1)"
+n_kod_In,v7_tamagawa,2,-493.5,1,1889364,same-group LOC
+torsion_structure,n_kod_In,8,-488.8,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_level,has_5_isog,2,-488.3,1,1885114,same-group GAL
+class_size,bad_at_3,2,-483.5,1,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v3_moddeg,n_kod_Ins,1,-481.7,1,1889364,family M: valuations track the size of moddeg (T12)
+two_adic_label,v3_moddeg,15,-464.7,2,1841734,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+has_5_isog,v5_sha,1,-464.2,0,1889364,U4 (partly C4: Selmer heuristics with torsion; Fisher for isogenies)
+has_2_isog,n_kod_IIs,1,-461.0,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+odd_torsion,v5_tamagawa,2,-459.8,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+torsion_structure,v3_moddeg,6,-457.8,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+exceptional_image,n_split_mult,3,-454.9,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,n_kod_Ins,1,-454.4,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_level,log_abs_c4,1,-450.6,0,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+has_5_isog,two_adic_log_index,3,-446.6,3,1885114,same-group GAL
+torsion_structure,v5_tamagawa,5,-445.4,2,1889364,T13
+v2_sha,log_abs_c4,1,-443.5,0,1889364,"I1+T11 (large Sha needs a small period, hence large c4 and Delta)"
+v2_moddeg,n_kod_III,6,-441.6,1,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
+two_adic_level,has_3_isog,2,-439.4,2,1885114,same-group GAL
+n_bad_primes,v3_tamagawa,6,-435.7,2,1889364,same-group LOC
+torsion_structure,bad_at_2,1,-433.7,1,1889364,T17
+c4_sign,n_nonsplit_mult,4,-433.6,4,1889364,T4 (local data and equation)
+c6_sign,n_additive,3,-430.9,1,1889364,T4 (local data and equation)
+v2_sha,log_area,1,-429.9,0,1889364,same-group AN
+n_kod_Ins,v3_tamagawa,4,-427.6,1,1889364,same-group LOC
+two_adic_label,bad_at_3,7,-423.0,7,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_level,n_bad_primes,2,-422.7,0,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,frac_zero,11,-421.5,8,1311066,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+odd_torsion,v5_moddeg,2,-420.3,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+c4_sign,n_split_mult,4,-419.4,4,1889364,T4 (local data and equation)
+two_adic_label,n_kod_IIIs,22,-417.3,21,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+torsion_structure,v5_moddeg,3,-414.0,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+class_size,has_7_isog,1,-413.0,1,1311066,same-group GAL
+is_cm,c6_sign,1,-403.3,1,1889364,"T10 (CM: integral j, no multiplicative reduction)"
+two_adic_label,n_kod_I0s,20,-399.4,13,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+has_7_isog,n_kod_In,1,-394.0,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_log_index,n_bad_primes,3,-392.8,1,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v5_tamagawa,log_j_height,5,-389.1,1,1889364,T4 (local data and equation)
+c4_sign,n_kod_Ins,2,-370.7,2,1889364,T4 (local data and equation)
+class_size,n_kod_IIIs,5,-369.0,3,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+exceptional_image,n_nonsplit_mult,3,-367.5,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_IVs,log_odd_moddeg,2,-365.5,0,1889364,family M: valuations track the size of moddeg (T12)
+class_size,n_kod_III,5,-364.9,3,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v3_moddeg,n_kod_II,1,-360.8,1,1889364,family M: valuations track the size of moddeg (T12)
+v5_tamagawa,log_abs_disc,3,-359.9,1,1889364,T4 (local data and equation)
+class_size,v7_tamagawa,4,-356.2,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_level,n_kod_Ins,1,-355.0,0,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+has_2_isog,c4_sign,1,-353.4,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_level,log_odd_tamagawa,5,-352.7,2,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_IVs,log_abs_disc,1,-352.0,0,1889364,T4 (local data and equation)
+c4_sign,bad_at_3,1,-351.4,1,1889364,T4 (local data and equation)
+odd_torsion,n_nonsplit_mult,3,-346.2,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_level,v2_sha,2,-342.9,0,1885114,U4 (partly C4: Selmer heuristics with torsion; Fisher for isogenies)
+n_kod_IVs,log_area,1,-340.9,0,1889364,"T11 (area is the covolume, a function of c4, c6)"
+v5_tamagawa,log_area,3,-337.4,1,1889364,"T11 (area is the covolume, a function of c4, c6)"
+max_isogeny_degree,v5_sha,1,-333.2,0,1889364,U4 (partly C4: Selmer heuristics with torsion; Fisher for isogenies)
+max_isogeny_degree,v7_tamagawa,6,-331.9,4,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+is_cm,n_nonsplit_mult,4,-322.8,4,1311066,T10
+n_split_mult,n_kod_I0s,4,-320.1,2,1889364,same-group LOC
+torsion_structure,n_nonsplit_mult,4,-319.5,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,has_7_isog,13,-319.3,9,1841734,same-group GAL
+has_2_isog,n_bad_primes,1,-319.0,0,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+is_cm,n_split_mult,4,-317.7,4,1311066,T10
+v2_torsion,is_opt,1,-315.1,0,1889364,I5/T8 (optimal vs non-optimal curves differ by the isogeny)
+c4_sign,n_kod_IVs,1,-309.6,0,1889364,T4 (local data and equation)
+n_kod_I0s,n_kod_Ins,4,-307.7,1,1889364,same-group LOC
+v5_tamagawa,log_odd_moddeg,3,-305.1,0,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
+v3_tamagawa,log_omega,1,-305.0,0,1889364,"T4+T11 (Tamagawa tracks v_p(Delta), hence the period)"
+n_kod_Ins,log_odd_moddeg,1,-303.6,0,1889364,family M: valuations track the size of moddeg (T12)
+has_5_isog,v2_torsion,1,-297.1,1,1889364,same-group GAL
+n_bad_primes,log_odd_tamagawa,3,-294.8,1,1889364,same-group LOC
+exceptional_image,n_kod_II,1,-294.7,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,n_kod_II,3,-294.6,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_nonsplit_mult,n_kod_I0s,4,-288.5,3,1889364,same-group LOC
+two_adic_log_index,log_odd_tamagawa,3,-287.2,1,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_IVs,log_omega,1,-274.3,0,1889364,"T4+T11 (reduction types fix v_p(Delta), hence the period)"
+n_additive,bad_at_3,1,-270.8,1,1311066,same-group LOC
+v3_tamagawa,log_abs_c4,1,-269.1,0,1889364,T4 (local data and equation)
+v5_sha,log_regulator,5,-267.4,0,1889364,same-group AN
+two_adic_log_index,log_odd_moddeg,2,-264.0,0,1885114,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+n_kod_IIIs,log_abs_disc,2,-263.1,1,1889364,T4 (local data and equation)
+n_kod_IV,v2_tamagawa,1,-259.1,0,1889364,same-group LOC
+v5_sha,log_omega,4,-258.8,1,1889364,same-group AN
+c4_sign,n_kod_II,1,-256.9,0,1889364,T4 (local data and equation)
+n_kod_Ins,log_odd_tamagawa,1,-256.4,0,1889364,same-group LOC
+root_number,v7_sha,1,-256.4,0,1889364,same-group AN
+n_kod_IIIs,log_area,1,-255.8,0,1889364,"T11 (area is the covolume, a function of c4, c6)"
+rank_c,v7_sha,2,-255.2,1,1889364,same-group AN
+rank_c,log_abs_disc,2,-252.8,0,1889364,C5/C8 (rank and height)
+rank_c,log_area,2,-252.4,0,1889364,same-group AN
+is_cm,n_kod_IVs,1,-252.0,0,1889364,"T10 (CM: integral j, no multiplicative reduction)"
+c4_sign,v2_tamagawa,1,-251.3,0,1889364,T4 (local data and equation)
+n_kod_In,n_kod_IIs,1,-248.6,0,1889364,same-group LOC
+class_size,v5_tamagawa,3,-247.7,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+rank_c,log_omega,3,-247.6,0,1889364,same-group AN
+n_kod_IIIs,log_abs_c4,1,-247.1,0,1889364,T4 (local data and equation)
+v5_sha,nagao_1000,1,-245.9,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+v2_torsion,disc_sign,1,-245.7,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+rank_c,log_abs_c4,2,-244.0,0,1889364,C5/C8 (rank and height)
+v2_sha,v2_moddeg,3,-243.4,1,1889364,T14
+exceptional_image,two_adic_log_index,2,-239.0,1,1885114,same-group GAL
+torsion_structure,frac_zero,2,-239.0,0,1889364,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+max_isogeny_degree,n_kod_In,15,-238.4,12,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v5_sha,st_mean,2,-237.0,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+is_cm,n_kod_I0s,1,-235.7,0,1889364,"T10 (CM: integral j, no multiplicative reduction)"
+two_adic_log_index,v3_moddeg,10,-235.3,3,1885114,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+n_kod_II,log_abs_disc,1,-234.6,0,1889364,T4 (local data and equation)
+torsion_structure,log_regulator,2,-234.2,0,1889364,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+v5_sha,log_abs_c4,2,-231.8,0,1889364,"I1+T11 (large Sha needs a small period, hence large c4 and Delta)"
+two_adic_label,has_5_isog,18,-231.7,18,1841734,same-group GAL
+n_kod_IIIs,log_omega,1,-231.7,0,1889364,"T4+T11 (reduction types fix v_p(Delta), hence the period)"
+n_kod_III,log_odd_moddeg,1,-231.5,0,1889364,family M: valuations track the size of moddeg (T12)
+c4_sign,n_bad_primes,2,-231.1,2,1889364,T4 (local data and equation)
+n_kod_II,log_area,1,-228.6,0,1889364,"T11 (area is the covolume, a function of c4, c6)"
+is_cm,log_j_height,7,-228.6,4,1889364,T10
+v5_sha,log_area,3,-226.0,0,1889364,same-group AN
+n_split_mult,n_kod_II,3,-226.0,1,1889364,same-group LOC
+n_kod_IIs,v2_tamagawa,1,-224.8,0,1889364,same-group LOC
+v3_tamagawa,log_j_height,1,-224.8,0,1889364,T4 (local data and equation)
+v5_sha,log_odd_moddeg,2,-222.7,0,1889364,same-group AN
+rank_c,log_j_height,1,-221.7,0,1889364,C5/C8 (rank and height)
+class_size,frac_zero,3,-221.0,1,1311066,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+n_torsion_gens,has_5_isog,1,-219.7,1,1889364,same-group GAL
+two_adic_label,c6_sign,3,-219.1,3,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_level,n_kod_IIs,2,-218.5,1,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+has_2_isog,c6_sign,1,-217.9,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_torsion,c6_sign,1,-217.9,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,petersson_resid,1,-213.0,0,1841734,family E/T10 (Eisenstein congruences; CM symmetric square)
+n_kod_II,log_abs_c4,1,-212.7,0,1889364,T4 (local data and equation)
+n_kod_II,log_j_height,1,-212.2,0,1889364,T4 (local data and equation)
+is_cm,n_kod_II,1,-211.4,0,1889364,"T10 (CM: integral j, no multiplicative reduction)"
+exceptional_image,v2_torsion,1,-210.6,1,1889364,same-group GAL
+n_kod_Ins,n_kod_IVs,2,-209.7,0,1889364,same-group LOC
+has_3_isog,n_kod_III,1,-209.4,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_torsion_gens,c6_sign,1,-208.8,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+torsion_structure,c6_sign,1,-208.8,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_bad_primes,n_kod_I0s,2,-207.4,1,1889364,same-group LOC
+n_kod_II,n_kod_Ins,2,-204.7,0,1889364,same-group LOC
+n_nonsplit_mult,v3_tamagawa,4,-203.6,1,1889364,same-group LOC
+n_nonsplit_mult,n_kod_II,3,-203.3,1,1889364,same-group LOC
+has_3_isog,n_kod_IIIs,1,-200.8,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_torsion,bad_at_3,1,-197.7,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_nonsplit_mult,log_odd_tamagawa,1,-196.2,0,1889364,same-group LOC
+n_kod_In,v3_tamagawa,2,-195.4,1,1889364,same-group LOC
+n_nonsplit_mult,n_kod_III,2,-195.2,1,1889364,same-group LOC
+two_adic_level,n_kod_In,1,-193.0,0,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_log_index,v3_tamagawa,6,-190.8,3,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_split_mult,n_kod_IIIs,2,-190.1,1,1889364,same-group LOC
+two_adic_level,v3_tamagawa,4,-189.1,2,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_bad_primes,log_abs_disc,7,-188.1,0,1889364,T4 (local data and equation)
+v2_torsion,n_bad_primes,4,-188.1,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_level,n_kod_IV,2,-187.9,1,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_IIIs,log_regulator,1,-185.9,0,1889364,"T4+T11 (reduction types fix v_p(Delta), hence the period)"
+n_split_mult,n_kod_III,2,-185.7,1,1889364,same-group LOC
+v3_moddeg,log_area,1,-185.0,0,1889364,same-group AN
+n_nonsplit_mult,n_kod_IVs,3,-184.5,1,1889364,same-group LOC
+n_split_mult,n_kod_IVs,3,-184.3,1,1889364,same-group LOC
+n_kod_III,n_kod_Ins,2,-182.8,0,1889364,same-group LOC
+rank_c,mur_hi,1,-182.1,0,1311066,C7
+two_adic_log_index,n_kod_II,3,-181.9,1,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+c6_sign,n_bad_primes,2,-181.7,2,1889364,T4 (local data and equation)
+class_size,c6_sign,1,-180.5,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,c6_sign,2,-180.5,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+is_cm,n_kod_IV,1,-180.1,0,1889364,"T10 (CM: integral j, no multiplicative reduction)"
+n_nonsplit_mult,petersson_resid,1,-180.0,0,1311066,family M: valuations track the size of moddeg (T12)
+has_2_isog,odd_torsion,2,-178.1,1,1889364,same-group GAL
+torsion_structure,bad_at_3,2,-176.9,2,1889364,T17
+n_bad_primes,log_area,5,-174.9,0,1889364,"T11 (area is the covolume, a function of c4, c6)"
+v3_moddeg,log_omega,1,-174.2,0,1889364,same-group AN
+v2_torsion,n_split_mult,2,-174.1,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,n_kod_I0s,3,-173.3,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_nonsplit_mult,n_kod_IIIs,2,-171.9,1,1889364,same-group LOC
+n_kod_IIIs,v3_tamagawa,1,-168.2,0,1889364,same-group LOC
+n_bad_primes,log_abs_c4,4,-167.1,0,1889364,T4 (local data and equation)
+n_additive,log_j_height,2,-164.8,0,1889364,T4 (local data and equation)
+n_bad_primes,log_omega,2,-164.4,0,1889364,"T4+T11 (reduction types fix v_p(Delta), hence the period)"
+class_size,n_kod_IIs,3,-163.9,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_additive,bad_at_2,1,-162.6,1,1311066,same-group LOC
+v2_torsion,v3_moddeg,2,-161.2,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+rank_c,petersson_resid,1,-160.4,0,1311066,U2 (candidate)
+rank_c,v2_moddeg,3,-159.6,3,1889364,C1
+v3_moddeg,n_kod_IIs,1,-159.0,1,1889364,family M: valuations track the size of moddeg (T12)
+two_adic_label,st_m2,1,-158.7,0,1841734,T18/T5 (mod-l image fixes a_p mod l)
+max_isogeny_degree,v2_sha,1,-158.2,0,1889364,U4 (partly C4: Selmer heuristics with torsion; Fisher for isogenies)
+n_torsion_gens,exceptional_image,1,-157.0,1,1889364,same-group GAL
+exceptional_image,n_kod_IIIs,1,-156.9,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+c6_sign,n_nonsplit_mult,3,-155.5,3,1889364,T4 (local data and equation)
+n_split_mult,petersson_resid,1,-155.2,0,1311066,family M: valuations track the size of moddeg (T12)
+v2_moddeg,log_area,6,-155.1,1,1889364,same-group AN
+torsion_structure,exceptional_image,3,-153.4,3,1889364,same-group GAL
+v2_torsion,n_kod_In,3,-153.4,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,v5_tamagawa,6,-152.7,1,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,log_odd_tamagawa,12,-152.3,1,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+rank_c,n_split_mult,1,-151.5,0,1311066,T1+T2
+c6_sign,n_split_mult,3,-150.5,3,1889364,T4 (local data and equation)
+two_adic_label,odd_torsion,20,-149.8,10,1841734,same-group GAL
+is_cm,v5_tamagawa,1,-149.4,1,1889364,"T10 (CM: integral j, no multiplicative reduction)"
+c4_sign,log_abs_c4,7,-149.3,7,1889364,same-group EQ
+c4_sign,log_j_height,7,-148.1,7,1889364,same-group EQ
+c4_sign,frac_zero,7,-147.5,7,1889364,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+two_adic_level,v7_tamagawa,3,-146.7,1,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_torsion,n_additive,2,-145.4,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v3_moddeg,n_additive,1,-145.2,0,1889364,family M: valuations track the size of moddeg (T12)
+is_cm,log_abs_c4,1,-145.1,0,1889364,"T10 (CM: integral j, no multiplicative reduction)"
+n_split_mult,n_kod_IIs,3,-144.2,1,1889364,same-group LOC
+exceptional_image,n_kod_IV,1,-143.6,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_moddeg,n_intpts_x,12,-143.0,3,1889364,U3 (likely via model size: T15)
+two_adic_label,log_odd_moddeg,4,-139.5,0,1841734,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+c6_sign,n_intpts_x,1,-138.5,1,1889364,U3 (likely via model size: T15)
+is_cm,n_kod_IIs,1,-136.7,0,1889364,"T10 (CM: integral j, no multiplicative reduction)"
+n_bad_primes,v5_tamagawa,2,-136.1,1,1889364,same-group LOC
+n_kod_Ins,n_kod_IIs,2,-135.8,0,1889364,same-group LOC
+v2_moddeg,bad_at_3,1,-134.4,0,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
+is_cm,n_kod_III,1,-133.9,0,1889364,"T10 (CM: integral j, no multiplicative reduction)"
+v2_moddeg,log_omega,3,-133.3,0,1889364,same-group AN
+v3_moddeg,c4_sign,3,-133.0,0,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
+is_cm,n_bad_primes,1,-132.9,1,1311066,T10
+v3_moddeg,n_kod_III,3,-132.1,1,1889364,family M: valuations track the size of moddeg (T12)
+torsion_structure,n_additive,7,-131.2,7,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v5_sha,v5_moddeg,1,-131.0,0,1889364,T14
+n_nonsplit_mult,n_kod_IV,2,-130.7,1,1889364,same-group LOC
+c4_sign,frac_even,1,-130.3,0,1889364,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+n_nonsplit_mult,n_kod_IIs,3,-129.3,1,1889364,same-group LOC
+two_adic_level,v3_moddeg,3,-127.9,1,1885114,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+n_kod_IIs,log_abs_disc,2,-125.4,1,1889364,T4 (local data and equation)
+n_additive,v5_tamagawa,4,-124.1,2,1889364,same-group LOC
+n_kod_IIs,log_area,2,-123.0,0,1889364,"T11 (area is the covolume, a function of c4, c6)"
+rank_c,n_kod_IIIs,1,-122.0,0,1889364,U7 (rank and reduction types; T16 for n_bad_primes)
+is_cm,frac_even,1,-121.7,0,1311066,T10 (CM trace pattern)
+n_torsion_gens,v3_moddeg,2,-121.0,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+c4_sign,petersson_resid,1,-120.8,0,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
+two_adic_log_index,v7_tamagawa,3,-119.0,1,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_bad_primes,n_kod_IVs,2,-117.8,1,1889364,same-group LOC
+odd_torsion,n_additive,2,-116.6,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_IIs,log_omega,1,-115.7,0,1889364,"T4+T11 (reduction types fix v_p(Delta), hence the period)"
+root_number,v2_moddeg,1,-114.7,1,1889364,same-group AN
+n_kod_IV,log_odd_moddeg,1,-114.6,0,1889364,family M: valuations track the size of moddeg (T12)
+n_kod_IIs,log_odd_moddeg,1,-113.0,0,1889364,family M: valuations track the size of moddeg (T12)
+n_bad_primes,n_kod_IIIs,2,-110.6,1,1889364,same-group LOC
+two_adic_level,odd_torsion,4,-109.9,3,1885114,same-group GAL
+n_bad_primes,n_kod_III,2,-108.0,1,1889364,same-group LOC
+is_cm,petersson_resid,1,-107.2,0,1311066,family E/T10 (Eisenstein congruences; CM symmetric square)
+v2_torsion,n_kod_III,2,-106.2,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_additive,log_abs_disc,1,-105.8,0,1889364,T4 (local data and equation)
+two_adic_log_index,rank_c,2,-105.0,0,1885114,"C6 (rank and 2-, 3-torsion structure)"
+odd_torsion,n_kod_I0s,2,-103.9,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+is_cm,n_kod_Ins,1,-103.9,1,1889364,"T10 (CM: integral j, no multiplicative reduction)"
+n_kod_IIs,v3_tamagawa,1,-102.7,0,1889364,same-group LOC
+n_additive,petersson_resid,1,-102.0,0,1311066,family M: valuations track the size of moddeg (T12)
+v2_torsion,n_kod_IIIs,2,-101.8,2,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_additive,log_omega,1,-101.4,0,1889364,"T4+T11 (reduction types fix v_p(Delta), hence the period)"
+rank_c,n_kod_IIs,2,-100.1,1,1889364,U7 (rank and reduction types; T16 for n_bad_primes)
+max_isogeny_degree,n_split_mult,4,-99.6,1,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+c4_sign,st_m2,1,-97.7,0,1889364,T18/T5 (mod-l image fixes a_p mod l)
+two_adic_label,n_kod_Ins,6,-96.6,4,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+has_3_isog,n_bad_primes,1,-96.5,0,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_additive,log_area,1,-95.6,0,1889364,"T11 (area is the covolume, a function of c4, c6)"
+n_kod_Ins,n_kod_IIIs,1,-92.7,0,1889364,same-group LOC
+c4_sign,v5_tamagawa,1,-92.6,1,1889364,T4 (local data and equation)
+v2_torsion,c4_sign,2,-92.2,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+torsion_structure,n_kod_I0s,4,-91.3,4,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v5_sha,n_intpts_x,7,-89.5,7,1889364,"U3 (likely via rank and period: T15, I1)"
+c6_sign,v3_tamagawa,2,-89.2,2,1889364,T4 (local data and equation)
+odd_torsion,v2_tamagawa,1,-88.8,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_bad_primes,n_kod_IV,2,-88.4,1,1889364,same-group LOC
+v2_moddeg,disc_sign,1,-88.4,0,1889364,family M: valuations track the size of moddeg (T12)
+two_adic_level,n_kod_I0s,2,-87.3,0,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_torsion,v3_tamagawa,1,-86.3,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+max_isogeny_degree,log_j_height,10,-85.4,7,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_log_index,v2_sha,1,-85.1,0,1885114,U4 (partly C4: Selmer heuristics with torsion; Fisher for isogenies)
+v2_torsion,log_j_height,3,-84.1,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,log_regulator,3,-80.7,0,1841734,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+n_bad_primes,n_kod_IIs,2,-80.4,1,1889364,same-group LOC
+n_torsion_gens,n_kod_III,1,-80.2,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v7_tamagawa,log_abs_disc,1,-79.4,0,1889364,T4 (local data and equation)
+c6_sign,bad_at_2,1,-79.1,1,1889364,T4 (local data and equation)
+torsion_structure,n_kod_III,4,-78.6,4,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_IV,v3_tamagawa,1,-78.5,0,1889364,same-group LOC
+v2_torsion,n_kod_I0s,1,-77.3,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_torsion_gens,n_kod_IIIs,1,-77.0,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v7_tamagawa,log_odd_moddeg,2,-77.0,0,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
+v7_tamagawa,log_area,1,-75.9,0,1889364,"T11 (area is the covolume, a function of c4, c6)"
+c6_sign,log_odd_tamagawa,3,-75.7,3,1889364,T4 (local data and equation)
+v7_tamagawa,log_j_height,3,-75.3,0,1889364,T4 (local data and equation)
+two_adic_label,v7_tamagawa,8,-74.4,5,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v5_tamagawa,n_intpts_x,2,-73.5,1,1889364,"U3 (likely via torsion: T13, T15)"
+max_isogeny_degree,disc_sign,4,-73.2,4,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+is_cm,v7_tamagawa,1,-72.8,1,1889364,"T10 (CM: integral j, no multiplicative reduction)"
+has_7_isog,v2_torsion,1,-71.9,1,1889364,same-group GAL
+is_cm,st_m2,1,-70.4,0,1311066,T10 (CM trace pattern)
+two_adic_level,log_j_height,1,-70.4,1,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_torsion,log_regulator,1,-69.9,0,1889364,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+n_kod_Ins,v5_tamagawa,3,-69.8,2,1889364,same-group LOC
+two_adic_log_index,log_regulator,1,-69.4,0,1885114,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+v7_tamagawa,log_regulator,1,-69.0,0,1889364,"T4+T11 (Tamagawa tracks v_p(Delta), hence the period)"
+class_size,rank_c,1,-68.9,0,1311066,U5 (rank and isogeny structure beyond 2 and 3)
+v7_sha,log_odd_moddeg,3,-68.7,1,1889364,same-group AN
+has_3_isog,v2_torsion,1,-68.7,1,1889364,same-group GAL
+two_adic_log_index,n_kod_IIs,2,-68.3,2,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v7_sha,log_regulator,5,-67.9,3,1889364,same-group AN
+v2_moddeg,n_additive,2,-67.6,1,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
+n_bad_primes,v7_tamagawa,2,-67.4,1,1889364,same-group LOC
+rank_c,n_additive,1,-67.2,0,1311066,U7 (rank and reduction types; T16 for n_bad_primes)
+v2_torsion,rank_c,1,-66.7,0,1889364,"C6 (rank and 2-, 3-torsion structure)"
+has_3_isog,n_nonsplit_mult,1,-66.5,0,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,n_split_mult,1,-66.3,0,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v7_sha,log_omega,6,-65.9,2,1889364,same-group AN
+two_adic_log_index,petersson_resid,1,-65.9,0,1885114,family E/T10 (Eisenstein congruences; CM symmetric square)
+v7_sha,log_abs_c4,5,-65.8,2,1889364,"I1+T11 (large Sha needs a small period, hence large c4 and Delta)"
+has_5_isog,v3_tamagawa,2,-65.5,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_moddeg,is_opt,1,-65.4,0,1889364,T12 (non-optimal degrees carry the isogeny)
+max_isogeny_degree,n_nonsplit_mult,3,-64.4,1,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+odd_torsion,log_j_height,2,-64.4,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_label,v3_tamagawa,19,-64.0,4,1841734,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v7_sha,st_mean,2,-63.8,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+v7_tamagawa,log_abs_c4,1,-63.1,0,1889364,T4 (local data and equation)
+v7_sha,log_area,5,-62.9,1,1889364,same-group AN
+two_adic_label,rank_c,6,-62.6,0,1841734,"C6 (rank and 2-, 3-torsion structure)"
+max_isogeny_degree,rank_c,1,-60.9,0,1311066,U5 (rank and isogeny structure beyond 2 and 3)
+v7_tamagawa,log_omega,1,-60.8,0,1889364,"T4+T11 (Tamagawa tracks v_p(Delta), hence the period)"
+n_torsion_gens,n_bad_primes,1,-60.7,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_IV,n_kod_Ins,1,-60.1,0,1889364,same-group LOC
+v7_sha,nagao_1000,2,-59.5,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+max_isogeny_degree,n_additive,5,-59.2,1,1311066,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_level,log_regulator,1,-53.7,0,1885114,family S: large isogeny degree forces special j and small models (T9/T10/T8)
+c6_sign,log_j_height,7,-53.7,7,1889364,same-group EQ
+two_adic_log_index,frac_zero,1,-53.6,0,1885114,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+c6_sign,frac_zero,7,-53.2,7,1889364,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+n_torsion_gens,has_7_isog,1,-52.9,1,1889364,same-group GAL
+odd_torsion,n_kod_In,1,-52.3,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_additive,v7_tamagawa,2,-52.0,2,1889364,same-group LOC
+n_torsion_gens,rank_c,1,-51.7,0,1889364,"C6 (rank and 2-, 3-torsion structure)"
+two_adic_level,petersson_resid,1,-51.3,0,1885114,family E/T10 (Eisenstein congruences; CM symmetric square)
+torsion_structure,has_7_isog,4,-51.3,3,1889364,same-group GAL
+c6_sign,petersson_resid,1,-50.9,1,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
+c6_sign,frac_even,4,-50.9,4,1889364,T18/T5 (mod-l image fixes a_p mod l; c4=0 or c6=0 is CM)
+torsion_structure,rank_c,2,-50.7,0,1889364,"C6 (rank and 2-, 3-torsion structure)"
+odd_torsion,n_kod_II,1,-48.7,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_II,n_intpts_x,3,-48.1,0,1889364,U3 (likely via model size: T15)
+odd_torsion,n_kod_III,1,-47.5,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_In,n_kod_I0s,1,-47.1,1,1889364,same-group LOC
+v5_moddeg,log_abs_c4,1,-46.0,0,1889364,family M: valuations track the size of moddeg (T12)
+c4_sign,v7_tamagawa,1,-45.2,1,1889364,T4 (local data and equation)
+two_adic_log_index,v5_tamagawa,5,-44.5,3,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+has_3_isog,v7_tamagawa,1,-44.3,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+c6_sign,log_abs_c4,1,-43.9,1,1889364,same-group EQ
+c6_sign,v2_tamagawa,1,-43.7,0,1889364,T4 (local data and equation)
+v5_moddeg,log_j_height,1,-43.2,0,1889364,family M: valuations track the size of moddeg (T12)
+v5_sha,n_kod_IIs,1,-43.2,0,1889364,C9/I1 (Sha and Tamagawa enter BSD as a product)
+c6_sign,n_kod_I0s,1,-42.8,0,1889364,T4 (local data and equation)
+v5_moddeg,log_omega,1,-42.6,0,1889364,same-group AN
+has_3_isog,c6_sign,1,-42.4,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v5_moddeg,log_area,1,-41.9,0,1889364,same-group AN
+odd_torsion,n_kod_IVs,1,-41.8,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_level,v5_tamagawa,4,-40.6,3,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+class_size,v5_moddeg,2,-40.5,1,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+v5_tamagawa,log_omega,1,-39.8,1,1889364,"T4+T11 (Tamagawa tracks v_p(Delta), hence the period)"
+n_nonsurj_primes,n_bad_primes,1,-39.6,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+c6_sign,log_regulator,1,-39.3,0,1889364,family S
+n_split_mult,n_kod_IV,1,-38.4,1,1889364,same-group LOC
+has_3_isog,v5_moddeg,1,-36.1,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+v5_tamagawa,log_abs_c4,1,-36.1,0,1889364,T4 (local data and equation)
+c6_sign,log_omega,1,-36.0,0,1889364,family S
+v7_sha,log_odd_tamagawa,1,-35.1,0,1889364,C9/I1 (Sha and Tamagawa enter BSD as a product)
+v2_torsion,n_kod_Ins,1,-34.8,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+is_cm,n_intpts_x,1,-33.7,0,1889364,U3 (likely via model size: T15)
+c6_sign,n_kod_IVs,1,-33.4,1,1889364,T4 (local data and equation)
+v2_moddeg,log_regulator,5,-33.2,5,1889364,same-group AN
+odd_torsion,n_bad_primes,1,-32.9,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+c6_sign,v5_tamagawa,1,-32.7,1,1889364,T4 (local data and equation)
+n_kod_In,n_kod_IVs,1,-32.4,1,1889364,same-group LOC
+c6_sign,log_area,1,-32.2,0,1889364,"T11 (area is the covolume, a function of c4, c6)"
+two_adic_log_index,v5_moddeg,1,-31.4,0,1885114,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+odd_torsion,n_kod_IV,1,-29.3,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+has_7_isog,odd_torsion,2,-28.5,1,1889364,same-group GAL
+v2_moddeg,n_kod_I0s,2,-28.4,1,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
+v7_sha,n_intpts_x,3,-27.9,2,1889364,"U3 (likely via rank and period: T15, I1)"
+n_nonsurj_primes,rank_c,1,-27.9,0,1889364,U5 (rank and isogeny structure beyond 2 and 3)
+torsion_structure,v7_tamagawa,2,-27.6,1,1889364,T13
+odd_torsion,v7_tamagawa,1,-27.6,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_I0s,v5_tamagawa,1,-27.5,0,1889364,same-group LOC
+v5_tamagawa,petersson_resid,1,-26.9,0,1889364,"T4+T12 (Tamagawa tracks v_p(Delta), hence the covolume in the residual)"
+max_isogeny_degree,petersson_resid,2,-26.7,1,1311066,family E/T10 (Eisenstein congruences; CM symmetric square)
+n_nonsplit_mult,v5_tamagawa,1,-26.3,0,1889364,same-group LOC
+has_3_isog,v5_tamagawa,1,-25.6,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_moddeg,frac_zero,1,-25.5,0,1889364,C7/T3 via conductor and bad primes
+has_5_isog,v3_moddeg,1,-25.1,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+v2_torsion,v7_tamagawa,1,-25.0,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+rank_c,n_bad_primes,1,-24.8,0,1311066,U7 (rank and reduction types; T16 for n_bad_primes)
+odd_torsion,rank_c,1,-24.5,0,1889364,"C6 (rank and 2-, 3-torsion structure)"
+v2_moddeg,log_odd_moddeg,1,-24.2,0,1889364,same-group AN
+v3_moddeg,c6_sign,2,-24.0,1,1889364,T10 (c4=0 or c6=0 is a CM curve with j=0 or 1728)
+torsion_structure,is_cm,1,-23.6,0,1889364,same-group GAL
+v2_moddeg,log_odd_tamagawa,2,-23.5,1,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
+c6_sign,n_kod_IV,1,-23.5,1,1889364,T4 (local data and equation)
+v2_moddeg,log_j_height,1,-23.4,0,1889364,family M: valuations track the size of moddeg (T12)
+c6_sign,n_kod_Ins,1,-22.6,1,1889364,T4 (local data and equation)
+c4_sign,n_intpts_x,1,-21.7,0,1889364,U3 (likely via model size: T15)
+c6_sign,n_kod_IIs,1,-21.6,1,1889364,T4 (local data and equation)
+n_kod_III,v3_tamagawa,1,-21.0,0,1889364,same-group LOC
+odd_torsion,v7_moddeg,1,-20.5,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+has_5_isog,n_kod_IVs,1,-20.5,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+torsion_structure,v7_moddeg,1,-20.5,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+n_kod_In,n_kod_IIIs,1,-19.8,1,1889364,same-group LOC
+v7_sha,v3_tamagawa,1,-19.2,0,1889364,C9/I1 (Sha and Tamagawa enter BSD as a product)
+v3_moddeg,n_bad_primes,1,-19.0,0,1889364,family M: valuations track the size of moddeg (T12)
+v5_sha,v3_tamagawa,1,-19.0,0,1889364,C9/I1 (Sha and Tamagawa enter BSD as a product)
+max_isogeny_degree,st_m2,6,-18.8,2,1311066,T18/T5 (mod-l image fixes a_p mod l)
+n_torsion_gens,v7_tamagawa,1,-17.7,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_kod_In,n_kod_III,1,-17.6,1,1889364,same-group LOC
+v2_moddeg,v5_tamagawa,1,-17.3,0,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
+n_kod_I0s,v3_tamagawa,1,-16.5,1,1889364,same-group LOC
+has_7_isog,v3_tamagawa,1,-16.3,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+has_2_isog,v5_moddeg,1,-16.3,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+v3_sha,log_odd_moddeg,3,-16.2,3,1889364,same-group AN
+v3_sha,log_abs_c4,5,-16.1,2,1889364,"I1+T11 (large Sha needs a small period, hence large c4 and Delta)"
+v3_sha,log_area,5,-16.0,3,1889364,same-group AN
+v2_moddeg,n_kod_II,1,-16.0,0,1889364,"family P: Dummigan, Caro-Pasten bounds on v2(moddeg) from multiplicative primes"
+c6_sign,v7_tamagawa,1,-15.9,1,1889364,T4 (local data and equation)
+exceptional_image,n_kod_Ins,1,-15.3,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_torsion_gens,v5_tamagawa,1,-15.0,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_torsion,v5_tamagawa,1,-14.7,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v2_torsion,v5_moddeg,1,-14.3,0,1889364,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+v2_torsion,n_nonsplit_mult,1,-14.2,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+two_adic_level,v7_moddeg,1,-14.1,1,1885114,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+two_adic_label,v5_moddeg,2,-13.5,0,1841734,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+two_adic_level,v5_moddeg,1,-13.4,1,1885114,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+n_nonsurj_primes,v7_tamagawa,1,-13.3,1,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v7_sha,n_split_mult,1,-13.3,0,1889364,C9/I1 (Sha and Tamagawa enter BSD as a product)
+n_nonsplit_mult,v7_tamagawa,1,-13.1,0,1889364,same-group LOC
+two_adic_log_index,n_kod_I0s,1,-13.0,0,1885114,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+n_nonsurj_primes,v5_tamagawa,1,-12.7,0,1889364,family L: torsion/isogeny constrains local data (T4/T13/T17 type)
+v3_moddeg,n_kod_IIIs,1,-12.6,0,1889364,family M: valuations track the size of moddeg (T12)
+v3_sha,mur_lo,1,-12.5,0,1889364,"C7 (trace summaries are rank proxies; Sha and integral points follow rank by C4, T15)"
+n_kod_I0s,n_kod_IIIs,1,-12.3,0,1889364,same-group LOC
+n_kod_II,n_kod_I0s,1,-11.1,0,1889364,same-group LOC
+v5_moddeg,v2_tamagawa,1,-11.1,0,1889364,"U1 (check Agashe-Ribet-Stein, Emerton: component groups and the congruence number)"
+two_adic_log_index,v7_moddeg,1,-10.9,0,1885114,"family E: Eisenstein congruence, rational torsion/isogeny divides the congruence number"
+n_kod_III,n_kod_I0s,1,-10.5,0,1889364,same-group LOC
+v7_tamagawa,log_odd_sha,1,-10.3,0,1889364,C9/I1 (Sha and Tamagawa enter BSD as a product)

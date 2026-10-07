@@ -1,0 +1,258 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref,url}
+\usepackage[margin=1.1in]{geometry}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\degphi}{\deg\varphi_E}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\Phig}{\Phi^{\mathrm{geom}}}
+\newcommand{\Phit}{\widetilde{\Phi}}
+\newcommand{\Gal}{\operatorname{Gal}}
+
+\title{Local component groups and the $\ell$-adic valuations of the modular degree}
+\author{[Author]}
+\address{[Affiliation]}
+\email{[email]}
+\date{\today}
+
+\begin{document}
+
+\begin{abstract}
+Let $E/\Q$ be the $X_0(N)$-optimal curve of its isogeny class and $\varphi_E\colon X_0(N)\to E$ its modular parametrisation. For a bad prime $q$ let $\Phig_q$ denote the component group of the N\'eron model of $E$ over $\overline{\F}_q$. We study the inequality
+\[
+v_\ell(\degphi)\ \ge\ \sum_{q\mid N} v_\ell\bigl(\#\Phig_q\bigr)
+\]
+for odd primes $\ell$ at which $E[\ell]$ is irreducible, together with its refinement in which, at each odd $q$, the component group of $E$ is replaced by the larger of the component groups of $E$ and of its quadratic twist by $\Q(\sqrt{q^*})$. For $\ell\ge 5$ the multiplicative part is a consequence of a theorem of Kim and Ota on the Pollack--Weston conjecture combined with a result of Agashe, Ribet and Stein, under hypotheses that exclude $\ell=3$, primes $\ell\mid N$ and primes $q\equiv\pm1\pmod\ell$. We verify both inequalities with no exception on every optimal curve of conductor at most $500000$ (more than two million curves) and on $893$ curves of conductor up to $4\cdot 10^6$ outside the tables, beyond all of these hypotheses. The new feature is the additive primes: at $\ell=3$ every prime of Kodaira type $\mathrm{IV}$ or $\mathrm{IV}^*$ and every odd prime of type $\mathrm{II}$ or $\mathrm{II}^*$ contributes one, whatever its Tamagawa number, and at every odd $\ell$ an odd prime of type $\mathrm{I}_n^*$ contributes $v_\ell(n)$. We prove the qualitative statements by level lowering, applied to a quadratic twist in the twisted cases, formulate the quantitative conjecture, and describe the exact failure of the inequality in the Eisenstein case.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $E/\Q$ be an elliptic curve of conductor $N$ and let $f_E\in S_2(\Gamma_0(N))$ be the newform attached to it. Among the curves in the isogeny class of $E$ there is a distinguished one, the $X_0(N)$-optimal curve, for which the modular parametrisation $\varphi_E\colon X_0(N)\to E$ has minimal degree; throughout, $E$ denotes this curve and $\degphi$ its \emph{modular degree}. The modular degree is computable \cite{Cremona97,Watkins02} and its growth is understood (it is $N^{1+o(1)}$ times a power of the discriminant), but its prime factorisation is not. The purpose of this note is to describe, and partly prove, a local-to-global divisibility: the $\ell$-adic valuation of $\degphi$ is bounded below by local data at the bad primes.
+
+For a bad prime $q$ let $\Phig_q = \Phi_q(\overline{\F}_q)$ be the group of components of the special fibre of the N\'eron model of $E$ at $q$, over the algebraic closure. Its order is read off the Kodaira type: $n$ for type $\mathrm{I}_n$; $1$ for $\mathrm{II},\mathrm{II}^*$; $2$ for $\mathrm{III},\mathrm{III}^*$; $3$ for $\mathrm{IV},\mathrm{IV}^*$; $4$ for $\mathrm{I}_0^*$ and $\mathrm{I}_n^*$ \cite[IV.9]{SilvermanATAEC}. The Tamagawa number $c_q=\#\Phi_q(\F_q)$ counts only the components defined over $\F_q$; the statements below are about $\Phig_q$, not $c_q$.
+
+\begin{conjecture}\label{conj:main}
+Let $E$ be $X_0(N)$-optimal and without complex multiplication, and let $\ell$ be an odd prime such that $E[\ell]$ is irreducible as a $\Gal(\overline{\Q}/\Q)$-module. Then
+\begin{equation}\label{eq:main}
+v_\ell(\degphi)\ \ge\ \sum_{q\mid N} v_\ell\bigl(\#\Phig_q\bigr).
+\end{equation}
+\end{conjecture}
+
+For $\ell\ge5$ only multiplicative primes contribute, through $v_\ell(n_q)$ where $n_q=v_q(\Delta_E)$ is the exponent of the minimal discriminant. For $\ell=3$ the primes of type $\mathrm{IV}$ and $\mathrm{IV}^*$ contribute one each. The multiplicative part has a long history. Ribet and Takahashi \cite{RibetTakahashi97,Takahashi01} compared $\degphi$ with the degree of a parametrisation by a Shimura curve and found the product of the $n_q$ over the primes of the quaternion discriminant, up to primes where $E[\ell]$ is reducible; Pasten \cite{Pasten} controls that error term. Pollack and Weston \cite{PollackWeston11} conjectured, and Kim and Ota \cite{KimOta} proved, that moving a prime $q$ into the ``new'' part of the level changes the congruence ideal of $f_E$ by exactly the \emph{Tamagawa exponent} $t_q$, the largest $t$ with $\rho_{E,\ell}\bmod\ell^t$ unramified at $q$; for multiplicative $q$ one has $t_q=v_\ell(n_q)$ whether or not the reduction is split. Together with the theorem of Agashe, Ribet and Stein \cite{ARS12} that $\degphi$ divides the congruence number $r_E$, with $v_p(\degphi)=v_p(r_E)$ whenever $p^2\nmid N$, this gives:
+
+\begin{theorem}[Kim--Ota, Agashe--Ribet--Stein]\label{thm:known}
+Let $\ell\ge5$ be a prime not dividing $N$ such that $\bar\rho_{E,\ell}$ is absolutely irreducible when restricted to $\Gal(\overline\Q/\Q(\sqrt{\ell^*}))$, $\ell^*=(-1)^{(\ell-1)/2}\ell$. Then
+\[
+v_\ell(\degphi)\ \ge \sum_{\substack{q\,\|\,N\\ q\not\equiv\pm1\ (\mathrm{mod}\ \ell)}} v_\ell(n_q).
+\]
+\end{theorem}
+
+The data presented in Section~\ref{sec:data} say that none of the three restrictions in Theorem~\ref{thm:known} is needed for the inequality: it holds at $\ell=3$, at primes $\ell$ dividing $N$, and with the primes $q\equiv\pm1\pmod\ell$ included, in every one of more than two million optimal curves.
+
+The additive primes enter in a second way, through quadratic twists. For an odd prime $q$ put $q^*=(-1)^{(q-1)/2}q$ and let $E^{(q)}$ be the quadratic twist of $E$ by $\Q(\sqrt{q^*})$. The twisting character is ramified only at $q$, so $E^{(q)}$ has the same reduction type as $E$ at every prime other than $q$, while at $q$ the Kodaira types are exchanged (Lemma~\ref{lem:twist}):
+\[
+\mathrm{I}_n\leftrightarrow\mathrm{I}_n^*,\qquad \mathrm{II}\leftrightarrow\mathrm{IV}^*,\qquad \mathrm{IV}\leftrightarrow\mathrm{II}^*,\qquad \mathrm{III}\leftrightarrow\mathrm{III}^*,\qquad \mathrm{I}_0\leftrightarrow\mathrm{I}_0^*
+\]
+(the first for every odd $q$, the others for $q\ge5$). For an odd prime $\ell$ and a bad prime $q$ define the \emph{twist-symmetrised} weight
+\[
+w_\ell(E,q)=\begin{cases}
+v_\ell(n) & \text{if the type at $q$ is $\mathrm{I}_n$, or $\mathrm{I}_n^*$ with $q$ odd},\\
+1 & \text{if $\ell=3$ and the type is $\mathrm{IV}$ or $\mathrm{IV}^*$, or $\mathrm{II}$ or $\mathrm{II}^*$ with $q$ odd},\\
+0 & \text{otherwise},
+\end{cases}
+\]
+where $n$ is the index of the Kodaira symbol. For $q\ge5$ this is the twist-symmetrised component order,
+\[
+w_\ell(E,q)=\max\bigl(v_\ell(\#\Phig_q(E)),\ v_\ell(\#\Phig_q(E^{(q)}))\bigr),
+\]
+and for $q=2$ it is just $v_\ell(\#\Phig_2(E))$; so $w_\ell(E,q)\ge v_\ell(\#\Phig_q(E))$ always, with equality unless $q$ is odd and of type $\mathrm{II}$, $\mathrm{II}^*$ or $\mathrm{I}_n^*$, the \emph{twisted} types.
+
+\begin{conjecture}\label{conj:twist}
+With the hypotheses of Conjecture~\ref{conj:main},
+\begin{equation}\label{eq:twist}
+v_\ell(\degphi)\ \ge\ \sum_{q\mid N} w_\ell(E,q).
+\end{equation}
+\end{conjecture}
+
+Conjecture~\ref{conj:twist} implies Conjecture~\ref{conj:main}. We keep both because they have different standing: \eqref{eq:main} is a statement about $E$ alone, with Theorem~\ref{thm:known} behind its multiplicative part, whereas \eqref{eq:twist} says that an odd prime of type $\mathrm{II}$ forces a factor $3$ which its component group of order one does not see, and that the prime $2$ does \emph{not} do so (Section~\ref{sec:twisted}). The qualitative half of the additive terms is a theorem:
+
+\begin{theorem}\label{thm:qual}
+Let $E/\Q$ have conductor $N$ and let $\ell$ be an odd prime with $\ell^2\nmid N$ such that $\bar\rho_{E,\ell}$ is irreducible and, if $\ell=3$, absolutely irreducible when restricted to $\Gal(\overline\Q/\Q(\sqrt{-3}))$. Let $q\neq\ell$ be a prime at which $E$ has additive reduction of one of the following kinds:
+\begin{enumerate}
+\item[(a)] type $\mathrm{IV}$ or $\mathrm{IV}^*$, with $q\ge5$ and $\ell=3$;
+\item[(b)] type $\mathrm{II}$ or $\mathrm{II}^*$, with $q\ge5$ and $\ell=3$;
+\item[(c)] type $\mathrm{I}_n^*$ with $\ell\mid n$, $q$ odd.
+\end{enumerate}
+Then $\ell$ divides the modular degree of the $X_0(N)$-optimal curve in the isogeny class of $E$.
+\end{theorem}
+
+In each case the prime $q$ has $w_\ell(E,q)\ge1$, and the theorem says that it contributes at least one to $v_\ell(\degphi)$. The quantitative half, namely that the contributions of several such primes and of the multiplicative primes add up and that a prime of type $\mathrm{I}_n^*$ contributes the full $v_\ell(n)$, is Conjecture~\ref{conj:twist}; the data support it also at $q=3$ and when $\ell^2\mid N$, where the proof does not apply. In case (a) the mechanism is that the ramification of $\bar\rho_{E,3}$ at $q$ is unipotent, so that the level can be lowered from $q^2$ to $q$ (Lemma~\ref{lem:IV}). In cases (b) and (c) $\bar\rho_{E,\ell}$ itself has conductor exponent $2$ at $q$ and nothing can be lowered; but its twist $\bar\rho_{E,\ell}\otimes\chi_q$, the representation of $E^{(q)}$, has conductor exponent $1$ or $0$ at $q$. Lowering the level of the twist and twisting back produces an eigenform of level dividing $N$, different from $f_E$ and congruent to it modulo $\ell$ (Section~\ref{sec:proof}). The argument does not apply at $q=2$, where a quadratic character ramified at $2$ changes the conductor exponent, and the data say that the twisted types at $2$ indeed force nothing.
+
+The third statement concerns the Eisenstein case, in which Conjecture~\ref{conj:main} can fail.
+
+\begin{conjecture}\label{conj:eis}
+Let $E$ be optimal, not CM, with a rational $\ell$-isogeny, $\ell$ odd, and let $D$ be the deficit $\sum_q v_\ell(\#\Phig_q)-v_\ell(\degphi)$ of \eqref{eq:main}. Then
+\[
+D\ \le\ v_\ell\bigl(\#E(\Q)_{\mathrm{tors}}\bigr)+\bigl[\,E[3]\simeq\Z/3\oplus\mu_3\,\bigr],
+\]
+and also $D\le$ the number of curves in the isogeny class of $E$ with a rational point of order $\ell$. In particular $D\le0$ when $E$ has no rational $\ell$-torsion point, $D\le1$ for $\ell\ge5$, and $D\le2$ for $\ell=3$.
+\end{conjecture}
+
+Section~\ref{sec:local} collects the local facts, Section~\ref{sec:proof} proves Theorem~\ref{thm:qual}, Section~\ref{sec:data} describes the computations and Section~\ref{sec:two} discusses the prime $2$, where the analogous statements overlap with the literature on Watkins's conjecture.
+
+\section{Local invariants}\label{sec:local}
+
+Let $q$ be a prime of bad reduction. We use Tate's algorithm \cite[IV.9]{SilvermanATAEC} for the Kodaira type and $c_q$, and the following facts.
+
+\begin{lemma}\label{lem:tamagawa-exp}
+Let $q$ be a prime of multiplicative reduction, $n_q=v_q(\Delta_E)$, and $\ell\ne q$ a prime. Then $\rho_{E,\ell}\bmod\ell^t$ is unramified at $q$ if and only if $\ell^t\mid n_q$. This holds for split and for nonsplit reduction.
+\end{lemma}
+
+\begin{proof}
+Over the unramified quadratic extension of $\Q_q$ (which does not change the inertia group) $E$ is a Tate curve with parameter $u$, $v_q(u)=n_q$. The $\ell^t$-torsion is generated by $\mu_{\ell^t}$ and an $\ell^t$-th root of $u$, so inertia acts trivially on $E[\ell^t]$ exactly when $u$ is an $\ell^t$-th power in $\Q_q^{\mathrm{ur}}$ up to units, that is, when $\ell^t\mid n_q$.
+\end{proof}
+
+\begin{lemma}\label{lem:IV}
+Let $q\ge5$ be a prime at which $E$ has reduction of type $\mathrm{IV}$ or $\mathrm{IV}^*$. Then the image of the inertia group $I_q$ in $\operatorname{Aut}(T_3E)$ is cyclic of order $3$, and its image in $\operatorname{Aut}(E[3])$ is a nontrivial unipotent subgroup. Consequently $E[3]^{I_q}$ is a line, $\bar\rho_{E,3}$ is tamely ramified at $q$, and the Serre conductor of $\bar\rho_{E,3}$ has exponent $1$ at $q$.
+\end{lemma}
+
+\begin{proof}
+For $q\ge5$ the reduction is potentially good and the semistability defect, the order of the image of $I_q$ in $\operatorname{Aut}(T_\ell E)$ for any $\ell\ne q$, equals $12/\gcd(v_q(\Delta_E),12)$ \cite{Kraus90}; for $v_q(\Delta_E)\in\{4,8\}$ this is $3$. The image is tame since $q\ne3$, hence cyclic, generated by an element $\sigma$ of order $3$ with determinant $1$, so with eigenvalues the two primitive cube roots of unity. Hence $\sigma^2+\sigma+1$ annihilates $T=T_3E$, and $T$ is a module over $\Z_3[\sigma]/(\sigma^2+\sigma+1)\simeq\Z_3[\zeta_3]$, a discrete valuation ring with uniformiser $\pi=1-\zeta_3$ and residue field $\F_3$. Being torsion-free of $\Z_3$-rank $2$, $T$ is free of rank one over $\Z_3[\zeta_3]$, and $E[3]=T/3T\simeq\Z_3[\zeta_3]/(\pi^2)$ with $\sigma$ acting as multiplication by $\zeta_3=1-\pi$. Since $\pi\ne0$ in $\Z_3[\zeta_3]/(\pi^2)$, this is a nontrivial unipotent automorphism of order $3$; its fixed space is the line $\pi\Z_3[\zeta_3]/(\pi^2)$. The Serre conductor exponent at $q$ is $\dim E[3]-\dim E[3]^{I_q}=1$, there being no wild part.
+\end{proof}
+
+\begin{remark}\label{rem:types}
+For the other additive types at $q\ge5$ the image of inertia mod $3$ is not unipotent: it has order $2$ or $4$ (types $\mathrm{I}_0^*$, $\mathrm{III}$, $\mathrm{III}^*$, defects $2$ and $4$), or it is minus a unipotent (types $\mathrm{II}$, $\mathrm{II}^*$, defect $6$), or it is a ramified quadratic character times a unipotent (type $\mathrm{I}_n^*$). In the last two cases $E[3]^{I_q}=0$ and the Serre conductor of $\bar\rho_{E,3}$ has exponent $2$ at $q$, the same as the conductor of $E$; these are the twisted types of Conjecture~\ref{conj:twist}.
+\end{remark}
+
+\begin{lemma}\label{lem:twist}
+Let $q$ be an odd prime, $\chi=\chi_q$ the quadratic character of conductor $q$ and $E^{(q)}$ the twist of $E$ by $\chi$, that is, by $\Q(\sqrt{q^*})$.
+\begin{enumerate}
+\item[(i)] At every prime $p\ne q$ the curves $E$ and $E^{(q)}$ have the same Kodaira type, the same geometric component group and the same conductor exponent.
+\item[(ii)] If $E$ has type $\mathrm{I}_n$ at $q$ ($n\ge0$) then $E^{(q)}$ has type $\mathrm{I}_n^*$ at $q$, and conversely, with the same $n$. If $q\ge5$ and $E$ has type $\mathrm{II}$, $\mathrm{III}$, $\mathrm{IV}$ at $q$ then $E^{(q)}$ has type $\mathrm{IV}^*$, $\mathrm{III}^*$, $\mathrm{II}^*$ respectively, and conversely. The conductor exponent of $E^{(q)}$ at $q$ is $2$ when its reduction is additive and $1$ when it is of type $\mathrm{I}_n$, $n\ge1$.
+\item[(iii)] (Atkin--Li \cite{AtkinLi78}) Let $g$ be a newform of weight $2$ on $\Gamma_0(M)$ with $q^2\nmid M$. Then the twist $g\otimes\chi$, with coefficients $a_n(g\otimes\chi)=\chi(n)a_n(g)$, is a newform of weight $2$ on $\Gamma_0(M')$, $M'=\operatorname{lcm}(M,q^2)$; that is, $M'=Mq^2$ if $q\nmid M$ and $M'=Mq$ if $q\,\|\,M$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) The character $\chi$ is unramified at $p$, so $E$ and $E^{(q)}$ become isomorphic over an unramified extension of $\Q_p$, and the Kodaira type, the geometric component group and the conductor exponent are invariant under unramified base change. (ii) If $(a_1,a_2,a_3,a_4,a_6)$ is a minimal model of $E$ at $q$ with invariants $c_4,c_6,\Delta$, the twist has a model with invariants $q^{2}c_4$, $q^{3}c_6$, $q^{6}\Delta$ and the same $j$-invariant. For potentially multiplicative reduction, $v_q(j)<0$, the type is $\mathrm{I}_n$ or $\mathrm{I}_n^*$ with $n=-v_q(j)$ according as the reduction is multiplicative or additive, and a ramified quadratic twist exchanges the two. For $q\ge5$ and potentially good reduction the type is determined by $v_q(\Delta)$ of a minimal model, which lies in $\{0,2,3,4,6,8,9,10\}$ for the types $\mathrm{I}_0,\mathrm{II},\mathrm{III},\mathrm{IV},\mathrm{I}_0^*,\mathrm{IV}^*,\mathrm{III}^*,\mathrm{II}^*$; the twisted model has $v_q(\Delta)$ increased by $6$, and is minimal exactly when the result is less than $12$, otherwise $12$ is subtracted. The conductor exponents are the standard ones for $q$ odd (tame). (iii) is \cite[Theorem 3.1]{AtkinLi78}; in the case $q\,\|\,M$, the local component of $g$ at $q$ is an unramified twist of the Steinberg representation, whose twist by a ramified quadratic character has conductor exponent $2$.
+\end{proof}
+
+\section{Proof of Theorem~\ref{thm:qual}}\label{sec:proof}
+
+Let $f=f_E$, a newform of weight $2$ on $\Gamma_0(N)$, let $E_0$ be the optimal curve in the class of $E$ and $r=r_{E_0}$ its congruence number. By \cite[Theorem 2.1]{ARS12}, $\deg\varphi_{E_0}$ divides $r$ with $v_p(\deg\varphi_{E_0})=v_p(r)$ for every prime $p$ with $p^2\nmid N$; as $\ell^2\nmid N$ it suffices to prove $\ell\mid r$. For that it is enough to produce a normalised eigenform $h\in S_2(\Gamma_0(N))\otimes\overline\Q$, $h\ne f$, with $a_p(h)\equiv a_p(f)\pmod\lambda$ for all primes $p$ outside a finite set, for some prime $\lambda\mid\ell$ of a number field containing the coefficients: such a congruence means that the Hecke algebra of level $N$ has a maximal ideal of residue characteristic $\ell$ containing the kernels of both eigencharacters, which is equivalent to $\ell\mid r$ \cite{Ribet83}, \cite[\S3]{ARS12}. Write $\bar\rho=\bar\rho_{E,\ell}$, irreducible by hypothesis.
+
+We use the level-lowering theorem in the following form \cite{Ribet90,Carayol89,Diamond95} (see \cite{RibetStein} for an exposition): if $\bar\rho$ arises from a newform of weight $2$ on $\Gamma_0(N)$, satisfies the irreducibility hypothesis of the theorem, and $q\neq\ell$ is a prime with $v_q(N(\bar\rho))<v_q(N)$, where $N(\bar\rho)$ is the Serre conductor, then $\bar\rho$ arises from a newform of weight $2$ on $\Gamma_0(M)$ for some $M$ dividing $N/q$. [[Check the exact hypotheses of the statements used, in particular when $\ell\mid N$ and at $\ell=3$; the condition over $\Q(\sqrt{-3})$ is the one needed in \cite{Diamond95}.]]
+
+\medskip\noindent\emph{Case (a).} Here $q^2\,\|\,N$ and $\ell=3$. By Lemma~\ref{lem:IV} the Serre conductor $N(\bar\rho)$ has exponent $1$ at $q$, so there is a newform $g$ of weight $2$ on $\Gamma_0(M)$, $M\mid N/q$, with coefficients in the ring of integers $\mathcal{O}$ of a number field and a prime $\lambda\mid3$ of $\mathcal{O}$ such that $a_p(g)\equiv a_p(f)\pmod\lambda$ for all primes $p\nmid 3N$. Since $M<N$, the form $g$ is old at level $N$ and lies in the orthogonal complement of $f$ in $S_2(\Gamma_0(N))$; take $h=g$.
+
+\medskip\noindent\emph{Case (b).} Here $q^2\,\|\,N$, $\ell=3$, and $E$ has type $\mathrm{II}$ or $\mathrm{II}^*$ at $q\ge5$. Let $\chi=\chi_q$ and $E'=E^{(q)}$. By Lemma~\ref{lem:twist}, $E'$ has type $\mathrm{IV}^*$ or $\mathrm{IV}$ at $q$, the same types as $E$ elsewhere, and conductor $N$; its newform is $f'=f\otimes\chi$, a newform of weight $2$ on $\Gamma_0(N)$, and $\bar\rho_{E',3}=\bar\rho\otimes\chi$ satisfies the irreducibility hypothesis since $\bar\rho$ does. By Lemma~\ref{lem:IV} applied to $E'$, the Serre conductor of $\bar\rho\otimes\chi$ has exponent $1$ at $q$, so there is a newform $g$ of weight $2$ on $\Gamma_0(M)$, $M\mid N/q$, with $a_p(g)\equiv a_p(f')\pmod\lambda$ for all $p\nmid 3N$. As $q^2\nmid M$, Lemma~\ref{lem:twist}(iii) says that $h=g\otimes\chi$ is a newform on $\Gamma_0(M')$ with $M'=\operatorname{lcm}(M,q^2)$, which divides $N$ because $M\mid N/q$ and $q^2\,\|\,N$. For $p\nmid 3N$,
+\[
+a_p(h)=\chi(p)a_p(g)\equiv\chi(p)a_p(f\otimes\chi)=\chi(p)^2a_p(f)=a_p(f)\pmod\lambda .
+\]
+Finally $h\ne f$: otherwise $g=h\otimes\chi=f\otimes\chi=f'$ would have level $N$, whereas $M<N$. So $h$ is an eigenform of level dividing $N$, different from $f$ and congruent to it, and $3\mid r$.
+
+\medskip\noindent\emph{Case (c).} Here $E$ has type $\mathrm{I}_n^*$ at an odd prime $q\ne\ell$ with $\ell\mid n$, so $q^2\,\|\,N$. Let $\chi=\chi_q$ and $E'=E^{(q)}$. By Lemma~\ref{lem:twist}, $E'$ has multiplicative reduction of type $\mathrm{I}_n$ at $q$ and conductor $N/q$, so $f'=f\otimes\chi$ is a newform of weight $2$ on $\Gamma_0(N/q)$ with $q\,\|\,N/q$. By Lemma~\ref{lem:tamagawa-exp} applied to $E'$, $\bar\rho\otimes\chi=\bar\rho_{E',\ell}$ is unramified at $q$, so by the level-lowering theorem (here in Ribet's original form \cite{Ribet90}, $q$ exactly dividing the level) there is a newform $g$ of weight $2$ on $\Gamma_0(M)$, $M\mid N/q^2$, with $a_p(g)\equiv a_p(f')\pmod\lambda$ for all $p\nmid \ell N$. As $q\nmid M$, $h=g\otimes\chi$ is a newform on $\Gamma_0(Mq^2)$ with $Mq^2\mid N$, congruent to $f$ at all $p\nmid\ell N$ by the computation of case (b), and $h\ne f$ since $g=h\otimes\chi$ would otherwise equal $f'$, of level $N/q\nmid N/q^2$. Hence $\ell\mid r$. \qed
+
+\begin{example}
+The congruences produced by the proof can be seen directly on the tables (labels as in \cite{Cremona97}). (b): the curve 121a1 has type $\mathrm{II}$ at $11$; its twist by $-11$ lies in the class 121c and has type $\mathrm{IV}^*$ at $11$; its mod $3$ representation has conductor $11$ and is congruent to the form of 11a1; twisting back, $f_{\text{11a}}\otimes\chi_{-11}$ is the form of 121d, and indeed $a_p(\text{121a1})\equiv\chi_{-11}(p)\,a_p(\text{11a1})\pmod 3$ for all $p\ne3,11$ (checked for $p<500$), while $\deg\varphi_{\text{121a1}}=6$. (c) at $\ell=3$: 539c1 has type $\mathrm{I}_3^*$ at $7$; its twist by $-7$ has conductor $77$ and type $\mathrm{I}_3$ at $7$, and $a_p(\text{539c1})\equiv\chi_{-7}(p)\,a_p(\text{11a1})\pmod3$ for all $p\ne3,7,11$ (checked for $p<1000$); $\deg\varphi_{\text{539c1}}=2^5\cdot3^2$. (c) at $\ell=5$: 980i1 has type $\mathrm{I}_5^*$ at $7$; its twist by $-7$ has conductor $140$ and type $\mathrm{I}_5$ at $7$, and $a_p(\text{980i1})\equiv\chi_{-7}(p)\,a_p(\text{20a1})\pmod5$ for all $p\ne2,5,7$ (checked for $p<1000$); $\deg\varphi_{\text{980i1}}=2^6\cdot3^2\cdot5$.
+\end{example}
+
+\begin{remark}
+The hypothesis $\ell^2\nmid N$ is used only to pass from the congruence number to the modular degree, and it cannot simply be dropped from that step: Agashe, Ribet and Stein \cite[Proposition 2.3]{ARS12} note that for the curve 99a1 the prime $3$ divides the congruence number but not the modular degree. The data nevertheless show the conclusion of the theorem for every curve with $9\mid N$ and a prime of one of the three kinds; so do they at $q=3$ in cases (a) and (b), where Lemma~\ref{lem:IV} does not apply because the ramification is wild. The proof gives one factor of $\ell$ for each such prime but says nothing about additivity with the multiplicative contributions or with each other, nor about the full $v_\ell(n)$ in case (c); that is the content of Conjecture~\ref{conj:twist}. Note also that the proof of case (c) is the proof of the multiplicative case at level $N/q$ transported by the twist: the quantitative statement for $\mathrm{I}_n^*$ should therefore follow from the Kim--Ota formula for $f\otimes\chi$ once the congruence ideals at levels $N/q$ and $N$ are compared.
+\end{remark}
+
+\section{The computations}\label{sec:data}
+
+\subsection{Data and protocol}
+We used Cremona's tables \cite{Cremona97} in the form of the \texttt{ecdata} repository at commit \texttt{25cec5e}, which contain every elliptic curve over $\Q$ of conductor below $500000$ with its Kodaira symbols, Tamagawa numbers, modular degree, isogeny class, torsion and, up to conductor $400000$, the images of the mod $\ell$ Galois representations. Optimality is determined in the tables for every class of conductor at most $400000$ and for $359{,}009$ further classes up to $500000$. Conjectures~\ref{conj:main} and~\ref{conj:eis} were found on the curves of conductor at most $300000$, written down, and then tested once on the curves of conductor in $(300000,400000]$, which had been held out, and afterwards on the extension to $500000$; nothing was adjusted after the hold-out test. Conjecture~\ref{conj:twist} replaced an earlier, weaker formulation of the same phenomenon (every prime of a twisted type, the prime $2$ included, contributing ``all but the largest'' of the weights), which had passed the hold-out as well. The replacement was formulated on the working set, after the prime $2$ had been separated from the odd primes, and then tested once on the hold-out and on the extension (Section~\ref{sec:twisted}); the earlier formulation is implied by it. The Kodaira types and discriminant exponents at the bad primes were recomputed with PARI/GP 2.15 \cite{PARI} from the $a$-invariants, and fifteen modular degrees spanning the configurations were recomputed with \texttt{ellmoddegree}, all agreeing with the tables.
+
+\subsection{Results}
+Table~\ref{tab:counts} gives, for each range and each small prime $\ell$, the number of optimal non-CM curves with $E[\ell]$ irreducible and a positive right-hand side in \eqref{eq:main} and in \eqref{eq:twist}, the number of violations of each inequality, and the number of Eisenstein curves with a positive bound together with the violations of Conjecture~\ref{conj:eis}. There are none.
+
+\begin{table}[ht]
+\centering\footnotesize
+\input{tables/counts.tex}
+\caption{Verification counts. ``\eqref{eq:main} $>0$'' is the number of curves with $E[\ell]$ irreducible, not CM, for which the right-hand side of \eqref{eq:main} is positive, and ``viol.'' the number of violations; likewise for \eqref{eq:twist}. The last column counts the Eisenstein curves with a positive bound in \eqref{eq:main} and the violations of Conjecture~\ref{conj:eis}.}\label{tab:counts}
+\end{table}
+
+The theorem range of Theorem~\ref{thm:known} covers $281{,}739$ of the $913{,}244$ working-set pairs $(E,\ell)$ with $E[\ell]$ irreducible and a positive multiplicative bound; the remaining pairs have $\ell=3$ ($455{,}707$), $\ell\mid N$ ($175{,}798$ at $\ell\ge5$), or a contributing prime $q\equiv\pm1\pmod\ell$ ($410{,}074$), and show no violation either.
+
+\subsection{Isolated configurations}
+Table~\ref{tab:isolated} isolates the additive types at $\ell=3$. For the untwisted types it lists, for working-set curves with no multiplicative prime $q$ with $3\mid n_q$ and all additive primes of a single Kodaira type, the minimum of $v_3(\degphi)$ by type and number of primes. For the twisted types it lists the minimum of $v_3(\degphi)$ over the curves whose only contribution to \eqref{eq:twist} comes from primes of the given type at odd $q$, or at $q=2$, with the given total weight. The hold-out and the extension reproduce every minimum.
+
+\begin{table}[ht]
+\centering\small
+\input{tables/isolated3.tex}
+\caption{Minimum of $v_3(\degphi)$ (number of curves) over working-set curves with $E[3]$ irreducible whose only possible contributions at $3$ come from the primes named in the row, with the given number of primes (untwisted rows) or total weight (twisted rows).}\label{tab:isolated}
+\end{table}
+
+The rows $\mathrm{IV}$, $\mathrm{IV}^*$ are Conjecture~\ref{conj:main}: each prime contributes exactly one at the minimum, while $\mathrm{III}$, $\mathrm{III}^*$ and $\mathrm{I}_0^*$ contribute nothing. The twisted rows are Conjecture~\ref{conj:twist}: at an odd prime, each $\mathrm{II}$ or $\mathrm{II}^*$ contributes one and each $\mathrm{I}_n^*$ contributes $v_3(n)$, additively, and the minimum is attained in every cell; at the prime $2$ a type $\mathrm{II}$ or $\mathrm{II}^*$ contributes nothing ($v_3(\degphi)=0$ for $14{,}182$ of the $44{,}672$ curves whose only candidate is such a prime), and a type $\mathrm{I}_n^*$ with $3\,\|\,n$ contributes nothing either, although with $9\mid n$ the minimum is $1$.
+
+\subsection{Sharpness and the rest of the degree}\label{sec:sharp}
+The bounds are attained. Among working-set curves with $E[\ell]$ irreducible and a positive bound, $v_\ell(\degphi)$ equals the right-hand side of \eqref{eq:twist} in $39.4\%$ of cases at $\ell=3$, $71.1\%$ at $\ell=5$, $81.2\%$ at $\ell=7$ and $91.5\%$ at $\ell=13$ (for \eqref{eq:main}: $36.9\%$, $69.7\%$, $80.4\%$ and $91.2\%$), the proportion decreasing slowly with the conductor (from $77\%$ to $38\%$ at $\ell=3$ between conductors $1000$ and $300000$). The whole odd part of $\degphi$ is another matter: for the $1{,}226{,}216$ working-set optimal non-CM curves with no isogeny of odd degree, the odd part of $\degphi$ equals $\prod_\ell\ell^{\,b_\ell}$, with $b_\ell$ the right-hand side of \eqref{eq:twist}, in only $1.85\%$ of cases. The quotient is most often $9$, $3$, $15$, $45$, $27$ or $21$; its smallest prime factor is $3$ in $63\%$ of the cases and divides $N$ in $52\%$. So the local component groups account for a definite, sharp part of the modular degree and for little of the rest, which is governed by congruences of other origins and by the size of the Petersson norm.
+
+\subsection{The twisted primes}\label{sec:twisted}
+Table~\ref{tab:twist} tests \eqref{eq:twist} on the three ranges and every odd $\ell\le13$, and shows what happens when the twisted types at $2$ are counted as well: the inequality then fails thousands of times in each range. The earlier ``all but the largest'' rule was an artifact of this mixture, since in the data the largest weight usually sat at the prime $2$.
+
+\begin{table}[ht]
+\centering\footnotesize
+\input{tables/twist.tex}
+\caption{The twisted primes. ``Odd twisted weight $>0$'': curves with $E[\ell]$ irreducible, not CM, having an odd prime of type $\mathrm{II}$, $\mathrm{II}^*$ ($\ell=3$) or $\mathrm{I}_n^*$ with $\ell\mid n$. ``Twisted prime 2'': curves where the prime $2$ is of such a type. The last column counts the violations of \eqref{eq:twist} with the weight of the prime $2$ added to the right-hand side.}\label{tab:twist}
+\end{table}
+
+Two further tests concern the mechanism. First, for the $56{,}509$ working-set curves whose only candidate contribution at $3$ is a single odd prime of type $\mathrm{II}$ or $\mathrm{II}^*$, $3$ divides $\degphi$ in every case, uniformly in $q\bmod3$, in the type, in the Tamagawa number of the twist at $q$ (which is $1$ or $3$ for the types $\mathrm{IV}^*$, $\mathrm{IV}$) and in the image of $\bar\rho_{E,3}$; this is Theorem~\ref{thm:qual}(b) for $q\ge5$, and the data extend it to $q=3$ ($26{,}649$ of the curves) and to $9\mid N$. Second, for the $2{,}502$ working-set curves with exactly two odd primes of type $\mathrm{II}$ or $\mathrm{II}^*$ and no other contribution, $9\mid\degphi$ always, and we tested whether the mechanism could be a congruence between $f$ and its own quadratic twist by the character ramified at both primes, which would make $f$ an eigenform with $a_p\equiv0\pmod3$ at all primes inert in the corresponding quadratic field: this never happens ($0$ of $2{,}502$; the fraction of inert primes with $3\mid a_p$ is $0.37$, against $1/3$ for a random form). The congruent form of Section~\ref{sec:proof} is a different one, the twist of a form of lower level.
+
+\subsection{Out of table}
+To test the statements beyond the tables, we generated curves with prescribed local types and conductor between $500000$ and $4\cdot10^6$ (families with a type $\mathrm{IV}$ or $\mathrm{IV}^*$ prime, with two or three type $\mathrm{II}$ primes, with mixed types, and random curves), kept those with trivial isogeny class (so that the curve is optimal and $E[\ell]$ is irreducible for every $\ell$) and not CM, and computed their modular degrees with \texttt{ellmoddegree}. Table~\ref{tab:oot} summarises them; Conjectures~\ref{conj:main} and~\ref{conj:twist} hold for all of them (Table~\ref{tab:counts}, last rows).
+
+\begin{table}[ht]
+\centering\small
+\input{tables/oot.tex}
+\caption{Curves outside the tables, with modular degrees computed independently.}\label{tab:oot}
+\end{table}
+
+\subsection{The Eisenstein case}
+Among the $75{,}430$ working-set optimal non-CM curves with a rational $3$-isogeny, $67{,}845$ have a positive bound in \eqref{eq:main} and $2{,}777$ a positive deficit $D$; $D=2$ occurs $22$ times. No curve without a rational $3$-torsion point has a deficit, whatever its $3$-isogeny structure. With a rational point of order $3$ and mod $3$ image of Borel type, $D\le1$; $D=2$ occurs only when $E[3]\simeq\Z/3\oplus\mu_3$ (the split Cartan image \texttt{3Cs.1.1} in the notation of \cite{Sutherland16}, seventeen curves, all of rank $0$ and torsion $\Z/3$) or when $E$ has a point of order $9$ (five curves). The bounds of Conjecture~\ref{conj:eis} hold with no exception on all three ranges, and the torsion bound is attained with $D>0$ in $2{,}773$ cases. For $\ell=5$ and $7$ the deficits are at most $1$ and occur only with a rational $\ell$-torsion point ($192$ and $18$ cases in the working set). Measured against the stronger bound \eqref{eq:twist} the deficit is not controlled by the torsion: it exceeds the bound of Conjecture~\ref{conj:eis} for $1{,}148$ working-set curves at $\ell=3$ ($189$ and $39$ on the hold-out and the extension) and for $141$ at $\ell=5$. In the Eisenstein case the twisted primes do not contribute reliably, and Conjecture~\ref{conj:eis} is stated for \eqref{eq:main} only.
+
+\section{The prime 2}\label{sec:two}
+At $\ell=2$ the modular degree is the subject of Watkins's conjecture $2^{\operatorname{rank}E(\Q)}\mid\degphi$ \cite{Watkins02} and of a substantial literature \cite{Dummigan06,CalegariEmerton09,Yazdani11,CaroPasten22,HatleyKundu,BKP}, and the mod $2$ representation has a rational $2$-isogeny for a large fraction of curves. We record only the following. For working-set optimal curves without a rational $2$-isogeny and not CM, the inequality $v_2(\degphi)\ge\sum_{q\,\|\,N}v_2(n_q)+\#\{q:\ \text{type }\mathrm{III},\mathrm{III}^*,\mathrm{I}_0^*\text{ or }\mathrm{I}_n^*\}$ holds with no exception on all three ranges ($964{,}432$, $325{,}510$ and $313{,}741$ curves), while counting $\mathrm{I}_0^*$ with weight $2=v_2(\#\Phig_q)$ fails ($123$, $26$ and $20$ exceptions). The isolated-configuration minima suggest that types $\mathrm{III}$, $\mathrm{III}^*$ and $\mathrm{I}_n^*$ contribute $3$ each and types $\mathrm{II}$, $\mathrm{IV}$ and $\mathrm{I}_0^*$ contribute $1$ each, in line with the theorem of Calegari and Emerton that a curve of odd modular degree has at most two odd bad primes and a rational $2$-torsion point or prime conductor \cite{CalegariEmerton09}. We have not attempted to reconcile the exponents with the results of \cite{Dummigan06,CaroPasten22,HatleyKundu,BKP}.
+
+\section{Open questions}
+\begin{enumerate}
+\item Prove Conjecture~\ref{conj:main} at $\ell=3$ for multiplicative primes, and remove the conditions $\ell\nmid N$ and $q\not\equiv\pm1\pmod\ell$ from Theorem~\ref{thm:known}. The data say the inequality survives both; whether the equality of Kim and Ota does is a separate question.
+\item Prove the quantitative additive statements: a Kim--Ota type formula in which the prime $q$ enters the level with exponent $2$ and the local invariant is the unipotent ramification of Lemma~\ref{lem:IV} (types $\mathrm{IV}$, $\mathrm{IV}^*$), or the unipotent ramification of the twist (types $\mathrm{II}$, $\mathrm{II}^*$, $\mathrm{I}_n^*$). For $\mathrm{I}_n^*$ the formula for $f\otimes\chi_q$ at level $N/q$ is available, and the question is how the congruence ideals at levels $N/q$ and $N$ compare.
+\item Explain why the prime $2$ contributes nothing through its twisted types, while an $\mathrm{I}_n^*$ at $2$ with $9\mid n$ does contribute one (Table~\ref{tab:isolated}). Presumably the right local invariant at $2$ is the conductor exponent of $\bar\rho_{E,\ell}\otimes\psi$ over the three quadratic characters $\psi$ ramified at $2$.
+\item Identify the deficit of Conjecture~\ref{conj:eis} with a natural invariant of the Eisenstein ideal at $\ell$, presumably through the cuspidal subgroup of $J_0(N)$ \cite{Mazur77}.
+\end{enumerate}
+
+\appendix
+\section{Reproducibility}
+All scripts, the pinned data commit and the result tables are in the repository \url{https://github.com/dsr001001/mcptrial} (directory \texttt{ecmine}). The checker takes a table of optimal curves with their Kodaira symbols, Tamagawa numbers, modular degrees, isogeny degrees and torsion, and reports the violations of each statement; it runs on the full tables in minutes. A single curve can be checked against \eqref{eq:twist} at $\ell=3$ in PARI/GP with
+\begin{verbatim}
+E = ellinit([0,0,0,-99,360]); R = ellglobalred(E); L = R[5]; P = R[4][,1];
+d = ellmoddegree(E);
+b = sum(i=1,#L, my(k=L[i][2], q=P[i]); if(k>=5, valuation(k-4,3),
+      if(k<=-5, if(q>2, valuation(-k-4,3), 0),
+      if(abs(k)==4 || (abs(k)==2 && q>2), 1, 0))));
+print([valuation(d,3), b])
+\end{verbatim}
+where the PARI codes $k=n+4$, $-(n+4)$, $\pm2$, $\pm4$ stand for $\mathrm{I}_n$, $\mathrm{I}_n^*$, $\mathrm{II}/\mathrm{II}^*$, $\mathrm{IV}/\mathrm{IV}^*$. The pipeline was rerun from a clean clone and reproduced every count. Lemma~\ref{lem:twist}(ii) was also checked numerically on $4{,}577$ random pairs (curve, odd bad prime) with no exception (\texttt{scripts/twist\_lemma\_check.gp}).
+
+\section*{Acknowledgements}
+[[The computations, the literature search and a first draft of this note were carried out with the assistance of an AI system (Claude, Anthropic); the author is responsible for all statements and proofs.]]
+
+\bibliographystyle{amsplain}
+\bibliography{refs}
+\end{document}

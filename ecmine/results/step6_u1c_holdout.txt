@@ -1,0 +1,48 @@
+holdout: optimal curves 429936; (curve, l) pairs with some multiplicative q having l | v_q(Delta): 332727
+
+=== Non-Eisenstein, non-CM pairs: 314592
+  all                                                                    pairs  314592  V < S:     0   V < S_ko:     0
+  l >= 5, l not dividing N   (Kim-Ota range: V >= S_ko is a theorem)     pairs   93189  V < S:     0   V < S_ko:     0
+  l >= 5, l divides N                                                    pairs   61595  V < S:     0   V < S_ko:     0
+  l = 3                                                                  pairs  159808  V < S:     0   V < S_ko:     0
+  N squarefree                                                           pairs  112859  V < S:     0   V < S_ko:     0
+  N not squarefree                                                       pairs  201733  V < S:     0   V < S_ko:     0
+
+--- all non-Eisenstein non-CM violations of V >= S, by (l, every contributing prime is +-1 mod l):
+Empty DataFrame
+Columns: []
+Index: []
+
+--- violations where NOT every contributing prime is +-1 mod l (these would contradict the conjecture even in its weakest form):
+Empty DataFrame
+Columns: [label, l, V, S, S_ko, primes, N, rank, torsion, l_div_N, sqf]
+Index: []
+
+--- violations with every contributing prime +-1 mod l (first 40):
+Empty DataFrame
+Columns: [label, l, V, S, S_ko, primes, N, rank, torsion, l_div_N, sqf]
+Index: []
+
+--- among pairs with a contributing prime q = +-1 mod l: how often does V >= S still hold?
+col_0    True
+l            
+3      133829
+5       10141
+7        1854
+11         41
+13          2
+
+=== Eisenstein pairs (rational l-isogeny): 18135
+  V - S distribution:
+-1     390
+ 0    1859
+ 1    3887
+ 2    4545
+ 3    3802
+ 4    3652
+col_0   -1     0     1      2
+l                            
+3      372  1635  3374  11626
+5       17   192   436    344
+7        1    30    77     29
+13       0     2     0      0

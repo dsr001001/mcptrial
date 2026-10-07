@@ -1,0 +1,419 @@
+working set: 1311066 optimal curves
+bad-prime rows: 5007579
+odd primes dividing a Tamagawa number: [3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 97]
+  l=3 done
+  l=5 done
+  l=7 done
+  l=11 done
+  l=13 done
+  l=17 done
+  l=19 done
+  l=23 done
+  l=29 done
+  l=31 done
+  l=37 done
+  l=41 done
+  l=43 done
+  l=47 done
+  l=53 done
+  l=59 done
+  l=61 done
+  l=67 done
+  l=71 done
+  l=73 done
+  l=79 done
+  l=83 done
+  l=97 done
+
+######## l = 3: curves with l | some c_q: 382985  (Eisenstein among them: 48695)
+
+=== l=3, no rational 3-isogeny: curves 1234329, with l | some c_q: 334290
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of  334290
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of  334290
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of  334290
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of  334290
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of  334290
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of  334290
+
+=== l=3, with a rational 3-isogeny: curves 76737, with l | some c_q: 48695
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations   1921 of   48695   e.g. ['10010z1', '100110f1', '10065k1', '100749d1', '100758h1']
+  all multiplicative primes                                      [V >= Tm                     ] violations   1924 of   48695   e.g. ['10010z1', '100110f1', '10065k1', '100749d1', '100758h1']
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations   2507 of   48695   e.g. ['10010z1', '100110f1', '10065k1', '100749d1', '100758h1']
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations    695 of   48695   e.g. ['101522b1', '102283a1', '10262d1', '102954e1', '10310b1']
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations   1948 of   48695   e.g. ['10010z1', '100110f1', '100749d1', '100758h1', '100844a1']
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of   48695
+
+######## l = 5: curves with l | some c_q: 126238  (Eisenstein among them: 2735)
+
+=== l=5, no rational 5-isogeny: curves 1305131, with l | some c_q: 123503
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of  123503
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of  123503
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of  123503
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of  123503
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of  123503
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of  123503
+
+=== l=5, with a rational 5-isogeny: curves 5935, with l | some c_q: 2735
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations    183 of    2735   e.g. ['100598c1', '100970f1', '102279d1', '105906m1', '10811b1']
+  all multiplicative primes                                      [V >= Tm                     ] violations    192 of    2735   e.g. ['100598c1', '100970f1', '102279d1', '1050o1', '105906m1']
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations    192 of    2735   e.g. ['100598c1', '100970f1', '102279d1', '1050o1', '105906m1']
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations     16 of    2735   e.g. ['10811b1', '118b1', '11a1', '158c1', '17007d1']
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations    179 of    2735   e.g. ['100598c1', '100970f1', '102279d1', '1050o1', '105906m1']
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of    2735
+
+######## l = 7: curves with l | some c_q: 63278  (Eisenstein among them: 449)
+
+=== l=7, no rational 7-isogeny: curves 1309618, with l | some c_q: 62829
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of   62829
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of   62829
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of   62829
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of   62829
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of   62829
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of   62829
+
+=== l=7, with a rational 7-isogeny: curves 1448, with l | some c_q: 449
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations     18 of     449   e.g. ['101478k1', '10470d1', '1230k1', '174b1', '2110h1']
+  all multiplicative primes                                      [V >= Tm                     ] violations     18 of     449   e.g. ['101478k1', '10470d1', '1230k1', '174b1', '2110h1']
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations     18 of     449   e.g. ['101478k1', '10470d1', '1230k1', '174b1', '2110h1']
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      1 of     449   e.g. ['26b1']
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations     18 of     449   e.g. ['101478k1', '10470d1', '1230k1', '174b1', '2110h1']
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of     449
+
+######## l = 11: curves with l | some c_q: 21556  (Eisenstein among them: 0)
+
+=== l=11, no rational 11-isogeny: curves 1310982, with l | some c_q: 21556
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of   21556
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of   21556
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of   21556
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of   21556
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of   21556
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of   21556
+
+######## l = 13: curves with l | some c_q: 13800  (Eisenstein among them: 12)
+
+=== l=13, no rational 13-isogeny: curves 1310852, with l | some c_q: 13788
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of   13788
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of   13788
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of   13788
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of   13788
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of   13788
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of   13788
+
+=== l=13, with a rational 13-isogeny: curves 214, with l | some c_q: 12
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of      12
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of      12
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of      12
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of      12
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of      12
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of      12
+
+######## l = 17: curves with l | some c_q: 6313  (Eisenstein among them: 2)
+
+=== l=17, no rational 17-isogeny: curves 1311054, with l | some c_q: 6311
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of    6311
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of    6311
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of    6311
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of    6311
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of    6311
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of    6311
+
+=== l=17, with a rational 17-isogeny: curves 12, with l | some c_q: 2
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of       2
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of       2
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of       2
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of       2
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of       2
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of       2
+
+######## l = 19: curves with l | some c_q: 4324  (Eisenstein among them: 0)
+
+=== l=19, no rational 19-isogeny: curves 1311048, with l | some c_q: 4324
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of    4324
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of    4324
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of    4324
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of    4324
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of    4324
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of    4324
+
+######## l = 23: curves with l | some c_q: 2290  (Eisenstein among them: 0)
+
+=== l=23, no rational 23-isogeny: curves 1311066, with l | some c_q: 2290
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of    2290
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of    2290
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of    2290
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of    2290
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of    2290
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of    2290
+
+######## l = 29: curves with l | some c_q: 946  (Eisenstein among them: 0)
+
+=== l=29, no rational 29-isogeny: curves 1311066, with l | some c_q: 946
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of     946
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of     946
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of     946
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of     946
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of     946
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of     946
+
+######## l = 31: curves with l | some c_q: 686  (Eisenstein among them: 0)
+
+=== l=31, no rational 31-isogeny: curves 1311066, with l | some c_q: 686
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of     686
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of     686
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of     686
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of     686
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of     686
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of     686
+
+######## l = 37: curves with l | some c_q: 288  (Eisenstein among them: 0)
+
+=== l=37, no rational 37-isogeny: curves 1311034, with l | some c_q: 288
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of     288
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of     288
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of     288
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of     288
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of     288
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of     288
+
+######## l = 41: curves with l | some c_q: 169  (Eisenstein among them: 0)
+
+=== l=41, no rational 41-isogeny: curves 1311066, with l | some c_q: 169
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of     169
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of     169
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of     169
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of     169
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of     169
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of     169
+
+######## l = 43: curves with l | some c_q: 143  (Eisenstein among them: 0)
+
+=== l=43, no rational 43-isogeny: curves 1311057, with l | some c_q: 143
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of     143
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of     143
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of     143
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of     143
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of     143
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of     143
+
+######## l = 47: curves with l | some c_q: 73  (Eisenstein among them: 0)
+
+=== l=47, no rational 47-isogeny: curves 1311066, with l | some c_q: 73
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of      73
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of      73
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of      73
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of      73
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of      73
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of      73
+
+######## l = 53: curves with l | some c_q: 37  (Eisenstein among them: 0)
+
+=== l=53, no rational 53-isogeny: curves 1311066, with l | some c_q: 37
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of      37
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of      37
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of      37
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of      37
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of      37
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of      37
+
+######## l = 59: curves with l | some c_q: 17  (Eisenstein among them: 0)
+
+=== l=59, no rational 59-isogeny: curves 1311066, with l | some c_q: 17
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of      17
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of      17
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of      17
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of      17
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of      17
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of      17
+
+######## l = 61: curves with l | some c_q: 12  (Eisenstein among them: 0)
+
+=== l=61, no rational 61-isogeny: curves 1311066, with l | some c_q: 12
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of      12
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of      12
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of      12
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of      12
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of      12
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of      12
+
+######## l = 67: curves with l | some c_q: 12  (Eisenstein among them: 0)
+
+=== l=67, no rational 67-isogeny: curves 1311059, with l | some c_q: 12
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of      12
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of      12
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of      12
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of      12
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of      12
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of      12
+
+######## l = 71: curves with l | some c_q: 3  (Eisenstein among them: 0)
+
+=== l=71, no rational 71-isogeny: curves 1311066, with l | some c_q: 3
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of       3
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of       3
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of       3
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of       3
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of       3
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of       3
+
+######## l = 73: curves with l | some c_q: 2  (Eisenstein among them: 0)
+
+=== l=73, no rational 73-isogeny: curves 1311066, with l | some c_q: 2
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of       2
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of       2
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of       2
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of       2
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of       2
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of       2
+
+######## l = 79: curves with l | some c_q: 1  (Eisenstein among them: 0)
+
+=== l=79, no rational 79-isogeny: curves 1311066, with l | some c_q: 1
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of       1
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of       1
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of       1
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of       1
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of       1
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of       1
+
+######## l = 83: curves with l | some c_q: 2  (Eisenstein among them: 0)
+
+=== l=83, no rational 83-isogeny: curves 1311066, with l | some c_q: 2
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of       2
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of       2
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of       2
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of       2
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of       2
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of       2
+
+######## l = 97: curves with l | some c_q: 1  (Eisenstein among them: 0)
+
+=== l=97, no rational 97-isogeny: curves 1311066, with l | some c_q: 1
+  Ribet-Takahashi bound (even subset of multiplicative primes)   [V >= RT                     ] violations      0 of       1
+  all multiplicative primes                                      [V >= Tm                     ] violations      0 of       1
+  all bad primes (multiplicative and additive)                   [V >= Tm + Ta                ] violations      0 of       1
+  largest single v_l(c_q)                                        [V >= max_v                  ] violations      0 of       1
+  number of bad primes with l | c_q                              [V >= n_mult_l + n_add_l     ] violations      0 of       1
+  number of bad primes with l | c_q, minus one                   [V >= n_mult_l + n_add_l - 1 ] violations      0 of       1
+
+--- l=3, non-Eisenstein: rows V = v_3(deg), cols T = sum v_3(c_q) (clipped at 6)
+T       0      1      2     3    4   5  6
+V                                        
+0  195007      0      0     0    0   0  0
+1  281382  76983      0     0    0   0  0
+2  223937  94385  17104     0    0   0  0
+3  124779  62117  16810  2746    0   0  0
+4   51720  29097   9410  2308  282   0  0
+5   17117  10632   4133  1173  242  33  0
+6    4783   3025   1409   452   99  15  1
+7    1073    767    437   172   35  13  1
+8     241    200    145    43   19   2  0
+
+--- l=3, non-Eisenstein, curves with Ta > 0 (additive primes with 3 | c_q): rows V, cols Ta
+Ta      1     2   3
+V                  
+1   21321     0   0
+2   32048   841   0
+3   25880  1205  13
+4   13336   772   9
+5    5162   310   6
+6    1548    91   2
+7     430    22   2
+8      94     6   0
+    ... and with Tm = 0 (only additive contributions): rows V, cols Ta
+Ta      1     2   3
+V                  
+1   21321     0   0
+2   27570   841   0
+3   20805  1113  13
+4   10295   678   9
+5    3828   259   6
+6    1117    73   2
+7     279    17   2
+8      66     3   0
+
+--- l=3, non-Eisenstein, exactly one multiplicative prime with 3 | c_q and no additive: rows V, cols Tm
+Tm      1     2    3  4
+V                      
+1   55662     0    0  0
+2   66815  6379    0  0
+3   41312  6902  203  0
+4   18802  4342  282  3
+5    6804  2104  183  4
+6    1908   795   88  0
+7     488   248   53  0
+8     134   106   13  0
+
+--- l=3, Eisenstein (rational 3-isogeny), T > 0: rows V, cols T
+T     1     2     3    4    5   6
+V                                
+0   650     0     0    0    0   0
+1  1274   934     0    0    0   0
+2  2939  3213   684    0    0   0
+3  5359  3925  2478  198    2   0
+4  5914  3477  2601  789   30   0
+5  3758  2235  1630  763  133   8
+6  1515  1037   782  450  125  23
+7   454   357   296  128   69  16
+8   122   101    94   84   33  15
+
+--- l=5, non-Eisenstein: rows V = v_5(deg), cols T = sum v_5(c_q) (clipped at 6)
+T       0      1     2    3  4
+V                             
+0  708693      0     0    0  0
+1  360525  76189     0    0  0
+2   93789  31993  4172    0  0
+3   16352   7717  1504  124  0
+4    2074   1207   337   30  3
+5     182    152    52    7  1
+6      13     10     3    1  0
+7       0      1     0    0  0
+
+--- l=5, non-Eisenstein, exactly one multiplicative prime with 5 | c_q and no additive: rows V, cols Tm
+Tm      1    2
+V             
+1   76189    0
+2   31993  951
+3    7717  450
+4    1207  103
+5     152   14
+6      10    1
+7       1    0
+
+--- l=5, Eisenstein (rational 5-isogeny), T > 0: rows V, cols T
+T    1    2    3   4  5
+V                      
+0   16    0    0   0  0
+1  143   75    0   0  0
+2  633  265   88   0  0
+3  588  154  275  13  0
+4  215   65   92  47  0
+5   22   16   14   6  4
+6    1    1    2   0  0
+
+--- l=7, non-Eisenstein: rows V = v_7(deg), cols T = sum v_7(c_q) (clipped at 6)
+T       0      1     2  3
+V                        
+0  941209      0     0  0
+1  263255  47808     0  0
+2   38528  11759  1099  0
+3    3573   1722   222  9
+4     221    158    37  3
+5       3      9     3  0
+
+--- l=7, non-Eisenstein, exactly one multiplicative prime with 7 | c_q and no additive: rows V, cols Tm
+Tm      1   2
+V            
+1   47808   0
+2   11759  44
+3    1722  11
+4     158   0
+5       9   1
+
+--- l=7, Eisenstein (rational 7-isogeny), T > 0: rows V, cols T
+T    1   2   3  4
+V                
+0    1   0   0  0
+1   79   5   0  0
+2  193  10  12  0
+3   85  13  24  0
+4   14   4   5  4

@@ -1,0 +1,11 @@
+[repro] checker rerun start Tue Oct  6 19:13:31 UTC 2026
+83 1311066  1309159                   3                    3         0.0         0.0      0               0         0.0            0.0        NaN
+97 1311066  1309159                   1                    1         0.0         0.0      0               0         0.0            0.0        NaN
+79  429936   429514                   1                    1         0.0         0.0      0               0         0.0            0.0        NaN
+83  429936   429514                   4                    4         0.0         0.0      0               0         0.0            0.0        NaN
+71  359009   358832                   0                    0         0.0         0.0     0               0         0.0            0.0        NaN
+73  359009   358832                   1                    1         0.0         0.0     0               0         0.0            0.0        NaN
+[repro] work summary IDENTICAL to reference
+[repro] holdout summary IDENTICAL to reference
+[repro] ext summary IDENTICAL to reference
+[repro] checker rerun end Tue Oct  6 19:21:47 UTC 2026
