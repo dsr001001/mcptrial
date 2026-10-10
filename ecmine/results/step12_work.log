@@ -1,0 +1,3 @@
+PARI stack size set to 600000000 bytes, maximum size set to 600002560
+work {'curves_in_range': 417754, 'with_candidate_prime': 46222, 'with_extra': 12095, 'viol_old': 0, 'viol_new': 0, 'eq_old': 20822, 'eq_new': 28007, 'pos_old': 46222, 'pos_new': 46222, 'extra_total': 12125, 'l': 3}
+work {'curves_in_range': 729135, 'with_candidate_prime': 10940, 'with_extra': 1646, 'viol_old': 0, 'viol_new': 0, 'eq_old': 7333, 'eq_new': 8610, 'pos_old': 10940, 'pos_new': 10940, 'extra_total': 1646, 'l': 5}

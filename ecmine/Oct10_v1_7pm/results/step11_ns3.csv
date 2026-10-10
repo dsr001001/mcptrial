@@ -1,0 +1,5 @@
+set,curves,ns3,ns3_with_III_term,ns3_failing,non_ns3_failing,exceptions,exc_pattern_22,h_eq_1,h_other,III_q_1mod12,III_q_11mod12,III_q_2,exc_with_tam_prime_2mod3,shortfall_1,shortfall_other
+work,1233729,1170,1170,364,0,364,364,1170,0,140,160,72,364,364,0
+holdout,409577,290,290,68,0,68,68,290,0,34,30,4,68,68,0
+ext,348227,237,237,43,0,43,43,237,0,16,25,2,43,43,0
+oot,893,0,0,0,0,0,0,0,0,0,0,0,0,0,0

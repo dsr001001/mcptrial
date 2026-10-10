@@ -1,0 +1,28 @@
+PARI stack size set to 400000000 bytes, maximum size set to 400003072
+{'set': 'work', 'curves': 1233729, 'ns3': 1170, 'ns3_with_III_term': 1170, 'ns3_failing': 364, 'non_ns3_failing': 0, 'exceptions': 364, 'exc_pattern_22': 364, 'h_eq_1': 1170, 'h_other': 0, 'III_q_1mod12': 140, 'III_q_11mod12': 160, 'III_q_2': 72, 'exc_with_tam_prime_2mod3': 364, 'shortfall_1': 364, 'shortfall_other': 0}
+type IV/IV* at 2 in the working set (E[3] irreducible, non-CM): 92812 e_3(E,2) distribution: {1: 92812}
+calibration l=3 corrected rule: bound-0 curves 366151, frac V=0 0.532, positive 867578, expected violations if independent 605,311, mean excess 0.63
+{'set': 'holdout', 'curves': 409577, 'ns3': 290, 'ns3_with_III_term': 290, 'ns3_failing': 68, 'non_ns3_failing': 0, 'exceptions': 68, 'exc_pattern_22': 68, 'h_eq_1': 290, 'h_other': 0, 'III_q_1mod12': 34, 'III_q_11mod12': 30, 'III_q_2': 4, 'exc_with_tam_prime_2mod3': 68, 'shortfall_1': 68, 'shortfall_other': 0}
+{'set': 'ext', 'curves': 348227, 'ns3': 237, 'ns3_with_III_term': 237, 'ns3_failing': 43, 'non_ns3_failing': 0, 'exceptions': 43, 'exc_pattern_22': 43, 'h_eq_1': 237, 'h_other': 0, 'III_q_1mod12': 16, 'III_q_11mod12': 25, 'III_q_2': 2, 'exc_with_tam_prime_2mod3': 43, 'shortfall_1': 43, 'shortfall_other': 0}
+{'set': 'oot', 'curves': 893, 'ns3': 0, 'ns3_with_III_term': 0, 'ns3_failing': 0, 'non_ns3_failing': 0, 'exceptions': 0, 'exc_pattern_22': 0, 'h_eq_1': 0, 'h_other': 0, 'III_q_1mod12': 0, 'III_q_11mod12': 0, 'III_q_2': 0, 'exc_with_tam_prime_2mod3': 0, 'shortfall_1': 0, 'shortfall_other': 0}
+    set  l  curves  bound_pos  viol     eq  viol_full  noIII_pos  viol_noIII  eq_noIII
+   work  3 1233729     867578     0 0.5748        364     861074           0    0.5679
+   work  5 1303224     332771     0 0.7561          0     330477           0    0.7552
+   work  7 1307753     174266     0 0.8409          0     173488           0    0.8408
+   work 11 1309103      59849     0 0.9158          0      59495           0    0.9155
+   work 13 1308945      35817     0 0.9238          0      35635           0    0.9237
+holdout  3  409577     298435     0 0.5464         68     295973           0    0.5388
+holdout  5  428251     115702     0 0.7418          0     114860           0    0.7400
+holdout  7  429280      60868     0 0.8322          0      60580           0    0.8320
+holdout 11  429502      21271     0 0.9061          0      21097           0    0.9059
+holdout 13  429498      12751     0 0.9238          0      12681           0    0.9234
+    ext  3  348227     257165     0 0.5395         43     255507           0    0.5323
+    ext  5  358244     100034     0 0.7333          0      99401           0    0.7323
+    ext  7  358717      53034     0 0.8268          0      52766           0    0.8268
+    ext 11  358830      19235     0 0.9065          0      19136           0    0.9064
+    ext 13  358816      11561     0 0.9193          0      11484           0    0.9193
+    oot  3     893        828     0 0.5254          0        827           0    0.5163
+    oot  5     893        112     0 0.8214          0        111           0    0.8198
+    oot  7     893         52     0 0.9038          0         52           0    0.9038
+    oot 11     893         19     0 0.9474          0         19           0    0.9474
+    oot 13     893         12     0 1.0000          0         12           0    1.0000

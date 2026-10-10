@@ -241,3 +241,40 @@ Snapshot of today's state of all documents: `Oct10/` (note, memorandum, bibliogr
 in the note, the memorandum and the outreach signature (live and snapshot copies). The statement on the use of an AI system at every stage (an unnumbered section at the end of the
 note, 21 pages; a short version at the end of the memorandum, 10 pages; a sentence in the outreach message) replaces the
 bracketed placeholder; the author takes responsibility for all statements, proofs, computations and errors.
+
+## Version of 2026-10-10, evening: the rule is a theorem under the Taylor-Wiles hypothesis
+
+Two reports on the morning version (an AI referee report and an independent assessment) asked whether the rule follows
+from Diamond-Flach-Guo and found that every type III exception has mod 3 image 3Ns. Both points were verified and settled:
+
+- `paper/note.tex` (24 pages) now has Theorem 1.2: for l not dividing 2N with rho-bar absolutely irreducible on
+  Q(sqrt(l*)) (DFG's hypothesis l not in S_f), v_l(deg) >= length H^1_f(Q, ad^0 T (x) Q_l/Z_l) + sum_q v_l(Tam_q(ad^0 T))
+  + sum_q e_l(E,q), equality under multiplicity one, hence v_l(deg) >= sum e_l + sum t_l for ALL Kodaira types, type III
+  included. Chain (Section 4): Lemma 4.3 (DDT Lemma 4.17 inequality, with DFG's pairing cited precisely), DFG Prop 1.4(c)
+  (Theorem 4.1), DFG Theorem 3.7 (4.5), DFG Theorem 2.7 (4.6), DFG Lemma 2.1 (4.7), Fontaine-Perrin-Riou local formula
+  (4.8), Lemma 4.9 (vanishing of H^0(Q, ad^0 T(1) (x) Q_l/Z_l) iff TW), Lemma 2.7 (Tamagawa factor of ad^0 at a
+  multiplicative prime: l^{v(n) + min(v(n), v(q-1), v(c_q))}, c_q the unit part of the Tate parameter).
+- Conjecture 1.3 (all types, all odd l with E[l] irreducible, l | N allowed) includes the correction term h_l(E) =
+  length H^0(Q, ad^0 T(1) (x) Q_l/Z_l), which is 1 exactly for the 3Ns curves (Proposition 1.7, Lemma 4.9) and 0 otherwise.
+  Zero violations on all four ranges (Table 1; `scripts/step11_tw_boundary.py`, `results/step11_summary.csv`,
+  `results/step11_ns3.csv`, `paper/tables/euler_uniform.tex`, `paper/tables/ns3.tex`).
+- The 3Ns boundary (Section 6.7, Table 4): all 475 exceptions of the rule without correction are 3Ns, their 3-division
+  polynomial factors as two quadratics, h_3 = 1 for all 1,697 3Ns curves of the tables, shortfall always exactly 1,
+  31% / 23% / 18% of 3Ns curves fail. The morning version's claim "q = 1 mod 12" was wrong (140 / 160 / 72 for q = 1, 11 mod
+  12, q = 2 on the working set).
+- Tamagawa factor test (Section 6.4, `scripts/step12_tamagawa.py`, `results/step12_work.csv`): the predicted extra term
+  (Steinberg q = 1 mod l, l | n, unit part of the Tate parameter an l-th power) holds with zero violations on the working
+  set; equality among affected curves rises 45% -> 61% at l = 3 (46,222 curves, 12,095 with extra term) and 67% -> 79% at
+  l = 5 (10,940 / 1,646).
+- Other changes: Lemma 3.2 and Theorem 4.11's Step 1 say "generalised eigenform" where U_p is not semisimple; Zagier 1985
+  credited for the degree formula; Kim-Ota's hypotheses stated (Remark 4.10); Proposition 1.4 gives the count 92,812 of
+  type IV/IV* at 2 curves with e_3(E,2) = 1; the calibration method is stated; the AI-use statement names DFG and the
+  reports; no statement in the paper defers to an outside review.
+- `paper/memo_local_factors.tex` got a postscript recording the resolution and marking its superseded parts.
+  `paper/outreach.md` rewritten as an optional notification to Diamond/Flach. New bib entries: Zagier85, FPR94, Zywina15.
+- Snapshot of this version: `Oct10_v1_7pm/` (pdf, tex and plain-text versions of the note and the memorandum, the
+  tables, the outreach texts, the README, HANDOFF.md, the scripts of steps 10-12).
+
+Verified today from the sources: DFG published text (Prop 1.4(c), Theorem 3.7, Lemma 2.1, Theorem 2.7, 2.15, the
+definition of eta^Sigma via the pairing delta-hat composed with w, pages 663-727); the arXiv long version 2512.02348
+(different numbering, not cited); ARS Table 1 (99A1: degree 4, congruence number 12; 54B1: 2, 6).

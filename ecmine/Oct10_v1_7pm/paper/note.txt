@@ -1,0 +1,1292 @@
+  LOCAL FACTORS OF THE ADJOINT L-FUNCTION AND THE ℓ-ADIC
+            VALUATIONS OF THE MODULAR DEGREE
+
+                                                     DHARMAJ SONI
+
+
+       Abstract. Let E/Q be the X0 (N )-optimal curve of its isogeny class, φE : X0 (N ) → E its
+       modular parametrisation and f its newform. For an odd prime ℓ √   not dividing 2N such that the
+       mod ℓ representation of E is absolutely irreducible on Gal(Q/Q( ℓ∗ )), we prove
+                                                 X               X
+                                 vℓ (deg φE ) ≥      eℓ (E, q) +   tℓ (E, q),
+                                                         q|N              q|N
+
+       where eℓ (E, q) is the ℓ-adic valuation of the Euler factor at s = 1 of the adjoint L-function
+       L(ad0 f, s) that the naive adjoint L-function omits (it is nonzero only at the additive primes:
+       for a tame q ≥ 5 it is vℓ (q − χ−3 (q)) for the Kodaira types II, II∗ , IV, IV∗ , vℓ (q − χ−4 (q)) for
+       III, III∗ , vℓ (q 2 − 1) for I∗n and vℓ (q − 1) + vℓ ((q + 1)2 − aq (E ′ )2 ) for I∗0 , with E ′ the twist of good
+       reduction), and tℓ (E, q) is the ℓ-part of the valuation of the Tate parameter at a potentially
+       multiplicative prime. The proof assembles the theorem of Diamond, Flach and Guo identifying
+       the length of the Σ-imprimitive adjoint Selmer group with the valuation of a congruence ideal,
+       their formula for the variation of that ideal with Σ, the local Tamagawa formula of Fontaine and
+       Perrin-Riou, a computation of the Tamagawa factor of the adjoint at a multiplicative prime,
+       and the comparison of the modular degree with the congruence number of Agashe, Ribet and
+       Stein. More precisely, vℓ (deg φE ) is bounded below by, and when multiplicity one holds at level
+       N equals, the length of the Bloch–Kato Selmer group of ad0 Vℓ E plus the Tamagawa factors
+       plus the omitted Euler factors; the data confirm the Tamagawa factor formula, which raises the
+       bound by one whenever a Steinberg prime q ≡ 1 (mod             √ ℓ) has a Tate parameter whose unit part
+       is an ℓ-th power. Without the irreducibility over Q( ℓ∗ ) the terms of the types I∗0 and I∗n still
+       hold, by an elementary twisting argument, but the inequality itself fails: for ℓ = 3 exactly the
+       curves whose mod 3 image is the normaliser of a split Cartan subgroup violate it, by exactly
+       one, in a third of the cases, the one being the length of H 0 (Q, ad0 ρ(1) ⊗ Q3 /Z3 ). With that
+       correction term the inequality holds with no exception, with Euler factors computed by PARI
+       at every bad prime, for every optimal curve of conductor at most 500000 and for 893 curves
+       outside the tables, at ℓ = 3, 5, 7, 11, 13, also at primes ℓ dividing N where no theorem applies,
+       with equality in 57% of the cases with a positive bound at ℓ = 3. We describe the extra terms
+       at q = ℓ = 3 and the failure in the Eisenstein case.
+
+
+
+
+                                                  1. Introduction
+   Let E/Q be an elliptic curve of conductor N and let f = fE ∈ S2 (Γ0 (N )) be the newform
+attached to it. Among the curves in the isogeny class of E there is a distinguished one, the
+X0 (N )-optimal curve, for which the modular parametrisation φE : X0 (N ) → E has minimal
+degree; throughout, E denotes this curve and deg φE its modular degree. The modular degree is
+computable [9, 33], and its size is tied to deep questions (the conjectured bound deg φE ≪ε N 2+ε
+is equivalent to a form of the abc conjecture, see [2, §2] and the references there), but its prime
+factorisation is not understood. The purpose of this note is to describe, and for the most part
+prove, a local-to-global divisibility: the ℓ-adic valuation of deg φE is bounded below by local
+invariants of E at the bad primes, and the right invariants are the local factors of the adjoint
+L-function.
+
+  Date: October 10, 2026.
+                                                               1
+2                                                   DHARMAJ SONI
+
+   The classical route to the degree is the Petersson norm. Up to explicit factors deg φE is
+⟨f, f ⟩ divided by the area of the period lattice of E (Zagier [35], Watkins [33]), and ⟨f, f ⟩ is
+the special value L(Sym2 f, 2) up to the local factors at the bad primes (Rankin, Shimura; see
+[12, Lemma 2.12]); Flach’s finiteness theorem for the symmetric square [15] is the first place
+where the modular degree meets the Selmer group of Sym2 f . By a theorem of Agashe, Ribet
+and Stein [2, Theorem 2.2], deg φE divides the congruence number rE , the largest integer r such
+that f ≡ g (mod r) coefficientwise for some integral cusp form g of level N orthogonal to f , with
+vp (deg φE ) = vp (rE ) for every prime p with p2 ∤ N . The congruence number is the congruence
+ideal of f in the full Hecke algebra of level N (Lemma 3.1), and the theory of such ideals, from
+Hida [18] to Diamond, Flach and Guo [12], expresses them through the adjoint Selmer group
+andPthe adjoint   L-value. The L-function that appears there is the naive one: the Euler product
+             2 −s
+of an (f ) n , which has the true local factor at the primes of good or multiplicative reduction
+and the trivial factor at the additive primes. The point of this note is that the primes at which
+the naive and the true adjoint L-functions differ are exactly the primes at which the modular
+degree acquires extra local divisibility, that the amount is the valuation of the omitted factor,
+and that this is a consequence of the theorems of [12] once they are read for elliptic curves, with
+a precise boundary at the one hypothesis they need.
+
+1.1. The local terms. Let V = Vℓ E, T = Tℓ E, ρ = ρE,ℓ , ρ̄ its reduction, and Af = ad0 V the
+trace-zero adjoint. We follow the conventions of [12, §1.7.2]: for a prime p let δp = dim V Ip , so
+                                                                                              I
+δp = 2, 1, 0 for good, multiplicative, additive reduction; Lp (Af , s) = det(1 − Frobp p−s | Afp )−1
+is the true local factor, and the naive factor is Lnv  p (Af , s) = Lp (Af , s) if δp > 0 and 1 if
+δp = 0. In the normalisation of the symmetric square, Lp (Sym2 f, s) = Lp (Af , s − 1), and
+PARI’s lfunsympow(E,2) returns these factors at every prime, including 2 and 3 [31].
+Definition 1.1. For a bad prime q ̸= ℓ put
+                                                                                    (
+               L (A , 1)−1            Pq (q −2 )                                 vℓ (−vq (jE )) if vq (jE ) < 0,
+                 q  f
+eℓ (E, q) = vℓ nv             = v ℓ                      ,              tℓ (E, q) =
+               Lq (Af , 1)−1          1 − aq (E)2 q −2                               0              otherwise,
+where Pq (X) is the polynomial with Lq (Sym2 f, s) = Pq (q −s )−1 . So eℓ is the valuation of the
+Euler factor that the naive L-function omits; it is 0 at a multiplicative prime, where the naive
+factor is the true one. The term tℓ is the ℓ-part of the valuation of the Tate parameter at a
+potentially multiplicative prime, which is vℓ (n) for a Kodaira symbol In at any q and I∗n at odd
+q, while a symbol I∗n at q = 2 can have potentially good reduction, and then tℓ = 0. Both terms
+are invariant under quadratic twist.
+   For a tame prime q ≥ 5 the omitted √ factor is read off the Kodaira type (Lemma 2.5). √    With
+χ−3 , χ−4 the quadratic characters of Q( −3) and Q(i), E ′ the quadratic twist of E by Q( q ∗ ),
+q ∗ = (−1)(q−1)/2 q, and α, β the roots of X 2 − aq (E ′ )X + q (for type I∗0 , where E ′ has good
+reduction at q):
+             type at q ≥ 5       Lq (Af , s)−1                         eℓ (E, q)
+                                      −1−s
+             In                  1−q                                   0
+             I∗n                 1 − q −1−s                            vℓ (q 2 − 1)
+             II, II∗ , IV, IV∗   1 − χ−3 (q)q −s                       vℓ (q − χ−3 (q))
+             III, III∗           1 − χ−4 (q)q −s                       vℓ (q − χ−4 (q))
+             I∗0                 (1 − α  q −s )(1 − q −s )(1 − α
+                                                               β −s
+                                                                       vℓ (q − 1) + vℓ (q + 1)2 − aq (E ′ )2
+                                                                                                             
+                                       β
+                                                                 q )
+
+1.2. The theorem. For a prime p ̸= ℓ and a GQp -stable Zℓ -lattice M the Tamagawa factor is
+                                   G
+Tamp (M ) = FittZℓ H 1 (Ip , M )tor Qp , an ideal of Zℓ [12, p. 708], [16, I.4.2.2]; for M = ad0 T at
+                  LOCAL FACTORS OF THE ADJOINT AND THE MODULAR DEGREE                               3
+
+a prime of multiplicative reduction its valuation is at least tℓ (E, p) (Lemma 2.7), and at a prime
+of good reduction it is 0. Let Hf1 (Q, ad0 T ⊗ Qℓ /Zℓ ) be the Bloch–Kato Selmer group [12, §2.1].
+Theorem 1.2. Let E be X0 (N )-optimal and let ℓ be an √    odd prime not dividing 2N such that
+ρ̄E,ℓ is absolutely irreducible when restricted to Gal(Q/Q( ℓ∗ )), ℓ∗ = (−1)(ℓ−1)/2 ℓ. Then
+                                                          X                         X
+(1) vℓ (deg φE ) ≥ lengthZℓ Hf1 (Q, ad0 T ⊗ Qℓ /Zℓ ) +      vℓ Tamq (ad0 T ) +
+                                                                             
+                                                                                        eℓ (E, q),
+                                                           q|N                       q|N
+
+with equality when H 1 (X0 (N ), Zℓ ), localised at the maximal ideal of the Hecke algebra attached
+to (f, ℓ), is free over the localised Hecke algebra. In particular
+                                               X              X
+(2)                            vℓ (deg φE ) ≥     eℓ (E, q) +   tℓ (E, q).
+                                             q|N            q|N
+
+   The hypothesis is the one under which Diamond, Flach and Guo prove the Tamagawa number
+conjecture for the adjoint motive of f [12, Theorem 0.1]; in their notation it says that ℓ is not
+in the exceptional set Sf . Theorem 1.2 is an assembly of their results. Their Theorem 3.7
+identifies the length of the Σ-imprimitive adjoint Selmer group, Σ the set of bad primes, with
+the valuation of the naive Σ-finite congruence ideal; their Proposition 1.4 says that this ideal is
+the congruence ideal at level N times the naive Euler factors at the multiplicative primes; their
+Lemma 2.1 compares the Σ-imprimitive Selmer group with the Bloch–Kato one, the local indices
+being, by the formula of Fontaine and Perrin-Riou, the true Euler factors times the Tamagawa
+factors; and the inequality between the congruence ideal and the congruence number is the
+algebra of [10, Lemma 4.17], with the modular degree entering through [2]. The naive factors at
+the multiplicative primes cancel, the true factors at the additive primes are the omitted ones, and
+(1) appears. What this note adds is the reading of the local terms for elliptic curves (Lemmas 2.5
+and 2.7), the observation that the assembly
+                                         √ bounds the modular degree, the twisting theorems
+that hold without the hypothesis on Q( ℓ∗ ) (Theorem 1.6), the identification of the curves for
+which that hypothesis fails and of what happens to them (Proposition 1.7 and Section 6.7), and
+the computations, which test (1) well beyond the inequality.
+1.3. Beyond the hypotheses. The data suggest that the inequality survives the loss of the
+                                                 √ prime ℓ itself when ℓ | N , and a correction
+hypotheses, with two modifications: a weight at the
+term when the representation is induced from Q( ℓ∗ ).
+Conjecture 1.3. Let E be X0 (N )-optimal and without complex multiplication, let ℓ be an odd
+prime such that E[ℓ] is irreducible, and let hℓ (E) be the length of H 0 (Q, ad0 T (1)⊗Qℓ /Zℓ ). Then
+                             X                   X
+(3)       vℓ (deg φE ) ≥           eℓ (E, q) +      tℓ (E, q) + [ℓ = 3] w3 (E) − hℓ (E),
+                           q|N, q̸=ℓ               q|N
+
+where w3 (E) is the weight of the prime 3 itself when 3 | N and the reduction at 3 is potentially
+good: 1 for the types II, IV, III∗ , 2 for II∗ , IV∗ and 0 for III, I∗0 .
+   The term hℓ (E) vanishes under the hypothesis of Theorem 1.2 (Lemma 4.9) and is positive
+exactly when ρ̄ ≃ ρ̄ ⊗ χℓ∗ ; for ℓ = 3 this happens precisely when the image of ρ̄E,3 is the
+normaliser of a split Cartan subgroup, the image labelled 3Ns in the tables [29], and then
+h3 (E) = 1 for every such curve of the tables (Proposition 1.7, Section 6.7). For these curves the
+inequality without the correction fails by exactly one in a third of the cases, so the hypothesis
+of Theorem 1.2 is sharp, and the correction is the term that Lemma 2.1 of [12] produces when
+H 0 (Q, ad0 T (1) ⊗ Qℓ /Zℓ ) ̸= 0 (Remark 5.1). The weights w3 at q = ℓ = 3 are empirical
+(Section 6.8); at q = ℓ ≥ 5 no term is needed. The terms at the wild primes 2 and 3 are the ones
+of Definition 1.1 with PARI’s Euler factor, and they reproduce every minimum observed in the
+4                                            DHARMAJ SONI
+
+tables, including the irregular behaviour of the prime 2 noted in an earlier version of this note
+(Section 6.8). On the four ranges of Section 6, (3) holds with no exception at ℓ = 3, 5, 7, 11, 13,
+including the curves with ℓ | N , which no theorem covers.
+
+1.4. Local component groups. The rule contains the two statements of the earlier version of
+this note. For a bad prime q let Φgeom   q     = Φq (Fq ) be the group of components of the special fibre
+of the Néron model of E at q over the algebraic closure. Its order is read off the Kodaira type:
+n for type In ; 1 for II, II∗ ; 2 for III, III∗ ; 3 for IV, IV∗ ; 4 for I∗0 and I∗n [28, IV.9]. The Tamagawa
+number cq = #Φq (Fq ) counts only the components defined over Fq ; the statements below are
+                                                                                                      √
+about Φgeom
+         q   , not cq . For an odd prime q let E (q) be the quadratic twist of E by Q( q ∗ ); it
+has the same reduction type as E at every prime other than q, while at q the Kodaira types are
+exchanged (Lemma 2.4):
+                 In ↔ I∗n ,     II ↔ IV∗ ,      IV ↔ II∗ ,        III ↔ III∗ ,    I0 ↔ I∗0
+(the first and the last for every odd q, the three others for q ≥ 5). Define the twist-symmetrised
+weight
+                     
+                                                          ∗
+                     vℓ (n) if the type at q is In , or In with q odd,
+                     
+         wℓ (E, q) = 1         if ℓ = 3 and the type is IV or IV∗ , or II or II∗ with q odd,
+                     
+                       0       otherwise,
+                     
+
+so that
+wℓ (E, q) = max vℓ (#Φgeom (E)), vℓ (#Φgeom (E (q) )) for q ≥ 5,             wℓ (E, 2) = vℓ (#Φgeom
+                                                     
+                      q                q                                                       2    (E)).
+The two inequalities are
+                                                     X
+                                                           vℓ #Φgeom
+                                                                     
+(4)                                 vℓ (deg φE ) ≥              q      ,
+                                                     q|N
+
+                                                       X
+(5)                                   vℓ (deg φE ) ≥         wℓ (E, q),
+                                                       q|N
+
+of which the second implies the first. Both were conjectured in the earlier version under the
+hypotheses of Conjecture 1.3, and both hold with no exception on the same ranges (Section 6.6).
+Proposition 1.4. Under the hypothesis of Theorem 1.2, (4) and (5) hold, except possibly when
+ℓ = 3 and E has type IV or IV∗ at 2, where they hold as soon as e3 (E, 2) ≥ 1; the same is true
+under Conjecture 1.3 with hℓ (E) = 0. The inequality e3 (E, 2) ≥ 1 holds for all 92,812 curves
+of type IV or IV∗ at 2 in the working set, where PARI’s factor at 2 is 1 + 2X for every one of
+them.
+Proof. Compare the two sides term by term; wℓ (E, q) ≥ vℓ (#Φgeom    q   ), so it suffices to treat (5).
+At a prime of type In both sides have vℓ (n) = tℓ (E, q). At a prime of type I∗n with q odd,
+tℓ (E, q) = vℓ (n) = wℓ (E, q); with q = 2, wℓ (E, 2) = vℓ (4) = 0. At q ≥ 5 of type II, II∗ , IV, IV∗
+and ℓ = 3, e3 (E, q) = v3 (q − χ−3 (q)) ≥ 1 = w3 (E, q) since q ≡ χ−3 (q) (mod 3); for ℓ ≥ 5 both
+weights are 0. At q = 3 of these types and ℓ = 3, w3 (E) ≥ 1 = w3 (E, 3) by definition, and
+for ℓ ≥ 5 the weight is 0. At q = 2 of type II, II∗ , wℓ (E, 2) = 0; of type IV, IV∗ and ℓ = 3,
+w3 (E, 2) = 1, which is the excepted case. The types III, III∗ , I∗0 have wℓ = 0 for odd ℓ. All other
+terms of (2) and (3) are nonnegative.                                                                 □
+                   LOCAL FACTORS OF THE ADJOINT AND THE MODULAR DEGREE                                   5
+                                                                                   √
+1.5. History, and the statements proved without the hypothesis on Q( ℓ∗ ). The mul-
+tiplicative part of (4) has a long history. Ribet and Takahashi [27, 30] compared deg φE with
+the degree of a parametrisation by a Shimura curve and found the product of the nq over
+the primes of the quaternion discriminant, up to primes where E[ℓ] is reducible; Pasten [22]
+controls that error term. Pollack and Weston [23] conjectured, and proved for weight 2 and
+square-free level when ρ̄ is ramified at two primes at least, and Kim and Ota [19] proved un-
+der the hypotheses recalled in Remark 4.10, that moving a prime q into the “new” part of
+the level changes the congruence ideal of fE in the full space S2 (Γ0 (N )) by exactly the Tam-
+agawa exponent tq , the largest t with ρE,ℓ mod ℓt unramified at q; for multiplicative q one has
+tq = vℓ (nq ) = tℓ (E, q) whether
+                               Por not the reduction is split (Lemma 2.1). Theorem 1.2 contains
+the inequality vℓ (deg φE ) ≥ q ∥ N tℓ (E, q) for every multiplicative prime, including the primes
+q ≡ ±1 (mod ℓ) and the prime ℓ = 3, which the formula of Kim and Ota excludes; it does not
+contain their equality.
+   Two statements hold under weaker hypotheses than Theorem 1.2, by level lowering and twist-
+ing rather than by the Taylor–Wiles method, and they matter exactly where that method does
+not apply.
+Theorem 1.5. Let E/Q have conductor N and let ℓ be an odd prime not dividing N        √ such that
+ρ̄E,ℓ is irreducible and, if ℓ = 3, absolutely irreducible when restricted to Gal(Q/Q( −3)). Let
+q ̸= ℓ be a prime at which E has additive reduction of one of the following kinds:
+     (a) type IV or IV∗ , with q ≥ 5 and ℓ = 3;
+     (b) type II or II∗ , with q ≥ 5 and ℓ = 3;
+     (c) type I∗n with ℓ | n, q odd.
+Then ℓ divides the modular degree of the X0 (N )-optimal curve in the isogeny class of E.
+     For ℓ ≥ 5 Theorem 1.5 needs only the irreducibility of ρ̄; its proof (Section 3) lowers the level
+of ρ̄, or of its twist ρ̄ ⊗ χq , and twists back. The quantitative version of case (c), and of the type
+I∗0 , is the following, which needs no hypothesis beyond the irreducibility of E[ℓ].
+Theorem 1.6. Let ℓ be an odd prime with ℓ ∤ 2N and E[ℓ] irreducible, let S be the set of primes
+q ≥ 5 at which E has type I∗0 or I∗n , and let ES be the twist of E by the product of the characters
+χq , q ∈ S. Then
+                                                  X                X
+                    vℓ (deg φE ) ≥ vℓ (rES ) +        eℓ (E, q) ≥     eℓ (E, q).
+                                                   q∈S               q∈S
+
+  The proof (Section 4.4) uses the formula of [12, Proposition 1.4] for the depleted form of fES ,
+which lives at level N , and an elementary transport of congruences along the twist; under the
+hypothesis of Theorem 1.2 the identity (1) for E and for ES shows that the first inequality is
+then an equality when multiplicity one holds at both levels.
+Proposition 1.7. Let E/Q be without √ complex multiplication with E[3] irreducible. Then ρ̄E,3 is
+absolutely irreducible on Gal(Q/Q( −3)) unless its image is conjugate to the normaliser Ns (F3 )
+of a split Cartan subgroup of GL2 (F3 ), and in that case ρ̄E,3 ≃ ρ̄E,3 ⊗χ−3 , H 0 (Q, ad0 ρ̄E,3 (1)) ̸= 0
+and h3 (E) ≥ 1. The 3-division polynomial of E then factors as a product of two irreducible
+quadratics, and otherwise it is irreducible.
+  The last statement concerns the Eisenstein case, in which (4) can fail.
+Conjecture    1.8. Let E be optimal, not CM, with a rational ℓ-isogeny, ℓ odd, and let D be the
+deficit q vℓ (#Φgeom
+       P
+                 q   ) − vℓ (deg φE ) of (4). Then
+                                                                 
+                          D ≤ vℓ #E(Q)tors + E[3] ≃ Z/3 ⊕ µ3 ,
+6                                            DHARMAJ SONI
+
+where [ · ] is 1 if the condition holds and 0 otherwise, and also D ≤ the number of curves in the
+isogeny class of E with a rational point of order ℓ. In particular D ≤ 0 when E has no rational
+ℓ-torsion point, D ≤ 1 for ℓ ≥ 5, and D ≤ 2 for ℓ = 3, since a point of order 9 and the image
+Z/3 ⊕ µ3 do not occur together in the tables (Section 6.10).
+  Section 2 collects the local facts, Section 3 proves Theorem 1.5, Section 4 proves Theorems 1.2
+and 1.6, Section 5 proves Proposition 1.7 and explains the correction term, Section 6 describes
+the computations and Section 7 discusses the prime 2, where the analogous statements overlap
+with the literature on Watkins’s conjecture.
+
+                                        2. Local invariants
+  Let q be a prime of bad reduction. We use Tate’s algorithm [28, IV.9] for the Kodaira type
+and cq , and the following facts.
+Lemma 2.1. Let q be a prime of multiplicative reduction, nq = vq (∆E ), and ℓ ̸= q a prime.
+Then ρE,ℓ mod ℓt is unramified at q if and only if ℓt | nq . This holds for split and for nonsplit
+reduction.
+Proof. Over the unramified quadratic extension of Qq (which does not change the inertia group)
+E is a Tate curve with parameter u, vq (u) = nq . The ℓt -torsion is generated by µℓt and an ℓt -th
+root of u, so inertia acts trivially on E[ℓt ] exactly when u is an ℓt -th power in Qur
+                                                                                     q up to units,
+that is, when ℓt | nq .                                                                          □
+Lemma 2.2. Let q ≥ 5 be a prime at which E has reduction of type IV or IV∗ . Then the
+image of the inertia group Iq in Aut(T3 E) is cyclic of order 3, and its image in Aut(E[3]) is a
+nontrivial unipotent subgroup. Consequently E[3]Iq is a line, ρ̄E,3 is tamely ramified at q, and
+the Serre conductor of ρ̄E,3 has exponent 1 at q.
+Proof. For q ≥ 5 the reduction is potentially good and the semistability defect, the order of
+the image of Iq in Aut(Tℓ E) for any ℓ ̸= q, equals 12/ gcd(vq (∆E ), 12) [20]; for vq (∆E ) ∈ {4, 8}
+this is 3. The image is tame since q ̸= 3, hence cyclic, generated by an element σ of order 3
+with determinant 1, so with eigenvalues the two primitive cube roots of unity. Hence σ 2 + σ + 1
+annihilates T = T3 E, and T is a module over Z3 [σ]/(σ 2 +σ+1) ≃ Z3 [ζ3 ], a discrete valuation ring
+with uniformiser π = 1−ζ3 and residue field F3 . Being torsion-free of Z3 -rank 2, T is free of rank
+one over Z3 [ζ3 ], and E[3] = T /3T ≃ Z3 [ζ3 ]/(π 2 ) with σ acting as multiplication by ζ3 = 1 − π.
+Since π ̸= 0 in Z3 [ζ3 ]/(π 2 ), this is a nontrivial unipotent automorphism of order 3; its fixed
+space is the line πZ3 [ζ3 ]/(π 2 ). The Serre conductor exponent at q is dim E[3] − dim E[3]Iq = 1,
+there being no wild part.                                                                          □
+Remark 2.3. For the other additive types at q ≥ 5 the image of inertia mod 3 is not unipotent:
+it has order 2 or 4 (types I∗0 , III, III∗ , defects 2 and 4), or it is minus a unipotent (types II, II∗ ,
+defect 6), or it is a ramified quadratic character times a unipotent (type I∗n ). In the last two
+cases E[3]Iq = 0 and the Serre conductor of ρ̄E,3 has exponent 2 at q, the same as the conductor
+of E; these are the types whose twist by χq lowers the conductor exponent.
+Lemma 2.4. Let q be an odd prime,                                                                   (q)
+                                    √ ∗ χ = χq the quadratic character of conductor q and E
+the twist of E by χ, that is, by Q( q ).
+     (i) At every prime p ̸= q the curves E and E (q) have the same Kodaira type, the same
+         geometric component group and the same conductor exponent.
+    (ii) If E has type In at q (n ≥ 0) then E (q) has type I∗n at q, and conversely, with the same
+         n. If q ≥ 5 and E has type II, III, IV at q then E (q) has type IV∗ , III∗ , II∗ respectively,
+         and conversely. The conductor exponent of E (q) at q is 2 when its reduction is additive
+         and 1 when it is of type In , n ≥ 1.
+                    LOCAL FACTORS OF THE ADJOINT AND THE MODULAR DEGREE                                         7
+
+   (iii) (Atkin–Li [4]) Let g be a newform of weight 2 on Γ0 (M ) with q 2 ∤ M . Then the twist
+         g ⊗ χ, with coefficients an (g ⊗ χ) = χ(n)an (g), is a newform of weight 2 on Γ0 (M ′ ),
+         M ′ = lcm(M, q 2 ); that is, M ′ = M q 2 if q ∤ M and M ′ = M q if q ∥ M .
+Proof. (i) The character χ is unramified at p, so E and E (q) become isomorphic over an unram-
+ified extension of Qp , and the Kodaira type, the geometric component group and the conductor
+exponent are invariant under unramified base change. (ii) If (a1 , a2 , a3 , a4 , a6 ) is a minimal model
+of E at q with invariants c4 , c6 , ∆, the twist has a model with invariants q 2 c4 , q 3 c6 , q 6 ∆ and the
+same j-invariant. For potentially multiplicative reduction, vq (j) < 0, the type is In or I∗n with
+n = −vq (j) according as the reduction is multiplicative or additive, and a ramified quadratic
+twist exchanges the two. For n = 0: a model y 2 = x3 + a2 x2 + a4 x + a6 with good reduction
+at q has twist y 2 = x3 + q ∗ a2 x2 + q ∗2 a4 x + q ∗3 a6 , for which the cubic T 3 + a2 T 2 + a4 T + a6
+of Tate’s algorithm has distinct roots modulo q, the criterion for type I∗0 ; conversely a curve of
+type I∗0 at an odd q has a model of the latter shape, and its twist has good reduction. For q ≥ 5
+and potentially good reduction the type is determined by vq (∆) of a minimal model, which lies
+in {0, 2, 3, 4, 6, 8, 9, 10} for the types I0 , II, III, IV, I∗0 , IV∗ , III∗ , II∗ ; the twisted model has vq (∆)
+increased by 6, and is minimal exactly when the result is less than 12, otherwise 12 is subtracted.
+The conductor exponents are the standard ones for q odd (tame). (iii) is [4, Theorem 3.1]; in the
+case q ∥ M , the local component of g at q is an unramified twist of the Steinberg representation,
+whose twist by a ramified quadratic character has conductor exponent 2.                                          □
+Lemma 2.5 (the omitted factors at tame primes). Let q ≥ 5 be a bad prime, q ̸= ℓ. Then
+Lq (Af , s)−1 and eℓ (E, q) are as in the table of Section 1.
+Proof. The inertia group acts on V through a finite cyclic quotient when the reduction is po-
+tentially good, and through Q     a quadratic character times a unipotent when it is potentially
+multiplicative; Lq (Af , s)−1 = (1 − λq −s ) over the eigenvalues λ of Frobenius on (ad0 V )Iq , in
+the normalisation in which a good prime has the eigenvalues α/β, 1, β/α on ad0 V .
+   Type In . The local component of f is an unramified twist of the Steinberg representation;
+(ad0 V )Iq is a line with eigenvalue q −1 , so Lq (Af , s)−1 = 1 − q −1−s , which is also the naive factor
+since a2q = 1: eℓ = 0. Type I∗n . V = V ′ ⊗ χq with V ′ Steinberg at q (Lemma 2.4), ad0 V = ad0 V ′
+and aq = 0, so the naive factor is 1 and eℓ = vℓ (1 − q −2 ) = vℓ (q 2 − 1). Types II, II∗ , IV, IV∗ .
+The image of Iq in Aut V is cyclic of order 3 or 6 [20], generated by σ or −σ with σ of order
+                       ±1         0
+    √ eigenvalues ζ3 . On ad V the sign disappears and the invariants form the line spanned
+3 and
+by −3 ∈ Zℓ [ζ3 ] ≃ EndIq (V ); Frobenius centralises σ if q ≡ 1 (mod 3) and inverts it if q ≡ 2,
+so it acts on the line by χ−3 (q), and eℓ = vℓ (1 − χ−3 (q)q −1 ) = vℓ (q − χ−3 (q)). Types III, III∗ .
+The image has order 4, eigenvalues ±i; the invariant line of ad0 V is spanned by the diagonal
+element, on which Frobenius acts by χ−4 (q), and eℓ = vℓ (q − χ−4 (q)). Type I∗0 . V = V ′ ⊗ χq with
+V ′ unramified with Frobenius eigenvalues α, β; ad0 V is unramified with eigenvalues α/β, 1, β/α,
+and
+                                   α        1        β  q − 1 (q + 1)2 − aq (E ′ )2
+             Lq (Af , 1)−1 = 1 −          1−        1−        =        ·                     ,
+                                    βq         q         αq       q              q2
+using αβ = q and α + β = aq (E ′ ). In each case the values were confirmed against PARI’s
+lfunsympow on every curve of the tables.                                                                □
+Remark 2.6. At q = 2, 3 the Kodaira type does not determine Lq (Af , s), but PARI does,
+and Definition 1.1 applies verbatim: for instance a type IV at 2 has P2 (X) = 1 + 2X and
+e3 = v3 (1 + 12 ) = 1, a type II at 2 has P2 = 1 and e3 = 0, and a type I∗n at 2 has potentially
+good reduction in about half of the cases, with a cubic P2 and tℓ = 0. At q = ℓ the Euler factor
+is not the relevant quantity, and the weights w3 of Conjecture 1.3 are empirical.
+8                                            DHARMAJ SONI
+
+Lemma 2.7 (the Tamagawa factor at a multiplicative prime). Let q be a prime of multiplicative
+reduction, n = nq , ℓ an odd prime different from q, T = Tℓ E and M = ad0 T . Let qE ∈ Q×
+                                                                                        q be
+                                                                                                   v (q−1)
+the Tate parameter, u = qE q −n its unit part, and c ∈ Z/ℓvℓ (q−1) the class of u in F×    × ℓ ℓ
+                                                                                      q /(Fq )        ,
+                                           k              ×                             1
+so that vℓ (c) ≥ k if and only if u is an ℓ -th power in Fq , for k ≤ vℓ (q −1). Then H (Iq , M )tor ≃
+(Z/ℓvℓ (n) )2 and
+                       vℓ Tamq (ad0 T ) = vℓ (n) + min vℓ (n), vℓ (q − 1), vℓ (c) .
+                                                                                
+
+In particular vℓ (Tamq (ad0 T )) ≥ tℓ (E, q), with equality unless q ≡ 1 (mod ℓ), ℓ | n and u is an
+ℓ-th power in F×q .
+
+Proof. Over the unramified quadratic extension of Qq the curve is a Tate curve, so T has a basis
+e1 , e2 in which G = GQq acts through matrices ( χ0ℓ ε κε ), with ε unramified of order at most 2
+and κ the Kummer class of qE in H 1 (G, Zℓ (1)) = lim Q×          /(Q×     ℓk
+                                                         ←− q          q ) . The inertia group I = Iq acts
+through its maximal pro-ℓ tame quotient, generated by an element t with te1 = e1 , te2 = e2 +n′ e1 ,
+vℓ (n′ ) = vℓ (n), since the restriction of κ to I is n times the tame character; the kernel of I → ⟨t⟩
+has trivial pro-ℓ quotient, so by inflation-restriction H 1 (I, M ′ ) = H 1 (⟨t⟩, M ′ ) = M ′ /(t−1)M ′ for
+every Zℓ -module M ′ of finite type with this action. In the basis e = e1 ⊗e∨                     ∨      ∨
+                                                                                   2 , h = e1 ⊗e1 −e2 ⊗e2 ,
+                            0
+f = e2 ⊗ e∨                                                               ′              ′     ′2
+             1 of M = ad T one has (t − 1)e = 0, (t − 1)h = −2n e, (t − 1)f = n h − n e, and as 2
+                            ′                    1                  ′          ′         ¯
+is a unit, (t − 1)M = n (Zℓ e ⊕ Zℓ h); so H (I, M ) = (Zℓ /n )ē ⊕ (Zℓ /n )h̄ ⊕ Zℓ f and its torsion is
+                                                                                                         −1
+(Z/ℓvℓ (n) )2 . The group G/I acts on H 1 (I, M ) by (σ · c)(i) = σc(σ −1 iσ); as Frob−1 t Frob = tq
+and c(tk ) ≡ k c(t) modulo (t−1)M , the arithmetic Frobenius acts on M/(t−1)M as q −1 ρ(Frob).
+Writing ρ(Frob) = εq        c′ , the adjoint action sends e to qe and h to h − 2c′ εe, so on the torsion
+                          0 ε
+ē 7→ ē and h̄ 7→ q −1 (h̄ − 2c′ εē). The fixed points are the xē + y h̄ with (q − 1)y ≡ 0 and c′ y ≡ 0
+                                                                   ′
+(mod ℓvℓ (n) ): ℓvℓ (n) choices of x and ℓmin(vℓ (n),vℓ (q−1),vℓ (c )) of y. Finally c′ is the image of κ
+in H 1 (G/I, Zℓ (1)I ) = Zℓ (1)/(q − 1) ≃ Z/ℓvℓ (q−1) , the class of the unit part of qE in F×      q ⊗ Zℓ
+by Kummer theory, well defined modulo q − 1; so vℓ (c′ ) = vℓ (c) in the sense stated. The
+identification of Tamq with the Fitting ideal of the G-invariants of the torsion of H 1 (I, M ) is
+[16, I.4.2.2], as recalled in [12, p. 708]. As a check, the same computation for M = T gives
+(Z/ℓvℓ (n) )ē1 with Frob acting by ε, that is, the ℓ-part of the Tamagawa number cq (E), as it
+should.                                                                                                  □
+
+
+                                     3. Proof of Theorem 1.5
+   Throughout this section ℓ is odd and ℓ ∤ N . Let f = fE ∈ S2 (Γ0 (N )) be the newform of the
+isogeny class of E, let E0 be the optimal curve in the class, and let r = rE0 be its congruence
+number: the largest integer r such that f ≡ g (mod r) coefficientwise for some g ∈ S2 (Γ0 (N ))
+with integer coefficients orthogonal to f [2, §2]. By [2, Theorem 2.2], deg φE0 divides r and
+vp (deg φE0 ) = vp (r) for every prime p with p2 ∤ N ; as ℓ ∤ N it suffices to prove ℓ | r. Let T be
+the Hecke algebra of level N , the subring of End S2 (Γ0 (N )) generated over Z by all Tn , n ≥ 1,
+including the operators Up for p | N , and write ρ̄ = ρ̄E,ℓ , irreducible by hypothesis. The two
+lemmas below reduce the theorem to the production of a congruent newform of lower level.
+
+Lemma 3.1 (congruence criterion). Let ϕf : T → Z, Tn 7→ an (f ), let I = ker ϕf and let J be
+the annihilator in T of the orthogonal complement f ⊥ of f . Then T/(I + J) is cyclic of order
+r; equivalently, r generates the congruence ideal ϕf (J) = ϕf (AnnT I). Consequently, if there is
+a normalised eigenform g ∈ S2 (Γ0 (N )) ⊗ Q for all of T, orthogonal to f , with coefficients in the
+ring of integers O of a number field, and a prime λ | ℓ of O such that an (g) ≡ an (f ) (mod λ)
+for every n ≥ 1, then ℓ | r. The same statements hold with Z replaced by Zℓ and r by its ℓ-part.
+                  LOCAL FACTORS OF THE ADJOINT AND THE MODULAR DEGREE                                 9
+
+Proof. Writing T ⊗ Q = Q × T′ with T′ acting faithfully on f ⊥ (the f -line is T-stable, and so is
+f ⊥ , because f is an eigenvector of the adjoints of the Tn as well), one has I = T ∩ (0 × T′ ) and
+J = T ∩ (Q × 0), so I ∩ J = 0 and T/(I + J) ≃ Z/ϕf (J) is cyclic, of order r′ say. The pairing
+S2 (Γ0 (N ); Z) × T → Z, (g, t) 7→ a1 (tg), is perfect [24, Theorem 2.2], [1, Lemma 2.1] (see [2, §3]),
+and under it the forms killed by I are Zf and the forms killed by J are L = f ⊥ ∩ S2 (Γ0 (N ); Z).
+Dualising the inclusion T ⊂ T/I × T/J, whose cokernel is T/(I + J), shows that Zf ⊕ L has
+index r′ in S2 (Γ0 (N ); Z). The quotient S2 (Γ0 (N ); Z)/(Zf ⊕ L) embeds in Qf /Zf by projection
+onto Qf along f ⊥ , so it is cyclic, generated by the class of a form h with projection f /r′ ; then
+r′ h = f + g0 with g0 ∈ L, so f ≡ −g0 (mod r′ ) and r′ ≤ r; conversely a congruence f ≡ g1
+(mod r) with g1 ∈ L gives the integral form (f − g1 )/r, whose class has order r, so r | r′ . Hence
+r = r′ = #T/(I + J). Now let ϕg : T → O be the eigencharacter of g. It kills J because g ∈ f ⊥ ,
+and ϕg ≡ ϕf (mod λ) on all of T by hypothesis, so ϕg (I) ⊂ λ. Thus I + J lies in the kernel of
+T → O/λ, a maximal ideal of residue characteristic ℓ, and ℓ divides #T/(I + J) = r. Every step
+holds verbatim over Zℓ , the pairing being perfect after tensoring with Zℓ .                         □
+Lemma 3.2 (oldforms). Let h be a newform of weight 2 on Γ0 (M ) with M | N and h ̸= f , with
+coefficients in O, and let λ | ℓ be a prime of O such that ap (h) ≡ ap (f ) (mod λ) for all primes
+p ∤ ℓN . Assume that p ∤ M for every prime p ∥ N at which ρ̄ is unramified. Then, after enlarging
+O and λ, the span of the forms h(dz), d | N/M , contains an eigenform g as in Lemma 3.1.
+Consequently ℓ | r.
+Proof. The forms h(dz), d | N/M , span a T-stable subspace V of S2 (Γ0 (N )) orthogonal to the
+newform f (whether M < N , or M = N and h ̸= f ). On V the operators Tn with (n, N ) = 1
+act by the scalars an (h), and Up for p | M with vp (M ) = vp (N ) acts by ap (h). For p | N/M
+put ep = vp (N/M ); on the span of h(pj z), 0 ≤ j ≤ ep , one has Up h(pj z) = h(pj−1 z) for j ≥ 1,
+and Up h = ap (h)h − p h(pz) if p ∤ M , Up h = ap (h)h if p | M . The eigenvalues of Up there
+are therefore the roots αp , βp of X 2 − ap (h)X + p, together with 0 if ep ≥ 2, when p ∤ M ;
+and ap (h), together with 0 if ep ≥ 1, when p | M . The operator Up is not semisimple on
+this span when 0 is a repeated eigenvalue, but each listed eigenvalue has an eigenvector: the
+p-stabilisations h − βp h(pz), h − αp h(pz) for αp , βp , the form h for ap (h), and the depleted
+forms h − ap (h)h(pz) + p h(p2 z) (if p ∤ M ), h − ap (h)h(pz) (if p ∥ M ) or h itself (if p2 | M ,
+where ap (h) = 0) for the eigenvalue 0. Since V is the tensor product of these local spaces
+and T is commutative, for every choice of one such eigenvalue µp at each p | N/M there is
+a common eigenform g ∈ V ⊗ Q of all of T with Up g = µp g for p | N/M , Up g = ap (h)g for
+the other p | N , and Tn g = an (h)g for (n, N ) = 1; normalise it by a1 (g) = 1. We choose the
+µp and check ap (g) ≡ ap (f ) (mod λ) prime by prime; the congruence for all n then follows
+from the multiplicativity of the coefficients, from apk = akp for p | N , and from the recursion
+apk+1 = ap apk − p apk−1 for p ∤ N , which f and g both satisfy.
+   p ∤ ℓN . ap (g) = ap (h) ≡ ap (f ) by hypothesis. Consequently ρ̄h ≃ ρ̄ by Chebotarev and
+Brauer–Nesbitt, ρ̄ being irreducible.
+   p = ℓ. Both f and h have weight 2 and level prime to ℓ. By the theorems of Deligne
+and Fontaine describing ρ̄f |Dℓ and ρ̄h |Dℓ [14, §2], the residue class of aℓ is determined by the
+restriction to Dℓ : it is 0 when that restriction is irreducible, and otherwise the eigenvalue of
+Frobenius on the unramified quotient. Hence aℓ (h) ≡ aℓ (f ).
+   p2 | N . Here E has additive reduction at p and ap (f ) = 0. If vp (M ) = vp (N ) then ap (h) = 0,
+because a newform on Γ0 (M ) with p2 | M has ap = 0 [3, Theorem 3]. Otherwise ep ≥ 1, and
+ep ≥ 2 if p ∤ M , so 0 is an available eigenvalue: take µp = 0.
+   p ∥ N , ρ̄ unramified at p. By hypothesis p ∤ M , so ep = 1 and µp ∈ {αp , βp }. Here ρE,ℓ |Dp
+is an extension of an unramified character ε by εχℓ with ε(Frobp ) = ap (f ) = ±1 [10, Theorem
+3.1(e)], so the eigenvalues of ρ̄(Frobp ) are ap (f )p and ap (f ). As ρ̄h ≃ ρ̄ is unramified at p and
+10                                          DHARMAJ SONI
+
+p ∤ M , the characteristic polynomial of ρ̄h (Frobp ) is X 2 − ap (h)X + p ≡ (X − ap (f )p)(X − ap (f ))
+(mod λ), so one of αp , βp is congruent to ap (f ) modulo a prime above λ in O[αp ]; take it as µp .
+   p ∥ N , ρ̄ ramified at p. Then p | M , since otherwise ρ̄h would be unramified at p; so
+vp (M ) = 1 = vp (N ) and ap (g) = ap (h) = ±1. Both ρ̄|Dp and ρ̄h |Dp are extensions of an
+unramified character by its twist by χ̄ℓ , with Frobenius eigenvalue ap (f ), respectively ap (h), on
+the unramified quotient [10, Theorem 3.1(e)], and both are non-split because ρ̄ is ramified at p.
+A non-split extension of two characters has a unique stable line, so the isomorphism ρ̄|Dp ≃ ρ̄h |Dp
+matches the sublines and hence the quotients, and ap (h) ≡ ap (f ).
+   In all cases ap (g) ≡ ap (f ) (mod λ), and Lemma 3.1 applies.                                      □
+   We use the optimal-level theorem of Ribet, Carayol and Diamond [25, 7, 11] in the form of
+[10, Theorem 3.15]: let ℓ be odd and  √ let σ̄ : Gal(Q/Q) → GL2 (Fℓ ) be irreducible and modular,
+absolutely irreducible on Gal(Q/Q( −3)) if ℓ = 3; then σ̄ arises from a newform of weight 2
+and level N (σ̄)ℓδ(σ̄) with nebentypus of order prime to ℓ, where N (σ̄) is the Serre conductor and
+δ(σ̄) = 0 when σ̄|Dℓ is good. For σ̄ = ρ̄E ′ ,ℓ with E ′ an elliptic curve of conductor prime to ℓ,
+the restriction to Dℓ comes from the finite flat group scheme E ′ [ℓ] and is good, and det σ̄ = χ̄ℓ
+forces the nebentypus, which is trivial modulo λ and of order prime to ℓ, to be trivial. So in
+that case σ̄ arises from a newform of weight 2 on Γ0 (N (σ̄)). Recall also that N (ρ̄E ′ ,ℓ ) divides
+the conductor of E ′ [7], and that N (σ̄) is prime to every prime at which σ̄ is unramified.
+Case (a). Here q 2 ∥ N and ℓ = 3. By Lemma 2.2 the Serre conductor M = N (ρ̄) has exponent
+exactly 1 at q, so M | N/q. The optimal-level theorem gives a newform g of weight 2 on Γ0 (M )
+with ρ̄g ≃ ρ̄, that is, ap (g) ≡ ap (f ) (mod λ) for all p ∤ 3N . Take h = g: it has level M < N ,
+and p ∤ M for every prime p at which ρ̄ is unramified. Lemma 3.2 gives 3 | r.
+Case (b). Here q 2 ∥ N , ℓ = 3, and E has type II or II∗ at q ≥ 5. Let χ = χq and E ′ = E (q) .
+By Lemma 2.4, E ′ has type IV∗ or IV at q, the same types as E elsewhere, and conductor N ;
+its newform is f ′ = f ⊗ χ, a newform of weight 2 on Γ0 (N ), and ρ̄E ′ ,3 = ρ̄ ⊗ χ satisfies the
+hypotheses of the optimal-level theorem since ρ̄ does. By Lemma 2.2 applied to E ′ , the Serre
+conductor M = N (ρ̄ ⊗ χ) has exponent exactly 1 at q, and M | N/q. The optimal-level theorem
+gives a newform g of weight 2 on Γ0 (M ) with ap (g) ≡ ap (f ′ ) = χ(p)ap (f ) (mod λ) for all p ∤ 3N .
+As q ∥ M , Lemma 2.4(iii) says that h = g ⊗ χ is a newform on Γ0 (M q), and M q | N . For p ∤ 3N ,
+                       ap (h) = χ(p)ap (g) ≡ χ(p)2 ap (f ) = ap (f )   (mod λ).
+Moreover h ̸= f :   otherwise g = h ⊗ χ = f ⊗ χ = f ′ would have level N , whereas M         < N.
+Finally, if p ∥ N and ρ̄ is unramified at p, then p ̸= q, so ρ̄ ⊗ χ is unramified at p as well and
+p ∤ M , hence p ∤ M q. Lemma 3.2 gives 3 | r.
+Case (c). Here E has type I∗n at an odd prime q ̸= ℓ with ℓ | n, so q 2 ∥ N . Let χ = χq and
+E ′ = E (q) . By Lemma 2.4, E ′ has multiplicative reduction of type In at q and conductor N/q,
+so f ′ = f ⊗ χ is a newform of weight 2 on Γ0 (N/q) with q ∥ N/q. By Lemma 2.1 applied to E ′ ,
+ρ̄⊗χ = ρ̄E ′ ,ℓ is unramified at q, so the Serre conductor M = N (ρ̄⊗χ) is prime to q and M | N/q 2 .
+The optimal-level theorem (this is the case of Ribet’s theorem [25], q exactly dividing the level
+and ρ̄ ⊗ χ unramified at q) gives a newform g of weight 2 on Γ0 (M ) with ap (g) ≡ χ(p)ap (f )
+(mod λ) for all p ∤ ℓN . As q ∤ M , h = g ⊗ χ is a newform on Γ0 (M q 2 ) with M q 2 | N , congruent
+to f at all p ∤ ℓN by the computation of case (b), and h ̸= f since g = h ⊗ χ would otherwise
+equal f ′ , of level N/q ̸= M . The hypothesis of Lemma 3.2 holds as in case (b), and ℓ | r.      □
+Example 3.3. The congruences produced by the proof can be seen directly on the tables (labels
+as in [9]). (b): the curve 121a1 has type II at 11; its twist by −11 lies in the class 121c and has
+type IV∗ at 11; its mod 3 representation has conductor 11 and is congruent to the form of 11a1;
+twisting back, f11a ⊗χ−11 is the form of 121d, and indeed ap (121a1) ≡ χ−11 (p) ap (11a1) (mod 3)
+                  LOCAL FACTORS OF THE ADJOINT AND THE MODULAR DEGREE                                 11
+
+for all p ̸= 3, 11 (checked for p < 500), while deg φ121a1 = 6: here e3 (E, 11) = v3 (11 + 1) = 1
+and the bound is attained. (c) at ℓ = 3: 539c1 has type I∗3 at 7; its twist by −7 has conductor
+77 and type I3 at 7, and ap (539c1) ≡ χ−7 (p) ap (11a1) (mod 3) for all p ̸= 3, 7, 11 (checked for
+p < 1000); deg φ539c1 = 25 · 32 , and the two terms e3 (E, 7) = v3 (48) = 1 and t3 (E, 7) = v3 (3) = 1
+are both attained. (c) at ℓ = 5: 980i1 has type I∗5 at 7; its twist by −7 has conductor 140 and
+type I5 at 7, and ap (980i1) ≡ χ−7 (p) ap (20a1) (mod 5) for all p ̸= 2, 5, 7 (checked for p < 1000);
+deg φ980i1 = 26 · 32 · 5.
+Remark 3.4. The hypothesis ℓ ∤ N is used in the optimal-level theorem, in Lemma 3.2 at p = ℓ,
+and to pass from the congruence number to the modular degree. The last step needs only ℓ2 ∤ N ,
+and it cannot be dropped there: Table 1 of [2] lists the curve 99A1, of conductor 9 · 11, with
+modular degree 4 and congruence number 12. The data nevertheless show the conclusion of the
+theorem for every curve with ℓ ∥ N or ℓ2 | N and a prime of one of the three kinds; so do they
+at q = 3 in cases (a) and (b), where Lemma 2.2 does not apply because the ramification is wild.
+
+                4. The congruence ideal and the adjoint Selmer group
+4.1. Congruence ideals. Let f be a newform of weight 2 on Γ0 (M ) with rational      Q coefficients,
+λ = ℓ a prime not dividing 2M , and Σ a finite set of primes. Put M Σ = M p∈Σ pδp and let
+f Σ = (n,Σ)=1 an (f )q n be the Σ-depleted eigenform, of level M Σ . Diamond, Flach and Guo
+       P
+                                                                     Σ ⊂ Z as follows. The integral
+define [12, §§1.5.3, 1.6.2, 1.7.3] a lattice Mf Σ ,λ and an ideal ηf,λ      ℓ
+                  Σ           1        Σ
+structure M (M , 1)!,λ is H (X0 (M ), Zℓ ), with its Hecke action; the lattice Mf Σ ,λ is the kernel
+on it of the kernel of the eigencharacter of f Σ [12,   §1.6.2]; the pairing δ̂! is the cup product
+composed with the operator [U wU ]ω, w = M0Σ −1      0
+                                                        [12, (13), (14)], which for weight 2 and trivial
+character is the Atkin–Lehner involution wM Σ ; it is perfect and alternating on H 1 (X0 (M Σ ), Zℓ ),
+                                                                                     −1
+and the Hecke operators, Up included, are self-adjoint for it, because wM Σ Tn wM      Σ is the adjoint
+of Tn for the cup product (this is what the composition with w is for; see [12, §§1.6.1, 1.8.2]
+and [10, §4.4]). The restriction of δ̂! to the rank-two lattice Mf Σ ,λ takes its values in an ideal of
+               Σ , the naive Σ-finite congruence ideal ; equivalently the Gram determinant of the
+Zℓ , which is ηf,λ
+                        Σ )2 up to a unit.
+pairing on Mf Σ ,λ is (ηf,λ
+Theorem 4.1 ([12, Proposition 1.4(c)]). If ρ̄f is irreducible then
+                                           Y
+                                Σ       ∅                   −1
+                               ηf,λ = ηf,λ      Lnv
+                                                  p (Af , 1) .
+                                                p∈Σ
+
+   Only the primes with δp ≥ 1 contribute: adding an additive prime to Σ changes neither the
+level nor the ideal; adding a good prime p multiplies the ideal by (1 − αβ p−1 )(1 − p−1 )(1 − αβ p−1 ),
+Wiles’s level-raising factor; adding a multiplicative prime multiplies it by 1 − p−2 .
+   We also need the following piece of commutative algebra, which is the inequality half of [10,
+Lemma 4.17]. Let O be a discrete valuation ring, T a commutative O-algebra, finite and free
+as an O-module, acting on an O-module L free of finite rank with a perfect O-bilinear pairing
+for which T is self-adjoint; let π : T → O be a surjective O-algebra homomorphism, ℘ = ker π,
+I = AnnT (℘) and η = π(I), the congruence ideal of π; and suppose that L[℘] is free of rank d
+over O with Gram determinant ∆ ̸= 0.
+Lemma 4.2. η d ⊆ ∆O, that is, d · v(η) ≥ v(∆); and equality holds if L is free over T.
+Proof. Since L is torsion-free and ℘ ∩ I = 0, the sum L[℘] + L[I] is direct. For t ∈ I with
+π(t) a generator of η and x ∈ L, one has tx ∈ L[℘] (as ℘I = 0) and (π(t) − t)x ∈ L[I] (as
+s(π(t) − t) ∈ ℘ ∩ I = 0 for s ∈ I), so Q = L/(L[℘] ⊕ L[I]) is killed by η. The pairing identifies
+12                                         DHARMAJ SONI
+
+L/L[℘]⊥ with Hom(L[℘], O), because L[℘] is saturated, and L[℘]⊥ = L[I]: for y ∈ L[I] and
+x ∈ L[℘], π(t)⟨x, y⟩ = ⟨tx, y⟩ = ⟨x, ty⟩ = 0; conversely if y ⊥ L[℘] then ⟨ty, z⟩ = ⟨y, tz⟩ = 0 for
+all z, since tz ∈ L[℘], so ty = 0. Hence Q is the cokernel of L[℘] → Hom(L[℘], O), of order
+#O/∆, and it is generated by d elements and killed by η, so #O/∆ ≤ #(O/η)d . If L ≃ Td then
+Q ≃ (T/(℘ + I))d ≃ (O/η)d .                                                                      □
+Lemma 4.3. Let E be X0 (N )-optimal, ℓ an odd prime with ℓ ∤ 2N and ρ̄ irreducible, and m
+                                                                                          ∅
+the maximal ideal of T ⊗ Zℓ containing ℓ and ker ϕf . Then vℓ (deg φE ) = vℓ (rE ) ≥ vλ (ηf,λ ), with
+             1
+equality if H (X0 (N ), Zℓ )m is free over Tm .
+Proof. vℓ (deg φE ) = vℓ (rE ) is [2, Theorem 2.2], as ℓ2 ∤ N , and rE Zℓ is the congruence ideal
+ϕf (AnnT ker ϕf )Zℓ by Lemma 3.1; the congruence ideal is computed in Tm , since the other local
+factors of T ⊗ Zℓ are killed by ϕf and lie in the annihilator. Apply Lemma 4.2 to O = Zℓ , Tm ,
+π = ϕf , and L = H 1 (X0 (N ), Zℓ )m with the pairing δ̂! of Section 4.1, perfect and alternating
+                                                                            ∅ 2
+with T self-adjoint; L[℘] = Mf,λ has rank 2 and Gram determinant (ηf,λ         ) up to a unit, so
+                  ∅
+2vℓ (rE ) ≥ 2vλ (ηf,λ ), with equality if L is free.                                           □
+
+Remark 4.4. Freeness of H 1 (X0 (N ), Zℓ )m over Tm holds when J0 (N )[m] is two-dimensional,
+since the localised Hecke algebra is then Gorenstein and the Tate module is free of rank two
+[32]; and J0 (N )[m] is two-dimensional for ℓ ∤ 2N and ρ̄ irreducible: [26, Theorem 3.5] gives it
+for J1 (N ), the only possible exception there having Serre weight ℓ, which does not occur in
+weight 2 with ℓ ∤ N , and J0 (N )[m] injects into J1 (N )[m′ ] under the pull-back map, whose kernel,
+                                                                                 ∅
+the Shimura subgroup, is Eisenstein. So the equality vℓ (deg φE ) = vλ (ηf,λ       ) holds under the
+hypotheses of Lemma 4.3; the inequality is all that (2) needs.
+4.2. The theorem of Diamond, Flach and Guo. Let now f = fE , Σ the set of primes
+dividing N , λ = ℓ ∤ 2N , A = Af,λ = ad0 T (the lattice Mf,λ of [12] and Tℓ E are homothetic
+when ρ̄ is irreducible, so their adjoints coincide), W = A ⊗ Qℓ /Zℓ , T D = Hom(A, Zℓ (1)) ≃ A(1)
+(via the trace form), V D = T D ⊗ Qℓ and W D = V D /T D . Let Hf1 (Q, W ) be the Bloch–Kato
+Selmer group and HΣ1 (Q, W ) ⊇ Hf1 (Q, W ) the group defined in [12, §2.1], with no condition at
+the primes of Σ, the Bloch–Kato condition at ℓ and the unramified condition elsewhere. Let Sf
+be the set of primes λ such that λ | 2N or ρ̄|Gal(Q/Q(√ℓ∗ )) is not absolutely irreducible [12, (31)];
+the hypothesis of Theorem 1.2 is ℓ ∈  / Sf .
+                                      / Sf , then HΣ1 (Q, W ) is finite of length vλ (ηf,λ
+Theorem 4.5 ([12, Theorem 3.7]). If ℓ ∈                                                Σ ).
+
+
+   The theorem is stated in [12] for a finite set Σ not containing ℓ such that Mf,λ is minimally
+ramified outside Σ, which holds for the set of primes dividing N , outside of which ρ is unramified;
+this is the form given as Theorem 0.2 there.
+                                      / Sf , then H 0 (Q, V D ) = Hf1 (Q, V D ) = 0 (and the same
+Theorem 4.6 ([12, Theorem 2.7]). If ℓ ∈
+for A ⊗ Qℓ ).
+Lemma 4.7 ([12, Lemma 2.1]). Suppose H 0 (Q, V D ) = Hf1 (Q, V D ) = 0, and let Σ be a nonempty
+finite set of primes containing every prime p ̸= ℓ at which W is ramified. Put Hf1 (Qp , T D ) =
+ι−1 Hf1 (Qp , V D ), ι : H 1 (Qp , T D ) → H 1 (Qp , V D ). Then there is an exact sequence
+                                                       M
+            0 → Hf1 (Q, W ) → HΣ1 (Q, W ) →                  Hf1 (Qp , T D )∗ → H 0 (Q, W D )∗ → 0,
+                                             p∈Σ∪{∞}
+
+where ∗ is the Pontryagin dual.
+                  LOCAL FACTORS OF THE ADJOINT AND THE MODULAR DEGREE                                13
+
+  For p ∈ Σ the group Hf1 (Qp , V D ) = Hur   1 (Q , V D ) = (V D )Ip /(Frob −1) vanishes, because
+                                                   p                        p
+                    I p               −1
+det(1 − Frobp | (V ) ) = Lp (Af , 1) ̸= 0; so Hf (Qp , T ) is the torsion of H 1 (Qp , T D ), a finite
+                  D                                 1        D
+
+group. At ∞, H 1 (R, T D ) is killed by 2, so Hf1 (R, T D ) = 0 for ℓ odd.
+Lemma 4.8 ([16, I.4.2.2], as recalled in the proof of [12, Theorem 2.15]). For p ∈ Σ,
+      FittZℓ Hf1 (Qp , T D ) = Lp (Af , 1)−1 · Tamp (T D ),     and         Tamp (T D ) = Tamp (A)
+[12, (57)]; here Lp (Af , 1)−1 = Lp (Af (1), 0)−1 is a nonzero rational number which is an ℓ-adic
+integer, of valuation eℓ (E, p) at an additive prime and vℓ (1 − p−2 ) at a multiplicative one.
+Lemma 4.9. Let ℓ be odd with ρ̄ irreducible. Then H 0 (Q, W D ) = H 0 (Q, ad0 T (1) ⊗ Qℓ /Zℓ ) is
+finite, and it vanishes if and only if ρ̄ ̸≃ ρ̄ ⊗ χ̄ℓ . For ℓ ≥ 5 it √
+                                                                     always vanishes; for ℓ = 3 it
+vanishes if and only if ρ̄E,3 is absolutely irreducible on Gal(Q/Q( −3)). Its length hℓ (E) is the
+largest k such that ρ mod ℓk ≃ (ρ ⊗ χℓ ) mod ℓk , and for E without complex multiplication it is
+finite.
+Proof. The ℓ-torsion of H 0 (Q, W D ) is H 0 (Q, ad0 ρ̄ ⊗ χ̄ℓ ), the space of trace-zero GQ -maps ρ̄ →
+ρ̄ ⊗ χ̄ℓ ; a nonzero such map is an isomorphism, ρ̄ being irreducible, and comparing determinants
+it forces χ̄2ℓ = 1, so ℓ = 3 and χ̄3 = χ−3 ; conversely an isomorphism ϕ : ρ̄ → ρ̄ ⊗ χ−3 has trace 0,
+since tr ϕ = tr(ρ̄(g)−1 ϕρ̄(g)) = χ−3 (g) tr ϕ for every
+                                                    √ g. For ℓ = 3 and ρ̄ irreducible, ρ̄ ≃ ρ̄ ⊗ χ−3
+holds if and only if ρ̄ is induced from Gal(Q/Q( −3)), that is, if and only if its restriction there
+is not absolutely irreducible. The description of the length follows in the same way from the
+ℓk -torsion,
+       √       and the finiteness from the fact that ρ ≃ ρ ⊗ χℓ would force ap = 0 at all primes inert
+            ∗
+in Q( ℓ ), which happens only for curves with complex multiplication by that field.                  □
+4.3. Proof of Theorem 1.2. Let ℓ ∈          / Sf , Σ the set of primes dividing N . By Lemma 4.3,
+                    ∅
+vℓ (deg φE ) ≥ vλ (ηf,λ ), with equality in the free case. By Theorem 4.1,
+                                                       X
+                                   ∅            Σ                      −1
+                                                         vℓ Lnv
+                                                                          
+                              vλ (ηf,λ ) = vλ (ηf,λ )−       p (Af , 1)     .
+                                                       p∈Σ
+
+By Theorem 4.5, vλ (ηf,λΣ ) = length H 1 (Q, W ).       By Theorem 4.6 the hypotheses of Lemma 4.7
+                                      Σ
+hold, and H 0 (Q, W D ) = 0 by Lemma 4.9, so
+                                                               X
+                 length HΣ1 (Q, W ) = length Hf1 (Q, W ) +           length Hf1 (Qp , T D ),
+                                                               p∈Σ
+
+and by Lemma 4.8 each local term is vℓ (Lp (Af , 1)−1 ) + vℓ (Tamp (A)). Hence
+               ∅
+                                              X                      X  Lp (Af , 1)−1 
+          vλ (ηf,λ ) = length Hf1 (Q, W ) +         vℓ Tamp (ad0 T ) + vℓ nv              ,
+                                                                          Lp (Af , 1)−1
+                                              p∈Σ                        p∈Σ
+                     P
+and the last sum is p|N eℓ (E, p) by Definition 1.1: at a multiplicative prime the true and the
+naive factors coincide, at an additive prime the naive factor is 1. This is (1). For (2), the Selmer
+length is nonnegative, vℓ (Tamp (ad0 T )) ≥ tℓ (E, p) at a multiplicative prime by Lemma 2.7, and
+vℓ (Tamp (ad0 T )) ≥ 0 at an additive prime, where tℓ (E, p) = 0 unless the type is I∗n ; at such a
+prime p the curve E{p} of Lemma 2.4 is multiplicative with the same Tate parameter valuation,
+ad0 T is unchanged by the twist, and Lemma 2.7 applies to it.                                     □
+Remark 4.10. (1) At a multiplicative prime q ≡ 1 (mod ℓ) with ℓ | n whose Tate parameter
+has an ℓ-th power as unit part, Lemma 2.7 gives vℓ (Tamq ) ≥ tℓ (E, q) + 1, and (1) raises the
+bound accordingly; Section 6.4 tests this on the tables. (2) The formula of Kim and Ota [19,
+Theorem 1.1] concerns the same congruence ideal: for N = N + N − with N − square-free, ℓ ≥ 5,
+14                                           DHARMAJ SONI
+
+ℓ ∤ N, ℓ ∈ / Sf , and P ρ̄ ramified at every q | N − with q ≡ ±1 (mod ℓ), it says ordλ ηf (N ) =
+ordλ ηf (N , N ) + q|N − tf (q), where ηf (N + , N − ) is the congruence ideal in the N − -new
+            +    −
+
+quotient of the Hecke algebra and tf (q) the Tamagawa exponent [19, Definition            2.12], which is
+tℓ (E, q) by Lemma 2.1. Since ηf (N + , N − ) is integral, this gives vℓ (rE ) ≥ q|N − tℓ (E, q), which
+                                                                                    P
+
+(2) contains, without the conditions ℓ ≥ 5 and q ̸≡ ±1; the equality is theirs.
+                                                                                               √
+4.4. Twist monotonicity and the Euler terms without the hypothesis on Q( ℓ∗ ).
+                                                                                   Q
+Theorem 4.11. Let E/Q have conductor N , S a set of odd primes, D = q∈S q, χS the product
+of the quadratic characters of conductor q ∈ S, and ES = E ⊗ χS of conductor NS . If q 2 | N for
+every q ∈ S and lcm(NS , D2 ) | N , then rES | rE ; if moreover lcm(N, D2 ) | NS , then rES = rE .
+                                                                χS (n)an (h)q n , which maps S2 (Γ0 (NS ))
+                                                             P
+Proof. Let f = fE , g = fES and ι : h 7→ h ⊗ χS =
+                          2
+into S2 (Γ0 (lcm(NS , D ))) ⊂ S2 (Γ0 (N )), preserves integrality, and sends an eigenform of all
+Tn , (n, NS ) = 1, to an eigenform with eigenvalues twisted by χS (n). Then ι(g) = f : both
+are multiplicative, ap (f ) = χS (p)ap (g) for p ∤ D since the twist is unramified outside S, and
+aqk (f ) = 0 for q ∈ S since q 2 | N . If h is a generalised eigenform of level dividing NS for a system
+of Tp -eigenvalues, p ∤ NS , differing from that of g at infinitely many p, then ι(h) is a generalised
+eigenform for a system differing from that of f at infinitely many p, so ι(h) ∈ f ⊥ ; hence ι maps
+g ⊥ , the T-stable complement of the g-line (the sum of the generalised eigenspaces of the other
+systems of eigenvalues), into f ⊥ . A congruence g ≡ h (mod r) with h ∈ g ⊥ integral therefore
+gives f ≡ ι(h) (mod r) with ι(h) ∈ f ⊥ integral, and r | rE by Lemma 3.1. With r = rES this is
+the first claim; the second hypothesis makes the situation symmetric.                                   □
+   The hypotheses hold when (a) E has type I∗n at each q ∈ S (NS = N/D), (b) type I∗0 at
+each q ∈ S (NS = N/D2 , ES good at S), (c) type II, III, IV or a dual at each q ∈ S, q ≥ 5
+(NS = N , equality). On the working set, for the 157,938 pairs (curve, prime of type I∗n ) and the
+292,580 pairs (curve, prime of potentially good additive type), vℓ (deg φE ) ≥ vℓ (deg φEq ) holds
+for ℓ ∈ {3, 5, 7, 11, 13}, ℓ2 ∤ N , with no exception, with equality in every pair of case (c) and
+strict inequality only in case (b), where the difference is the Euler term of Theorem 1.6.
+                                                                      Q
+Proof of Theorem 1.6. Write f = fE , g = fES of level NS , D = q∈S q, Σ = S, and O = Zℓ .
+By Lemma 2.4, ES has good reduction at the I∗0 primes of S and       Q multiplicative  reduction at
+      ∗                                                     Σ               δ
+the In primes, so δq = 2, resp. 1, for g at q ∈ S, and NS = NS q∈S q = N : the S-depleted
+                                                                              q
+
+
+form g S lives at level N , and ι(g S ) = f with ι the twist map of Theorem 4.11, which kills the
+coefficients at multiples of D and so does not distinguish g from g S .
+   Step 1: the twist map and the full Hecke algebra. Let T be the full Hecke algebra of level N ,
+π : T → Z the eigencharacter of g S , and m the maximal ideal of Tℓ = T ⊗ Zℓ containing ker π and
+ℓ; it contains Uq for q ∈ S. The congruence ideal η Hecke (g S ) = π(AnnT ker π) is computed in Tm ,
+and the generalised eigenspace of π in S2 (Γ0 (N )) ⊗ Q is the line of g S : strong multiplicity one
+identifies the forms with the Tp -eigenvalues of g, p ∤ N , with the span of the g(dz), d | N/NS ,
+and on that span the operators Uq , q ∈ S, have the eigenvalue 0 with multiplicity one. The
+generalised eigenforms of T whose eigencharacter is congruent to π modulo m have Uq ≡ 0 at
+q ∈ S. Among the stabilisations of g, only g S qualifies: the others have Uq -eigenvalue aq (g) = ±1
+(multiplicative case) or a root α, β of X 2 − aq (g)X + q (good case), which are ℓ-adic units since
+ℓ ̸= q. So the m-component of S2 (Γ0 (N ); Zℓ ) is the sum of the line of g S and of generalised
+eigenspaces of systems of eigenvalues with Uq = 0 for q ∈ S arising from newforms h ̸= g of level
+dividing N . For a form h′ in such a generalised eigenspace, ι(h′ ) = h′ ⊗ χS lies in S2 (Γ0 (N ))
+(the level of a twist by χS divides lcm(N, D2 ) = N ) and, since ι intertwines Tp with χS (p)Tp
+for p ∤ DN , in the generalised eigenspace of the system χS (p)ap (h), which differs from that
+                    LOCAL FACTORS OF THE ADJOINT AND THE MODULAR DEGREE                                    15
+
+of f at infinitely many p; so ι(h′ ) ∈ f ⊥ . Now the proof of Lemma 3.1, carried out over Zℓ
+                                                                     Hecke (g S ))
+with the pairing S2 (Γ0 (N ); Zℓ ) × Tℓ → Zℓ , shows that ℓvℓ (η                   is the largest power ℓt for
+which g S ≡ h (mod ℓt ) coefficientwise with h ∈ S2 (Γ0 (N ); Zℓ ) in the T-stable complement of
+the g S -line; and projecting h to the m-component (an idempotent of Tℓ , so the projection stays
+in the complement and the congruence survives) we may take h in the sum of the generalised
+eigenspaces above. Then f = ι(g S ) ≡ ι(h) (mod ℓt ) with ι(h) ∈ f ⊥ integral, and the Zℓ -version
+of Lemma 3.1 for f gives
+                                      vℓ (rE ) ≥ vℓ (η Hecke (g S )).
+   Step 2: Hecke versus cohomological congruence ideal. Apply Lemma 4.2 to the module L =
+  1
+H (X0 (N ), Zℓ )m , with the pairing of Section 4.1, and to π: L[℘] is the rank-two lattice MgS ,λ ,
+whose Gram determinant is (ηg,λ  S )2 up to a unit. Hence
+
+
+                                       vℓ (η Hecke (g S )) ≥ vλ (ηg,λ
+                                                                  S
+                                                                      ).
+Freeness of L over Tm is not needed for this inequality.
+  Step 3: the formula of Diamond, Flach and Guo. By Theorem 4.1 applied to g (its residual
+representation ρ̄ ⊗ χS is irreducible and ℓ ∤ 2NS ),
+                                       X                                      X
+                   S            ∅                        −1            ∅
+                                         vℓ Lnv
+                                                            
+              vλ (ηg,λ ) = vλ (ηg,λ )+        q (A g , 1)     = v λ (ηg,λ ) +   eℓ (E, q),
+                                        q∈S                                     q∈S
+
+the last equality because Ag = Af and, at q ∈ S, g has δq ≥ 1, so that its naive factor is the
+true one, which is the factor that f (with aq (f ) = 0) omits; the values are those of Lemma 2.5.
+    Step 4: the level NS . By Lemma 4.3 applied to ES in the free case (Remark 4.4, as ℓ ∤ 2NS and
+                          ∅
+ρ̄g is irreducible), vλ (ηg,λ ) = vℓ (rES ). Putting the steps together and using vℓ (deg φE ) = vℓ (rE )
+(as ℓ ∤ N ) proves the first inequality; the second holds because rES is an integer.                  □
+Remark 4.12. (1) Theorem 1.6 is the quantitative form of the twist-and-lower             argument of
+Section 3, read in the other direction: the level is raised, from NS to NS q δq = N , and the
+                                                                                Q
+price is the level-raising Euler factor. For ℓ = 3 it says that a single prime of type I∗n , with
+3 | n or not, forces 3 | deg φE , and that a prime of type I∗0 with
+                                                                  √ q ≡ 1 (mod 3) does too; neither
+is in Theorem 1.5, and neither needs the hypothesis on Q( −3). (2) Under the hypothesis
+of Theorem 1.2, the identity (1) for E and for ES , whose adjoint lattices, Selmer groups and
+                                          ∅          ∅      P
+Tamagawa factors coincide, gives vλ (ηf,λ   ) = vλ (ηg,λ ) + q∈S eℓ (E, q); so the first inequality of
+Theorem 1.6 is an equality when H 1 (X0 (N ), Zℓ )m is free, that is, under multiplicity one at level
+N . (3) Step 1 is where the argument would fail for the potentially good types II, IV, III and their
+duals: there the quadratic twist does not lower the level, f is its own depletion, and Theorem 4.1
+gives no factor. For these types
+                             √ the omitted factor is reached only through Theorem 4.5, that is,
+with the hypothesis on Q( ℓ∗ ), and Section 6.7 shows that the hypothesis cannot be dropped
+there.
+
+                             5. The boundary of the hypothesis
+                                                            √                                √
+Proof of Proposition 1.7. Since det ρ̄E,3 = χ−3 cuts out Q( −3), the image of Gal(Q/Q( −3))
+is the subgroup of determinant 1 of the image H of ρ̄E,3 . For a curve without complex multi-
+plication with E[3] irreducible, H is conjugate to one of GL2 (F3 ), the normaliser Nns (F3 ) of a
+nonsplit Cartan subgroup (order 16) and the normaliser Ns (F3 ) of a split Cartan subgroup (order
+8) [36]; these are the subgroups with surjective determinant acting irreducibly on F23 that contain
+an element of determinant −1 and trace 0 (complex conjugation), the nonsplit Cartan subgroup
+itself being excluded by the last condition. Their determinant-one subgroups   are SL2 (F3 ), the
+                                                                          0 1
+quaternion group Q8 and the cyclic group of order 4 generated by −1 0 . The first two act
+16                                        DHARMAJ SONI
+
+absolutely irreducibly on F23 (they are non-abelian and act faithfully), the third is abelian, hence
+absolutely reducible. In the third case ρ̄|Gal(Q/Q(√−3)) ⊗ F9 = ψ ⊕ ψ −1 for a character ψ of
+order 4, and ρ̄ ≃ Ind ψ by Frobenius reciprocity, so ρ̄ ≃ ρ̄ ⊗ χ−3 and H 0 (Q, ad0 ρ̄(1)) ̸= 0 as in
+the proof of Lemma 4.9; h3 (E) ≥ 1 follows. Finally the four roots of the 3-division polynomial
+correspond to the four lines of F23 , on which Ns (F3 ) has two orbits of size two (the two lines
+of the Cartan subgroup and the two others), whereas Nns (F3 ) and GL2 (F3 ) are transitive; so
+the division polynomial, which has no rational root when E[3] is irreducible, factors as two
+quadratics in the first case and is irreducible otherwise.                                        □
+Remark 5.1. When ℓ = 3 and the image is Ns (F3 ), Theorem 4.5 does not apply, but the exact
+sequence of Lemma 4.7 still does whenever H 0 (Q, V D ) = Hf1 (Q, V D ) = 0, and it then reads
+                                               X
+     length HΣ1 (Q, W ) = length Hf1 (Q, W ) +   vℓ (Lp (Af , 1)−1 ) + vℓ (Tamp (A)) − hℓ (E).
+                                                                                    
+
+                                              p∈Σ
+        Σ ) were still the length of H 1 (Q, W ), as in Theorem 4.5, then (1) would hold with h (E)
+If vλ (ηf,λ                           Σ                                                        ℓ
+subtracted on the right: this is the shape of Conjecture 1.3. Section 6.7 shows that on the tables
+the correction is exactly what is observed: h3 (E) = 1 for every curve with image Ns (F3 ), the
+inequality (2) fails for 31%, 23% and 18% of them on the three ranges, always by exactly one,
+and never for any other curve.
+
+                                     6. The computations
+6.1. Data and protocol. We used Cremona’s tables [9] in the form of the ecdata repository at
+commit 25cec5e, which contain every elliptic curve over Q of conductor below 500000 with its
+Kodaira symbols, Tamagawa numbers, modular degree, isogeny class, torsion and the images of
+the mod ℓ Galois representations in the notation of [29]. Optimality is determined in the tables
+for every class of conductor at most 400000 and for 359,009 further classes up to 500000. The
+ranges are the working set (N ≤ 300000), the hold-out (300000 < N ≤ 400000), the extension
+(400000 < N ≤ 500000) and the out-of-table set of Section 6.9. The component-group inequality
+(4) and Conjecture 1.8 were found on the working set, written down, and then tested once on
+the hold-out, which had been held back, and afterwards on the extension; nothing was adjusted
+after the hold-out test. The twist-symmetrised form (5) replaced an earlier, weaker formulation
+of the same phenomenon on the working set and was then tested once on the hold-out and the
+extension. The Euler-factor rule came next: it was formulated on the working set from the
+minima by Kodaira type (Section 6.5), the terms at 2 and 3 were fixed afterwards by PARI’s
+Euler factors, and the rule was tested on all four ranges; the correction term hℓ (E) was identified
+last, from the exceptions. Since the hold-out and the extension had already been used for (4)
+and (5), they are a confirmation and not a blind test for Conjecture 1.3; the out-of-table curves,
+generated before the rule was formulated, are. The Kodaira types and discriminant exponents
+at the bad primes were recomputed with PARI/GP 2.15 [31] from the a-invariants, the Euler
+factors of Sym2 f at every bad prime were computed with lfunsympow and lfuneuler, the Tate
+parameters with ellinit over Qq , and fifteen modular degrees spanning the configurations were
+recomputed with ellmoddegree, all agreeing with the tables. The mod 3 images of the tables
+were checked against the factorisation of the 3-division polynomial (Proposition 1.7) on every
+curve for which it mattered.
+6.2. The rule on whole ranges. Table 1 checks (3), with PARI’s Euler factors at every bad
+prime q ̸= ℓ, the terms tℓ , w3 as defined, and h3 (E) = 1 for the curves with image 3Ns (and
+hℓ = 0 otherwise, Lemma 4.9), on the four ranges at ℓ = 3, 5, 7, 11, 13: no violation at any ℓ.
+It also reports the number of violations when the correction term is dropped (all are curves
+                       LOCAL FACTORS OF THE ADJOINT AND THE MODULAR DEGREE                                            17
+
+with image 3Ns, Section 6.7) and the behaviour of the rule with the terms of the types III, III∗
+left out, which is the form that holds for every curve of the tables without any correction; the
+weights w3 at q = ℓ = 3 only sharpen the bound, and at ℓ ≥ 5 nothing is needed at q = ℓ.
+
+   set            ℓ       curves    (3) > 0   viol.   equality   viol. without h   III-free: > 0 / viol. / equality
+   working set    3     1,233,729   867,578      0     57.5%                364              861,074 / 0 / 56.8%
+                  5     1,303,224   332,771      0     75.6%                  0              330,477 / 0 / 75.5%
+                  7     1,307,753   174,266      0     84.1%                  0              173,488 / 0 / 84.1%
+                  11    1,309,103    59,849      0     91.6%                  0               59,495 / 0 / 91.6%
+                  13    1,308,945    35,817      0     92.4%                  0               35,635 / 0 / 92.4%
+   hold-out       3      409,577    298,435      0     54.6%                 68              295,973 / 0 / 53.9%
+                  5      428,251    115,702      0     74.2%                  0              114,860 / 0 / 74.0%
+                  7      429,280     60,868      0     83.2%                  0               60,580 / 0 / 83.2%
+                  11     429,502     21,271      0     90.6%                  0               21,097 / 0 / 90.6%
+                  13     429,498     12,751      0     92.4%                  0               12,681 / 0 / 92.3%
+   extension      3      348,227    257,165      0     54.0%                 43              255,507 / 0 / 53.2%
+                  5      358,244    100,034      0     73.3%                  0               99,401 / 0 / 73.2%
+                  7      358,717     53,034      0     82.7%                  0               52,766 / 0 / 82.7%
+                  11     358,830     19,235      0     90.6%                  0               19,136 / 0 / 90.6%
+                  13     358,816     11,561      0     91.9%                  0               11,484 / 0 / 91.9%
+   out of table   3          893       828       0     52.5%                  0                   827 / 0 / 51.6%
+                  5          893       112       0     82.1%                  0                   111 / 0 / 82.0%
+                  7          893        52       0     90.4%                  0                    52 / 0 / 90.4%
+                  11         893        19       0     94.7%                  0                    19 / 0 / 94.7%
+                  13         893        12       0    100.0%                  0                   12 / 0 / 100.0%
+         Table 1. Conjecture 1.3 with PARI’s factors at all primes: curves with E[ℓ]
+         irreducible, not CM, with a positive bound in (3); violations; equality rate among
+         them; violations when the correction term hℓ is dropped; and the rule without
+         the type III terms (“III-free”: positive bounds, violations, equality rate).
+
+
+
+6.3. Calibration and sharpness. The zero counts are not tautological. Among the 366,151
+working-set curves with E[3] irreducible, not CM, and right-hand side 0 in (3), the prime 3 does
+not divide deg φE for 53.2%. If the valuation of the degree were independent of the local data,
+the 867,578 working-set curves with a positive bound at ℓ = 3 would produce roughly 605,000
+violations (summing over them the proportion of bound-0 curves whose valuation is smaller than
+the bound); there are none. The bounds are attained: among working-set curves with a positive
+bound, vℓ (deg φE ) equals the right-hand side of (3) in 57.5% of the cases at ℓ = 3, 75.6% at
+ℓ = 5, 84.1% at ℓ = 7, 91.6% at ℓ = 11 and 92.4% at ℓ = 13, and the mean excess at ℓ = 3 is
+0.63. Under the hypothesis of Theorem 1.2 the identity (1) says what the excess is: the length
+of the Bloch–Kato Selmer group of the adjoint plus the excess of the Tamagawa factors over
+the terms tℓ . The whole odd part of deg φE is another matter: for the 1,226,216 working-set
+optimal non-CM curves with no isogeny of odd degree, the odd part of deg φE equals ℓ ℓ bℓ ,
+                                                                                             Q
+with bℓ the right-hand side of (5), in only 1.85% of cases; the quotient is most often 9, 3, 15, 45,
+27 or 21, its smallest prime factor is 3 in 63% of the cases and divides N in 52%. So the local
+factors account for a definite, sharp part of the modular degree and for little of the rest, which
+is governed by the adjoint Selmer group and by the size of the Petersson norm.
+6.4. The Tamagawa factors. Lemma 2.7 and the identity (1) predict that the bound can be
+raised, at a prime q of type In with ℓ | n and q ≡ 1 (mod ℓ), by min(vℓ (n), vℓ (q − 1), vℓ (cq )),
+18                                         DHARMAJ SONI
+
+where vℓ (cq ) ≥ k means that the unit part of the Tate parameter at q is an ℓk -th power in
+F×q . We computed the Tate parameters with PARI for the working-set curves that satisfy the
+hypothesis of Theorem 1.2 (ℓ ∤ N , and at ℓ = 3 image not 3Ns) and have such a prime. At ℓ = 3
+there are 46,222 such curves, 12,095 of them with a positive extra term (12,125 in total); the
+strengthened inequality has no exception, and the number of curves attaining the bound rises
+from 20,822 (45.0%) to 28,007 (60.6%). At ℓ = 5 there are 10,940 such curves, 1,646 with a
+positive extra term; again no exception, and equality rises from 7,333 (67.0%) to 8,610 (78.7%).
+This tests the identity, not only the inequality: the extra divisibility of the modular degree is
+exactly where the Tamagawa factor of the adjoint exceeds ℓtℓ .
+6.5. Each term in isolation. For working-set curves with exactly one additive prime q ≥ 5,
+q ̸= ℓ, and no multiplicative prime with ℓ | n, Table 2 gives the minimum of vℓ (deg φE ) by
+Kodaira type and by eℓ (E, q). In every cell, for ℓ = 3, 5, 7, the minimum equals eℓ and every
+curve has vℓ (deg φE ) ≥ eℓ ; for I∗n the excess over eℓ has minimum exactly vℓ (n) in every cell.
+The cells with e = 0 (III: 5,534 curves, I∗0 : 5,394) have minimum 0, and for I∗0 the term runs
+up to e = 6 (minimum 6). Multiplicative primes show no Euler term: for curves with a single
+multiplicative prime q with ℓ | n and no additive prime, min(vℓ (deg φE ) − vℓ (n)) = 0 for every
+value of vℓ (q 2 − 1) up to 6. For two primes of potentially good type the terms add: for the 2,502
+working-set curves with exactly two odd primes of type II or II∗ and no other contribution,
+9 | deg φE always, and the mechanism is not a congruence between f and its own quadratic
+twist by the character ramified at both primes, which never occurs (0 of 2,502).
+
+                                     e=1          e=2          e=3          e=4
+                   type (ℓ = 3)   min      n    min   n      min   n      min   n
+                   II              1    8,327    2     821    3      59    4     2
+                   II∗             1    4,184    2     296    3      12    4     1
+                   IV              1    4,290    2     296    3      12    4     1
+                   IV∗             1    8,221    2     821    3      59    4     2
+                   III             1    1,271    2      76    3       9    –     –
+                   III∗            1    1,271    2      76    3       9    –     –
+                   I∗0             1    1,370    2   4,432    3   2,737    4   247
+                   I∗n             1   30,497    2   2,589    3     145    4    13
+       Table 2. Working set, ℓ = 3: minimum of v3 (deg φE ) (number of curves) over
+       curves with E[3] irreducible whose only additive prime is a single q ≥ 5 of the
+       given type with e3 (E, q) = e, and no multiplicative 3-contribution. The same
+       holds at ℓ = 5 and 7.
+
+
+6.6. The two corollary forms. Table 3 gives, for each range and each small prime ℓ, the
+number of optimal non-CM curves with E[ℓ] irreducible and a positive right-hand side in (4)
+and in (5), the number of violations of each inequality, and the number of Eisenstein curves
+with a positive bound together with the violations of Conjecture 1.8. There are none. Among
+working-set curves with a positive bound, equality holds in (5) for 39.4% at ℓ = 3, 71.1% at
+ℓ = 5, 81.2% at ℓ = 7 and 91.5% at ℓ = 13, and in (4) for 36.9%, 69.7%, 80.4% and 91.2%;
+the rule raises these to the rates of Section 6.3 and bounds 867,578 curves instead of 705,563 at
+ℓ = 3. The hypothesis of Theorem 1.2 fails on the working set for the 1,170 curves with image
+3Ns at ℓ = 3, for the curves with ℓ | N (which include 455,707 of the 913,244 working-set pairs
+                                                                      = 3, and 175,798 at ℓ ≥ 5),
+(E, ℓ) with E[ℓ] irreducible and a positive multiplicative bound at ℓ √
+and for the curves whose mod ℓ representation is induced from Q( ℓ∗ ) with ℓ ≥ 5, which we
+did not single out; none of them violates (3).
+                    LOCAL FACTORS OF THE ADJOINT AND THE MODULAR DEGREE                                                       19
+
+ set                                  ℓ         curves     (4) > 0   (5) > 0      viol. (4)    viol. (5)   Eis. > 0 / viol.
+ working set, N ≤ 300000              3      1,311,066     598,833   705,563              0            0        67,845 / 0
+                                      5      1,311,066     235,510   262,531              0            0         4,454 / 0
+                                      7      1,311,066     121,947   136,707              0            0           759 / 0
+                                      11     1,311,066      42,334    47,040              0            0             0/0
+                                      13     1,311,066      27,215    29,943              0            0            26 / 0
+ hold-out, 300000 < N ≤ 400000        3        429,936     206,749   242,691              0            0        18,225 / 0
+                                      5        429,936      79,550    89,164              0            0           989 / 0
+                                      7        429,936      41,387    46,767              0            0           137 / 0
+                                      11       429,936      14,244    15,970              0            0             0/0
+                                      13       429,936       9,212    10,280              0            0             2/0
+ extension, 400000 < N ≤ 500000       3        359,009     181,075   214,033              0            0         9,894 / 0
+                                      5        359,009      70,514    78,650              0            0           474 / 0
+                                      7        359,009      36,734    41,317              0            0            70 / 0
+                                      11       359,009      13,347    14,975              0            0             0/0
+                                      13       359,009       8,467     9,465              0            0             5/0
+ out of table, 500000 < N ≤ 4 · 106   3            893         561       718              0            0             0/0
+                                      5            893           6         7              0            0             0/0
+                                      7            893           0         1              0            0             0/0
+          Table 3. Verification counts for the two corollary forms. “(4) > 0” is the number
+          of curves with E[ℓ] irreducible, not CM, for which the right-hand side of (4) is
+          positive, and “viol.” the number of violations; likewise for (5). The last column
+          counts the Eisenstein curves with a positive bound in (4) and the violations of
+          Conjecture 1.8.
+
+
+6.7. The boundary: the normaliser of a split Cartan subgroup at ℓ = 3. Table 4 records
+what happens to the inequality (2), with all types included and no correction, on the curves
+for which the hypothesis of Theorem 1.2 fails at ℓ = 3. There are 364, 68, 43 and 0 violations
+on the four ranges, all at ℓ = 3; every one of them is a curve with image 3Ns in the tables,
+and the 3-division polynomial of every one of them factors as two quadratics, as Proposition 1.7
+requires; no curve with image GL2 (F3 ) or Nns (F3 ) violates (2). Conversely every 3Ns curve of
+the tables has a prime of type III or III∗ with a positive term e3 , and the inequality fails for 31%,
+23% and 18% of them, always by exactly one; the violation involves a prime p ≡ −1 (mod 3)
+with t3 (E, p) ≥ 1 in every case. For every 3Ns curve of the tables h3 (E) √ = 1: by Lemma 4.9,
+h3 (E) ≥ 1, and h3 (E) ≤ 1 because some prime p < 1223 inert in Q( −3) has 9 ∤ ap ; for the
+other curves h3 (E) = 0. So the correction of Conjecture 1.3 is exactly one on exactly these
+curves, and with it there is no exception. The residue classes of the type III primes of the
+violating curves are q ≡ 1 and q ≡ 11 (mod 12) in comparable numbers, with some q = 2; what
+the violations have in common is the image, not the prime.
+
+    set          3Ns with III term         failing others failing       h3 = 1 q ≡ 1 / 11 (12) / q = 2 shortfall 1
+    working set 1,170        1,170 364 (31%)                   0 1,170 of 1,170               140 / 160 / 72 364 of 364
+    hold-out      290          290 68 (23%)                    0     290 of 290                  34 / 30 / 4   68 of 68
+    extension     237          237 43 (18%)                    0     237 of 237                  16 / 25 / 2   43 of 43
+    out of table    0            0    0 (0%)                   0         0 of 0                     0/0/0        0 of 0
+          Table 4. The curves with image 3Ns (mod 3 image the normaliser of a split
+          Cartan subgroup), with E[3] irreducible, not CM, optimal: how many have a
+          positive type III term, how many violate (2) (all types, no correction), how many
+          other curves do, how many have h3 (E) = 1, the residue classes mod 12 of the
+          type III primes of the violating curves (or q = 2), and the shortfall.
+20                                           DHARMAJ SONI
+
+6.8. The wild primes and the prime ℓ. Table 5, kept from the earlier version, isolates the
+additive types at ℓ = 3 with the weights of (5): for the untwisted types it lists, for working-set
+curves with no multiplicative prime q with 3 | nq and all additive primes of a single Kodaira type,
+the minimum of v3 (deg φE ) by type and number of primes; for the twisted types the minimum
+over the curves whose only contribution to (5) comes from primes of the given type at odd q,
+or at q = 2, with the given total weight. The rows show that the prime 2 contributes nothing
+through the types II, II∗ (v3 (deg φE ) = 0 for 14,182 of the 44,672 curves whose only candidate
+is such a prime) and nothing through a type I∗n with 3 ∥ n, although with 9 | n the minimum
+is 1. Definition 1.1 with PARI’s factor explains every one of these minima: a type II at 2 has
+P2 = 1 and e3 = 0; a type IV or IV∗ at 2 has e3 = 1; a type I∗n at 2 has t3 = v3 (−v2 (j)) when it
+is potentially multiplicative and 0 otherwise, and the index n of the symbol is not the valuation
+of the Tate parameter at 2, which is why n was not the right invariant. With the weights of
+(5) at 2 counted as if 2 were odd, (5) fails thousands of times in each range; with the terms of
+Definition 1.1 it never does. At q = 3 with potentially good reduction and ℓ = 3, the minima of
+v3 (deg φE ) over curves with a single wild additive prime are 1 for II, IV, III∗ , 2 for II∗ , IV∗ and 0
+for III, I∗0 : these are the weights w3 of Conjecture 1.3, which lie outside the range of Theorem 1.2
+(ℓ | N ) and which we cannot derive from an Euler factor. For ℓ = 5, 7 no term is needed at q = ℓ
+or at q = 2, 3 beyond Definition 1.1.
+
+                      type                           weight 1    weight 2 weight 3
+                      IV (any q)                    1 (25,414)    2 (969)  3 (11)
+                      IV∗ (any q)                   1 (30,168)   2 (2,268)  3 (45)
+                      III (any q)                   0 (34,904)   0 (2,208)  0 (34)
+                      III∗ (any q)                  0 (25,574)   0 (1,307)  0 (29)
+                      I∗0 (any q)                   0 (42,924)   0 (3,093)  0 (53)
+                      II, II∗ at odd q              1 (56,509)   2 (2,502) 3 (12)
+                      I∗n at odd q, weight v3 (n)   1 (28,175)   2 (3,453) 3 (89)
+                      II, II∗ at q = 2              0 (44,672)       –         –
+                      I∗n at q = 2, weight v3 (n)   0 (21,176)   1 (5,329) 1 (342)
+        Table 5. Minimum of v3 (deg φE ) (number of curves) over working-set curves
+        with E[3] irreducible whose only possible contributions at 3 come from the primes
+        named in the row, with the given number of primes (untwisted rows) or total
+        weight of (5) (twisted rows).
+
+
+
+6.9. Out of table. To test the statements beyond the tables, we generated curves with pre-
+scribed local types and conductor between 500000 and 4 · 106 (families with a type IV or IV∗
+prime, with two or three type II primes, with mixed types, and random curves), kept those with
+trivial isogeny class (so that the curve is optimal and E[ℓ] is irreducible for every ℓ) and not CM,
+and computed their modular degrees with ellmoddegree. Table 6 summarises them; none has
+image 3Ns, and Conjecture 1.3 and its two corollary forms hold for all of them (Tables 1 and 3,
+last rows), with equality in (3) for 52.5% of the 828 curves with a positive bound at ℓ = 3.
+6.10. The Eisenstein case. Among the 75,430 working-set optimal non-CM curves with a
+rational 3-isogeny, 67,845 have a positive bound in (4) and 2,777 a positive deficit D; D = 2
+occurs 22 times. No curve without a rational 3-torsion point has a deficit, whatever its 3-isogeny
+structure. With a rational point of order 3 and mod 3 image of Borel type, D ≤ 1; D = 2 occurs
+only when E[3] ≃ Z/3 ⊕ µ3 (the split Cartan image 3Cs.1.1 in the notation of [29], seventeen
+curves, all of rank 0 and torsion Z/3) or when E has a point of order 9 (five curves). The two
+sources of a deficit of 2 never combine: none of the 2,065 curves of conductor at most 400000
+                  LOCAL FACTORS OF THE ADJOINT AND THE MODULAR DEGREE                                 21
+
+                  family     curves largest conductor median seconds per degree
+                  II,II          98          3,968,800                      0.4
+                  II,II,II        1          2,832,200                      0.2
+                  IV            334          3,988,012                      1.1
+                  IV*           104          3,994,600                      4.9
+                  IVmixed       266          3,983,504                      1.3
+                  random         90          2,710,716                     32.1
+                  all           893          3,994,600                      1.5
+     Table 6. Curves outside the tables, with modular degrees computed independently.
+
+
+with mod 3 image 3Cs.1.1 has a point of order 9 (their torsion is Z/3 or Z/6), and the 18
+optimal curves with a point of order 9 all have image 3B.1.1. We have not proved that the two
+cannot coexist, so the bound D ≤ 2 is part of the conjecture. The bounds of Conjecture 1.8
+hold with no exception on all three ranges, and the torsion bound is attained with D > 0 in
+2,773 cases. For ℓ = 5 and 7 the deficits are at most 1 and occur only with a rational ℓ-torsion
+point (192 and 18 cases in the working set). Measured against the stronger bound (5) the deficit
+is not controlled by the torsion: it exceeds the bound of Conjecture 1.8 for 1,148 working-set
+curves at ℓ = 3 (189 and 39 on the hold-out and the extension) and for 141 at ℓ = 5. In the
+Eisenstein case the additive terms do not contribute reliably, and Conjecture 1.8 is stated for
+(4) only.
+
+                                          7. The prime 2
+   At ℓ = 2 the modular degree is the subject of Watkins’s conjecture 2rank E(Q) | deg φE [33]
+and of a substantial literature [13, 6, 34, 8, 17, 5], and the mod 2 representation has a rational
+2-isogeny for a large fraction of curves. We record only the following. For working-set P       optimal
+curves without a rational 2-isogeny and not CM, the inequality v2 (deg φE ) ≥ q ∥ N v2 (nq ) +
+#{q : type III, III∗ , I∗0 or I∗n } holds with no exception on all three ranges (964,432, 325,510 and
+313,741 curves), while counting I∗0 with weight 2 = v2 (#Φgeom q    ) fails (123, 26 and 20 exceptions).
+The isolated-configuration minima suggest that types III, III∗ and I∗n contribute 3 each and
+types II, IV and I∗0 contribute 1 each, in line with the theorem of Calegari and Emerton that
+a curve of odd modular degree has at most two odd bad primes and a rational 2-torsion point
+or prime conductor [6]. We have not attempted to reconcile the exponents with the results of
+[13, 8, 17, 5], nor with the Euler factors at ℓ = 2, which lie outside the range of [12].
+
+                                        8. Open questions
+   (1) Extend Theorem 1.2 to the primes ℓ dividing N , where the data show the inequality
+       with the weights w3 at q = ℓ = 3: identify these weights with the local term at ℓ of the
+       congruence-ideal formula, where the Euler factor is replaced by a condition at ℓ.
+   (2) Prove the corrected identity of Remark 5.1 for the curves with image√     Ns (F3 ), that is,
+                      Σ ) = length H 1 (Q, W ) without the hypothesis on Q( −3) in this dihedral
+       establish vλ (ηf,λ            Σ
+       case; the data say that the conclusion holds with the correction h3 (E) = 1.
+   (3) Compute the Tamagawa factors of ad0 T at the additive primes, and the length of the
+       adjoint Selmer group for curves attaining or exceeding the bound, so as to account for
+       the excess in (1) curve by curve.
+   (4) Identify the deficit of Conjecture 1.8 with a natural invariant of the Eisenstein ideal at
+       ℓ, presumably through the cuspidal subgroup of J0 (N ) [21].
+   (5) Reconcile Section 7 with the literature on Watkins’s conjecture and with the Euler factors
+       at ℓ = 2.
+22                                         DHARMAJ SONI
+
+                                Appendix A. Reproducibility
+   All scripts, the pinned data commit and the result tables are in the repository https:
+//github.com/dsr001001/mcptrial (directory ecmine). The symmetric-square Euler factors
+are computed by scripts/step10 sym2 euler.py, the rule is checked on the whole ranges by
+scripts/step10 rule.py and scripts/step11 tw boundary.py (correction term, image sta-
+tistics), the Tamagawa factors by scripts/step12 tamagawa.py, the two corollary forms by
+scripts/conj check.py; each runs on the full tables in minutes to hours. A single curve can
+be checked against (3) in PARI/GP (version 2.15) with the following functions, which return
+[vℓ (deg φE ), bound]; they are the file scripts/euler rule.gp.
+rule(E, l, {iii = 0}) =
+{ my(R = ellglobalred(E), P = R[4][,1], K = R[5], S = lfunsympow(E, 2), b = 0, j = E.j);
+  for(i = 1, #P,
+    my(q = P[i], k = K[i][2], e = 0, t = 0, vj = valuation(j, q));
+    if(q != l,
+      my(F = 1/lfuneuler(S, q), r = subst(F, x, 1/q^2)); \\ P_q(q^{-2}): omitted factor
+      if(k >= 5, r /= (1 - 1/q^2));                     \\ multiplicative: naive one out
+      if(abs(k) != 3 || iii, e = valuation(r, l)),      \\ III, III* (codes 3,-3) if iii
+      if(l == 3, e = if(k == 4 || k == 2, 1,
+                     if(k == -4 || k == -2, 2, if(k == -3, 1, 0)))));   \\ w_3 at q = 3
+    if(vj < 0, t = valuation(-vj, l));                   \\ Tamagawa exponent
+    b += e + t);
+  if(iii && l == 3, b -= ns3(E));                        \\ the correction term h_3
+  [valuation(ellmoddegree(E), l), b]; }
+ns3(E) = my(F = factor(elldivpol(E, 3))); (#F[,1] == 2 && poldegree(F[1,1]) == 2);
+   Here K[i][2] is PARI’s Kodaira code (n + 4 for In , −(n + 4) for I∗n , ±2 for II/II∗ , ±3 for
+III/III∗ , ±4 for IV/IV∗ , −1 for I∗0 ), rule(E,l) leaves the type III terms out and rule(E,l,1) is
+(3). For example rule(ellinit([1,1,1,-30,-76]), 3) (the curve 121a1) returns [1, 1]; for
+726a1, a curve with image 3Ns and type III at 11, rule(E,3) and rule(E,3,1) both return [2,
+2], the type III term and the correction cancelling; ellmoddegree needs parisizemax of a few
+hundred megabytes for conductors in the thousands. The pipeline was rerun from a clean clone
+and reproduced every count of Table 3. Lemma 2.4(ii) was also checked numerically, with the
+script twist lemma check.gp of the repository, on 4,577 random pairs (curve, odd bad prime),
+with no exception, and Lemma 2.5 against lfunsympow on every curve of the tables.
+
+                          Statement on the use of an AI system
+   This work was carried out with an AI system (Claude, Anthropic) at every stage, and it
+would not have been done without it. The author set the goal, a search for new relations in
+Cremona’s tables, chose the data and the protocol (a frozen snapshot of the tables, a working
+set, a range held back for one-time tests, and a list of tests fixed before any was run), and decided
+at each step what to pursue and what to keep. Under that direction, and in discussion with
+the author, the AI system did the rest: it built the feature table and the list of known relations
+to be excluded; ran the pre-registered search, which produced the candidate relation between
+the modular degree and the local invariants; searched the literature and identified the results
+of Ribet–Takahashi, Pollack–Weston, Kim–Ota, Agashe–Ribet–Stein and Diamond–Flach–Guo
+behind the statements; replaced the Tamagawa number by the geometric component group
+and formulated the conjectures and their successive refinements, up to the Euler-factor rule
+and its correction term; wrote and ran the verification code in Python and PARI/GP on the
+four ranges, generated the out-of-table curves and computed their modular degrees and Tate
+parameters; read the published text of [12] and assembled the proof of Theorem 1.2 from its
+statements, computed the Tamagawa factor of Lemma 2.7, and proposed and wrote the proofs of
+Theorems 1.5 and 1.6 and of Proposition 1.7; drafted every version of the text and the tables; and
+                     LOCAL FACTORS OF THE ADJOINT AND THE MODULAR DEGREE                                         23
+
+prepared the responses to reports on earlier versions, two of them written by AI systems, from
+which the identification of the local factors and of the boundary of the hypothesis arose. The
+scripts, the result files and the pinned data commit are in the repository named in the appendix,
+so that every count can be rerun; the proofs cite the published statements they use, with their
+numbering. The author takes full responsibility for all statements, proofs, computations and
+errors.
+
+                                                 References
+ 1. Ahmed Abbes and Emmanuel Ullmo, à propos de la conjecture de Manin pour les courbes elliptiques modu-
+    laires, Compositio Math. 103 (1996), 269–286.
+ 2. Amod Agashe, Kenneth A. Ribet, and William A. Stein, The modular degree, congruence primes, and multi-
+    plicity one, Number theory, analysis and geometry: in memory of Serge Lang, Springer, 2012, pp. 19–49.
+ 3. A. O. L. Atkin and J. Lehner, Hecke operators on Γ0 (m), Math. Ann. 185 (1970), 134–160.
+ 4. A. O. L. Atkin and Wen Ch’ing Winnie Li, Twists of newforms and pseudo-eigenvalues of W -operators, Invent.
+    Math. 48 (1978), 221–243.
+ 5. Subham Bhakta, Srilakshmi Krishnamoorthy, and Sunil Kumar Pasupulati, Modular degree and a conjecture
+    of Watkins, arXiv:2308.13708, 2023.
+ 6. Frank Calegari and Matthew Emerton, Elliptic curves of odd modular degree, Israel J. Math. 169 (2009),
+    417–444.
+ 7. Henri Carayol, Sur les représentations galoisiennes modulo ℓ attachées aux formes modulaires, Duke Math.
+    J. 59 (1989), 785–801.
+ 8. Jerson Caro and Hector Pasten, Watkins’s conjecture for elliptic curves with non-split multiplicative reduction,
+    Proc. Amer. Math. Soc. 150 (2022), 3245–3251.
+ 9. John E. Cremona, Algorithms for modular elliptic curves, second ed., Cambridge University Press, 1997,
+    Tables: https://github.com/JohnCremona/ecdata.
+10. Henri Darmon, Fred Diamond, and Richard Taylor, Fermat’s last theorem, Current developments in math-
+    ematics, 1995 (Cambridge, MA), Int. Press, 1994, Theorem numbers refer to the revised version at https:
+    //www.math.mcgill.ca/darmon/pub/Articles/Expository/05.DDT/paper.pdf, pp. 1–154.
+11. Fred Diamond, The refined conjecture of Serre, Elliptic curves, modular forms & Fermat’s last theorem (Hong
+    Kong, 1993), Int. Press, 1995, pp. 22–37.
+12. Fred Diamond, Matthias Flach, and Li Guo, The Tamagawa number conjecture of adjoint motives of modular
+    forms, Ann. Sci. École Norm. Sup. (4) 37 (2004), no. 5, 663–727.
+13. Neil Dummigan, On a conjecture of Watkins, J. Théor. Nombres Bordeaux 18 (2006), 345–355.
+14. Bas Edixhoven, The weight in Serre’s conjectures on modular forms, Invent. Math. 109 (1992), 563–594.
+15. Matthias Flach, A finiteness theorem for the symmetric square of an elliptic curve, Invent. Math. 109 (1992),
+    307–327.
+16. Jean-Marc Fontaine and Bernadette Perrin-Riou, Autour des conjectures de Bloch et Kato: cohomologie
+    galoisienne et valeurs de fonctions L, Motives (Seattle, WA, 1991), Proc. Sympos. Pure Math., vol. 55, Part
+    1, Amer. Math. Soc., Providence, RI, 1994, pp. 599–706.
+17. Jeffrey Hatley and Debanjana Kundu, Elliptic curves of conductor 2m p, quadratic twists, and Watkins’ con-
+    jecture, arXiv:2411.08321, 2024.
+18. Haruzo Hida, Congruence of cusp forms and special values of their zeta functions, Invent. Math. 63 (1981),
+    225–261.
+19. Chan-Ho Kim and Kazuto Ota, On the quantitative variation of congruence ideals and integral periods of
+    modular forms, Res. Math. Sci. 10 (2023), no. 2, Paper No. 22, arXiv:1905.02926.
+20. Alain Kraus, Sur le défaut de semi-stabilité des courbes elliptiques à réduction additive, Manuscripta Math.
+    69 (1990), 353–385.
+21. Barry Mazur, Modular curves and the Eisenstein ideal, Inst. Hautes Études Sci. Publ. Math. 47 (1977),
+    33–186.
+22. Hector Pasten, Shimura curves and the abc conjecture, J. Number Theory 254 (2024), 214–335.
+23. Robert Pollack and Tom Weston, On anticyclotomic µ-invariants of modular forms, Compos. Math. 147
+    (2011), 1353–1381.
+24. Kenneth A. Ribet, Mod p Hecke operators and congruences between modular forms, Invent. Math. 71 (1983),
+    193–205.
+25.         , On modular representations of Gal(Q/Q) arising from modular forms, Invent. Math. 100 (1990),
+    431–476.
+24                                             DHARMAJ SONI
+
+26. Kenneth A. Ribet and William A. Stein, Lectures on Serre’s conjectures, Arithmetic algebraic geometry (Park
+    City, UT, 1999), IAS/Park City Math. Ser., vol. 9, Amer. Math. Soc., 2001, pp. 143–232.
+27. Kenneth A. Ribet and Shuzo Takahashi, Parametrizations of elliptic curves by Shimura curves and by classical
+    modular curves, Proc. Nat. Acad. Sci. U.S.A. 94 (1997), no. 21, 11110–11114.
+28. Joseph H. Silverman, Advanced topics in the arithmetic of elliptic curves, Graduate Texts in Mathematics,
+    vol. 151, Springer, 1994.
+29. Andrew V. Sutherland, Computing images of Galois representations attached to elliptic curves, Forum Math.
+    Sigma 4 (2016), e4.
+30. Shuzo Takahashi, Degrees of parametrizations of elliptic curves by Shimura curves, J. Number Theory 90
+    (2001), 74–88.
+31. The PARI Group, PARI/GP version 2.15.4, Univ. Bordeaux, 2023, http://pari.math.u-bordeaux.fr/.
+32. Jacques Tilouine, Hecke algebras and the Gorenstein property, Modular forms and Fermat’s last theorem
+    (Boston, MA, 1995), Springer, New York, 1997, pp. 327–342.
+33. Mark Watkins, Computing the modular degree of an elliptic curve, Experiment. Math. 11 (2002), 487–502.
+34. Soroosh Yazdani, Modular abelian varieties of odd modular degree, Algebra Number Theory 5 (2011), 37–62.
+35. Don Zagier, Modular parametrizations of elliptic curves, Canad. Math. Bull. 28 (1985), no. 3, 372–384.
+36. David Zywina, On the possible images of the mod ℓ representations associated to elliptic curves over Q,
+    arXiv:1508.07660, 2015.
+   Email address: dharmaj.soni@gmail.com
+   URL: https://orcid.org/0009-0007-6397-3351
+
