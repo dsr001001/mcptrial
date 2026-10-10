@@ -60,8 +60,8 @@ Points an expert must check (listed in the note's Remark 4.7 and here):
 ## 3. Documents
 
 - `paper/note.tex` + `paper/refs.bib` + `paper/tables/*.tex` -> `paper/note.pdf` (20 pages). Build:
-  `cd paper && pdflatex note && bibtex note && pdflatex note && pdflatex note`. Placeholders in double brackets
-  (author, affiliation, acknowledgement) are for the user. Tables: `counts.tex`, `isolated3.tex`, `oot.tex`, `twist.tex`
+  `cd paper && pdflatex note && bibtex note && pdflatex note && pdflatex note`. Author (Dharmaj Soni), email and ORCID are
+  filled in (amsart `\email`, `\urladdr`); the acknowledgement in double brackets (the AI-use statement) is still for the user. Tables: `counts.tex`, `isolated3.tex`, `oot.tex`, `twist.tex`
   (no longer input) from `scripts/make_tables.py`; `euler_full.tex` (step 9, q >= 5 rule, no longer input by the note but
   used by nothing else; keep), `euler_uniform.tex` from `scripts/step10_make_table.py`, `euler_iso3.tex` (hand-copied from
   `results/step9_euler_l3.txt`).

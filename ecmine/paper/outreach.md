@@ -49,7 +49,8 @@ or if the refined structures of DFG section 1.8 settle it, a one-line pointer wo
 time; if not, I would be glad to hear whether it looks provable by the methods of [your paper].
 
 With best regards,
-[Name]
+Dharmaj Soni
+ORCID 0009-0007-6397-3351, dharmaj.soni@gmail.com
 
 ## B. MathOverflow question (title and body)
 

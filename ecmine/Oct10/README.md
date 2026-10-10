@@ -9,4 +9,5 @@ Copies, as of 10 October 2026, of every document of the project after the restru
 - `README.md` (the project log, as of this date), `HANDOFF.md` (how to resume), `STEP6_U1_REPORT.md` (working record).
 - `euler_rule.gp`: the PARI function checking the rule for one curve.
 
-The live versions are in the parent directory; this folder is not updated afterwards.
+The live versions are in the parent directory; this folder is not updated afterwards, except that the author name,
+email and ORCID were filled in on the same day in both places.

@@ -237,4 +237,5 @@ Tilouine97 (added from memory; check page numbers). The memorandum `paper/memo_l
 numbering, and its last section records the changes made. `paper/outreach.md` was rewritten for the rule.
 
 Snapshot of today's state of all documents: `Oct10/` (note, memorandum, bibliography, tables, outreach texts, this README and
-`HANDOFF.md`). To resume in a new session read `HANDOFF.md` first.
+`HANDOFF.md`). To resume in a new session read `HANDOFF.md` first. Author name, email and ORCID are filled in
+in the note, the memorandum and the outreach signature (live and snapshot copies); the AI-use acknowledgement is still a placeholder.
