@@ -99,6 +99,11 @@ independently with PARI on fifteen examples.
 
 ## Verify one curve yourself
 
+**Current statement (2026-10-10).** The Euler-factor rule (Conjecture 1.2 of the note) is checked for one curve by
+`scripts/euler_rule.gp`: in gp 2.15, `read("scripts/euler_rule.gp"); rule(ellinit([1,1,1,-30,-76]), 3)` returns `[1, 1]`
+(121a1: `[v_3(deg), bound]`); start gp with `-D parisizemax=400000000 -D threadsizemax=200000000`. The two older statements
+below are its corollaries (Proposition 1.3 of the note).
+
 PARI/GP (any version from 2.13; the modular degree takes seconds for conductors up to a few million):
 
 ```
@@ -213,3 +218,23 @@ Kim-Ota (Theorem 5.2); their sum (Corollary 5.3). The potentially good types II,
 the Sigma-imprimitive adjoint Selmer group (Proposition 6.1: Bloch-Kato Selmer group plus local H^0 terms minus a dual
 Selmer correction), which is the question for an expert; the type III anomaly is the case where the dual correction is 1.
 The citations to DFG, DDT and Ribet-Stein in the proofs still need checking by someone who knows these papers.
+
+## Note restructured around the Euler-factor rule (2026-10-10)
+
+`paper/note.tex` (compiled: `paper/note.pdf`, 20 pages) now has the title "Local factors of the adjoint L-function and the
+l-adic valuations of the modular degree". Structure: Section 1 (Definition 1.1 of the local terms e_l, t_l; Conjecture 1.2,
+the Euler-factor rule; Proposition 1.3, the component-group inequality (1.2) and the twist-symmetrised inequality (1.3) as its
+consequences; Theorem 1.4 Kim-Ota/ARS; Theorem 1.5, the qualitative additive statements at l = 3; Theorem 1.6, the quantitative
+theorem for I_0* and I_n*; Conjecture 1.7, the Eisenstein case); Section 2 local invariants (Lemma 2.5: the omitted factors at
+tame primes); Section 3 proof of Theorem 1.5 (unchanged); Section 4 the quantitative theorems (4.1 DFG's formula, 4.2 the
+DDT Lemma 4.17 inequality with proof, 4.3 twist monotonicity, 4.4 the Euler terms, 4.5 Tamagawa terms, 4.6 their sum);
+Section 5 the Selmer-group reformulation (Conjecture 5.1); Section 6 computations (Table 1 the rule on the four ranges,
+Table 2 each term in isolation, Table 3 the corollary forms, Table 4 the wild primes, Table 5 out of table; 6.6 the type III
+anomaly; 6.9 Eisenstein); Section 7 the prime 2; Section 8 open questions; Appendix with the PARI function. New tables:
+`paper/tables/euler_uniform.tex` (from `scripts/step10_make_table.py`), `paper/tables/euler_iso3.tex` (from
+`results/step9_euler_l3.txt`, copied from the memorandum). New references in `paper/refs.bib`: DFG04, Flach92, Hida81,
+Tilouine97 (added from memory; check page numbers). The memorandum `paper/memo_local_factors.tex` now refers to the new
+numbering, and its last section records the changes made. `paper/outreach.md` was rewritten for the rule.
+
+Snapshot of today's state of all documents: `Oct10/` (note, memorandum, bibliography, tables, outreach texts, this README and
+`HANDOFF.md`). To resume in a new session read `HANDOFF.md` first.
