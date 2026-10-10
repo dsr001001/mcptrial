@@ -182,3 +182,17 @@ Two reports were received on the note (an AI referee report and a research note 
 
 Not yet done: the local-factor memorandum (adjoint / congruence-ideal framing, M1 of the first report), the Zenodo archive
 and the AI-use statement.
+
+## Referee item 1 (2026-10-10): the local-factor memorandum
+
+`paper/memo_local_factors.tex` (compiled: `paper/memo_local_factors.pdf`). Main finding: the local term of an additive prime
+q >= 5 is the l-adic valuation of the inverse Euler factor of the symmetric square L-function at s = 2 (the factor that the
+naive symmetric square omits), plus the Tamagawa exponent v_l(n) for I_n and I_n*: v_l(q - chi_{-3}(q)) for II, II*, IV, IV*;
+v_l(q - chi_{-4}(q)) for III, III*; v_l(q^2 - 1) (+ v_l(n)) for I_n*; v_l(q - 1) + v_l((q+1)^2 - a_q(E')^2) for I_0* with E'
+the good twist. The component-group and twist-symmetrised bounds of the note are its shadows. Zero violations on all four
+ranges at l = 3, 5, 7, 11, 13 when the type III terms are left out; with them, 264 exceptions at l = 3, all with a prime
+= -1 mod 3 of type I_n or I_n* with 3 | n (Kim-Ota's excluded case). Scripts `scripts/step9_euler.py` (single-prime minima),
+`scripts/step9_fullrule.py` (the rule on whole ranges), `scripts/step9_additivity.py`, `scripts/step9_twist_degree.py`
+(twist monotonicity of the degree); outputs `results/step9_*`. The memorandum also proves twist monotonicity of the congruence
+number and the I_0* and I_n* (l not dividing n) Euler terms from Darmon-Diamond-Taylor Theorem 4.20 and Kim-Ota Lemma 2.7,
+and states what remains open (types II, IV, III: integrality of the primitive adjoint L-value; the wild primes).

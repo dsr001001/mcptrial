@@ -1,0 +1,57 @@
+holdout: 429936 curves, 1730458 bad primes, 24817 I_0* primes >= 5 twisted
+  l=3: violations of the Euler-factor rule:
+            e  tam  wild  old  V  new
+label                               
+301290u1   1    5     0    5  5    6
+301290cm1  1    5     0    5  5    6
+305762c1   3    3     0    3  5    6
+305762d1   3    3     0    3  5    6
+308550eb1  2    4     0    4  5    6
+308550et1  2    4     0    4  5    6
+308550ew1  2    5     0    5  6    7
+308550ic1  2    5     0    5  6    7
+308550ie1  2    4     0    4  5    6
+308550jb1  2    4     0    4  5    6
+ l  curves  bound_new>0  viol_new  equality_new  bound_twist>0  viol_twist  equality_twist  new>twist
+ 3  409577       274059        42        0.4553         242691           0          0.3619      73841
+ 5  428251       105485         0        0.7265          89164           0          0.6897      19975
+ 7  429280        56455         0        0.8242          46767           0          0.8017      10710
+11  429502        19940         0        0.9049          15970           0          0.8896       4103
+13  429498        11772         0        0.9209          10280           0          0.9121       1522
+ext: 359009 curves, 1435012 bad primes, 19289 I_0* primes >= 5 twisted
+  l=3: violations of the Euler-factor rule:
+            e  tam  wild  old  V  new
+label                               
+414050bb1  5    1     0    1  5    6
+414050fb1  5    1     0    1  5    6
+418914s1   2    3     0    3  4    5
+418914bq1  2    3     0    3  4    5
+428485a1   2    3     0    3  4    5
+428485b1   2    3     0    3  4    5
+436810y1   3    3     0    3  5    6
+436810cl1  3    3     0    3  5    6
+446490bu1  1    6     0    6  6    7
+446490fx1  1    6     0    6  6    7
+ l  curves  bound_new>0  viol_new  equality_new  bound_twist>0  viol_twist  equality_twist  new>twist
+ 3  348227       237180        22        0.4455         214033           0          0.3552      60393
+ 5  358244        91002         0        0.7159          78650           0          0.6836      15554
+ 7  358717        49189         0        0.8196          41317           0          0.7963       8832
+11  358830        17990         0        0.9032          14975           0          0.8896       3133
+13  358816        10711         0        0.9180           9465           0          0.9118       1272
+Traceback (most recent call last):
+  File "/home/user/mcptrial/ecmine/scripts/step9_fullrule.py", line 13, in <module>
+    opt = pd.read_parquet(f"results/optimal_{tag}.parquet").set_index("label")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/io/parquet.py", line 671, in read_parquet
+    return impl.read(
+           ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/io/parquet.py", line 253, in read
+    path_or_handle, handles, filesystem = _get_path_or_handle(
+                                          ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/io/parquet.py", line 141, in _get_path_or_handle
+    handles = get_handle(
+              ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/pandas/io/common.py", line 939, in get_handle
+    handle = open(handle, ioargs.mode)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'results/optimal_oot.parquet'

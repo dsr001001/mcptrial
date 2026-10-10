@@ -1,0 +1,59 @@
+l = 5: working-set curves with E[l] irreducible, not CM, one additive prime q >= 5 (q != l), no multiplicative l-part: 70199
+min and distribution of V - euler (Euler-factor term of ad^0 at s = 1) by type and euler term:
+                  n  minV  P(V>=euler)  P(V>=euler+1)
+type euler                                           
+I0*  0       5288.0   0.0          1.0          0.183
+     1       4876.0   1.0          1.0          0.192
+     2        999.0   2.0          1.0          0.152
+     3         73.0   3.0          1.0          0.164
+II   0       7337.0   0.0          1.0          0.237
+     1        537.0   1.0          1.0          0.264
+     2          5.0   2.0          1.0          0.200
+II*  0       3150.0   0.0          1.0          0.260
+     1        139.0   1.0          1.0          0.266
+     2          4.0   2.0          1.0          0.250
+III  0       5183.0   0.0          1.0          0.254
+     1        418.0   1.0          1.0          0.270
+     2          7.0   2.0          1.0          0.286
+III* 0       5173.0   0.0          1.0          0.255
+     1        418.0   1.0          1.0          0.270
+     2          7.0   2.0          1.0          0.286
+IV   0       3151.0   0.0          1.0          0.260
+     1        139.0   1.0          1.0          0.266
+     2          4.0   2.0          1.0          0.250
+IV*  0       7336.0   0.0          1.0          0.237
+     1        537.0   1.0          1.0          0.264
+     2          5.0   2.0          1.0          0.200
+In*  0      17894.0   0.0          1.0          0.283
+     1       7456.0   1.0          1.0          0.271
+     2         60.0   2.0          1.0          0.200
+     3          3.0   3.0          1.0          0.667
+
+I_n*: V - euler versus v_l(n) (additivity of the Tamagawa exponent of the twist):
+                 n  min(V-euler)  P(V>=pred)
+euler tam                                   
+0     0    16626.0           0.0         1.0
+      1     1268.0           1.0         1.0
+1     0     7101.0           0.0         1.0
+      1      355.0           1.0         1.0
+2     0       60.0           0.0         1.0
+3     0        3.0           0.0         1.0
+
+violations of V >= euler + tam over all single-additive-prime curves: 0 of 70199
+
+multiplicative: curves with no additive prime and exactly one multiplicative prime q >= 5 with l | n: 20866
+V - v_l(n) by v_l(q^2-1):
+         n  min(V-vn)  P(V>vn)
+e                             
+0  13708.0        0.0    0.232
+1   6910.0        0.0    0.330
+2    224.0        0.0    0.335
+3     24.0        0.0    0.250
+multiplicative, l not dividing n, no additive prime, single bad prime >= 5 besides 2,3: 3716; V by v_l(q^2-1):
+        n  minV  P(V>=1)
+e                       
+0  1875.0   0.0    0.245
+1  1488.0   0.0    0.251
+2   292.0   0.0    0.291
+3    48.0   0.0    0.229
+4    13.0   0.0    0.231

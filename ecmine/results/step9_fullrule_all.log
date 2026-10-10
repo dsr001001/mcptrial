@@ -1,0 +1,15 @@
+work: 1311066 curves, 5007579 bad primes, 64268 I_0* primes >= 5 twisted
+ l  curves  bound_new>0  viol_new  equality_new  bound_twist>0  viol_twist  equality_twist  new>twist  viol_noIII  viol_IIIcond  equality_IIIcond
+ 3 1233729       792258       200        0.4840         705563           0          0.3943     195243           0             2            0.4823
+ 5 1303224       303313         0        0.7409         262531           0          0.7108      49287           0             0            0.7409
+ 7 1307753       161406         0        0.8341         136707           0          0.8118      27181           0             0            0.8340
+holdout: 429936 curves, 1730458 bad primes, 24817 I_0* primes >= 5 twisted
+ l  curves  bound_new>0  viol_new  equality_new  bound_twist>0  viol_twist  equality_twist  new>twist  viol_noIII  viol_IIIcond  equality_IIIcond
+ 3  409577       274059        42        0.4553         242691           0          0.3619      73841           0             2            0.4534
+ 5  428251       105485         0        0.7265          89164           0          0.6897      19975           0             0            0.7265
+ 7  429280        56455         0        0.8242          46767           0          0.8017      10710           0             0            0.8242
+ext: 359009 curves, 1435012 bad primes, 19289 I_0* primes >= 5 twisted
+ l  curves  bound_new>0  viol_new  equality_new  bound_twist>0  viol_twist  equality_twist  new>twist  viol_noIII  viol_IIIcond  equality_IIIcond
+ 3  348227       237180        22        0.4455         214033           0          0.3552      60393           0             2            0.4433
+ 5  358244        91002         0        0.7159          78650           0          0.6836      15554           0             0            0.7159
+ 7  358717        49189         0        0.8196          41317           0          0.7963       8832           0             0            0.8196

@@ -1,0 +1,53 @@
+l = 7: working-set curves with E[l] irreducible, not CM, one additive prime q >= 5 (q != l), no multiplicative l-part: 108582
+min and distribution of V - euler (Euler-factor term of ad^0 at s = 1) by type and euler term:
+                  n  minV  P(V>=euler)  P(V>=euler+1)
+type euler                                           
+I0*  0      13022.0   0.0          1.0          0.116
+     1       3539.0   1.0          1.0          0.100
+     2        275.0   2.0          1.0          0.055
+     3          5.0   3.0          1.0          0.000
+II   0      11520.0   0.0          1.0          0.161
+     1        261.0   1.0          1.0          0.111
+     2          2.0   3.0          1.0          1.000
+II*  0       5484.0   0.0          1.0          0.173
+     1         70.0   1.0          1.0          0.286
+III  0       8307.0   0.0          1.0          0.158
+     1        165.0   1.0          1.0          0.218
+III* 0       8307.0   0.0          1.0          0.158
+     1        165.0   1.0          1.0          0.218
+IV   0       5622.0   0.0          1.0          0.174
+     1         70.0   1.0          1.0          0.286
+IV*  0      11382.0   0.0          1.0          0.161
+     1        261.0   1.0          1.0          0.111
+     2          2.0   3.0          1.0          1.000
+In*  0      35212.0   0.0          1.0          0.180
+     1       4858.0   1.0          1.0          0.157
+     2         53.0   2.0          1.0          0.132
+
+I_n*: V - euler versus v_l(n) (additivity of the Tamagawa exponent of the twist):
+                 n  min(V-euler)  P(V>=pred)
+euler tam                                   
+0     0    33956.0           0.0         1.0
+      1     1256.0           1.0         1.0
+1     0     4788.0           0.0         1.0
+      1       70.0           1.0         1.0
+2     0       53.0           0.0         1.0
+
+violations of V >= euler + tam over all single-additive-prime curves: 0 of 108582
+
+multiplicative: curves with no additive prime and exactly one multiplicative prime q >= 5 with l | n: 10178
+V - v_l(n) by v_l(q^2-1):
+        n  min(V-vn)  P(V>vn)
+e                            
+0  8724.0        0.0    0.162
+1  1431.0        0.0    0.189
+2    23.0        0.0    0.391
+multiplicative, l not dividing n, no additive prime, single bad prime >= 5 besides 2,3: 3717; V by v_l(q^2-1):
+        n  minV  P(V>=1)
+e                       
+0  2444.0   0.0    0.155
+1  1109.0   0.0    0.181
+2   144.0   0.0    0.146
+3    17.0   0.0    0.000
+4     2.0   0.0    0.000
+5     1.0   0.0    0.000
