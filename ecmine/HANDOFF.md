@@ -59,13 +59,13 @@ Points an expert must check (listed in the note's Remark 4.7 and here):
 
 ## 3. Documents
 
-- `paper/note.tex` + `paper/refs.bib` + `paper/tables/*.tex` -> `paper/note.pdf` (20 pages). Build:
+- `paper/note.tex` + `paper/refs.bib` + `paper/tables/*.tex` -> `paper/note.pdf` (21 pages). Build:
   `cd paper && pdflatex note && bibtex note && pdflatex note && pdflatex note`. Author (Dharmaj Soni), email and ORCID are
-  filled in (amsart `\email`, `\urladdr`); the acknowledgement in double brackets (the AI-use statement) is still for the user. Tables: `counts.tex`, `isolated3.tex`, `oot.tex`, `twist.tex`
+  filled in (amsart `\email`, `\urladdr`); the AI-use statement (an unnumbered section at the end of the note, a short version at the end of the memorandum, and a sentence in the outreach message) was written on 2026-10-10 and approved in substance by the user. Tables: `counts.tex`, `isolated3.tex`, `oot.tex`, `twist.tex`
   (no longer input) from `scripts/make_tables.py`; `euler_full.tex` (step 9, q >= 5 rule, no longer input by the note but
   used by nothing else; keep), `euler_uniform.tex` from `scripts/step10_make_table.py`, `euler_iso3.tex` (hand-copied from
   `results/step9_euler_l3.txt`).
-- `paper/memo_local_factors.tex` -> `.pdf` (9 pages; `pdflatex` twice, bibliography inline). The memorandum answering
+- `paper/memo_local_factors.tex` -> `.pdf` (10 pages; `pdflatex` twice, bibliography inline). The memorandum answering
   referee item 1; its last section records the changes made to the note; its proofs are the same as the note's Section 4.
 - `paper/outreach.md`: message to an expert and a MathOverflow question, both rewritten for the rule.
 - `README.md`: chronological log of all steps with commands; `STEP6_U1_REPORT.md` (working record, superseded, has update
@@ -76,7 +76,7 @@ Points an expert must check (listed in the note's Remark 4.7 and here):
   factors in the adjoint / congruence-ideal theory (done: the memorandum and the restructured note); (2) complete the proof
   of the qualitative theorem (done: Lemmas 3.1, 3.2, optimal-level theorem as DDT Theorem 3.15, l not dividing N added);
   (3) editorial: ARS citation and 99A1, Kim-Ota journal, Pasten, CNS24, abc sentence, q = 3 convention, Lemma 2.4 n = 0,
-  Conjecture 1.7 bracket, calibration rates, control rows (done). Not done: Zenodo archive, AI-use statement wording.
+  Conjecture 1.7 bracket, calibration rates, control rows (done). AI-use statement: done (see section 3). Not done: Zenodo archive.
 
 ## 4. Data and pipeline (from a clean clone)
 
@@ -136,7 +136,7 @@ rewritten; README, this handoff, `Oct10/` snapshot.
 Open, for the user to decide:
 1. Whether and how to approach Kim/Ota (or Diamond/Flach) with Section 5 of the note (Conjecture 5.1) and the memorandum.
    The outreach text A is drafted for that.
-2. Zenodo archive of the result files and the AI-use statement wording (referee item, not done).
+2. Zenodo archive of the result files (referee item, not done).
 3. Possible further computations: (a) the type III anomaly at larger scale (configurations with q >= 5 only were
    analysed in `results/step9_fullrule_*`; the q = 2 cases have v_2(N) = 8 and factor 1 + 2X); (b) the weights at q = l = 3
    against the local condition at l in DFG; (c) a direct computation of the adjoint Selmer groups for a handful of

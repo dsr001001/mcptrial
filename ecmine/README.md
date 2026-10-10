@@ -238,4 +238,6 @@ numbering, and its last section records the changes made. `paper/outreach.md` wa
 
 Snapshot of today's state of all documents: `Oct10/` (note, memorandum, bibliography, tables, outreach texts, this README and
 `HANDOFF.md`). To resume in a new session read `HANDOFF.md` first. Author name, email and ORCID are filled in
-in the note, the memorandum and the outreach signature (live and snapshot copies); the AI-use acknowledgement is still a placeholder.
+in the note, the memorandum and the outreach signature (live and snapshot copies). The statement on the use of an AI system at every stage (an unnumbered section at the end of the
+note, 21 pages; a short version at the end of the memorandum, 10 pages; a sentence in the outreach message) replaces the
+bracketed placeholder; the author takes responsibility for all statements, proofs, computations and errors.

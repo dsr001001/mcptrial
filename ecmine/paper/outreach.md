@@ -48,6 +48,10 @@ reformulation, are attached / at [link]. If the Selmer inequality is a special c
 or if the refined structures of DFG section 1.8 settle it, a one-line pointer would save me a great deal of
 time; if not, I would be glad to hear whether it looks provable by the methods of [your paper].
 
+I should add that the computations, the literature search and the drafts, this message included, were produced with
+an AI system under my direction; the note says so in a statement at the end, names the citations I would like an
+expert to check, and I take responsibility for everything stated.
+
 With best regards,
 Dharmaj Soni
 ORCID 0009-0007-6397-3351, dharmaj.soni@gmail.com
