@@ -185,14 +185,31 @@ and the AI-use statement.
 
 ## Referee item 1 (2026-10-10): the local-factor memorandum
 
-`paper/memo_local_factors.tex` (compiled: `paper/memo_local_factors.pdf`). Main finding: the local term of an additive prime
-q >= 5 is the l-adic valuation of the inverse Euler factor of the symmetric square L-function at s = 2 (the factor that the
-naive symmetric square omits), plus the Tamagawa exponent v_l(n) for I_n and I_n*: v_l(q - chi_{-3}(q)) for II, II*, IV, IV*;
-v_l(q - chi_{-4}(q)) for III, III*; v_l(q^2 - 1) (+ v_l(n)) for I_n*; v_l(q - 1) + v_l((q+1)^2 - a_q(E')^2) for I_0* with E'
-the good twist. The component-group and twist-symmetrised bounds of the note are its shadows. Zero violations on all four
-ranges at l = 3, 5, 7, 11, 13 when the type III terms are left out; with them, 264 exceptions at l = 3, all with a prime
-= -1 mod 3 of type I_n or I_n* with 3 | n (Kim-Ota's excluded case). Scripts `scripts/step9_euler.py` (single-prime minima),
-`scripts/step9_fullrule.py` (the rule on whole ranges), `scripts/step9_additivity.py`, `scripts/step9_twist_degree.py`
-(twist monotonicity of the degree); outputs `results/step9_*`. The memorandum also proves twist monotonicity of the congruence
-number and the I_0* and I_n* (l not dividing n) Euler terms from Darmon-Diamond-Taylor Theorem 4.20 and Kim-Ota Lemma 2.7,
-and states what remains open (types II, IV, III: integrality of the primitive adjoint L-value; the wild primes).
+`paper/memo_local_factors.tex` (compiled: `paper/memo_local_factors.pdf`, 9 pages). Main finding: the local term of a bad
+prime q != l is e_l(E,q) = v_l of the inverse Euler factor of the adjoint L-function at s = 1 that the naive adjoint
+L-function of Diamond-Flach-Guo omits (in the symmetric-square normalisation, P_q(q^-2) / (1 - a_q^2 q^-2) with
+L_q(Sym^2 f, s) = P_q(q^-s)^-1), plus the Tamagawa exponent t_l(E,q) = v_l(-v_q(j)) of the adjoint when the reduction is
+potentially multiplicative. For tame q >= 5 this reads: 0 for I_n; v_l(q^2 - 1) for I_n*; v_l(q - chi_{-3}(q)) for
+II, II*, IV, IV*; v_l(q - chi_{-4}(q)) for III, III*; v_l(q - 1) + v_l((q+1)^2 - a_q(E')^2) for I_0* with E' the good
+twist. The component-group and twist-symmetrised bounds of the note are its shadows.
+
+Verification (`scripts/step10_sym2_euler.py`: PARI's `lfunsympow(E,2)` / `lfuneuler` factors at every bad prime, the wild
+primes 2 and 3 included, into `results/sym2_<set>_<shard>.parquet`; `scripts/step10_rule.py`: the rule on the four ranges,
+summaries `results/step10_rule_<set>_summary.csv`, log `results/step10_rule.log`; `scripts/step10_make_table.py` builds
+`paper/tables/euler_uniform.tex`): with the type III terms dropped at every prime, zero violations on all four ranges at
+l = 3, 5, 7, 11, 13; equality rate at l = 3 of 56.8% (working set), against 39.4% for the twist rule of the note. With the
+type III terms added: 475 exceptions, all at l = 3, all of one shape (a III/III* prime with nontrivial Euler factor and
+trivial Frobenius on the invariant line, i.e. q = 1 mod 12 or q = 2 with factor 1 + 2X, together with a prime p = -1 mod 3
+with t_3 >= 1; shortfall exactly 1). The weights of the prime l = 3 itself (w_3) remain empirical. PARI's factor at 2
+resolves the irregular I_n* behaviour of the note: a symbol I_n* at 2 can be potentially good (v_2(j) >= 0), and then no
+Tamagawa term is due. Earlier Kodaira-type scripts (q >= 5 only): `scripts/step9_euler.py` (single-prime minima),
+`scripts/step9_fullrule.py`, `scripts/step9_additivity.py`, `scripts/step9_twist_degree.py` (twist monotonicity of the
+degree); outputs `results/step9_*`, table `paper/tables/euler_full.tex`.
+
+Proved in the memorandum: twist monotonicity of the congruence number (Theorem 4.1); the I_0* and I_n* Euler terms for every
+odd l with l not dividing 2N and E[l] irreducible, from Diamond-Flach-Guo Proposition 1.4(c), the inequality of
+Darmon-Diamond-Taylor Lemma 4.17 and multiplicity one at the lower level (Theorem 5.1); the Tamagawa terms for l >= 5 from
+Kim-Ota (Theorem 5.2); their sum (Corollary 5.3). The potentially good types II, IV, III are reduced to a statement about
+the Sigma-imprimitive adjoint Selmer group (Proposition 6.1: Bloch-Kato Selmer group plus local H^0 terms minus a dual
+Selmer correction), which is the question for an expert; the type III anomaly is the case where the dual correction is 1.
+The citations to DFG, DDT and Ribet-Stein in the proofs still need checking by someone who knows these papers.
