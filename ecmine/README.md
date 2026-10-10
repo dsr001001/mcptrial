@@ -161,3 +161,24 @@ does to the Kodaira types) on random curves; the three worked examples of the no
 
 The consolidated checker is `scripts/conj_check.py`; its summary columns are `viol_conj1` (Conjecture 1.1 of the note), `viol_conj2`
 (Conjecture 1.3, the twist-symmetrised bound, every odd l) and `viol_conj3` (Conjecture 1.5, Eisenstein deficit against the bound of 1.1).
+
+## Referee responses (2026-10-10)
+
+Two reports were received on the note (an AI referee report and a research note assessing it). Settled in this commit:
+
+- Theorem 1.4 now assumes l does not divide N (the case l | N is left to the data), and its proof is complete: Lemma 3.1
+  (the congruence criterion, with the full Hecke algebra and the Abbes-Ullmo/Ribet duality) and Lemma 3.2 (the oldform
+  eigenvector with the right U_p eigenvalues at every p | N and the right a_l) replace the former appeal to "a congruence at
+  almost all primes"; the optimal-level theorem is quoted in the form of Darmon-Diamond-Taylor, Theorem 3.15, with the level
+  taken to be the Serre conductor, which is what makes Lemma 3.2 applicable.
+- Agashe-Ribet-Stein: the result is their Theorem 2.2, and 99A1 is in their Table 1 (modular degree 4, congruence number
+  12); Kim-Ota is Res. Math. Sci. 10 (2023), Paper 22, and their congruence ideal is the full-space one; Pasten is
+  J. Number Theory 254 (2024); Cesnavicius-Neururer-Saha (JEMS 26, 2024) is cited for additive primes and the Manin constant;
+  Pollack-Weston are credited with the square-free weight-2 case.
+- The growth sentence in the introduction is replaced by the abc statement of ARS; the twist weight at q = 3 is flagged as
+  data-driven; Lemma 2.4(ii) now proves I_0 <-> I_0* at every odd q; the indicator bracket in Conjecture 1.5 is defined and
+  the bound D <= 2 is justified from the tables (no curve has both a point of order 9 and image 3Cs.1.1).
+- Calibration rates are reported (Section 4.3 of the note) and the control rows of Table 2 are named as such.
+
+Not yet done: the local-factor memorandum (adjoint / congruence-ideal framing, M1 of the first report), the Zenodo archive
+and the AI-use statement.
